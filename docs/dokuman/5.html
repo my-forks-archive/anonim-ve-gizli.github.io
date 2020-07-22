@@ -1,0 +1,1203 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 5. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./4.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./6.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./4.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./6.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">Qubes Nedir</a>
+			<a href="#1" class="list-group-item list-group-item-action">Kullanım Alternatifleri</a>
+			<a href="#2" class="list-group-item list-group-item-action">Sistem Gereksinimleri</a>
+			<a href="#3" class="list-group-item list-group-item-action">USB Üzerinden</a>
+			<a href="#4" class="list-group-item list-group-item-action">Sabit Disk Üzerinden</a>
+          	<a href="#5" class="list-group-item list-group-item-action">İndirmek ve Doğrulamak</a>
+			<a href="#6" class="list-group-item list-group-item-action">Disk Oluşturmak</a>
+			<a href="#7" class="list-group-item list-group-item-action">Sistem Arayüzü</a>
+			<a href="#8" class="list-group-item list-group-item-action">Alt Sistemler</a>
+			<a href="#9" class="list-group-item list-group-item-action">Disposable</a>
+          	<a href="#10" class="list-group-item list-group-item-action">Domain</a>
+			<a href="#11" class="list-group-item list-group-item-action">Service</a>
+			<a href="#12" class="list-group-item list-group-item-action">Template</a>
+			<a href="#13" class="list-group-item list-group-item-action">Çoklu Sistemler</a>
+			<a href="#14" class="list-group-item list-group-item-action">Sistemlerin Yönetimi</a>
+          	<a href="#15" class="list-group-item list-group-item-action">Süreçlerin Yönetimi</a>
+			<a href="#16" class="list-group-item list-group-item-action">Dosya&Metin Aktarımı</a>
+			<a href="#17" class="list-group-item list-group-item-action">Dosya Aktarımı</a>
+			<a href="#18" class="list-group-item list-group-item-action">Metin Aktarımı</a>
+			<a href="#19" class="list-group-item list-group-item-action">Dom0 ile Alışveriş</a>
+          	<a href="#20" class="list-group-item list-group-item-action">Dom0'a Dosya Aktarımı</a>
+			<a href="#21" class="list-group-item list-group-item-action">Dom0'dan Dosya Aktarımı</a>
+			<a href="#22" class="list-group-item list-group-item-action">Cihazların Bağlanması</a>
+			<a href="#23" class="list-group-item list-group-item-action">Program Kurulumları</a>
+			<a href="#24" class="list-group-item list-group-item-action">Fedora Prg. Kur.</a>
+          	<a href="#25" class="list-group-item list-group-item-action">Whonix Prg. Kur.</a>
+			<a href="#26" class="list-group-item list-group-item-action">Debian Prg. Kur.</a>
+			<a href="#27" class="list-group-item list-group-item-action">Dom0 Prg. Kur.</a>
+			<a href="#28" class="list-group-item list-group-item-action">Geçici Sis. Çalışma.</a>
+			<a href="#29" class="list-group-item list-group-item-action">Güvenli PDF</a>
+			<a href="#30" class="list-group-item list-group-item-action">Tor Bağlantısı</a>
+			<a href="#31" class="list-group-item list-group-item-action">Yeni Sanal Sistem</a>
+			<a href="#32" class="list-group-item list-group-item-action">Şablona Bağımlı</a>
+			<a href="#33" class="list-group-item list-group-item-action">Sistem Ayarları</a>
+			<a href="#34" class="list-group-item list-group-item-action">Şablondan Bağımsız</a>
+			<a href="#35" class="list-group-item list-group-item-action">Yeni İşletim Sistemi</a>
+			<a href="#36" class="list-group-item list-group-item-action">Bölüm Sonu</a>
+   			<hr>
+
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">5.Doküman</strong>
+          <h3 class="mb-0">Qubes İşletim Sistemi</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">qubes os , whonix , dom0 , disposable , template , service , domain  </p>
+        </div>
+        
+      </div>
+    </div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	 
+	 <h4 id="0">Qubes Nedir Hangi Amaçla Kullanılır ?</h4>
+
+<p>Qubes bizlere birden fazla işletim sistemini aynı anda, birbirinden izole şekilde çalıştırabilme olanağı tanıyan bir işletim sistemidir. Peki böyle bir işletim sistemi bizim ne işimize yarar ?</p>
+
+<p>Eğer güvenliğinizi çok daha yüksek seviyede tutmak isterseniz; okul, iş, kişisel ve benzeri farklı amaçlarınız için kullanacağınız birden fazla bilgisayara sahip olmanız gerekir. Bunun nedeni herhangi bir sistemde çalışırken meydana gelebilecek güvenlik zafiyetinin diğer sistemleri de etkilemesini önlemektir. Örneğin çok kritik bilgileri tuttuğunuz bir sistemde, okulunuza yönelik basit işlevleri gerçekleştirirken dikkatsizliğiniz sonucu sistemin enfekte olmasına neden olursanız kritik bilgileriniz de risk altına girecektir. Normalde ben olsam bilginin kritikliğine de bağlı olarak, internet bağlantısı bulunmayan tamamen izole bir sistemi kullanmayı tercih ederim. Özetle tek bir sistemi çok amaçlı kullanmak, pek çok güvenlik riskini de beraberinde getirebiliyor.</p>
+
+<p>Bu gibi durumların önüne geçmek için birden fazla bilgisayara sahip olma fikri güvenli bir yol olsa da hem oldukça pahalı hem de taşınabilirlik açısından oldukça verimsizdir.</p>
+
+<p>Birden fazla bilgisayar yerine birden fazla USB disk fikri ise kısmen daha taşınabilir ve ucuz bir alternatif sunuyor olsa da, USB disklerin de birden fazla olması unutulma ihtimalini ortaya koyuyor. Örneğin işinizle ilgili acil bir veriye ulaşmanız gereken durumda, işinize özel olarak kullandığınız USB diskinizi evde unutmanız oldukça can sıkıcı olabilir.</p>
+
+<p>Bunun yerine tek bir bilgisayar ya da yalnızca tek bir USB disk üzerinden çoklu işletim sistemleri kullanmak, daha taşınabilir ve daha az unutulabilir bir çözüm olacaktır. İşte bu durum için "<strong>Qubes OS</strong>" harika bir çözümdür.</p>
+
+<p>Bilgisayarımıza ya da USB diskimize ana işletim sistemi olarak Qubes kurarsak, Qubes üzerinde birden fazla işletim sistemini birbirinden izole şekilde çalıştırmamız da mümkün oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_10-57-13-00ab86b181f0729e4617021008aa9bac.png" class="responsive"></figure>
+
+<p>Bu işletim sistemi tamamen güvenlik odaklı çalışarak farklı işletim sistemlerinin birbirinden izole şekilde aynı ortamda çalışabilmesine olanak tanıyor. Çalışma sistemi tüm yapıları hücrelere bölerek çok daha kontrollü bir sistem ortaya koyacak şekildedir. Nasıl bir sistem olduğunu ilerleyen kısımlardaki uygulamalı anlatım sırasında çok daha iyi anlamış olacaksınız.</p>
+
+<h4 id="1">Qubes OS Kullanım Alternatifleri</h4>
+
+<p>Qubes OS kullanmak için iki alternatif yolumuz bulunuyor.</p>
+
+<ul><li><p>USB üzerine kurarak kolay taşınabilir şekilde kullanmak.</p></li><li><p>Herhangi bir bilgisayarın depolama birimine kurarak, ilgili bilgisayarda kalıcı olarak kullanmak.</p></li></ul>
+
+<h4 id="2">Minimum Sistem Gereksinimleri</h4>
+
+<p>Kurulum işlemelerine geçmeden önce sisteminizin gereken şartları sağlayıp sağlamadığından emin olarak devam etmeniz önemli. Aşağıdaki şartlar minimum sistem gereksinimlerini içeriyor. Ayrıca sistem sürekli geliştiği ve değiştiği için bu gereksinimler de zaman içerisinde değişiklik gösterebilir. Bu sebeple en doğru bilgiyi işletim sisteminin kendi web sitesindeki <a href="https://www.qubes-os.org/doc/system-requirements/" target="_blank" rel="noopener noreferrer">sistem gereksinimleri </a>bölümünden öğrenebilirsiniz.</p>
+
+<p>Bu eğitimi hazırladığım dönemde sistem gereksinimleri aşağıdaki gibiydi;</p>
+
+<ul><li><p>64 bit intel ya da amd işlemci.</p></li><li><p>Sanallaştırma desteği;</p><ul><li><p><a href="https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_.28VT-x.29" target="_blank" rel="noopener noreferrer">Intel VT-x</a> ile <a href="https://en.wikipedia.org/wiki/Second_Level_Address_Translation#Extended_Page_Tables" target="_blank" rel="noopener noreferrer">EPT</a> ya da <a href="https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_.28AMD-V.29" target="_blank" rel="noopener noreferrer">AMD-V</a> ile <a href="https://en.wikipedia.org/wiki/Second_Level_Address_Translation#Rapid_Virtualization_Indexing" target="_blank" rel="noopener noreferrer">RVI</a></p></li><li><p><a href="https://en.wikipedia.org/wiki/X86_virtualization#Intel-VT-d" target="_blank" rel="noopener noreferrer">Intel VT-d</a> ya da AMD-Vi (aka AMD IOMMU))</p></li></ul></li><li><p>4 GB ram.</p></li><li><p>32 GB boş disk alanı.</p></li></ul>
+
+<p>Bu gereksinimlerin minimum düzeyde kullanım için olduğunu lütfen unutmayın. Yani sistemi stabil şekilde kullanmak istiyorsanız çok daha iyi sistem özelliklerine sahip olmanız gerekecektir.</p>
+
+<p>Nitekim 4 GB ram ya da 32 GB boş disk alanı minimum olarak gösteriliyor olsa da kesinlikle yeterli olmadığını üzülerek belirtmek zorundayım. Eğer sistemi stabil şekilde kullanmak istiyorsanız benim önerim en az 8 GB ram ve 40-45 GB boş disk alanına sahip olmanızdır. Sistem aynı anda pek çok alt işletim sistemini birbirinden izole şekilde çalıştırmak üzere tasarlandığından, sistem gereksinimlerinin normalin üzerinde olması gayet doğal. Eğer deneyimleme fırsatınız olursa, böylesi gereksinimlere neden ihtiyaç duyduğu konusunda benimle aynı fikirde olacağınıza eminim.</p>
+
+<p>Eğer şartlar sizin için müsaitse ya da müsait olmasa da nasıl kurulup kullanılacağını öğrenmek istiyorsanız, anlatımlara devam edelim.</p>
+
+<h4 id="3">USB Üzerinden Qubes OS Kullanmak</h4>
+
+<p>USB üzerinden kullanmak için öncelikle kurulum işleminde kullanılacak, en az 8 GB depolama alanına sahip bir adet USB diskimizin olması gerekiyor.</p>
+
+<p>İlk olarak bu USB diskimize kurulum imajını yükleyeceğiz. Ardından herhangi bir bilgisayar üzerinden bu USB diskimizi başlatarak, sistemin kurulmasını istediğimiz USB depolama alanına kurulumu gerçekleştireceğiz. Bu sayede işletim sistemi, seçtiğimiz USB diske kurulmuş olacak. En nihayetinde bizler de, USB diski kullanarak herhangi bir bilgisayarda izole işletim sistemlerimizi kullanabiliyor olacağız.</p>
+
+<h4 id="4">Depolama Birimine Kalıcı Kurulum</h4>
+
+<p>Aslında bu yöntem de USB üzerinden kurulum ile tamamen aynı. Tek fark kurulumu USB disk yerine bilgisayarın depolama birimine yani HDD ya da SSD gibi sabit disklerden birine yapıyor olmamız. Böylelikle bilgisayar ilgili depolama birimi ile başlatıldığında Qubes işletim sistemi kullanılabilir oluyor.</p>
+
+<p>Kurulum işlemi tamamen aynı olduğu için tek seferde iki çeşit kurulum işlemine de değinmiş olacağız. Aralarındaki tek fark, kurulumu yapacağımız alanı seçerken USB diske mi yoksa sabit diske mi kurulacağına karar vermemiz olacak. Alternatif kurulum işlemini "kalıcı" olarak isimlendirmiş olma nedenim, bilgisayara bağlı bulunan disk olmasıdır. Ancak bu yöntemlerin dışında boot edebileceğiniz herhangi bir harici disk alanına da kurulum yapmamız mümkündür. Bu seçimden zaten yeri geldiğinde tekrar bahsediyor olacağız. Şimdilik lafı daha fazla uzatmadan, kurulum aşamasında kullanacağımız USB diski hazırlama işlemlerine geçelim.</p>
+
+<h4 id="5">Qubes OS İndirmek Ve Doğrulamak</h4>
+
+<p>Öncelikle işletim sistemi imajını edinmek üzere Qubes işletim sisteminin web sitesini ziyaret edelim. Web sitesi üzerinde yer alan indirme sekmesine tıklayalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-00-01-cb5148bed8a78ce6acd28c89c4ebb923.png" class="responsive"></figure>
+
+<p>Açılan sayfada en yeni sürümden en eski sürüme kadar indirme bağlantıları yer alıyor. Elbette biz en son sürümü indireceğiz. Eski sürümleri artık desteklenmediği için güvenlik risklerine daha açıktır. İndirme işlemi için doğrudan ya da Torrent üzerinden olmak üzere iki alternatifimiz bulunuyor. Eğer bağlantı hızınız yavaş ise ve ayrıca indirmenin kesintiye uğraması halinde tekrar devam edebilmesini isterseniz Torrent seçeneğini kullanabilirsiniz. Kurulum imajı ile birlikte, elbette doğrulama yapabilmek adına imza dosyasını da üzerine sağ tıklayıp farklı kaydet diyerek indirelim.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-01-30-e5b5da9447cd488f1f77e21618fa4de3.png" class="responsive""></figure>
+
+<p>Ben anlatımları Windows üzerinden gösteriyorum ancak sizler kendi işletim sisteminizden de bu işlemleri rahatlıkla takip edebilirsiniz. Zaten kurulum için kullandığımız program ve doğrulama işlemlerinde gireceğimiz komutlar tüm sistemlerde aynı. Örneğin ben Windows'un komut satırı aracı olan "cmd" aracını kullanırken sizler MacOS için "Terminal", Linux için ise yine "Terminal" ya da "Konsol" olarak geçen araçlara aynı komutları uyguluyor olacaksınız.</p>
+
+<p>Tüm doğrulama adımlarını kolayca takip edebilmek adına, indirme sayfasında yer alan "doğrulama" kısmındaki soru işaretine tıklayalım. Böylelikle doğrulama adımlarını nasıl gerçekleştirebileceğimizi açıklayan <a href="https://www.qubes-os.org/security/verifying-signatures/" target="_blank" rel="noopener noreferrer">resmi rehber</a> karşımıza gelmiş oluyor.</p>
+
+<p>Hem kurulum imajını hem de imza dosyasını edindiğimize göre şimdi doğrulama adımlarına geçebiliriz. Doğrulama işlemini üç adımda gerçekleştiriyor olacağız. Bunlar;
+
+1- Geliştirici ana imzalama anahtarını edinmek ve değişmemiş olduğunu teyit etmek.
+
+2- Sürüm imzalama anahtarını edinmek.
+
+3- Qubes kurulum imajını yani "ISO" dosyasını doğrulamak.</p>
+
+<p>İlk adım olarak geliştirici ana imzasını edinmek üzere mevcut sistemimizdeki komut satırı aracını açalım. Ben Windows üzerinden anlatımları ele aldığım için ben "cmd" aracını açıyorum.
+
+</p>
+
+<p>Konsol aracım açıldıktan sonra, doğrulama rehberinde de yer aldığı şekilde ana anahtarı içeri aktarmak üzere ilgili komutu girelim. Ayrıca yeri gelmişken belirteyim; buradaki komutların başında, sistemimizde yüklü bulunan PGP doğrulama aracımızı çalıştıracak olan ifade <code>gpg2</code> olarak belirtiliyor ancak bizler bu ifade yerine yalnızca <code>gpg</code> komutunu kullanıyor olacağız. Çünkü kurmuş olduğumuz PGP doğrulama aracımız Windows sistemi üzerinde "gpg2" olarak değil "gpg" olarak geçiyor. Yani bizler aracımızı konsoldan yalnızca <code>gpg</code> komutu ile çağırıyoruz. Bu sebeple konsola <code>gpg2</code> şeklinde komut girdiğimizde, konsol bizim hangi aracı çalıştırmak istediğimizi anlayamayacağından hata verecektir. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-06-49-a76c858c970a7ae683d4ed66ec568726.png" class="responsive""></figure>
+
+<p>Yani anlatım sırasında doğrulama rehberi üzerinde yer alan tüm komutları, başında <code>gpg</code> ifadesi ile kullanıyor olacağız. Bahsetmiş olduğum bu durum Windows sistemi için geçerli. Yani sizin kullandığınız Mac ya da Linux sisteminde doğrulama aracı "gpg2" olarak geçiyorsa elbette komutların başına <code>gpg2</code> ifadesini yazabilirsiniz. </p>
+
+<p>Lütfen buradaki açıklamam kafanızı karıştırmasın. Size önerim hangi sistemi kullandığınıza bakmasızın, öncelikle komutlarınızın başında <code>gpg2</code> ifadesini girmeyi deneyin eğer hata alırsanız bu sefer <code>gpg</code> komutu ile doğrulama aracını çalıştırmayı denersiniz. Zira sizin eğitimi takip ettiğiniz dönemde doğrulama aracını konsol üzerinden çağırma şekli değişmiş olabilir. Yine de söylediğim gibi deneme yanılma ile kolayca hangisinin doğru sonuca götürdüğünü bizzat test edebilirsiniz.
+
+</p>
+
+<p>Bu durumu da netleştirdiğimize göre şimdi ana anahtarı içerik aktarmak üzere komutumuzu girelim.
+
+Böylelikle ana geliştirici anahtarını sunucu üzerinden içeri aktarmış olduk. Her ne kadar düşük bir ihtimal de olsa anahtarı edindiğimiz sunucu ya da bizim internet trafiğimiz hacklenip, anahtarın sahtesi ile değiştirilmiş olma ihtimali bulunuyor. Bu sebeple edindiğimiz ana anahtarın parmak izini kontrol edip, değiştirilip değiştirilmediğini teyit edelim. Bu işlem için konsola <code>gpg --fingerprint</code> komutunun ardından edinmiş olduğumuz anahtarın kimliğini girelim.</p>
+
+<pre class="prettyprint linenums"> gpg --fingerprint 0x427F11FD0FAA4B080123F01CDDFA1A3E36879494</pre>
+
+<p>Aldığımız çıktıdaki parmak izi ile web sayfasındaki kıyaslayarak, edinmiş olduğumuz ana anahtarın değişip değişmediğini teyit edebiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-08-21-11e6fe8c9997c8fb370949d6eb938b55.png" class="responsive""></figure>
+
+<p>Ancak bu noktada unutmamanız gereken detay, web sitesinin de hacklenmiş olabileceğidir. Yani parmak izini yalnızca web sitesi üzerinden değil, internet üzerindeki farklı kaynaklardan da aratarak teyit etmenizi şiddetle tavsiye ederim. Parmak izini internette aratarak bu parmak izinin hangi anahtara ait olduğuna dair pek çok farklı kaynaktan teyit alabilirsiniz. Neticede bizler, edinmiş olduğumuz ana anahtarın parmak izinin değişmemiş olduğunu teyit etmiş olduk. </p>
+
+<p>Şimdi ikinci adım olan sürüm imzalama anahtarını edinmemiz gerekiyor. Bu işlem için de yine doğrulama rehberinde yer alan komutumuzu girelim. Bu komutu girerken dikkat etmeniz gereken detay, kullandığınız sürüme göre komut içerisindeki "X" ifadesini değiştirmektir. Örneğin bizim kullandığımız sürüm "4" olduğu için "X" ifadesi yerine "4" rakamını yazarak komutumuzu giriyoruz.</p>
+
+<pre class="prettyprint linenums">gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys https://keys.qubes-os.org/keys/qubes-release-4-signing-key.asc</pre>
+
+<p>Ayrıca komutu girdiğinizde bende olduğu gibi "https" bağlantısı sorun oluşturuyorsa "https" yerine "http" bağlantısı şeklinde komutunu düzenleyebilirsiniz.</p>
+
+<pre class="prettyprint linenums">gpg --keyserver-options no-self-sigs-only,no-import-clean --fetch-keys http://keys.qubes-os.org/keys/qubes-release-4-signing-key.asc</pre>
+
+<figure><img src="./../../img/5/2020-06-14_11-10-09-6fe610a2e39d3210ed5a06d23262a366.png" class="responsive"></figure>
+
+<p>Anahtarı içeri aktardıktan sonra indirme işlemi sırasında edinmiş olduğumuz imza dosyası ile kurulum imajının konumunu belirterek doğrulama işlemini yapalım.</p>
+
+<p>
+
+Ben öncelikle indirme konumuna gitmek üzere <code>cd</code> komutunun ardından dosyaların bulunduğu konumu belirtiyorum. Dosyaların bu konumda olduğu <code>dir</code> komutu ile dosyaları listeleyerek teyit edebiliriz. Görebileceğiniz gibi kurulum imajımız ve imza dosyamız bu konumda yer alıyor. Şimdi doğrulamayı gerçekleştirmek üzere önce imza dosyası ardından kurulum imajını belirtecek şekilde komutumuzu girelim. Komutumuzun ardından kısa bir süre sonra doğrulama işlemini başarılı bir biçimde gerçekleştirmiş oluyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-10-22-22ef3debe1fa0e9c33a5af32d88f5708.png" class="responsive"></figure>
+
+<p>Eğer çıktılarda anahtarın içeri aktardığımız imza ile eşleştiği belirtiliyorsa, kurulum dosyamız güvenli yani değiştirilmemiş dosyadır. Sizde teyit edebiliyorsanız kurulum diski oluşturma işlemi ile devam edebiliriz.
+
+Ayrıca eğer sizin eğitimi takip ettiğiniz dönemde doğrulama adımlarında değişiklik meydana geldiyse, elbette kendi web sitesi üzerindeki doğrulama rehberini takip ederek kolayca doğrulama yapabilirsiniz. Zaten ben de anlatım sırasında doğrulama rehberinden yardım alarak adımları sizlere göstermeye çalıştım. Yani sizlerin de ana rehberi web sitesi üzerindeki kaynak olmalı. Bu sayede değişimlerden etkilenmeden doğrulama işlemeni gerçekleştirebilirsiniz.</p>
+
+<h4 id="6">Kurulum Diski Oluşturmak ve Sistemi Disk Üzerinden Başlatmak</h4>
+
+<p>Kurulum işlemi için en az 8 GB depolama alanına sahip bir USB diskimiz olması gerekiyor. USB diski temin ettikten sonra yine "Etcher" isimli araç ile kurulum imajını USB disk üzerine yazdırıyoruz.</p>
+
+<p>İşlem tamamlandığında içerisinde kurulum imajı yer alan kurulum diski oluşturulmuş oluyor. Artık bu USB diski kullanarak istediğimiz bir depolama birimine Qubes işletim sistemini kurabiliriz.</p>
+
+<p>Kurulum işlemi için USB diski bilgisayar başlangıcında açılacak şekilde ayarlamamız gerekiyor. Ayrıca Qubes işletim sistemini çalıştıracak bilgisayarın sanallaştırma özelliğinin bios üzerinden aktif edilmesi de gerekiyor.</p>
+
+<p>Gereken ayarlamayı yapmak üzere bios menüsünü açalım.</p>
+
+<p>Bios menüsünü açmak için bilgisayarınız açılışında bilgisayarınıza özel olan bios menüsüne giriş tuşuna basmanız gerekiyor. Bu tuş genellikle F2 F10 F11 F12 ya da DEL gibi tuşlardır. Hangi tuşun bios menüsünü açtığını bilgisayarınızın açılışında, ekranın alt tarafında yer alan bilgi kısmından ya da modeline göre internet üzerinden kısa bir araştırma yaparak öğrenebilirsiniz.</p>
+
+<p>Bios menüsünü açtıktan sonra ilk yapmamız gereken işlem, sanallaştırma teknolojisini aktifleştirmek. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-27-56-a7df26bb9944ff0c646a0c8265856fd2.png" class="responsive"></figure>
+
+<p>Ayrıca kurulum noktasında sorun yaşamamak adına "secure boot" seçeneğini de "devre dışı" bırakalım. Ek olarak boot modunu "UEFI" yerine "Legacy" destekli mod olarak ayarlayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-28-22-463402f853df5d91dff20e1722745a4f.png" class="responsive"></figure>
+
+<p>Son olarak bilgisayarın USB üzerinden başlatılabilmesi için, boot sırasında USB seçeneğini en üste alalım. Tüm ayarlamaları yaptıktan sonra, ayarları kaydederek bilgisayarın yeninden başlamasını sağlayalım. Eğer her şeyi doğru yapmanıza rağmen bilgisayarınızı USB üzerinden başlatmayı başaramadıysanız soru-cevap kısmından bana ulaşabilirsiniz. Yine de bana sormadan önce lütfen tüm işlemleri doğru şekilde yerine getirdiğinizden emin olun.</p>
+
+<p>Bilgisayar USB diskimiz üzerinden başlatıldığında, kurulum işlemini başlatmak için seçenek menüsü gelmiş oluyor. Buradan "<strong>Test this media &amp; install Qubes</strong>" seçeneğini seçerek, kurulum işleminden önce kurulum için şartların el verişli olup olmadığının test edilmesini sağlayalım. Eğer şartlar müsaitse karşımıza kurulum için rehber geliyor. İlk olarak kurulum işlemine hangi dil ile devam etmek istediğimizi soruyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-35-58-bb555f1678efad798635da867632f403.png" class="responsive"></figure>
+
+<p>Buradan "<strong>Türkçe</strong>" seçeneğini ve Türkçe klavye ayarını seçip devam edelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-40-31-3d40b2afc8b3f5f92af6434f9cdf528f.png" class="responsive"></figure>
+
+<p>Bu noktada eğer karşınıza "<strong>Unsupported Hardware Detected</strong>" hatası çıkıyorsa, bios ayarlarınızdan sanallaştırma teknolojisini açmadığınız ya da bu özelliği bilgisayarınızın desteklemediği anlamına gelir. Bu uyarının ardından işleme devam etseniz dahi kurulum sonrası sistemi çalıştırma noktasında sorun yaşarsınız.</p>
+
+<p>Yine de sanallaştırma teknolojisi olmayan bilgisayarınızı sadece kurulum işlemi sırasında kullanacaksanız kurulum işlemine devam edebilirsiniz.</p>
+
+<p>Devam ettikten sonra karşımıza "<strong>Kurulum Özeti</strong>" sayfası geliyor. Buradan sistem saati, klavye ve dil ayarlarını değiştirebilirsiniz.</p>
+
+<p>Yazılım başlığı altındaki ayarları değiştirmeden, kurulumu yapacağımız disk alanını belirtmek üzere "<strong>System</strong>" başlığı altındaki "<strong>Kurulum Konumu</strong>" kısmına tıklayalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-40-52-898b6e21e94351c3495a3dff102efc69.png" class="responsive"></figure>
+
+<p>Açılan sayfada kurulumu hangi disk alanına yapacaksak o alanı seçmemiz gerekiyor. Örneğin ben USB diske kurulum yapacağım için USB diskimi seçiyorum. Eğer sizler de USB disk üzerine kurulum yapacaksanız daha önce de belirttiğim şekilde pek çok durumda 32 GB yetersiz kalacağından, benim önerim 64 GB alana sahip USB 3.0 bağlantısına bulunan bir USB kullanmanızdır. 64 diyorum çünkü genellikle USB diskler 16..32..64 gibi standart büyüklüklere sahiptirler. 32 GB'dan fazla olması için 64 dedim ancak yine de 64 olması zaruri şart değil. Görüldüğü gibi benim kurulum yapacağım USB diskim de 32 GB'dan daha büyük depolama alanına sahip. Eğer sizler USB disk yerine sabit diskinize kurulum yapmak isterseniz, yine aynı şekilde benim önerim buradan minimum 40-45 GB depolama alanına sahip olan sabit diski seçmeniz olacaktır. Sabit diske kurulumda mümkünse SSD tercih etmeniz performans açısından oldukça verimli olacaktır.</p>
+
+<p>Her şekilde kurulum işlemi aynı olduğundan tek fark buradan hangi depolama birimine kurulumu yapmak istediğinizi seçmek. Seçimimizi yaptıktan sonra hiç bir ayarı değiştirmeden "<strong>Bitti</strong>" diyerek devam edelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-41-07-0fa8445a4edb1588b35b024f984651ad.png" class="responsive"></figure>
+
+<p>Disk alanını şifrelemek için parola belirlememizi isteyen pencere açılıyor. Buraya güçlü ama unutmayacağımız bir parola belirleyip devam edelim. Parola girmeyi tamamladıktan sonra "<strong>parolayı kaydet</strong>" diyerek devam edelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-41-29-b46f81755e81790b81c0d7610ea657ff.png" class="responsive"></figure>
+
+<p>Eğer seçili disk alanı tamamen boş değilse bizi bu konuda uyaran bir pencere açılıyor. Buradan "<strong>Reclaim space</strong>" butonuna basalım ve açılan pencereden "<strong>Delete all</strong>" diyerek tüm disk alanın sıfırlanmasını sağlamak üzere "<strong>Reclaim space</strong>" butonuna basalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-41-43-39ddebb864287622a6edecab63a0f5bd.png" class="responsive"></figure>
+
+<figure><img src="./../../img/5/2020-06-14_11-42-03-95b5d6161f4d512482dd04e556082a96.png" class="responsive"></figure>
+
+<figure><img src="./../../img/5/2020-06-14_11-42-22-908949e4954c4bf2eb275f77fdcf78ac.png" class="responsive"></figure>
+
+<p>Tüm bu ayarlamaların ardından tekrar en başta karşımıza çıkan "<strong>Kurulum Özeti</strong>" sayfasına dönmüş olduk. Eğer tüm ayarlar istediğimiz gibiyse "<strong>Kuruluma Başla</strong>" diyerek, seçmiş olduğumuz disk alanına Qubes işletim sisteminin kurulmasını sağlayalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-42-29-6cd23d90ef7bcc4028999b0fd3ab4a65.png" class="responsive"></figure>
+
+<p>Kurulum işlemi devam ederken biz de yeni bir kullanıcı hesabı oluşturmak için "<strong>Kullanıcı Oluşturma</strong>" kısmına tıklayalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-42-40-a4cbbb9effb4b43fdeb0fe3e5230484b.png" class="responsive"></figure>
+
+<p>Buradan kullanıcı adımızı ve hesaba ait olacak güçlü parolamızı girelim. Bu hesabı, sistemde oturum açarken kullanıyor olacağız. Önceki parola belirleme işlemimiz disk alanını şifrelemek içindi, bu ise kullanıcı hesabımızı şifrelemek için. Gerekli alanları doğru şekilde doldurduktan sonra "<strong>Bitti</strong>" diyerek hesabın oluşturulmasını sağlayalım. </p>
+
+<p>Eğer sistemde kök kullanıcısı yani en yetkili kullanıcı olan root hesabını aktifleştirmek isterseniz buradan kök hesabı için parola belirleyebilirsiniz. Ancak benim önerim tıpkı Tail işletim sisteminde olduğu gibi kök hesabını, güvenliğiniz için eğer ne yaptığınızdan emin değilseniz yani uzman bir kullanıcı değilseniz kesinlikle aktifleştirmemenizdir. Zaten sistemin yapısı gereği temel kullanım için kök hesabına ihtiyacınız olmayacaktır. Burada oluşturduğumuz kullanıcı da yönetici hesabı olduğundan sistemi root yetkilerine ihtiyaç duymadan rahatlıkla kullanabiliyor olacağız. Ben root hesabını aktifleştirmeden devam ediyorum.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-43-15-119f62db088622123c8f1b15d084a146.png" class="responsive"></figure>
+
+<p>Kurulum işleminin süresi, kurulumu yaptığınız alana göre değişiklik gösterebilir. Özellikle USB üzerine kurulumlar oldukça uzun sürebiliyor. Sadece işlem bitene kadar sabırla bekleyin.</p>
+
+<p>Kurulum işlemi bittiğinde "<strong>Yeniden başlat</strong>" butonuna basarak sistemin yeniden başlamasını sağlayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-43-35-142939c29119cf068ccd4b48d4222eb0.png" class="responsive"></figure>
+
+<p>Bilgisayar yeniden başlatılırken kurulum işlemi için kullandığımız USB diskimizi çıkarıyoruz çünkü sistem varsayılan olarak bu diskten başlatılacaktı. Sizde eğer sistemi USB disk üzerine kurduysanız, yalnızca kurulumu yapmak için kullandığınız düşük boyutlu olan USB diski sistemden çıkarın. Eğer sabit diske kurulum yaptıysanız, zaten kurulum USB diskini çıkarınca ikinci sırada sabit diskiniz geldiği için sistem bu sabit disk üzerinden başlatılacaktır. Yine de Qubes işletim sistemini başlatmada sorun yaşarsanız, bios ayarlarınıza giderek boot sekmesinden boot sırasınında Qubes işletim sisteminin kurulu olduğu disk alanını en üste getirmeniz yeterli olacaktır.</p>
+
+<p>Eğer tüm işlemleri doğru yaptıysanız sistem yeninden başlatıldığında karşınıza disk parolasını soran ekran gelmiş olmalı. Buraya, kurulum aşamasında diski şifrelemek için belirtmiş olduğunuz parolayı girin.</p>
+
+<p>Disk şifresini açtıktan sonra karşımıza gelen pencerede son ayarlamamızı da yapmak üzere, ünlem işaretli "<strong>Qubes OS</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-44-23-aa5a2a93d50014e4105b14bc3c521cb4.png" class="responsive"></figure>
+
+<p>Açılan sayfadaki hiç bir ayarı değiştirmeden "<strong>Bitti</strong>" diyerek devam edelim. Son olarak "<strong>Konfigürasyonu Bitir</strong>" butonuna basarak, konfigürasyon işleminin tamamlanıp sistemin başlatılmasını bekleyelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_11-44-49-d8edebb5bb8866e456ae14cc051bbf02.png" class="responsive"></figure>
+
+<p>Bu işlem de biraz vakit alabilir, sabırla tüm konfigürasyonun tamamlanmasını bekleyelim. Konfigürasyonlar da tamamlandıktan sonra, kurulum aşamasında oluşturmuş olduğumuz kullanıcı hesabımıza giriş yapalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-45-31-5542342bf52f5df4078f311a9f797573.png" class="responsive"></figure>
+
+<p>Ve neticede masaüstü arayüzü bizleri karşılamış oluyor.</p>
+
+<figure><img src="./../../img/5/2020-06-14_11-45-58-49022e84490efe7217f36d99144c28dd.png" class="responsive"></figure>
+
+<h4 id="7">Sistem Arayüzüne Genel Bakış</h4>
+
+<p>Kurulumu tamamladığımıza göre şimdi sistemin kullanımından ve genel özelliklerinden bahsederek anlatımlara devam edelim. Ancak anlatımlara başlamadan önce bu bölümde Qubes işletim sistemini temel anlamda kullanabilmeniz için gereken tüm detaylara değineceğimizi peşinen bildirmek istiyorum. Haliyle bu bölüm nispeten eğitim geri kalanından daha uzun soluklu bir bölüm olacaktır. Yani eğer Qubes işletim sistemini gerçekten aktif olarak kullanacaksınız ya da kullanımını merak ediyorsanız bu bölümdeki tüm anlatımlar sizin için gerekli bilgileri içeriyor olacak. Bu sebeple lütfen "anonimlik" ve "gizlilik" temelindeki bir kursta neden uzun uzadıya işletim sistemi kullanımından bahsettiğimi eleştirmeyin. Bu bölümdeki her bilgi Qubes işletim sistemi özelinde anonimlik ve gizilik konuları kapsadığı için ele alınıyor olacak. Eğer bu konuda hemfikirsek ve şartlar sizin için müsaitse anlatımlara başlayalım.</p>
+
+<p>Sistem, performans verimliliği açısından oldukça yalın bir grafik arayüze sahip olduğundan kullanması oldukça kolaydır. Daha önce Tail işletim sistemini ele alırken açıkladığımız pek çok kullanım detayı bu sistem için de benzer şekildedir. Sadece sistemin güvenlik gerekçeleriyle kendine has olan bir takım özelliklerine alışmanız gerekecektir. Bu özelliklere de kısa sürede alışacağınıza eminim. Tek yapmanız gereken dikkatli bir biçimde müfredat sırasına uyarak rehberi takip etmek. Lafı daha fazla uzatmadan karşımıza gelen temel arayüzden ve sistemin kullanımından bahsetmeye başlayalım.</p>
+
+<p>Öncelikle sistemin ilk açılışında karşımıza gelen pencereden bahsedecek olursak. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-02-30-96854754c016fa381364e8184c01f7ee.png" class="responsive"></figure>
+
+<p>Bu pencere, gerektiğinde Tor ağına bağlanmamızı sağlayan Whonix servisinin ayar penceresidir. Biz bu pencereden Whonix servisinin Tor ağı bağlantı ayarlarını düzenleyebiliyoruz. Eğer "Connect" seçeneği ile devam edersek, Whonix hizmeti doğrudan Tor ağına bağlanıyor olacak. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-03-31-853e69e8002a272fc19bfc191b06be75.png" class="responsive"></figure>
+
+<p>Bunun yerine köprü bağlantısı belirtmek istersek "Configure" seçeneği ile devam etmemiz gerekir. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-04-14-385ef8c048ef7386112814b417ee979c.png" class="responsive"></figure>
+
+<p>Açılan sayfada köprü bağlantısına ihtiyacımız olduğunu belirtip, otomatik olarak ayarlanmasını ya da elle girmeyi tercih edip gereken ayarlamayı yapabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-04-21-7d25b55f6148cf6475c68a90c60c266a.png" class="responsive"></figure>
+
+<p>Tüm bunlar haricinde Tor ağı bağlantısını istemezsek geri gelerek "Disable Tor" seçeneğini de seçebiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-04-30-b7ef10e8dbebdde76996f6803ed60961.png" class="responsive"></figure>
+
+<p>İstediğimiz seçeneği seçerek devam edelim. İşlem bitiminde "<strong>Finish</strong>" diyerek pencereyi kapatalım.</p>
+
+<p>Bu yaptığımız işleme şimdilik anlam verememiş olabilirsiniz. Ancak endişelenmeyin. Burada yaptığımız ayar, ileride defaatle ele alacağımız Tor ağı bağlantısını sağlayan Whonix hizmeti için gerekli bir ayarlamaydı. Ayrıca sistemi ilk başlattığınızda pencere sizde açılmadıysa da sorun yok. Kimi durumlarda kurulumun hemen ardından bu ayar penceresinin açılmadığı da olabilir. Tor ağı bağlantısını gerektiren bir durumda ya da sistemi daha sonra yeniden başlattığınızda bu pencere karşınıza çıkacaktır. Burada bilmeniz gereken tek şey, daha önce de yaptığımıza benzer şekilde Tor bağlantısı için ayarlama yapmış olduğumuzdur. Anlatıma grafiksel arayüz ile devam edecek olursak;</p>
+
+<p>Görev çubuğunun köşesinde yer alan Qubes simgesine tıkladığımızda, sistemle ilgili pek çok kısayolu içeren araç menüsü açılmış oluyor.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-05-50-7e81cdb61189a696bf9878100b666f0a.png" class="responsive"></figure>
+
+<p><strong>Run Program;</strong> Ana işletim sisteminde yüklü bulunan programların kısayoldan çalıştırılmasını sağlar. Ana işletim sistemi dediğimiz sistem şu an üzerinde çalışmakta olduğumuz sistemdir. İleride ne demek istediğimi çok daha iyi anlamış olacaksınız.</p>
+
+<p><strong>Terminal Emulator;</strong> Ana sisteme komut girmemizi sağlayan basit bir araçtır. Komut aracının ne olduğunu, daha önce indirmiş olduğumuz programları doğrulama işleminde&nbsp; "Windows", "Mac" ve "Linux" sistemlerinde görmüştük zaten. Özetle buradaki komut aracını çalıştırarak, gerektiğinde ana sistemimize komutlar verebiliyoruz. Bu komut aracını da zaten eğitim içerisinde kullanıyor olacağız.</p>
+
+<p><strong>Create Qubes VM;</strong> Bu seçenek yeni sanal sistemler oluşturmamızı sağlayan pencereyi açıyor. Yeni bir sanal sistemi nasıl oluşturabileceğimizden eğitimin ilerleyen kısımlarında bahsediyor olacağız. Şimdilik listedeki bu seçeneğin yeni sanal makine oluşturma görevinde olduğunu bilmeniz yeterli.</p>
+
+<p><strong>System Tools;</strong> Bu kısımdan ise sistemde yer alan pek çok araca kısayoldan ulaşabiliyoruz. Örneğin sistem ayarlarını açmak için "<strong>Settings Manager</strong>" kısmına tıklamamız yeterli oluyor. Açılmış olan ayarlar penceresinde açıklanacak özel bir durum yok. Tıpkı Tail sisteminde olduğu gibi ihtiyacınız olan sistem ayarlamalarını buradan kolayca gerçekleştirebilirsiniz. Tekrar araçlar listesine dönecek olursak, aslında burada yer alan pek çok seçeneğin sadece ayarların kısayolları olduğunu da görebilirsiniz. Ayarlar dışındaki seçeneklerden de zaten yeri geldikçe bahsediyor olacağız.</p>
+
+<p>Ayrıca gördüğünüz gibi menünün devamında pek çok farklı amaç için çeşitli işletim sistemleri, servisler ve şablonlar yer alıyor. Şimdilik menüde yer alan seçeneklerin detaylarını bir kenara bırakarak, görev çubuğundaki diğer yapılardan da kısaca bahsedelim.</p>
+
+<p>Görev çubuğunda, çalışmakta olan uygulamayı görebiliyoruz. Dilersek buradan da uygulamayı kapatma, yeniden boyutlandırma gibi işlemleri yerine getirebiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-09-50-3a31fc2dd57dba568a8f8e3c4b95e9c6.png" class="responsive"></figure>
+
+<p>Ayrıca tıpkı Tail sisteminde olduğu gibi çoklu çalışma ortamlarına geçiş yapma imkanımız da bulunuyor. Ortamlar arasında geçiş yapmak için gitmek istediğimiz ortamı seçmemiz ya da faremizdeki tekerleği kullanmamız mümkün. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-10-02-93692c22e53e4ca65f666aa94b9220a3.png" class="responsive"></figure>
+
+<p>Hem masaüstündeyken hem de çalışma alanlarını temsil eden bu bölümdeyken, faremizdeki tekerleği kullanarak çalışma ortamları arasında hızlı geçişler yapabiliyoruz. Saatin yer aldığı kısıma tıklayarak takvime ulaşabiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-10-12-d83f76dddbc034ac7a5259e33c085390.png" class="responsive"></figure>
+
+<p>Hoparlör simgesi de açık bir biçimde sistemin ses seviyesini ayarlamamızı sağlıyor.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-10-28-2a68d9033aea358b582a536f74c2b17d.png" class="responsive"></figure>
+
+<p>Bilgisayarların yer aldığı simgeye tıklarsak da, kablolu ağ bağlantımızın durumunu gösteren panel açılıyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-10-38-4e854e03e696be2a3d39fa69ed95f1f9.png" class="responsive"></figure>
+
+<p>Eğer sistem wi-fi kartımızı destekliyorsa, kablolu bağlantı dışında Wi-Fi bağlantısı yani kablosuz bağlantı sağlamamız da mümkün oluyor. İnternet bağlantımızı kablosuz şekilde yaptığımızda, buradaki simge de kablosuz bağlantıyı ifade edecek şekilde değişiyor. </p>
+
+<p>Pano kısmına tıklarsak, farklı sanal sistemler arasında kopyalama yapmamızı sağlayan "<strong>kopyala-yapıştır</strong>" paneli açılmış oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-11-39-1dc51c4f9fb41c971ec695d632fb1b74.png" class="responsive"></figure>
+
+<p>Bu panel güvenlik için Qubes sisteminin kullandığı harici bir özellik. Daha sonra bu özelliği uygulamalı şekilde test ediyor olacağız. Aygıtlar kısmında ise, sisteme bağlı bulunan aygıtların listesi yer alıyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-11-57-3bce4d1e105f182dac092dc05df86491.png" class="responsive"></figure>
+
+<p>Bu kısım da güvenlik amaçlı oluşturulmuş bir özelliği temsil ediyor. Bu güvenlik özelliği sayesinde biz özellikle belirtmediğimiz sürece bu listedeki hiç bir aygıta hiç bir alt sistem ulaşamıyor. Yani aygıtların erişim kontrolü de tamamen bizim ellerimizde oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-12-11-670bf6f85c3163a71ba28a3545fc56e4.png" class="responsive"></figure>
+
+<p>Disk simgesine tıklayarak, sistemin toplam disk alanı ve kullanılan miktarı hakkında bilgi edinebiliyoruz. Sistem logosunun bulunduğu kısımdan da, çalışmakta olan sistemlerin ne kadar sistem kaynağı tükettiğine genel bir bakış atabiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-12-26-abe70f07023e99571cddf6220943df7b.png" class="responsive"></figure>
+
+<p>Ayrıca sistemlerin özelliklerine buradan ulaşabilir ya da duraklatıp, kapatma gibi işlemleri yerine getirebiliriz. Daha fazla detay almak istersek de "<strong>Open Qube Manager</strong>" kısmına tıklayabiliriz. Açılan yönetim panelinden sistemlerin durumları hakkında bilgi alıp çeşitli ayarlamaları da yapabiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-12-35-5e4470aae5a1ef0b69ab34f52afe9f98.png" class="responsive"></figure>
+
+<p>Bu yönetim panelinden de anlatım sırasında ayrıca bahsediyor olacağız. Pil ve güncelleme kısımlarından sistemin güncelleme ve pil durumunu da öğrenebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-12-51-25aecb6936aafb0274e0d22d2230736a.png" class="responsive"></figure>
+
+<p>Kullanıcı adımızın yazılı olduğu kısıma tıklayarak da; ekranı kilitleme, kullanıcı değiştirme, uykuya alma, sistemi ve oturumu kapatma gibi işlemleri yerine getirebiliyoruz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-13-08-d5ef82705bb836bc5c2f42c9040ae7c6.png" class="responsive"></figure>
+
+<figure><img src="./../../img/5/2020-06-14_12-13-16-adf8a2d4d9f453904d10c7acf3b23384.png" class="responsive"></figure>
+
+<h4 id="8">Yüklü Bulunan Alt Sistem Türleri Hakkında</h4>
+
+<p>Genel arayüzden bahsettiğimize göre şimdi de menüde yer alan seçeneklere dönerek, yavaş yavaş sistemin çalışma yapısını daha net görmeye başlayalım.</p>
+
+<p>Üzerinde çalışmakta olduğumuz ana sistemin kontrolü altında, sanal olarak çalıştırabileceğimiz birden fazla sistem varsayılan olarak yüklü geliyor. Buradaki tüm sistemler farklı amaçlar için farklı özelliklere sahip olan ve tamamen birbirinden izole şekilde çalışan sanal işletim sistemleridir. Qubes işletim sisteminin temel amacının da izole şekilde çoklu sistemleri çalıştırmak olduğunu bölümün başında dile getirmiştik. Şimdi sırasıyla listede yer alan alt işletim sistemleri hakkında bilgi edinmeye başlayalım.</p>
+
+<h4 id="9">Disposable</h4>
+
+<p>"Disposable" olarak geçen sistemler, tek kullanımlık geçici hizmet sunarlar. Yani bu sistemler de tıpkı Tail işletim sistemi gibi "unutkan" şekilde çalışırlar. Çalışma yapısı gereği bu tür sistemler, güvenliğinden endişe duyulan geçici işler için sıklıkla tercih edilir.</p>
+
+<p>Örneğin herhangi bir dosyanın virüslü olduğundan şüphe duyarsak, ilgili dosyayı bu geçici alanda çalıştırabiliriz. Dosyayı çalıştırıp işimizi bitirdikten sonra pencereyi kapattığımızda her şey otomatik olarak sıfırlanıp eski haline döneceği için, zararlı dosya da kendiliğinden kalıcı olarak silinmiş olacak. Zararlı dosyalar dışında benzer şekilde zararlı olabilecek web sitelerini de bu tek kullanımlık hizmetler üzerinden ziyaret etmemiz mümkündür. Üstelik bu alanda faaliyet yürüten hiç bir zararlı içerik diğer sanal sistemlere sızamaz. Gerekli tüm süreçler kısa süreli olarak açılan pencerede çalışır, pencere kapatıldığında ise tamamen yok edilir. Tail sisteminde sadece işletim sistemi tamamen kapatıldığında veriler siliniyorken, "Disposable" olarak geçen bu sistemlerde pencerelerin kapatılması dahi mevcut verilerin silinmesi için yeterli. Yani güvenliğinden endişe ettiğiniz her türlü iş için bu sistemlerden yararlanabilirsiniz.</p>
+
+<p>Listede de görüldüğü gibi tek kullanımlık iki adet sistemimiz bulunuyor. Sistem isimlerinin sonunda yer alan numaralar, sistemin mevcut sürümünü temsil eden numaralardır. Yani siz bu eğitimi takip ederken eğer güncelleme yapıldıysa bende gördüğünüz sistem sürümleri sizde daha yüksek gözüküyor olabilir. Bu durum eğitimi takip etmenize kesinlikle engel değil. Ayrıca her iki sistemin sonunda yer alan "<strong>dvm</strong>" kısaltması da "<strong>d</strong>isposible <strong>v</strong>irtual <strong>m</strong>achine" ifadesinin kısaltmasıdır. Bu kısaltma da, sistemlerin "geçici sanal makineler" olduğunu belirtir. </p>
+
+<p><strong>"fedora-dvm" olarak geçen kısımda;</strong></p>
+
+<ul><li><p>Firefox tarayıcısı ile güvenli bulmadığımız web sitelerini ziyaret edebilir.</p></li><li><p>Mevcut sistemin özelliklerini değiştirebilir.</p></li><li><p>XTerm komut aracı ile komut girmeyi gerektiren geçici işlemleri yerine getirebiliriz.</p></li></ul>
+
+<p><strong>"whonix-dvm" olarak geçen kısımda;</strong></p>
+
+<ul><li><p>Destek ile iletişim kurabilir.</p></li><li><p>Kullanılan sistemin özelliklerini değiştirebilir.</p></li><li><p>Dosya yöneticisini çalıştırabilir.</p></li><li><p>Tor tarayıcısını kullanabilir.</p></li><li><p>Yeni sürüm Tor tarayıcısını yükleyebilir.</p></li><li><p>Whonix servisinin durumunu kontrol edebilir.</p></li><li><p>Xfce Terminali üzerinden komut girebiliriz.</p></li></ul>
+
+<p>Sistemlerin içerisinde yer alan araçlar ilk bakışta size yetersiz gelmiş olabilir, ancak endişelenmeyin. İlerleyen kısımlarda bu sistemlere, ihtiyacınız olan araçları nasıl yükleyip kullanabileceğinizi öğrenmiş olacaksınız. Lütfen bu noktada sistemlerin kısıtlı olduklarına dair yanlış bir yargıya kapılmayın. Herhangi bir işletim sisteminden farksız şekilde bu sistemleri de kullanmak mümkündür.</p>
+
+<p>Ayrıca neden hem "Fedora" hem de "Whonix" isimli iki adet "<strong>unutkan</strong>" sistemin bulunduğunu merak ettiyseniz;</p>
+
+<p>Fedora olarak geçen sistem, ağ trafiğini Tor bağlantısı olmadan standart ağ bağlantısı üzerinden sağlıyor. Whonix olarak geçen sistem ise tüm internet trafiğini Tor ağı üzerinden yönlendirecek şekilde çalışıyor. 
+
+Yani Fedora-dvm sistemi Tor ağını kullanmayan "unutkan" bir sistemdir. Whonix-ws-dvm ise hem "unutkan" hem de tüm internet trafiğini Tor ağı üzerinden sağlamakta olan diğer bir alternatif sistemdir.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-18-45-b9a8ad1f5d18710436001f3f5f6de62c.png" class="responsive"> </figure>
+
+<p>Zaten işletim sistemleri içerisinde varsayılan olarak yüklü gelen uygulamalara bakarak da sistemlerin bağlantı türleri hakkında rahatlıkla çıkarımda bulunabiliriz. Gördüğünüz gibi "whonix-ws" sisteminde Tor ile ilgili bileşenler yüklü geliyor. Yine de belirteyim tüm bu araçları ve ağ bağlantı türünü düzenleyip değiştirmek bizim elimizde. Yani burada gördüğünüz her şey sadece varsayılan olarak gelen standartlardır. Biz istersek tüm bu varsayılan standartları düzenleyebiliyoruz. Ayrıca eğitimin devamında Tor ağını kullanan servislerden ve Tor ağının ayarlarından söz ediyor olacağız. Şimdilik daha fazla kafa karıştırmadan listedeki diğer seçeneklerden de söz edelim. Sistem özelliklerini değiştirme işleminden yeri geldiğinde zaten ayrıca bahsediyor olacağız.</p>
+
+<h4 id="10">Domain</h4>
+
+<p>"Domain" olarak geçen sistemler, şablonlar üzerinden üretilmiş kalıcı olan standart sanal sistemleri temsil ediyor. Kalıcı diyorum çünkü bu sistemler "Disposable" sistemleri gibi "unutkanlık" özelliğine sahip değildir. Sıradan işletim sistemlerinde olduğu gibi dosyalarımız tekrar ulaşabileceğimiz şekilde sistem içerisinde tutulur. Burada gördüğünüz gibi farklı amaçlar için, farklı isim ve renklerde sistemler bulunuyor.</p>
+
+<p>Birden fazla sistem bulunmasının amacı; farklı amaçlar için ayrı ayrı sistemleri kullanarak, yaşanabilecek güvenlik ihlallerinin etkilerini azaltmaktır. Örneğin iş ile ilgili faaliyetlerinizi yürüttüğünüz sisteminizde, güvenliğinden endişe ettiğiniz bir dosyayı hiç bir zaman açmak zorunda kalmazsınız. Çünkü güvensiz dosyaları açabileceğiniz ayrı bir sistem mevcuttur.&nbsp; Güvensiz dosyaları ayrı bir sistemde açabilme olanağı, işlerimizi yürüttüğümüz sistemin de güvenli kalmasını sağlıyor. Güvensiz dosyaları açtığımız sistem enfekte olsa dahi diğer hiç bir sistem bu enfeksiyondan etkilenmiyor. Çünkü sistemlerin hepsi birbirinden izole şekilde, sanal hücreleme yöntemiyle çalışıyor.</p>
+
+<p>Yapılacak işin önemi ve kapsamı dahilinde, işlerinizi çoklu sistemlerden birini kullanarak izole biçimde yürütebilirsiniz. Burada yer alan anon-whonix sistemi daha önce ele aldığımız tek kullanımlık sistemdeki Whonix-ws ile benzer işlevlere sahip. Tek fark bu sistem kalıcı şekilde çalışıyor yani pencereleri kapattığımızda veriler silinmiyor. Bu sistemi Tor servislerine erişmek ve güvenli gezinti gibi hizmetler için kullanabilirsiniz. </p>
+
+<p>Bu sistemleri kullanırken tek dikkat etmeniz gereken nokta, sistemleri sadece ama sadece amaçları doğrultusunda kullanmanızdır. Aksi halde güvenliğinizi sağlayan bu sanal hücreleme sisteminin hiç bir anlamı kalmaz. Varsayılan olarak yüklü gelen "Domain" sistemlerinin hangi amaçlarla kullanılması gerektiğine kısaca değinecek olursak;</p>
+
+<p>"<strong>Personal</strong>" sistemini, kişisel işleriniz için kullanmanız gerekir. Bu işler güvenlik tehlikesi içermeyen, internet üzerinde gezinme, standart araştırmalar, video izleme, müzik dinleme gibi faaliyetlerdir. Yani kişisel olarak gerçekleştirmeniz gereken hangi işlem varsa bu alanda sınırlı tutmanız gerekir.</p>
+
+<p>"<strong>Untrusted</strong>" sistemini, güvenliğinden emin olmadığınız her türlü işlem için kullanabilirsiniz. Yaptığınız işlemeler kayıtlı şekilde tutulacaktır ancak diğer sistemlere hiç bir sızıntı gerçekleşmeyecektir. Bu sistemi asla ama asla kişisel işlemleriniz için kullanmayın. Bu alanda hiç bir kişisel hesabınızın oturumunu açmayın. Bu alan güvensiz olacağı için asla kişisel kullanıma uygun olmayacaktır.</p>
+
+<p>"<strong>Vault</strong>" sistemini, internetten izole şekilde tutmak istediğiniz verilerinizi barındırmak için kullanabilirsiniz. Bu sistemin internet erişimi olmadığı için verilerinizi tutabileceğiniz en güvenli alandır. Şifrelerinizi, hassas içeriğe sahip dosyalarınızı ve gizliliğe ihtiyaç duyan her türlü dijital veriyi burada tutabilirsiniz. Hem internet hem de diğer sistemlerden tamamen izole olduğundan, bu alanı yalnızca meraklı gözlerden uzak tutmak isteyeceğiniz türden verileri barındırmak için kullanmanız gerekir.</p>
+
+<p>"<strong>Work</strong>" sistemini, işinizle ilgili olan görevleri yerine getirmek için kullanmanız gerekir. Aynı şekilde kişisel kullanım amacıyla "work" sistemini kullanmanızı da asla önermem. Zira kişisel amaçlarınız doğrultusunda işlem yaparken daha dikkatsiz davranmanız olasıdır. İşinize gereken özeni göstermek adına bu alanı da yalnızca amacına uygun kullanmanız son derece önemlidir.</p>
+
+<p>Listede yer alan farklı amaçlar için oluşturulmuş sanal sistemlerin sayısı sizin için yeterli gelmemiş olabilir. Eğer daha farklı amaçlar için daha fazla sanal sisteme ihtiyacınız varsa, ilerleyen kısımlarda kendi amaçlarımıza uygun yeni sanal sistemleri nasıl oluşturabileceğimizi de ayrıca ele alıyor olacağız.</p>
+
+<h4 id="11">Service</h4>
+
+<p>"<strong>Service</strong>" olarak geçen kısımlar, sistemde yer alan izole ağ servisleridir. Sistemin güvenliğini arttırmak için bu servisler de diğer bileşenler gibi izole şekilde hizmet verir. Hangi servisin hangi amaca hizmet ettiğine kısaca değinecek olursak;</p>
+
+<p>"<strong>sys-firewall</strong>" servisi, ağ trafiğinin güvenlik için belirtilmiş olan kısıtlamalar kapsamında hizmet sunmasını sağlar.</p>
+
+<p>"<strong>sys-net</strong>" ise sınırlamasız standart ağ bağlantısını sağlayan hizmettir. Bağlantının standart olması, güvensiz olduğu anlamına gelmiyor. Eğer herhangi bir şekilde ağımıza sızmış biri olursa, ağ üzerinden diğer izole sistemlere erişememesi için bu servis de ayrıca izole şekilde hizmet verir.</p>
+
+<p>"<strong>sys-whonix</strong>" ağ trafiğinin Tor üzerinden yönlendirilmesini sağlayan hizmettir.</p>
+
+<p>Bizler bu servisleri kullanarak istediğimiz sistemin ağ trafiğinin nasıl sağlanması gerektiğine karar verebiliyoruz. Sistemleri özelleştirme ve yeni sistem oluşturma işlemleri sırasında, ağ bağlantı türüne karar verirken bu servislerden tekrar bahsediyor olacağız.</p>
+
+<h4 id="12">Template</h4>
+
+<p>"<strong>Template</strong>" olarak geçen kısımlar, şu ana kadar ele aldığımız tüm sistemlerin ana kaynaklarıdır. Yani şu ana kadar gördüğümüz tüm sistemler aslında "Template" olarak geçen buradaki şablonlar üzerinden oluşturulmuşlardır. Örneğin sistem üzerinde yer alan tüm "Fedora-30" sistemleri buradaki "Fedora-30" şablonu üzerinden üretilmiştir. Eğer biz bu şablon üzerinde güncelleme ya da yeni bir araç yüklemesi gibi işlemler yaparsak, tüm "Fedora-30" kullanan sistemler de bu değişikliklerden otomatik olarak etkileneceklerdir. Örneğin biz buradaki şablon Fedora sistemine Ofis yazılımı kuracak olursak, Fedora şablonu üzerinden üretilmiş olan tüm alt sistemlerde de otomatik olarak Ofis yazılımı kullanılabilir olacak. Kısacası buradaki şablonlar temel alınarak birbirinden izole pek çok alt sanal sistem oluşturulmuştur. Yani sistemlerin temeli bu şablonlar olduğu için, şablonlar üzerinde meydana gelen değişiklik tüm ortak sistemleri aynı şekilde etkiler. Bu konuyu ileride yeni uygulama kurulumları aşamasında çok daha net olarak kavramış olacaksınız zaten. Son olarak merak edenler için "Whonix-gw" ile "Whonix-ws" şablonlarının farkını kısaca açıklayacak olursak; "<strong>GW</strong>" olarak geçen ifade "<strong>g</strong>ate<strong>w</strong>ay" yani "<strong>ağ geçidi</strong>" anlamındayken "<strong>WS</strong>" ifadesi "<strong>w</strong>ork<strong>s</strong>tation" yani "<strong>iş istasyonu</strong>" anlamına geliyor.</p>
+
+<p><strong>Whonix-gw</strong>; İnternet trafiğinin Tor ağı üzerinden yönlendirilmesini sağlayan sanal ağ geçididir.</p>
+
+<p><strong>Whonix-ws</strong>; Ağ geçidi olarak Whonix-gw sistemini kullanarak, içerisinde bulunan tüm araçların Tor ağı üzerinden kullanılmasını sağlayan sanal işletim sistemidir.</p>
+
+<h4 id="13">Aynı Anda Birden Çok Sistem ile Çalışmak</h4>
+
+<p>Listede yer alan seçeneklerin ne anlama geldiğini genel olarak öğrenmiş olduk. Şimdi de seçenekler arasında yer alan sistemlerin genel kullanımlarından uygulamalı olarak bahsedelim. Anlatımlara çeşitli amaçlar için sıkça kullanacağımız "Domain" olarak geçen, standart izole sistemleri ele alarak başlayalım.</p>
+
+<p>Örneğin iş ile ilgili faaliyetlerimi yürütmek üzere "work" olarak isimlendirilmiş sanal sistemi kullanmam gerekiyor. Örnek olması açısından iş alanında Firefox tarayıcısını açıyorum. Tarayıcı açıldığında, pencere rengi çalışmakta olduğumuz sistemi temsilen gördüğünüz gibi mavi renkte gözüküyor. Aynı zamanda açılan pencerenin hangi sistem üzerinde çalıştırıldığını da başlık kısımına bakarak görebiliyorum. Testi devam ettirmek için birde kişisel çalışma alanı olan "personal" sistemindeki tarayıcıyı çalıştıralım. Tarayıcı açıldığında bu kez sarı renkte, "personal" başlığı ile açılıyor. Gördüğünüz gibi iki ayrı sistem için bariz şekilde ayırt edilebilir iki adet çalışma penceresi açılmış oldu. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-22-53-cb77fc0a64409361c2dbf9d20f9bfdc4.png" class="responsive"></figure>
+
+<p>Benzer şekilde iki sistemin dosya yöneticilerini çalıştırdığımda da pencere renkleri ve açıklamaları, çalıştıkları sistemi belirgin bir biçimde temsil ediyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-23-12-d4549a960080f12bffaf66d953954535.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi aynı anda çok amaçlı sistemleri ayrı ayrı çalıştırıp rahatlıkla birbirinden ayırt edebilecek şekilde kullanabiliyoruz. Son olarak denemek için "vault" olarak geçen, internet bağlantısından izole şekilde çalışan sistemin tarayıcısını da açalım. Durumu test etmek için açılan tarayıcıda basit bir arama yapalım. Sonuç olarak internet erişimi olmadığı için aramamız başarısız olmuş oldu. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-23-35-44f4ccd66d091030abe77ea5066d72e4.png" class="responsive"></figure>
+
+<p>Zaten "vault" sisteminin ağ bağlantısından izole bir sistem olduğundan da bahsetmiştik. Bu sistemi verilerimizi tamamen güvenli bir biçimde barındırmak üzere kullanabiliriz.</p>
+
+<p>Böylelikle farklı amaçlar için pek çok sistemi birbirinden izole şekilde çalıştırmış olduk. Buradaki farklı amaçlar için oluşturulmuş makineleri sadece amacı doğrultusunda kullandığınız sürece güvende kalabilirsiniz. Bu detaya dikkat ettiğiniz sürece sorun yaşamazsınız.</p>
+
+<p>Sistemleri sorunsuzca çalıştırmış olmamız harika fakat kapatmadığımız için hala arkaplanda kaynak tüketmeye devam ediyorlar. Biz sistemlere ait olan pencereleri kapatsak dahi, artık sanal sistemler başlatıldığı için sistemi tamamen kapatana kadar hazırda beklemeye ve dolayısı ile kaynak tüketmeye devam edecekler. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-24-45-a91f774ab798ab658ad4733e6111b47c.png" class="responsive"></figure>
+
+<p>Açmış olduğumuz sistemleri nasıl kapatabileceğimizi de hazır yeri gelmişken öğrenelim.</p>
+
+<h4>Çalışmakta Olan Sistemlerin Ve Süreçlerin Yönetimi</h4>
+
+<h4 id="14">Sistemlerin Yönetimi</h4>
+
+<p>Görev çubuğunda yer alan sistem simgesine tıklayarak hangi sistemin ne kadar kaynak harcadığını kabaca görebiliyoruz. Ayrıca gerekirse sistemi duraklatma ve kapatma gibi işlemleri de yerine getirebiliyoruz. Örneğin çalışmakta olan "personal" sistemini duraklattığımızda pencere açık kalsa da pencere üzerinde hiç bir değişiklik yapamıyoruz. Yani sistem duraklatılmış oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-31-53-23bced115f91986a1e32449cd371d367.png" class="responsive"></figure>
+
+<p>Bu özelliği sistemi tamamen kapatmak istemediğiniz ancak kısa süreliğine duraklatarak kaynak kullanımını önlemek istediğiniz durumlarda kullanabilirsiniz. Personal sistemini durdurduğum için ben tekrar devam ettirene kadar kaynak tüketmiyor olacak. Bir nevi sistemi askıya almış oluyoruz. Eğer durdurulmuş olan sistemi devam ettirmek istersek "unpause" kısmına tıklamamız yeterli olacaktır. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-32-04-be488bbc9008c5bdea05152a7ff0faf1.png" class="responsive"></figure>
+
+<p>Ayrıca durdurulmuş olan sistemi doğrudan kapatmak istersek "kill" seçeneğini de kullanabiliriz. Sistemi durdurmak yerine kapatmak için "shutdown" seçeneğini de kullanabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-33-20-1826df79084a962bbbb39d7641ab0b64.png" class="responsive"></figure>
+
+<p>Eğer sistemi kapatmanıza rağmen uzun süre boyunca kapanmazsa bu listeye gelerek "kill" seçeneği ile sistemin doğrudan kapatılmasını da sağlayabilirsiniz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-33-29-cbd20e90f22ffdf5e06ae96b4cd75921.png" class="responsive"></figure>
+
+<p>Ayrıca tüm sistemlerin yönetimini yapmak üzere "Qube Manager" aracını da kullanabiliriz. Bu araç, yüklü bulunan tüm alt sistemlerin yönetilmesi konusunda bize yardımcı oluyor. Biz bu panelden sistemler hakkında bilgi edinip, gerektiğinde ayarlarını düzenleyip sistemler ile ilgili yapılabilecek her türlü yönetim işlemini buradan yapabiliyoruz. Sistemlere sağ tıklayarak uygulayabileceğimiz seçenekleri görebilirsiniz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-34-29-54ae0a73bc8ae5117ce2374d75b59fe7.png" class="responsive"></figure>
+
+<p>Örneğin şablonların güncellemelerini kontrol ederek, varsa güncellemeyi yüklemek üzere şablona sağ tıklayıp "Update qube" seçeneğine tıklayabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-34-45-a2c33fe45c56471a89f7b9efa8c35d68.png" class="responsive"></figure>
+
+<p>Eğer güncellemeleri elle yapmazsak, sistem görev çubuğundan da şablon güncellemeleri olduğunda bizi uyarıyor olacak. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-34-57-7fd9fbff8f76f5df8f55ee960d4c0036.png" class="responsive"></figure>
+
+<p>Güncelleme işlemi haricinde "State" olarak geçen kısımdan, sistemlerin mevcut durumları hakkında anlık bilgi edinebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-35-17-29f0d988a4a2b7735f0bdd51b57361f6.png" class="responsive"></figure>
+
+<p>State kısmında yer alan simgelerin üzerine gelerek simgelerin ne anlama geldiğini de öğrenebilirsiniz. Örneğin indirme simgesi güncellemenin olduğunu belirtiyor. </p>
+
+<p>Ayrıca buradan, yeni bir alt sanal sistem oluşturmamız da mümkündür. Kısacası bu panel tek elden tüm sistemlerin yönetilebilmesini sağlayan paneldir. Gerektiğinde bu paneli tekrar tekrar kullanıyor olacağız.</p>
+
+<p>Hazır yönetim paneli de açıkken Dom0 sisteminden de bahsedelim istiyorum. Dom0 olarak geçen ifade tüm alt sistemlerin yönetilmesini sağlayan ana sistemi temsil ediyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-35-43-f3ef84d89d0c69421e1a707d304d0579.png" class="responsive"></figure>
+
+<p>Yani Dom0 dışında listede yer alan tüm sistemler "Dom0" altında çalıştırılan alt sistemlerdir. Dom0 bu sistemlerin çalıştırılması ve yönetilmesi için gereken ortamı sağlar. Araç menüsündeki ögeleri açıklarken de hatırlarsanız ana sistemden bahsetmiştik. İşte o bahsi geçen sistem Dom0 olarak ifade ediliyor.</p>
+
+<h4 id="15">Süreçlerin Yönetimi</h4>
+
+<p>Eğer ana sistemimiz olan Dom0 sistemi üzerindeki süreçleri takip etmek ve gerektiğinde yönetmek istersek, bu iş için "<strong>Task Manager</strong>" olarak geçen "<strong>Görev Yöneticisi</strong>" aracını kullanabiliriz. Aracımızı açmak üzere menüden sistem araçlarına gelerek "Task Manager" aracına tıklayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-36-07-751b068744c0e0c91749d91a434a8b00.png" class="responsive"></figure>
+
+<p>Bu araç daha önce alışmış olduğunuz herhangi bir işletim sisteminde bulunan görev yöneticisi ile benzerdir. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-36-33-4dc007db7425cee198b76e4d4a8ffc23.png" class="responsive"></figure>
+
+<p>Buradan süreçlerin kaynak tüketimlerine göz atabilir, gerektiğinde süreçleri sonlandırabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-36-48-734ecd513a117e155eed4b587a558cba.png" class="responsive"></figure>
+
+<p>Bu araç yalnızca üzerinde çalışmakta olduğu Dom0 sistemindeki süreçleri gösteriyor. Alt sistemlerdeki süreçleri takip etmek için ilgili sisteme özel olan görev yöneticilerini kullanabilirsiniz. İleride program kurulumlarını ele alırken eğer mevcutsa görev yöneticisini araçlar listesine eklemeyi şayet yoksa da kurmayı öğrenmiş olacağız. Şimdilik Dom0 sistemi üzerindeki süreçleri kontrol edebileceğimiz görev yöneticisi hakkında bilgi edinmiş olduk.</p>
+
+<h4 id="16">Sistemler Arası Dosya ve Metin İçeriği Aktarımı</h4>
+
+<p>Eğer çalışmakta olduğumuz bir sistemden diğerine dosya ya da metin içeriği aktarmak istersek, bunu doğrudan "kopyala-yapıştır" ya da "sürükle-bırak" ile yapamıyoruz. Aktarma işleminin sistemler arasında güvenli biçimde yapılabilmesi için uymamız gereken bir prosedür bulunuyor. Şimdi sırasıyla hem dosya hem de metin içeriklerini nasıl aktarabileceğimizi görelim.</p>
+
+<h4 id="17">Dosya İçeriğinin Aktarılması</h4>
+
+<p>Anlatıma dosya aktarma işlemini nasıl yapabileceğimizi ele alarak başlayalım.</p>
+
+<p>Örneğin "personal" alanında çalışırken hassas içeriğe sahip dosyamızı güvenli alana taşımak isteyebiliriz. Daha önce "vault" sisteminin bu amaçla kullanıldığından bahsetmiştik. Şimdi örnek olarak "personal" alanında yer alan PDF dosyasını güvenli bir biçimde "vault" alanına aktarmayı deneyelim. Aktarma işleminin standart yöntemlerden farklı olduğu konusunda içinizde şüphe kalmaması için; sürükle bırak ve standart kopyala yapıştır işlemlerinin işe yarayıp yaramadığını test etmek üzere deneme gerçekleştirelim. Dosyamızı sürükleyip bırakmayı ya da kopyalayıp yapıştırmayı denerken, bu işlemin mümkün olmadığını görebiliyoruz. Bu yöntemlerin işe yaramadığını da teyit ettikten sonra dosyamızı hedef sisteme taşımak üzere ilgili dosyaya sağ tıklayarak "<strong>Move To Other AppVM</strong>" seçeneğini seçelim. Eğer dosyayı taşımak yerine sadece kopyalamak istersek "<strong>Copy To Other AppVM</strong>" seçeneğini de kullanabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-45-12-f2c05ee96853ccdb90ea0f870de0089e.png" class="responsive"></figure>
+
+<p>Açılan pencereden, dosyamızı göndermek istediğimiz sistemi belirtelim ve "<strong>Ok</strong>" diyerek işlemi tamamlayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-45-27-adc9280752a720aa6aca9a41435851f5.png" class="responsive"></figure>
+
+<p>Dosyamız taşındıktan sonra hedef sistemin ana dizininde oluşturulan "<strong>QubesIncoming</strong>" isimli klasöre kaydolmuş oluyor. Klasörü açıp dosyamızın başarılı şekilde kopyalanmış olduğunu teyit edebiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-45-42-ad330406c4e88add009db7a9303e2598.png" class="responsive"></figure>
+
+<p>Biz taşıma işlemi yaptığımız için kaynaktaki dosya yok olmuş oldu. Eğer kaynaktaki dosya yok olmadan hedef sistemde dosyanın kopyası oluşturulsun isterseniz "<strong>Copy To Other AppVM</strong>" seçeneğini kullanarak aktarım yapmanız gerekir. Bu şekilde ihtiyaç duyduğunuzda sistemler arası dosya aktarımında bulunabilirsiniz.</p>
+
+<h4 id="18">Metin İçeriğinin Aktarılması</h4>
+
+<p>Anlatıma, metin içeriklerinin kopyalanması işlemi ile devam edecek olursak. Dosya içeriklerine benzer şekilde, metin içeriklerini kopyalamak istediğimizde de doğrudan kopyala yapıştır yapamıyoruz. Çünkü sistemlerin hepsi güvenlik nedeniyle birbirinden izole şekilde çalışıyor. Kopyalama işlemi için metni genel panoya kopyalayarak, oradan hedef sisteme yapıştırmamız gerekiyor. Genel pano tüm sistemlerden bağımsız şekilde sadece aktarıcı görevi görüyor. Kopyalama işlemi için öncelikle metni standart kopyalama yöntemi olan "Ctrl + C" tuşlamasıyla ya da sağ tıklayıp "<strong>Copy</strong>" diyerek kopyalayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-46-07-6f1daf5ec5cc7de1664900b528b58a19.png" class="responsive"></figure>
+
+<p>Bu işlemini ardından "Ctrl + Shift + C" tuşlaması ile kopyalanmış içeriğin genel panoya aktarılmasını sağlayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-46-29-ed4bc05c88b5cdbed498ae6bc03b3f3c.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi kopyaladığımız içeriğin bilgisini panelden de takip edebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-46-43-720b06fcf2a8fb05c62f1c086e102132.png" class="responsive"></figure>
+
+<p>Artık kopyaladığımız içerik biz hangi sisteme yapıştırmak istersek o sistemin erişimine açık olacak. Bu işlem için öncelikle genel panoda kopyalı duran içeriği, yapıştırmak istediğimiz sanal sisteme gelerek "Ctrl + Shift + V" tuşlaması ile ulaşılabilir kılmamız gerekiyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_12-46-58-088bbb00c1ef01e18e8ee6c2ec38f4a1.png" class="responsive"></figure>
+
+<figure><img src="./../../img/5/2020-06-14_12-47-09-31cdd9197f3a38b4591f80d61f5b6c1c.png" class="responsive"></figure>
+
+<p>Son olarak da kopyalanmış içeriğimizi hedef sanal sisteme yapıştırmak için tekrar "Ctrl + V" tuşlamasını uygulamamız gerekiyor.</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-47-24-fa1aecc38279f1fc21d953439df622c8.png" class="responsive"></figure>
+
+<p>Böylelikle metin içeriğinin kopyalanıp yapıştırılması güvenli prosedür üzerinden yürütülmüş oluyor. Bu işlem başlangıçta biraz sıra dışı gelse de kullanımı hiç de zor değil. Birkaç kez kullandıktan sonra kullanımın ne kadar kolay olduğunu sizler de görmüş olacaksınız.</p>
+
+<p>Genel ilerleyiş şemasına bakarak durumu daha net kavrayabilirsiniz.
+
+</p>
+
+<figure><img src="./../../img/5/2020-06-14_12-48-29-0439fdbd6c8082535c0732b677d60aae.png" class="responsive">
+
+</figure>
+
+<h4 id="19">Dom0 Alanı İle Dosya Alışverişi</h4>
+
+<p>Dom0 olarak geçen sistemin bizim ana yönetim sistemimizi temsil eden alan olduğundan daha önce bahsettik. Yani menüde gördüğümüz tüm sistemlerin Dom0 sistemi kontrolü altında olduğunu biliyoruz. Dom0 olarak geçen yönetim sistemi tüm alt sistemleri etkileyebileceği için çok daha fazla güvenlik kısıtlaması barındırır. Yine de gerektiğinde Dom0 alanındaki dosyaları istediğimiz alt sisteme gönderebilir ya da alt sistemlerden Dom0 alanına dosya aktarabiliriz. Yalnızca dosya alışverişi açık olduğundan metin aktarma işlemini de, metni bir dosyaya kaydedip göndermek şeklinde gerçekleştirmemiz gerekiyor. Uygulama üzerinden çok daha iyi anlaşılacağı için, basit bir metni dosyaya kaydedip Dom0 sistemine nasıl gönderebileceğimizi ele alalım.</p>
+
+<h4 id="20">Alt Sistemlerden Dom0 Sistemine Dosya Aktarımı</h4>
+
+<p>Herhangi bir alt sanal sistemden ana sisteme dosya aktarmak için aşağıdaki komut yapısını kullanıyoruz.</p>
+
+<pre class="prettyprint linenums">qvm-run --pass-io &lt;kaynak-sistem&gt; 'cat /dosya/konumu/kaynak-sistemdeki-dosya' &gt; /dosya/konumu/dosyanın-dom0-sistemine-kayıt-olacağı-konum</pre>
+
+<figure><img src="./../../img/5/2020-06-14_13-42-11-e33e1581b44ec6a912693410cb9ecc16.png" class="responsive"></figure>
+
+<p>Tüm işlemleri grafiksel arayüzden de takip edebilmek adına öncelikle Dom0 sisteminin dosya yönetim aracını çalıştıralım. Dosya yöneticisini çalıştırmak üzere menüden "<strong>Run Program...</strong>" kısmına tıklayıp açılan pencereye "<code>thunar</code>" ifadesini girip onaylayalım. Run program, isminden de anlaşılacağı gibi sistem üzerinde yüklü bulunan programların çalıştırılmasını sağlayan bir araç. "<strong>thunar</strong>" ifadesi ise Dom0 sistemindeki dosya yönetim aracının ismidir.</p>
+
+<p>Neticede Dom0 sisteminin dosya yöneticisini açmış olduk. Şimdi testimizi iki taraflı şekilde grafiksel arayüzden de takip edebilmek adına, "Personal" sisteminin dosya yöneticisini de menüden çalıştıralım.</p>
+
+<p>Ben örnek olması açısından personal sisteminde deneme metni oluşturmak üzere, personal sisteminin komut aracını açıp <code>cat &gt; metin.txt</code> komutunun ardından istediğim metin ifadesini girip Ctrl + D tuşlaması ile kayıt olmasını sağlıyorum. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-42-38-563e31c56c84c75e610c71c168507a32.png" class="responsive"></figure>
+
+<p>Personal sisteminin dosya yöneticisine de baktığınızda "<strong>metin.txt</strong>" dosyasının oluşturulmuş olduğunu görebiliyorsunuz. İçeriğini komut satırından <code>cat</code> komutu ile ya da grafiksel arayüzden üzerine tıklayarak, okuyup teyit edebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-43-42-e8a8936684e39472b20f1cc2b8c9f4df.png" class="responsive"></figure>
+
+<figure><img src="./../../img/5/2020-06-14_13-43-55-ac7226696f8c20558f83e360505dceeb.png" class="responsive"></figure>
+
+<p>Şimdi bu dosyayı Dom0 sisteminin <strong>Documents-Belgeler</strong> konumuna göndermek üzere Dom0 sisteminin Terminal aracını açalım. Açılan terminal aracına, dosyanın Dom0 sisteminde hangi konuma hangi isimle kayıt olmasını istediğimizi de belirterek komutumuzu girelim.</p>
+
+<pre class="prettyprint linenums">qvm-run --pass-io personal 'cat /home/user/Documents/metin.txt' &gt; /home/suser/Documents/gonderilen-metin.txt</pre>
+
+<figure><img src="./../../img/5/2020-06-14_13-44-23-68354fe9a33404fec9549ec56a8743f2.png" class="responsive"></figure>
+
+<p>Komutumuzun ardından Dom0 sisteminin belgeler konumunu kontrol ettiğimizde, göndermiş olduğumuz metin dosyasının bizim istediğimiz isimle kayıt olmuş olduğunu görebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-45-18-8d6525c40136e4d9f08badc1a25413c0.png" class="responsive"></figure>
+
+<p>İçeriğini konsol üzerinden okumak üzere <code>cat gonderilen-metin.txt</code> komutunu girdiğimizde de metin içeriğinin sorunsuzca karşı tarafa ulaştırılmış olduğunu teyit edebiliyoruz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_13-45-29-16e62e7c6f8bb11d2720aafe616ffebc.png" class="responsive"></figure>
+
+<p>Anlatım sırasında kullandığımız <code>cat</code> komutu, konsol üzerinden dosya oluşturma ve dosya içeriklerini okumamıza yardımcı olan kullanımı basit bir araçtır. Sizler de gerektiğinde kolayca bu araç ile anlatım sırasında gösterdiğim şekilde dosya oluşturup dosya içeriklerini okuyabilirsiniz.</p>
+
+<h4 id="21">Dom0 Sisteminden Alt Sistemlere Dosya Aktarımı</h4>
+
+<p>Yönetim sistemimiz olan Dom0 sisteminden, alt sanal sistemlere dosya göndermek için aşağıdaki komut yapısını kullanıyoruz.</p>
+
+<pre class="prettyprint linenums">qvm-copy-to-vm &lt;hedef-alt-sistem&gt; &lt;gönderilecek-dosya&gt;</pre>
+
+<figure><img src="./../../img/5/2020-06-14_13-46-23-ab509972ea735054b695788b2fda6c6c.png" class="responsive"></figure>
+
+<p>Gönderimin ardından hedefteki sistemin ana dizini altında "<strong>QubesIncoming/dom0</strong>" konumuna ilgili dosya kaydedilmiş olacak.</p>
+
+<p>Hemen denemek üzere, daha önce Dom0 sistemine gönderdiğimiz dosyayı bu kez "personal" sistemine geri göndermeyi deneyelim. Dosya gönderimi için Dom0 sisteminin Terminal uygulamasına aşağıdaki komutu girelim.</p>
+
+<pre class="prettyprint linenums">qvm-copy-to-vm personal /home/suser/Documents/gonderilen-metin.txt</pre>
+
+<figure><img src="./../../img/5/2020-06-14_13-46-38-ed06f6eb687b9bff07d7a61c52ee536f.png" class="responsive"></figure>
+
+<p>Komutumuzu girdikten hemen sonra gönderilmiş olan dosyanın ana dizin içerisinde "<strong>QubesIncoming/dom0</strong>" konumuna ulaştığını teyit edebiliyoruz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_13-46-46-c782115f0467c23565f577980be47c72.png" class="responsive"></figure>
+
+<p>Böylelikle hem Dom0 sistemine dosya göndermeyi hem de Dom0 sisteminden dosya almayı görmüş olduk. Artık ihtiyacınız olduğunda dilediğiniz dosyanın transferini dilediğiniz sisteme rahatlıkla gerçekleştirebilirsiniz. Ben anlatımda basit bir metin dosyası kullandım ancak sizler ihtiyacınız olan herhangi bir dosyayı da aktarabilirsiniz.</p>
+
+<h4 id="22">Cihazların Sistemlere Bağlanması</h4>
+
+<p>Tıpkı kopyalama işleminde olduğu gibi bilgisayara bağlı bulunan cihazların işletim sistemlerine bağlanması da kontrol altında tutuluyor. Görev çubuğunda yer alan cihazlar simgesine tıklayarak bilgisayarımıza bağlı bulunan cihazların listesini görebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-51-40-48391ac459a5054c833e7984260a2055.png" class="responsive"></figure>
+
+<p>Buradaki listeden, hangi cihazın hangi sisteme bağlanacağını özellikle belirtmemiz gerekiyor. Ben örnek olması açısında USB diskimi seçeneklerden "<strong>personal</strong>" sistemine tıklayarak bağlıyorum. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-51-58-7621fb4268b1409c5fb802a6c213762b.png" class="responsive"></figure>
+
+<p>USB diskin bağlanıp bağlanmadığını test etmek için hem "<strong>personal</strong>" sistemini hem de "<strong>work</strong>" sistemini kontrol edelim. Kontrol işlemi için her iki sistemin de dosya yöneticisini çalıştırarak "Other Locations" yani "Diğer Konumlar" kısmına tıklayalım. Açılan sayfalardan da görüldüğü gibi USB disk yalnızca benim belirtmiş olduğum şekilde "<strong>personal</strong>" sistemine bağlanmış bulunuyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-52-28-233f7fa195da51d2b5497921ab1c1cd2.png" class="responsive"></figure>
+
+<p>Yani şu an için bu disk içeriğine yalnızca "personal" sistemi erişebiliyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-52-40-8e24d7c34e67ee8e467d6091416eb4ff.png" class="responsive"></figure>
+
+<p>Ayrıca bağlamış olduğumuz cihazın bağlantısını ilgili sistemden ayırmak için tekrar cihazlar listesinden ilgili sistemin üzerine tıklamamız yeterli. </p>
+
+<figure><img src="./../../img/5/2020-06-14_13-53-19-9aeb9ba8ddfc36322bb3f498f93b4d7c.png" class="responsive"></figure>
+
+<p>Sizler de gerektiğinde bilgisayarınıza bağlı bulunan kamera ve mikrofon da dahil olmak üzere tüm aygıtların kontrollerini buradan sağlayabilirsiniz. Bu özellik gerçek manada iyi denebilecek bir güvenlik önlemi sağlıyor. Özellikle habersiz izleme ve dinlemeleri önlemek açısından cihazların bizim kontrolümüzde olması oldukça iyi bir çözümdür. Yine de güvenliğinizi bir adım ileri taşımak adına kamera ve mikrofonu kullanmadığınız zamanlarda fiziksel olarak kapatma yoluna da gidebilirsiniz. Hatta yeri gelmişken fiziksel güvenliğin her daim siber güvenliğin de önünde tutulması gerektiğini vurgulamak istiyorum. Zira fiziksel güvenlik olmadan siber güvenlikten bahsetmek mümkün değildir. Örneğin şirketlerin sunucu odalarına her önüne gelen girebilseydi, sunucu güvenliği diye bir olgudan bahsedebilir miydik ?</p>
+
+<h4 id="23">Program Kurulumları</h4>
+
+<p>Varsayılan olarak yüklü gelen sistemlerin içerisinde çok az sayıda araç olduğunu anlatım sırasında pek çok kez dile getirdik. Örneğin "Fedora-30" sistemleri için varsayılan olarak yalnızca internet tarayıcısı, dosya yöneticisi ve terminal aracının listede yer aldığını görüyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-42-38-e0bc91f8aec9b5cc8527c5232a25e411.png" class="responsive"></figure>
+
+<p>Elbette bu araçlar kapsamlı işlerimizi halletmek için yeterli değil. Bu bölümde de ihtiyacımız olan araçları, istediğimiz sisteme nasıl kurabileceğimizi öğreniyor olacağız.</p>
+
+<p>Sistemlerin, şablonları temel alarak çalıştığından daha önce bahsetmiştik. Hatta "<strong>Qube Manager</strong>" aracını açıp hangi sistemin hangi şablon üzerinden çalıştığına da göz atabiliriz. Açılan pencereden de görebileceğimiz gibi pek çok sistem "Fedora" şablonu üzerine kurulu vaziyette. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-42-49-63689fed824aa0d5c04ef43d5d22fdfe.png" class="responsive"></figure>
+
+<p>Ayrıca "Debian" ya da "Whonix" şablonlarını kullanan sistemlere rastlamamız da mümkün. Her ne kadar varsayılan olarak "Debian" şablonunu kullanan sistem bulunmasa da ileride kendi sistemimizi kurarken "Debian" şablonunu kullanabiliyor olacağız.</p>
+
+<p>Tüm sistemler şablonlar üzerinden üretildiği için tek seferde tüm alt sistemlerin aynı araca ulaşabilmesi adına, kurulumları da şablonlar üzerine yapmamız gerekiyor. Örneğin Fedora şablonuna herhangi bir araç kurulumunu gerçekleştirdiğimizde, Fedora şablonunu kullanan tüm alt sistemler de bu araca erişebiliyor olacak. Aynı durum diğer "Debian" ve "Whonix" şablonları için de geçerli. Sırasıyla tüm bu şablonlar için yeni araç kurulumlarını nasıl yapabileceğimizi ele alıyor olacağız. Anlatıma ilk olarak sık kullanıma sahip olduğu için "Fedora" şablonu üzerine araç kurulum işlemi ile başlayalım.</p>
+
+<h4 id="24">Fedora Şablonu Üzerine Program Kurulumu</h4>
+
+<p>Fedora aslında bir Linux dağıtımıdır. Hafif ve stabil şekilde çalışması sebebiyle sıklıkla tercih edilir. Qubes işletim sistemi de benzer şekilde Fedora şablonunu, stabil alt sanal sistemler oluşturup kullanmak için sıklıkla tercih ediyor. </p>
+
+<p>Kurulum için öncelikle Fedora şablonun internete erişimini açmamız gerekiyor. Bu işlem için şablonun ayarlarını açalım. Açılan pencerede "<strong>Networking</strong>" kısmından "<strong>sys-net</strong>" seçeneğini seçip "<strong>Ok</strong>" butonuna basarak internet erişimi sağlamış olalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-49-02-4c322523a32ec235d839c121e7289dd1.png" class="responsive"></figure>
+
+<p>Neden diğer seçenekleri değil de "<strong>sys-net</strong>" seçeneğini seçtiğimizi merak etmiş olabilirsiniz. Durumu açıklamak adına daha önce dile getirdiğimiz ağ servislerin amaçlarını kısaca tekrar hatırlayalım;</p>
+
+<ul><li><p>"<strong>sys-firewall</strong>": ağ düzeyindeki güvenlik için çeşitli kısıtlamalar getirilmiş ağ bağlantısını temsil ediyor.</p></li><li><p>"<strong>sys-net</strong>": standart ağ bağlantısını temsil ediyor.</p></li><li><p>"<strong>sys-whonix</strong>" : ağ trafiğini Tor üzerinden yönlendirmeyi temsil ediyor.</p></li></ul>
+
+<p>Biz standart indirme işlemi yaparken sorun yaşamamak ve daha hızlı indirmek adına standart ağ bağlantısı sağlayan "<strong>sys-net</strong>" seçeneğini seçtik.</p>
+
+<p>Artık Fedora şablonun internet erişimi olduğuna göre uygulama kurulumu için "<strong>Software</strong>" aracını çalıştırabiliriz. Bu işlem için listeden Fedora şablonuna gelerek seçeneklerden "<strong>Software</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-49-22-570a075978e77f459fb02f51f39e04ac.png" class="responsive"></figure>
+
+<p>Biraz bekledikten sonra karşımıza, uygulama kurulumları yapmamızı sağlayan oldukça kolay kullanıma sahip uygulama yükleme merkezi açılıyor. İlk açtığımızda araçları doğru şekilde listeleyebilmek adına katalog bilgisinin indirilmesi gerekiyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-49-32-78baf1f470e34f8085f4a5dbe11a2881.png" class="responsive"></figure>
+
+<p>Bu işlem bitene kadar bekleyelim. İşlem bittikten sonra, arama kutusuna kurulumunu yapmak istediğimiz aracı yazıp aratalım. Ben denemek için excel dosyalarını açabilecek ofis yazılımını aratmak üzere arama kutusuna "office" şeklinde yazıyorum. Listelenen sonuçlar içerisinden uygun aracı seçip yüklüyorum. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-49-44-ca1d9b5b9a8529ea419ff0e80f991e59.png" class="responsive"></figure>
+
+<p>Yüklenmesi biraz vakit alabilir işlem bitene kadar sabırla bekleyelim. Ayrıca hazır "Software" uygulamasını çalıştırmışken birkaç özelliğinden daha bahsedelim istiyorum. Örneğin "Installed" sekmesine gelerek Fedora şablonu üzerinde kurulu olan araçların bilgisini alıp, eğer istersek bu araçları silebiliyoruz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_14-52-32-fe6ad58cef07c84abd02977da2465c1c.png" class="responsive"></figure>
+
+<p>Ayrıca "Updates" sekmesinden hem şablon hem de uygulamaların güncellemelerini takip edebiliyoruz. Örneğin gördüğünüz gibi Fedora şablonu için yeni bir güncelleme mevcutmuş. Eğer istersek bu güncellemenin de yüklenmesini sağlayabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-53-04-d984aad0aa74bdfb43d816e473b113f9.png" class="responsive"></figure>
+
+<p>Özetle "Software" uygulaması üzerinden Fedora şablonu için gerekli olan yükleme ve güncelleme işlemlerinin kontrolünü kolaylıkla sağlayabiliyoruz.</p>
+
+<p>Program kurulumuna devam edecek olursak, aracımız yüklendikten sonra test etmek üzere herhangi bir Fedora tabanlı sistemi açabiliriz. Ancak bu işlemden önce aracımıza kolay ulaşabilmek adına kısayolunu araç listesine nasıl ekleyebileceğimizi de görelim. Aracın kısayolunu eklemek istediğimiz Fedora tabanlı sistemin ayarlarını açarak "<strong>Applications</strong>" sekmesine gelelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-53-45-671d46842136798d003c3facc3229d68.png" class="responsive"></figure>
+
+<p>Burada gördüğünüz gibi sol tarafta sistemde yüklü olan pek çok araç bulunuyor. Biz bu araçlardan hangisini istersek, kısayol olarak ilgili sistemin seçeneklerine ekleyebiliriz. Gördüğünüz gibi şu an standart olarak "dosya yöneticisi", "internet tarayıcısı" ve "terminal aracı" bulunuyor. Yeni yüklemiş olduğumuz aracın bu listede de gözükebilmesi için üst tarafta yer alan yenileme butonuna basalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-54-46-f93d23c08cf57632faa1145b94b1e477.png" class="responsive"></figure>
+
+<p>Yeni yüklediğimiz araç da listede göründükten sonra, seçerek aktarma simgesine basıp sistem seçeneklerine eklemiş olalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-55-07-7cf368025292744310a9f90a510df78a.png" class="responsive"></figure>
+
+<p>Ayrıca hatırlarsanız eğitim başlarında her sistemin kendine has görev yöneticisi olduğundan da bahsetmiştik. Fedora sistemleri de listede görüldüğü üzere "Gnome System Monitor" aracını kullanıyor. Her iki yazılımı da kısayollara ekledikten sonra "<strong>Ok</strong>" butonuna basarak ayarın geçerli olmasını sağlayalım. Yaptığımız değişikliğin ardından listeyi kontrol ederek araç kısayollarının seçeneklere eklenip eklenmediğini teyit edebiliriz. Listeden de görüldüğü üzere, yüklemiş olduğumuz programın ve görev yöneticisinin kısayolları eklenmiş bulunuyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-55-21-076cde4a55a1195355c8e2580ad8a555.png" class="responsive"></figure>
+
+<p>Şimdi her iki aracımızı da çalıştırmayı deneyelim. Biraz bekledikten sonra sırasıyla iki aracımız da sorunsuzca açılmış oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-55-38-b9fa3b1dae0efec416cbf09659f9f34d.png" class="responsive"></figure>
+
+<p>İşte sizler de bu şekilde istediğiniz programı istediğiniz sistemde kullanabilirsiniz.</p>
+
+<p>Yanlış anlaşılmayı önlemek adına tekrar belirtelim; biz özellikle aracın kısayolunu eklemesek de aslında yüklü bulunan araç tüm ortak şablonu kullanan sistemler içerisinden kullanılabiliyor. Örneğin biz aracın kısayolunu sadece "work" sisteminin araçlar listesine eklemiştik. Yine de herhangi bir sistemden örneğin "personal" sisteminden de aracı kullanmamız mümkün. Denemek için aracın kısayolunun yer almadığı "personal" makinesinde excel dosyasını açmayı deneyim. Ancak bu işlemden önce yeni yüklenen aracın tüm fedora sistemleri tarafından varsayılan olarak algılanması için fedora şablonunu kapatmamız gerekiyor. Çünkü biz yükleme işlemi ile fedora şablonunda değişiklik yaptık, alt sistemler de bu değişikliği geçerli kılmak için tüm değişikliklerin bitirilmesini bekliyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-56-18-5d5d462fa08825122d717ad52a9a2253.png" class="responsive"></figure>
+
+<p>Değişikliğin bittiğini belirtmek için de fedora şablonu kapatmamız gerekiyor. Fedora şablonunu kapattıktan sonra eğer açıksa kullanacağımız alt sistemi de yeninden başlatalım. Böylelikle şablon üzerinde gerçekleştirilmiş değişiklikler alt sistem tarafından da tanınmış olacak. Personal sistemini yeninden başlattıktan sonra aracın kullanılabilirlik durumunu denemek için excel dosyamıza çift tıklayalım. Biraz bekledikten sonra, yüklemiş olduğumuz araç üzerinden otomatik olarak dosyamız açılmış oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-56-31-648748b746359144f6d99c70e678988f.png" class="responsive"></figure>
+
+<p>Bu durum daha önce bahsetmiş olduğumuz; şablon üzerine kurulmuş olan araçların, şablondan üretilmiş olan tüm alt sistemlerde de otomatik olarak kullanılabilir olduğunu kanıtlamış oluyor.</p>
+
+<p>Yani herhangi bir Fedora sisteminin ayarlarındaki "<strong>Applications</strong>" kısmında yer alan tüm araçlar aslında tüm Fedora sistemlerinde yüklü bulunan ortak araçları temsil ediyor. Biz bu listede yer alan tüm uygulamaları, kısayolu bulunmasına bakılmaksızın tüm Fedora sistemlerinde kullanabiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_14-56-49-6d378f1efd49d9ea15e46dc84386870f.png" class="responsive"></figure>
+
+<p>Ayrıca sistem üzerine istediğimiz araçları yükleyebileceğimizi söylerken, elbette mevcut sistemin desteklediği yani kullanılabilir olan araçlardan bahsediyordum. Yani nasıl ki Windows sistemine özel olarak üretilmiş bir uygulamanın doğrudan Mac sistemi üzerinde çalışmasını beklemiyorsak aynı şey bu sistemler için de geçerli. Yani kullanmak istediğiniz aracın aynısı bu sistemlerde yoksa alternatiflerini araştırmanız ve alternatif araçları deneyimlemeniz gerekir. Yine de temel olarak ihtiyacınız olan pek çok alternatif aracı kolaylıkla bulabileceğinizden emin olabilirsiniz. Sadece alternatif araçlara her olağan yenilik gibi alışması biraz zaman alacaktır.</p>
+
+<p>Bir sonraki bölümde "Whonix" şablonu üzerine araç kurulumunu ele alıyor olacağız. Whonix üzerine kurulum işlemi Fedora şablonundan farklı olduğu için bu rehberi de atlamadan eğitime devam edin.</p>
+
+<h4 id="25">Whonix Şablonu Üzerine Program Kurulumu</h4>
+
+<p>Whonix aslında güvenlik odaklı bir Linux dağıtımıdır. Bu dağıtım kendi çalışma yapısı gereği "<strong>Gateway</strong>" ve "<strong>Workstation</strong>" olmak üzere iki tür sanal makineden oluşur. Gateway ağ trafiğinin Tor üzerinden yönlendirilmesinden sorumludur. Workstation ise Tor ağı üzerinden yönlendirilen internet trafiği ile içerisinde bulunan araçların kullanımını sağlar. Özetle "Whonix" de tıpkı "Fedora" gibi bir işletim sistemidir. Fedora'dan farklı olarak güvenlik gizlilik gibi konuların ön planda olduğu durumlarda Tor ağı avantajı dolayısıyla sıklıkla tercih edilir. En amiyane tabirle, sistem içerisinde bir yerde "Whonix" ifadesi geçiyorsa, orada Tor ağı üzerinden yönlendirilen internet trafiği söz konusudur diyebiliriz.</p>
+
+<p>Bu bölümde de "Whonix" şablonuna nasıl program kurabileceğimizi görmüş olacağız.</p>
+
+<p>Whonix sistemine yükleme yapmak için Fedora sisteminde olduğu gibi, varsayılan olarak yüklü gelen bir kurulum aracı bulunmuyor. Kurulum aracı yerine komut satırından program kurulumunu gerçekleştiriyor olacağız.</p>
+
+<p>Kurulum işlemi için öncelikle Whonix şablonunun konsol aracını çalıştıralım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-05-22-2d245bc89a48fbea92194d10063fb172.png" class="responsive"></figure>
+
+<p>Konsol açıldıktan sonra güncel paket bilgilerini almak üzere <code>sudo apt-get update</code> komutunu girelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-05-33-6ffbb16d0c61c7c15bb2ddf572a753a9.png" class="responsive"></figure>
+
+<p>Bu komutu program kurulumundan önce girmezseniz, doğru paket bilgileri alınmayacağı için kurulum işlemi hata verecektir. Çünkü bu sistemde, kullanılabilir olan tüm araçlar depolardan kurulum paketleri halinde indirilip kuruluyor. Kurulum işleminden önce kurulum paketlerinin güncel bilgisini almak bu sebeple elzemdir. Güncelleme işlemi bittikten sonra kurmak istediğimiz aracın ismini <code>sudo apt-get install kurulacak-program</code> şeklinde girmemiz gerekiyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-05-47-bbaac9612913578d9b5c2fc71b95a380.png" class="responsive"></figure>
+
+<p>Benim önerim her defasında komut kullanımı ile uğraşmak istemiyorsanız daha önce Tail sisteminde kullanmış olduğumuz "<strong>Synaptic</strong>" aracını kurmanızdır. Bu araç, program paketlerinin araştırılması ve kurulması konusunda bize yardımcı olan grafiksel arayüze sahip bir yazılımdır. Bu bölümde de daha sonraki kurulum işlemlerinizi kolaylaştırmak adına "<strong>Synaptic</strong>" aracının kurulumunu ele alalım. Aracı kurmak üzere konsola <code>sudo apt-get install synpatic</code> komutunu giriyorum. Komutun ardından programın kurulumu için bizden onay bekliyor. Onaylamak için "<strong>Yes</strong>" ifadesin kısaltması olan "Y" tuşuna basarak kurulum işlemini onaylayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-06-19-a77089e18a2de6f1468b47617df00e1c.png" class="responsive"></figure>
+
+<p>Kurulum tamamlandıktan sonra aracımızı test etmek üzere kısayolunu ekleyip çalıştırmayı deneyelim. Kısayol ekleme işleminin ardından aracımızı listeden çalıştırdığımızda sorunsuzca açıldığını görebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-06-33-6babf7afbaf75c5ca171ff4349190be9.png" class="responsive"></figure>
+
+<p>Böylelikle hem komut yardımıyla hem de kurmuş olduğumuz "<strong>Synaptic</strong>" aracı yardımıyla, istediğimiz programları Whonix sistemine nasıl kurabileceğimizi öğrenmiş olduk. Artık ihtiyacınız olan araçları Whonix şablonunu kullanan tüm sistemler için kurabilirsiniz.</p>
+
+<h4 id="26">Debian Şablonu Üzerine Program Kurulumu</h4>
+
+<p>Debian sistemleri için program kurulumları da tıpkı Whonix sistemlerinde olduğu gibi konsol üzerinden ya da kurulacak olan "<strong>Synaptic</strong>" yazılımı üzerinden yapılabiliyor. Kurulum işlemi Whonix sistemi ile birebir aynı olduğu için ben şimdi tekrar "Debian" için de program kurulumunu ayrıca ele almayacağım. Yani eğer "Debian" şablonunu kullanan sistemler için program kurulumu yapacaksanız "Whonix" üzerinden anlattıklarımızı "Debian" şablonu üzerinde uygulamanız yeterli olacaktır. Ayrıca hazır Debian sisteminden bahsetmişken, dikkatinizi çektiyse varsayılan olarak gelen sistemler içerisinden Debian kullanan bir sisteme rastlamadık. Ancak bu durum Debian sistemi işe yaramazdır gibi bir anlama gelmiyor. Dilersek biz kendi sistemimizi oluştururken Debian dağıtımını kullanmayı tercih edebiliriz. Anlatımın devamında kendi sistemimizi oluşturmayı ele aldığımızda tekrar "Debian" şablonundan söz ediyor olacağız.</p>
+
+<h4 id="27">Dom0 Sistemi Üzerine Program Kurulumu</h4>
+
+<p>Güvenlik gerekçesiyle dom0 sistemine program yüklemenin kolay bir yolu yoktur. Birkaç farklı alternatif zorlama yöntem ile yeni programların kurulması mümkün olsa da ana sistem üzerine yeni araç kurulumu kesinlikle önerilmez. Dom0, tüm alt sistemlere ulaşabilen ana yönetim sistemi olduğu için güvenlik gerekçesiyle katı kurallara sahiptir. Eğer sisteminizin güvenli kalmasını istiyorsanız, bu kurallara uyarak dom0 sistemi üzerinde program yüklemesi yapmayı denemeyin. Özetle güvenlik gerekçesiyle ana sistemimiz olan dom0 sisteminde program kurulumu yapamayız. Zaten bu sistemin temel amacının diğer sistemleri yönetmek olduğunun farkında olarak, ihtiyacınız olan araçları alt işletim sistemleri üzerine kurmanız çok daha mantıklı bir hareket olacaktır.</p>
+
+<h4 id="28">Geçici Sistemler Üzerinde Çalışmak</h4>
+
+<p>Bu sistemler genellikle güvenliğinden endişe ettiğimiz içerikleri kontrol etmek için kullandığımız alanlardır. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-20-27-e3c1d59a068b48b44126193728e6376f.png" class="responsive"></figure>
+
+<p>Örneğin işinizle ilgili olan ancak yine de şüphe ettiğiniz bir excel dosyasını açıp içeriğindeki bilgileri almak ve dosyayı düzenlemek zorundasınız diyelim. Böyle bir durumda dosyayı kopyalama veya taşıma yapmadan, doğrudan tek kullanımlık "Disposable" alanında açmanız veya düzenlemeniz de mümkündür. Dosyayı geçici alanda düzenlemek için dosyaya sağ tıklayarak "<strong>Edit in Disposable VM</strong>" seçeneğini seçebilir ya da doğrudan dosyayı görüntülemek için "<strong>View in Disposable VM</strong>" seçeneğine de tıklayabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-20-47-139f2670d206ddfa58d43f3ccb077284.png" class="responsive"></figure>
+
+<p>Geçici olan bu alanda dosya içeriğine göz atıp içerisinden almak istediğimiz bilgiler varsa güvenle alabiliriz. Ayrıca dosya içeriklerini güvenli alanda düzenleyip kaydetmemiz de mümkündür. Denemek için excel dosyasını açarak içerisine birkaç yeni veri ekleyip kaydedelim. Geçici alanda düzenlemesini yaptığımız dosyayı Ctrl + S kısayolu ile kaydettiğimizde, ilgili dosya ana kaynağına otomatik olarak kayıt oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-21-05-402084099a20afc74a2090c21ed86449.png" class="responsive"></figure>
+
+<p>Değişikliğin kaydolup olmadığını teyit etmek üzere dosyamızı açtığımızda, ilgili düzenlemenin kayıt olduğunu görebiliyoruz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-21-29-db2da664f4ed916505c83fd64d56806d.png" class="responsive"></figure>
+
+<p>Sonuç olarak bu yöntemle dosyamızı güvenli olan harici bir ortamda görüntüleyip düzenledikten sonra, asıl ortamına kaydedebiliyoruz. Böylelikle güvenliğinden şüphe ettiğimiz hiç bir dosya, asla standart çalışma alanımızda açılmamış oluyor.</p>
+
+<p>Eğer "Disposable" olarak geçen sistemlerin, verileri yalnızca geçici olarak tutuyor olduğuna inanmadıysanız. Geçici alanda yeni bir klasör oluşturmayı deneyebilirsiniz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-21-42-06b25e5039220752fe60aa6fb8b1495d.png" class="responsive"></figure>
+
+<p>Oluşturduğunuz klasörün kalıcılığını görmek için pencereyi kapatıp tekrar açabilirsiniz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-21-51-41e082a9a9c5947943d2194b361dd594.png" class="responsive"></figure>
+
+<p>Bu denemenin ardından sizlerin de görebileceği gibi geçici sistem, oluşturulan klasörü de tüm diğer veriler gibi silmiş oluyor. İşte bu sebeple güvenliğinden endişe ettiğimiz dosyaları açmak için geçici sistemleri kullanmak harika bir çözümdür.</p>
+
+<h4 id="29">PDF Dosyalarını Güvenli Hale Getirme</h4>
+
+<p>Bir önceki kısımda anlattığımız; güvensiz dosyaları geçici sistem üzerinde açıp düzenleme işlemi dışında, ayrıca güvenli olmayan PDF dosyalarını doğrudan güvenli PDF dosyalarına dönüştürme imkanımız da bulunuyor. Bu özellik için PDF dosyasına sağ tıklayıp "<strong>Convert To Trusted PDF</strong>" seçeneğini seçelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-22-15-8056ca685ce67d18fc8a7f31aecfffae.png" class="responsive"></figure>
+
+<p>Bu işlemin ardından orijinal PDF dosyasının ismine "<strong>trusted</strong>" yani "<strong>güvenilir</strong>" eki getiriliyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-22-26-11ce4ba14a474664343f65523d31e459.png" class="responsive"></figure>
+
+<p>Bu dosya yeni üretilmiş olan güvenilir PDF dosyasıdır. Güvensiz olan dosya ise ana dizinde "<strong>QubesUntrustedPDFs</strong>" klasörü altına taşınmış oluyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-22-38-e39474b1b0416cc6ed659cb1f13b5359.png" class="responsive"></figure>
+
+<p>Güvenli PDF dosyası oluşturma işleminin nasıl mümkün olduğunu merak ediyorsanız ; bu yöntem, PDF metnini grafik forma dönüştürerek PDF içeriğinin güvenli hale getirilmesini sağlıyor.</p>
+
+<h4 id="30">Tor Ağına Bağlanmak</h4>
+
+<p>Tor ağına bağlantı için daha önce de bahsetmiş olduğumuz Whonix servisinden yardım alıyoruz. Whonix isminin geçtiği tüm sistemlerin, ağ bağlantısını Tor ağı üzerinden yönlendirdiğini daha önce de belirtmiştik. Tor ağından ve Whonix servisinden defaatle bahsetmiş olmamıza karşın doğrudan açıp hiç test etmemiştik. </p>
+
+<p>Şimdi kısaca servislerin kullanımından ve gerektiğinde Tor ağı bağlantısını nasıl sağlayabileceğimizden bahsedelim.</p>
+
+<p>Örneğin "Disposable Whonix" olarak geçen sistem, geçici yani unutkan kullanım modunda Tor ağı üzerinden işlemler yürütmemiz sağlar. Benzer şekilde Domain kısmında yer alan anon-Whonix sistemi ise unutkan olmayan standart sistemi Tor ağı üzerinden kullanabilmemize olanak sağlar. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-24-01-0b9a7785cdec4f35f027343f2224ac01.png" class="responsive"></figure>
+
+<p>Hemen test etmek üzere Tor Browser uygulamasını çalıştıralım. Uygulamayı çalıştırdıktan sonra karşımıza bir uyarı penceresi açılıyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-24-32-a6d117fbd1e6f1b5d0f671367255ac73.png" class="responsive"></figure>
+
+<p>Bu pencere, önerilen güvenlik ayarlarını kullanıp kullanmak istemediğimizi soruyor. Eğer güvenli gezinti yapmak istiyorsanız "<strong>Yes</strong>" butona basabilirsiniz.&nbsp; Zaten hangi ayarların uygulanacağı da bu pencerede açıkça belirtiliyor. Ben güvenli ayarları seçtiğim için gördüğünüz gibi tarayıcı açıldıktan sonra güvenli kullanım modu etkin gözüküyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-24-47-9125cb4912ec182de8d2ae42e13eafb6.png" class="responsive"></figure>
+
+<p>Hazır tarayıcımız açılmışken "check.torproject.org" adresine giderek Tor ağına bağlı olup olmadığımızı da teyit edelim. Web sitesinin de söylediği gibi Whonix servisini kullandığımız için Tor ağına bağlı bulunuyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-25-00-97c99aa74dad34638a9d6ec82a4f5ab3.png" class="responsive"></figure>
+
+<p>Whonix sayesinde Tor ağına bağlanabildiğimizi teyit etmiş olsak da aslında bu işlemi gösterirken varsayılan olarak yüklü bulunan Tor tarayıcısını kullanarak güvenlik riski almış olduk. Güvenlik riski aldık dedim çünkü varsayılan olarak yüklü gelen Tor tarayıcısının sürümü bizim sistemi yeni yüklediğimiz dönemde eskimiş olabilir. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-25-35-fd0ad687e8c828965f8255be9074ab53.png" class="responsive"></figure>
+
+<p>Bu gibi durumlarda sürümü güncellemek için "<strong>Tor Browser Downloader</strong>" aracı üzerinden yeni sürümü indirmemiz gerekiyor. İndirme işlemini de şablon sistem olan whonix-ws üzerinden gerçekleştirmeliyiz. Böylelikle güncel tarayıcı, whonix-ws şablonunu kullanan tüm alt sistemlerde de kurulmuş olacak. Güncelleme işleminden önce whonix-ws şablonunun internet erişimini düzenlemek üzere ayarlarını açalım. Açılan sayfadan ağ bağlantı türü olarak "<strong>sys-firewall</strong>" seçeneğini seçip "<strong>Ok</strong>" butonuna basarak ayarın geçerli olmasını sağlayalım. Artık şablon da internet erişimine sahip olduğuna göre güncelleme aracını çalıştırabiliriz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-26-13-57a00079695dce2e5cb0e71d0f9eb3b5.png" class="responsive"></figure>
+
+<p>Aracı çalıştırdıktan kısa bir süre sonra yükleyebileceğimiz güncel sürümlerin bilgisi karşımıza geliyor. Buradan en güncel olanı seçip "<strong>Yes</strong>" butonuna basalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-26-26-afe96eb722345f94909e970aff28bca0.png" class="responsive"></figure>
+
+<p>Böylelikle güncel tarayıcı sürümü indirilecek. İndirme işleminden sonra, sistem otomatik olarak indirilen kurulum dosyasının güvenliğini kontrol edip bizden onay isteyecektir. Karşımıza gelen imzayı kontrol edip sorun yoksa "<strong>Yes</strong>" diyerek kurulum başlatılmasını sağlamamız gerekiyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-26-38-4ef68fda1af992b0aad010971ff3af35.png" class="responsive"></figure>
+
+<p>İşlem bitine kadar sabırla bekleyelim. Güncelleme işlemi bittiğinde whonix-ws sistemini kapatıp, whonix şablonunu kullanan sistemleri yeniden başlatarak güncellemenin geçerli olmasını sağlayalım. Daha sonra herhangi bir sistem üzerindeki Tor tarayıcısını başlatarak, tarayıcı bilgisi kısmından güncellemenin geçerli olup olmadığını teyit edebiliriz.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-26-51-5d4da8465b06adb6acce6c424450fe54.png" class="responsive"></figure>
+
+<p>Ayrıca Whonix şablonunu kullanmayan herhangi bir sistem üzerinden de Tor ağına bağlanmamız mümkündür. Bu işlem için ağ bağlantı ayarlarından sys-whonix servisini seçmemiz yeterlidir. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-27-26-f35b305723590480b3e64f1428aabe53.png" class="responsive"></figure>
+
+<p>Bu ayarlamadan ilerleyen bölümde uygulamalı olarak bahsediyor olacağız. Yine de varsayılan olarak yüklü gelen sistemlerin ayarlarında gerekmedikçe bu gibi değişiklikler yapmanızı kesinlikle önermiyorum. Çünkü tüm sistemler zaten amaçlarına uygun şekilde konfigüre edildiğinden, sistemlerin mevcut ayarları ile oynamanız güvenliğinizi tehlikeye atabilir. Bunun yerine farklı amaçlarınız için yeni sanal sistemler oluşturabilirsiniz. Bir sonraki bölümde amaçlarımıza uygun sanal sistemleri nasıl oluşturabileceğimizi ele alıyor olacağız.</p>
+
+<h4 id="31">Yeni Sanal Sistem Oluşturmak</h4>
+
+<p>Eğer Qubes işletim sistemi içerisinde varsayılan olarak yüklü gelen sistemler bizim ihtiyaçlarımızı karşılamaya yetmiyorsa, kendi ihtiyaçlarımıza göre yeni sanal sistem kurulumları yapabiliriz. Qubes işletim sistemi altında yeni bir sanal sistem oluştururken üç tür sistem seçeneğimiz bulunuyor.</p>
+
+<ul><li><p>Şablona bağımlı yeni sanal sistem.</p></li><li><p>Şablondan bağımsız olan yeni sanal sistem.</p></li><li><p>İstediğimiz herhangi bir sistemin kurulum imajı ile oluşturulan sanal sistem.</p></li></ul>
+
+<p>Anlatımlara öncelikle şablon üzerinden üretilen ve "şablona bağımlı olan" yeni bir sanal sistemi nasıl oluşturabileceğimizi ele alarak başlayalım.</p>
+
+<h4 id="32">Şablona Bağımlı Yeni Sanal Sistem Kurulumu</h4>
+
+<p>Şablona bağımlı kurulum işlemi; yüklü bulunan "<strong>Fedora</strong>" "<strong>Debian</strong>" ya da "<strong>Whonix</strong>" şablonlarından istediğimiz bir tanesini kullanarak, üretildiği şablondaki değişikliklere bağımlı yeni alt sanal sistem üretimidir. Hatırlarsanız yeni bir program kurulumunu ele alırken bu konudan uzun uzadıya bahsetmiştik. Sistem üzerinde varsayılan olarak yüklü gelen tüm sanal makinelerin aslında bu şablonlar üzerinden üretilmiş, üretildiği şablondaki değişikliklere bağımlı birer alt sistem olduğunu belirtmiştik. Buradaki bağımlı ifadesi, şablonda meydana gelecek değişikliklerin, şablondan üretilmiş alt sistemleri de etkilemesidir. İşte bu kısımda da kendi ihtiyacımıza göre şablona bağımlı yeni bir alt sanal sistemi nasıl üretebileceğimizi ele alıyor olacağız.</p>
+
+<p>Şablon üzerinden kendi sanal sistemimizi oluşturmak üzere menüde yer alan "<strong>Create Qubes VM</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-30-47-55ce3e93e6565afedd8fe7f48a91253f.png" class="responsive"></figure>
+
+<p>Açılan pencereden yeni sanal sistemin adını ve rengini belirledikten sonra tip olarak "<strong>Qube based on a template</strong>" yani şablon üzerinden kuracağımızı belirtip hangi sistem şablonunu kullanmak istiyorsak onu seçelim. Ben örnek olması açısında "<strong>Debian</strong>" şablonu üzerine kurulumu yapmak üzere devam ediyorum. Ağ bağlantı türünü de sistemi hangi amaçla kullanacaksak ona göre belirleyebiliriz. Ben tüm bağlantının Tor ağı üzerinden sağlanmasını istediğim için "<strong>sys-whonix</strong>" seçeneğini seçiyorum. Bir önceki bölümde bu ayarı değiştirerek&nbsp; herhangi bir sistemin de Tor ağına bağlanabileceğinden bahsetmiştik. Şimdi de uygulamalı olarak deneyimlemiş olacağız. Eğer bu ayarları seçtikten sonra fikir değiştirirseniz, zaten tüm bu ayarları tekrar düzenleme fırsatınız da olacak. Tüm ayarlar istediğimiz gibiyse makinenin oluşturulması için "<strong>Ok</strong>" butonuna basalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-31-02-79a6370306b09b4a2428f6f878d21f16.png" class="responsive"></figure>
+
+<p>Makinemiz oluşturulduktan sonra listedeki yerini alıyor. Test etmek için yeni oluşturduğumuz sistemin tarayıcısını açalım. Tarayıcı açıldıktan sonra ağ bağlantısının bizim ayarladığımız gibi Tor ağı üzerinden sağlanıp sağlanmadığını teyit etmek üzere "check.torproject.org" adresine gidelim. Sayfa açıldığında sistemimizin, bizim ayarladığımız şekilde Tor ağı bağlantısını kullanmakta olduğunu görebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-31-15-87fc3a5bb32f215d77533f7f5c7e3786.png" class="responsive"></figure>
+
+<p>İşte gördüğünüz gibi şablon üzerinden istediğimiz özellikte yeni bir sanal sistem oluşturmak bu kadar kolay. </p>
+
+<h4 id="33">Sistem Ayarlarının Değiştirilmesi</h4>
+
+<p>Bir önceki kısımda istediğimiz özelliklere sahip olan şablona bağımlı yeni bir sanal sistemi nasıl oluşturabileceğimizi görmüş olduk. Yeni sanal sistem oluşturma işlemi dışında, ayrıca gerektiğinde mevcut sanal sistemimizin ayarlarında değişiklik yapmamız da mümkündür. Ayarları açmadan önce tek yapmamız gereken çalışmakta olan sistemi kapatmaktır. Böylelikle ilgili sistemdeki değiştirilebilir olan tüm ayarları sorunsuzca düzenleyebiliriz. Ayarlarını düzenleyeceğimiz sistemi kapattıktan sonra değiştirebileceğimiz ayarları görmek üzere sistem menüsünden "<strong>Qube Settings</strong>" seçeneğine tıklayalım.</p>
+
+<p>Açılan pencerede yer alan tüm sekmeleri tek tek ele alarak açıklayacak olursak;</p>
+
+<p><strong>Basic Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-34-21-0d371642fa1d240836de63769c3c6e12.png" class="responsive"></figure>
+
+<ul><li><p>İsmini değiştirmek için "<strong>Rename</strong>" butonuna basarak açılan pencereye yeni bir isim girişi yapabiliriz.</p></li><li><p>Dilersek sistemin rengini de mevcut rengin üzerine tıklayıp yenisini seçerek değiştirebiliriz.</p></li><li><p>Sistemin temel olarak aldığı "Template" yani "Şablonu" da değiştirebiliriz.</p></li><li><p>İhtiyaçlarımıza göre dilediğimiz zaman bağlantı türünü de düzenleyebiliriz. Hangi bağlantının hangi amaca hizmet ettiğini daha önce ele almıştık. İhtiyacınıza göre buradan seçim yapabilirsiniz.</p></li><li><p>Varsayılan olarak sistemin yedeklenmesi için gereken seçenek zaten seçili olacaktır. Eğer sistemin yedeklenmesini istemiyorsanız "yedeklemeye dahil et" seçeneğini kapatabilirsiniz.</p></li><li><p>Qubes işletim sistemi başlatıldığında bu sanal sistem de otomatik olarak başlatılsın isterseniz "boot sırasında otomatik olarak başlat" seçeneğini aktifleştirebilirsiniz. Bu özellik sistemin geç açılmasına neden olacağı için seçmenizi zorunlu durumların dışında önermem. Zaten herhangi bir sisteme ihtiyacımız olduğunda kolayca çalıştırabiliyoruz. Genelde sadece ağ servisleri başlangıçta başlatılacak şekilde ayarlanıyor. Hatta herhangi bir ağ servisinin ayarlarına göz attığımızda bu özelliğin varsayılan olarak seçili olduğunu da görebiliriz.</p></li><li><p>Eğer sistemde hata meydana geldiyse ve ne yaptığınızdan eminseniz "hata ayıklama modunu çalıştırma" seçeneğini aktifleştirebilirsiniz.</p></li><li><p>Sanal sisteminizi silmek ya da klonlamak isterseniz ilgili butonlara basarak adımları tamamlamanız yeterli olacaktır.</p></li></ul>
+
+<p><strong>Advanced Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-34-30-bdd68b7a35020ed8fa385437fba32e02.png" class="responsive"></figure>
+
+<ul><li><p>Hafıza ve işlemci bölümünden, sisteme özel olarak ayrılmış olan kaynakların miktarını düzenleyebilirsiniz.</p></li><li><p>Mevcut sanal sistemin "sys-whonix", "sys-net" ve "sys-firewall" ağ servisleri gibi, ağ bağlantısı sağlayıcısı görevinde kullanılmasını istiyorsanız "Ağ Sağlayıcı" özelliğini seçebilirsiniz. Yani sanal sisteminiz diğer sistemler için ağ yönlendiricisi olarak kullanılacaksa bu özelliği aktifleştirebilirsiniz. Aksi durumda kapalı kalmalıdır.</p></li><li><p>Sistemin "unutkan" olarak çalışmasını isterseniz "Disposable" seçeneğini aktif edip hangi şablon üzerinden kullanılması gerektiğine karar verebilirsiniz.</p></li><li><p>CD-ROM ile sistemin boot edilmesi özelliğinden daha sonra bahsediyor olacağım. Bu özellik harici bir kurulum imajı ile sistemi başlatmamızı ve gerektiğinde kurulum işlemi yapmamız sağlar. Yeri geldiğinde kullanımını zaten daha iyi anlamış olacaksınız.</p></li><li><p>Çekirdek ve sanallaştırma ile ilgili ayarları, eğer ne yaptığınızı bilmiyorsanız değiştirmenizi kesinlikle önermem. Bu ayarlar kullandığınız sisteme uygun olarak otomatik şekilde seçiliyor. Buradaki ayarlarla oynamak sistemin çalışma yapısını bozabilir.</p></li></ul>
+
+<p><strong>Firewall rules Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-35-41-34c0ed18b1ddc1b0801e7df2c3a667b1.png" class="responsive"></figure>
+
+<p>Buradan limitle seçeneğini seçtikten sonra internet bağlantısı ile ilgili kısıtlamalar oluşturmamız ve mevcut kısıtlamaları silmemiz mümkündür.</p>
+
+<p>Buradaki limitleme seçeneğini seçip herhangi bir adresi belirtirsek, belirttiğimiz adres dışındaki tüm bağlantılar otomatik olarak engelleniyor olacak. Denemek için limitlemeyi aktifleştirip "www.udemy.com" adresini belirtelim. Seçeneğin geçerli olması için ayarı uygulayıp sistemi yeniden başlatalım. Sistem yeniden başlatıldıktan sonra ilgili sınırlamanın geçerli olup olmadığını test etmek üzere, web tarayıcısı üzerinden rastgele bir web sayfasını ziyaret etmeye çalışalım. Belirlemiş olduğumuz udemy adresi dışında hangi adresi denersek deneyelim bağlantının başarısız olduğunu görebiliyoruz. Böylelikle limitleme seçeneğinin de doğru şekilde çalışmakta olduğunu teyit edebiliyoruz.</p>
+
+<p>Gördüğünüz gibi güvenlik duvarı, belirtilmiş olan adresler dışındaki tüm servisleri otomatik olarak engelleyecek şekilde çalışıyor. Biz bu kısıtlama ayarını sadece mevcut sistem için uyguladık. Eğer bu kısıtlamayı "sys-firewall" ağ bağlantı servisinde uygularsak, ağ bağlantı türü olarak "sys-firewall" kullanan tüm sistemlerde aynı kısıtlamalar geçerli olacaktır.</p>
+
+<p><strong>Devices Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-36-03-f20ee5a9a11389c45ca7bc34d83b0c63.png" class="responsive"></figure>
+
+<p>Mevcut sistem üzerinde kullanmak istediğimiz aygıtları buradan seçerek otomatik olarak bağlanmalarını sağlayabiliyoruz.</p>
+
+<p><strong>Applications Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-36-12-54e7d3514bf700b2ae65650c39f0a021.png" class="responsive"></figure>
+
+<p>Daha önce kurulum işlemleri sırasında ele aldığımız şekilde; buradan şablon üzerinde yüklü bulunan araçların kısayollarını, ilgili sistemin listesine ekleyebiliyoruz.</p>
+
+<p><strong>Services Sekmesi</strong></p>
+
+<figure><img src="./../../img/5/2020-06-14_15-36-27-93a5e9e5c8ec7568096758c80f347632.png" class="responsive"></figure>
+
+<p>Sistem üzerinde kullanılabilir olan servisleri ekleme ve çıkarma gibi işlemleri bu sekmeden halledebiliyoruz. Örneğin "<strong>clocksync</strong>" servisini aktif edersek saatimiz otomatik ağ üzerinden senkronize olacaktır.</p>
+
+<p>Böylelikle mevcut herhangi bir sistemin ayarlarında yapabileceğimiz genel değişikliklerin hepsinden bahsetmiş olduk. Burada anlatımı yeni oluşturduğumuz sanal sistem üzerinden ele aldık ancak siz dilediğiniz sistemin ayarlarını burada ele aldığımız şekilde değiştirebilirsiniz.</p>
+
+<h4 id="34">Şablondan Bağımsız Yeni Sanal Sistem Kurulumu</h4>
+
+<p>Bir önceki bölümde; üretildiği şablondaki değişikliklere bağımlı olan yeni sanal sistemleri nasıl oluşturabileceğimizi ele almıştık. Bu tür sistemlerin, üretildikleri şablonlardaki değişikliklerden etkilendiğini biliyoruz. Eğer oluşturduğumuz sistemin üretildiği şablon üzerindeki değişikliklerden etkilenmesini istemezsek, kaynağından yani şablonundan bağımsız bir sanal sistem kurulumu gerçekleştirmek isteyebiliriz. Bağımsız kurulumda; kaynak olan şablon üzerindeki hiç bir değişiklik, oluşturulmuş olan yeni sistemi etkilemez.</p>
+
+<p><strong>Aradaki farkı daha iyi anlamak adına;</strong></p>
+
+<p><strong>Şablona bağımlı olan sistemin;</strong> kullanmakta olduğu şablonun sadece gölgesi olduğunu düşünebilirsiniz. Orijinal sistem üzerindeki değişiklikler gölge sistemler üzerinde de etkilidir. Çünkü biliyoruz ki bizim gerçekliğimizde gölgeler kaynaklarından bağımsız hareket edemezler.</p>
+
+<p><strong>Şablondan bağımsız olan sistemler;</strong> sadece ilk başta şablonu kopyalarlar. Daha sonra kopyalandığı kaynak şablondan tamamen bağımsız hareket ederler. Çünkü bu sistemler gölge değil, kopya sistemlerdir. Kopya sistemlerin üretilmiş olduğu kaynağa sürekli ihtiyacı yoktur. Ancak gölgelerin her zaman üretildikleri kaynağa ihtiyacı vardır. Örneğin siz olmadan gölgeniz var olabilir mi ? </p>
+
+<p>Umarım iki kurulum arasındaki fark net bir biçimde anlaşılmıştır. Açıklamayı belki biraz uzun tutmuş olabilirim. Ancak aradaki farkı iyi anlamanız, ileride kullanım amacına göre doğru kararlar vermeniz adına önemli bir husus.</p>
+
+<p>Hemen deneyimlemek üzere kendimize bağımsız yeni bir sanal sistem oluşturalım.</p>
+
+<p>Yeni sistemimizi oluşturmak üzere menüde yer alan "<strong>Create Qubes VM</strong>" kısmına tıklayalım. Açılan pencereden yeni sanal sistemin adını ve rengini belirledikten sonra tip olarak "<strong>Standalone qube copied from a template</strong>" yani "<strong>Şablondan kopyalanan bağımsız sistem</strong>" seçeneğine tıklayalım. Bu tip özelliği; kurulan sistemin, kurulduğu şablondan bağımsız olmasını sağlar. Şablon olarak istediğimiz sistemi seçebiliriz. Yine de eğer daha sonra fikir değiştirirseniz, kurmuş olduğunuz sistemin şablonunu değiştiremezsiniz. Çünkü bizim burada yaptığımız işlem doğrudan ilgili şablonu kopyalamak olacak. Şablon seçiminden emin olduktan sonra bağlantı türünü de seçelim. Bağlantı türünü daha sonra istediğiniz bir zaman değiştirebilirsiniz. Yani bağlantı türü konusunda, şablonda olduğu gibi kesin bir karara varmanız gerekmiyor. Bu özelliği daha sonra ihtiyaçlarınıza göre dilediğiniz zaman değiştirebilirsiniz. Ayarlardan eminsek son olarak "<strong>Ok</strong>" butonuna basarak, bağımsız sanal sistemin oluşturulmasını sağlayalım.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-46-59-d9eb5e1b1e0ba195acea22313ee17227.png" class="responsive"></figure>
+
+<p>Sistemimiz oluşturulduktan sonra bağımsızlığını test etmek üzere; sistemimizin kopyalanmış olduğu şablon üzerine yeni bir araç yüklemesi yapalım. Araç yüklendikten sonra her iki sistemin içerisinde yüklü bulunan araçları kıyaslayarak, iki sistem arasında bağımlılık olup olmadığını teyit edelim.</p>
+
+<p>Ben örnek olması açısından rastgele bir araç kurulumu yapıyorum. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-48-15-0bff5b35c2c44130f6394bc0bf57199f.png" class="responsive"></figure>
+
+<p>Aracım kurulduktan sonra hem orijinal hem de kopya olan iki sistemin ayarlarındaki "<strong>Applications</strong>" sekmesine gelerek uygulamaları güncelliyorum. Her iki sistemin listesini de kontrol ettiğimizde, kurmuş olduğumuz aracın yalnızca kurulduğu orijinal sistemde yer aldığını görebiliyoruz. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-48-23-d3b1fec54a93bb8b33a6bf5b0928afce.png" class="responsive"></figure>
+
+<p>Hatta durumu iyice netleştirmek adına, bağımlı olan başka bir sistemin ayarlarına da göz atıp yeni kurulan aracın yer alıp almadığını görelim. Bağımlı olan herhangi bir sistemin ayarlarına gelerek uygulamaları yenileyelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-48-46-67a30ea3c9f3572b946f75b6079de555.png" class="responsive"></figure>
+
+<p>Yenilenen listeye baktığımızda, yüklenmiş olan uygulamanın otomatik olarak bu bağımlı sistem için kullanılabilir hale geldiğini görebiliyoruz.</p>
+
+<p>Böylelikle bağımlı ve bağımsız sistemler arasındaki farkı iyice netleştirmiş olduk. Sizler de amacınıza göre iki farklı şekilde şablonlar üzerinden sanal sistemler oluşturabilirsiniz.</p>
+
+<p>Bir sonraki bölümde şablonlar ile uğraşmadan kendi istediğimiz herhangi bir sistemi, kurulum imajı üzerinden nasıl kurabileceğimize değiniyor olacağız.</p>
+
+<h4 id="35">Yeni Bir İşletim Sistemi Yüklemek</h4>
+
+<p>Mevcut şablonları kullanmak yerine bizim tercih ettiğimiz alternatif işletim sistemlerini de yükleyip kullanmamız mümkündür. Mac ya da Android sistemleri henüz desteklenmiyor olsa da pek çok Linux dağıtımını ve ayrıca Windows işletim sistemini, Qubes içinde sanal olarak kurup kullanabiliyoruz.</p>
+
+<p>Bizler de anlatım sırasında örnek olarak "Windows 10" sisteminin kurulumunu ele alalım. </p>
+
+<p>Kurulum için işletim sistemi imajına ihtiyacımız var.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-49-20-9aa76c6df2f8af6f9c97155a62799ad7.png" class="responsive"></figure>
+
+<p>İmajı Windows'un kendi web sitesi üzerinden edindikten sonra kurulum için menüden "<strong>Create Qubes VM</strong>" seçeneğine tıklayalım. Buradan harici bir sistem kurmak istediğimizi "<strong>Empty standalone qube</strong>" tipini seçerek belirtelim. Sistemin ağ bağlantısını da ayarladıktan sonra "<strong>Ok</strong>" butonuna basarak devam edelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-49-34-98bf110a1aac8ba65be61c28655bbe2f.png" class="responsive"></figure>
+
+<p>Sistemin temel ayarlarını belirledikten sonra, kurulum imajını seçebileceğimiz pencere açılmış oluyor. Bu pencereyi şimdilik kapatalım, çünkü öncelikle sistemin ayarlarını düzenlememiz gerekiyor. </p>
+
+<p>Windows kuracağımız için ayarlardan en az 25 ya da efektif kullanım için mümkünse 50 GB disk alanı belirtelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-49-47-db04255b91cd5925118b4a85ebf21812.png" class="responsive"></figure>
+
+<p>Daha sonra en az 4 GB kadar ram ve işlemci tarafında yükseltme işlemi uygulayalım. Tüm ayarlamayı yaptıktan sonra kurulum imajını belirtmek üzere "<strong>Boot from CD-ROM</strong>" butonuna tıklayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-49-57-41e6903f9a77176deefd264e8f499d05.png" class="responsive"></figure>
+
+<p>Açılan pencereden, eğer kurulumu harici bir USB ya da DVD disk üzerinden yapacaksanız "<strong>from block device</strong>" seçeneğini işaretleyip ilgili diski seçebilirsiniz. Ya da mevcut depolama birimlerinde yer alan kurulum imajını da seçebilirsiniz. Ben örnek olması açısından, başka bir depolama biriminde yer alan kurulum imajını seçmek üzere "<strong>from file in qube</strong>" seçeneğini seçtikten sonra "<strong>personal</strong>" sistemini seçerek üç noktaya tıklıyorum. Böylelikle "personal" sisteminin dosya yöneticisi açılmış oluyor. Ben kurulum dosyasını "personal" sistemine indirdiğim için dosyayı buradan seçip "<strong>Ok</strong>" butonuna basarak kurulumun başlatılmasını sağlayabilirim.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-50-13-2c8fef3840594f796deef8e59d8b7cfa.png" class="responsive"></figure>
+
+<p>Ya da "personal" sistemine harici bir disk bağlayıp, kurulum imajını bu harici bir disk üzerinden de seçebilirim. </p>
+
+<p>Yine de en stabil yöntemin USB&nbsp; ya da DVD disk üzerinden kurulum işlemi olduğunu belirtmem gerekiyor. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-50-55-68b085abf603a7a1bb6e3c5077f3fd72.png" class="responsive"></figure>
+
+<p>Ben de USB diskimi "etcher" yazılımını kullanarak Windows kurulumu için hazırlamıştım. Şimdi USB diskimi buradan seçip "Ok" diyerek sistemin bu USB disk üzerinden başlatılmasını sağlıyorum.</p>
+
+<figure><img src="./../../img/5/2020-06-14_15-51-02-030b26b5d21f9a6a61b218b25e1a37b2.png" class="responsive"></figure>
+
+<p>Kurulumun başında ayarlardan genişletmiş olduğumuz en az 25 GB depolama alanına sahip disk bölümünü seçip, kurulumun bu alana yapılmasını sağlayalım. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-51-12-c5743d1054ecb6cac109ee67735282e1.png" class="responsive"></figure>
+
+<p>Kurulum işleminin süresi çeşitli faktörlere göre değişiklik gösterebilir. Yine de kısa sürmeyeceğini şimdiden belirtmiş olayım.</p>
+
+<p>Kurulum işleminin ardından sistem kapatılıyor. Sistemi açmak üzere menüden sanal sistemimize gelerek "<strong>Start</strong>" seçeneğine tıklayalım. Artık sistemi ne zaman açmak istersek bu şekilde kurulmuş olduğu disk alanından başlatabiliyor olacağız. Sistem açıldığında yüklemenin tamamlanması için hazırlıklar yapılıp sistem yeniden başlatılıyor. Yeniden başlatma işlemi kendiliğinden olmayacağı için bizim sistem kapandıktan sonra tekrar "<strong>Start</strong>" kısmına basarak başlatmamız gerekiyor.</p>
+
+<p>Tüm hazırlıklar bitip sistem açıldığında, güncellemeleri yükleyip sistemimizi kullanıma hazır hale getirebiliriz. Ayrıca güncelleme işlemi dışında sistemin nispeten daha performanslı şekilde çalışabilmesi için basit bir ayarlama yapmak üzere sistem özelliklerini açalım. Sistem özellikleri penceresinde yer alan "<strong>Gelişmiş</strong>" sekmesinde "<strong>Performans</strong>" ayarlarına tıklayalım. Açılan pencereden "<strong>En iyi performans için ayarla</strong>" seçeneğini seçip "<strong>Uygula</strong>" diyelim. </p>
+
+<figure><img src="./../../img/5/2020-06-14_15-51-28-7aae79592d792034097736714629b285.png" class="responsive"></figure>
+
+<p>Bu ayar sayesinde sistem öncesine oranla kısmen de olsa daha performanslı şekilde çalışıyor olacak. </p>
+
+<p>Biz burada "Windows 10" işletim sistemini ele aldık. Sizler kurmak istediğiniz diğer alternatif sistemleri de kurulum imajlarını kullanarak ele aldığımız şekilde kurabilirsiniz.</p>
+
+<h4 id="36">Bölüm Sonu Özeti</h4>
+
+<p>Aşağıdaki görsele bakarak Qubes sisteminin genel çalışma yapısının özetini görebilirsiniz. Aslında şu ana kadar anlattığımız pek çok konunun özeti aşağıdaki görsel üzerinden çok daha net görülebiliyor. Eğer tüm anlatımları dikkatlice takip ettiyseniz, görsel sizin için anlamlı gelecektir.</p>
+
+<p><img src="./../../img/5/qubesosdiagram.png" class="responsive"></p>
+
+<p>Qubes işletim sistemini anlatırken tüm konuların birbiri ile yakın ilişkisi nedeniyle hangi konuyu hangi sırada anlatmam gerektiği konusunda biraz zorlandığımı itiraf etmeliyim. Hatta bu bölüm içerisinde sıklıkla "ileride bu konuyu ayrıca ele alıyor olacağız" gibi cümleler kurduğumu fark etmişsinizdir. Bu gibi cümleleri sık kullanma nedenim de aynı şekilde konuların birbiri ile olan yakın ilişkisidir. Özellikle hiç bilmeyen yeni kullanıcılar üzerinde "zormuş" algısı oluşturmak istemediğim için tüm konuları bağlantılı ve kolay anlaşılır şekilde ele almaya özen gösterdim. Nitekim anlatımın sonunda, bu sistemin bize sağladığı katkıyı ve temel kullanımın hiç de zor olmadığını sizlere açıkça gösterebilmiş olduğumu umuyorum. Bu açıklamayı yapmış olma sebebim "hocam sürekli ileride anlatırız diyerek vaktimizi çaldınız" gibi yorumların önüne geçmek yani duruma açıklık getirmektir. </p>
+
+<p>Özetle bu bölümde; bilinen ve herkesin kullanımına açık olan en güvenli işletim sisteminin temel çalışma yapısını ve kullanımını öğrenmiş olduk. Sistemi kullandıkça zamanla sistem üzerindeki hakimiyetiniz artacaktır. Yani sizlerden istediğim sadece buradaki anlatımlar ile sınırlı kalmadan uygulamaya geçmenizdir. Ayrıca her zaman daha fazla kullanım bilgisi ve getirilen yeniliklerin takibi için Qubes sisteminin web sitesi üzerinde yer alan resmi dokümantasyonlarını okumaya devam etmenizi de şiddetle tavsiye ederim.</p>
+
+<p>Artık güvenli bir çalışma ortamına nasıl sahip olabileceğinizi biliyorsunuz. İlerleyen bölümlerde ele alacağımız diğer güvenlik bileşenlerini de kullanarak, mümkün olan en güvenli çalışma ortamını elde etmiş olacaksınız.</p>
+
+<p>Böylelikle uzun soluklu bir bölümün de sonuna gelmiş olduk. Bir sonraki bölümde Tor gizli servislerinden bahsediyor olacağız.</p>
+
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

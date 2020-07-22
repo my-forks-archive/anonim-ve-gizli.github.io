@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 8. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" class="responsive" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./7.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./9.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./7.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./9.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">E-Mail Servisleri</a>
+			<a href="#1" class="list-group-item list-group-item-action">Yaygın Kullanımdaki</a>
+			<a href="#2" class="list-group-item list-group-item-action">Geçici Hizmetler</a>
+			<a href="#3" class="list-group-item list-group-item-action">Gizlilik Odaklı</a>
+			<a href="#4" class="list-group-item list-group-item-action">ProtonMail</a>
+			<a href="#5" class="list-group-item list-group-item-action">ProtonMail Kullanımı</a>
+			<a href="#6" class="list-group-item list-group-item-action">Darknet Servisleri</a>
+			<a href="#7" class="list-group-item list-group-item-action">Torbox</a>
+			<a href="#8" class="list-group-item list-group-item-action">Elude</a>
+			<a href="#9" class="list-group-item list-group-item-action">ProtonMail</a>
+			<a href="#10" class="list-group-item list-group-item-action">Hangisi Seçilmeli</a>
+
+			
+			
+   			<hr>
+<a href="#alistirma" class="list-group-item list-group-item-action">Alıştırmalar</a>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">8.Doküman</strong>
+          <h3 class="mb-0">Güvenli E-Mail Servisleri</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">geçici , gizli ve güvenli , protonmail , torbox , elude , darknet servisleri</p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	<h4 id="0">E-Mail Servisleri Hakkında</h4>
+
+<p>Bu bölümde, ihtiyaçlarımıza uygun olan email servisine karar verebilmek adına, 4 çeşit email servisinden söz ediyor olacağız.</p>
+
+<p><strong>Ele alacağımız servisler;</strong></p>
+
+<ul><li><p>Yaygın kullanıma sahip, güvenli olmayan servisler.</p></li><li><p>Geçici hizmet sunan 'kullan-at' servisler.</p></li><li><p>Gizlilik ve güvenlik odaklı servisler.</p></li><li><p>Darknet üzerinde yer alan servisler.</p></li></ul>
+
+<h4 id="1">Yaygın Kullanıma Sahip Servisler</h4>
+
+<p>Bu servislere "gmail", "yahoo mail", "hotmail" ve benzeri email hizmetlerini örnek gösterebiliriz. Bu servisler görünürde ücretsizdir, ancak aldığınız hizmetin karşılığını kişisel verileriniz ile ödersiniz. Talep edildiğinde mesaj içeriklerinizi açık şekilde çeşitli otoriteler ile paylaşabilirler. Bu gibi yaygın kullanıma sahip ücretsiz servisleri kullanarak tüm bu gizlilik haklarınızdan da feragat etmiş oluyorsunuz. </p>
+
+<p>Bu tür servisleri kullanmak için pek çok farklı nedeniniz ve zorunluluğunuz olabilir. Kullanıyor olsanız bile bu servislerin sizi her daim izlediğinin bilincinde olmanız çok önemli. Yani gerçekten gizlilik gereken işleriniz ve kişisel bilgileriniz söz konusu olduğunda bu tür servislerden uzak durmanız gerekir. Özetle söz konusu gizliliğiniz olduğunda bu tür servisleri zorunda kalmadıkça kullanmanızı kesinlikle önermiyorum.</p>
+
+<h4 id="2">Geçici Hizmet Sunan Servisler</h4>
+
+<p>Kısa süreli oluşturulan ve işlem bittikten sonra silinen servislerdir. Kullan at telefonlar gibi kayıt olmak için kimlik bilgisi vermeden işiniz bittiğinde kurtulabileceğiniz geçici hizmet sunarlar. Bu şekilde çalışan pek çok servis vardır. Ancak bu tür servisleri kullanırken, gerçekten hassas içeriğe sahip verileri bu servisler üzerinden aktarmamanız ve bu servisleri Tor ağı üzerinden kullanmaya dikkat etmeniz gerekir. </p>
+
+<p>Bu tür servisler genelde, e-posta ile kayıt ya da doğrulama işlemi yapmak zorunda olduğunuz ancak aktif olarak kullandığınız e-posta adresinizi vermek istemediğiniz durumlarda kullanılabilir. Ayrıca Tor ağı üzerinden kullanıldığında <strong>isimsiz ve geri takip edilmesi zor</strong> mesajlar yollamak için de kullanılabilir. </p>
+
+<p>Pek çok servis olduğundan hangisini kullanmak istediğinize ihtiyaçlarınıza göre kendiniz karar verebilirsiniz. </p>
+
+<p>Kısa bir internet araştırması ile pek çok geçici hizmet sunan e-posta servisine rastlamak mümkün. Ben sadece kullanışlı bulduğum için anlatım sırasında <strong>Guerrilla Mail</strong> servisini ele alıyor olacağım. Ancak sizler dilediğiniz bir alternatifi de kullanabilirsiniz. </p>
+
+<p>Bu hizmeti hem clearnet hem de darknet üzerinde yer alan alan adresleri üzerinden kullanabiliyoruz. Ancak darknet üzerinde yer alan servisi mesaj göndermeye kapalı şekilde kullanılıyor yani sadece mesaj alımına açıktır. Ayrıca kötüye kullanımı önlemek amacıyla her mail gönderiminde, göndericinin ip adresini de mesaja ekliyor. Bu durumu mesaj göndererek de teyit edeceğiz. Eğer Tor tarayıcısı üzerinden bu servise eriştiyseniz ip adresi sizin gerçek ip adresiniz olmayacağı için sorun teşkil etmeyecektir.(Guerrilla servisi Tor ağı üzerinden mail göndermeyi captcha ile engelliyor. Yine de alternatif geçici mail servislerinin gönderim yapmak mümkün olabilir.) Ancak Tor ağına bağlı değilken dikkatsizlik hatası mesaj gönderirseniz, gerçek ip adresinizin gizliliğinizi ihlal etme olasılığı da vardır.</p>
+
+<p>Servisin kullanımı oldukça kolaydır. Web sitesine, kısa bağlantı adresi olan "grr.la" ifadesi ile de ulaşabiliyoruz. Açılan sayfadan isim ve mail servisinin alan adını istediğimiz gibi oluşturabiliyoruz. Oluşturmuş olduğumuz adresin dışında aynı adresin şifreli hali de otomatik olarak oluşturuluyor.&nbsp;</p>
+
+<figure><img src="../../img/8/2020-06-15_11-17-29-bd1ec18ab6d37dc2ceb44660bc464eca.png" class="responsive"></figure>
+
+<p>Şifreli halinin oluşturulma nedeni, bizim aldığımız ve gönderdiğimiz mail içeriklerinin başkaları tarafından okunmasını önlemektir. </p>
+
+<p>Örneğin ben isim olarak "oncegizlilik" ifadesini kullanarak oncegizlilik@sharklasers.com adresini aldım diyelim. Eğer bu adresin şifreli hali olmasa benim gönderdiğim e-postadaki gönderici bilgisinden ya da kayıt olurken kullandığım formdan benim kullandığım mail adresinin tam adını kolaylıkla öğrenebilirler. Ve eğer tam adresi biliyorlarsa tekrar oturum açmak için bu adresi tekrar yazmaları yeterli olacaktır. Bunu denemek için öncelikle hesabımızın ayırt edilebilir olması için bu hesaba başka bir adresten mail atalım. Daha sonra Tor tarayıcısı üzerinden farklı bir sekmede yani farklı bir ip adresinden aynı hesaba erişmeyi deneyelim. Bu işlem için tek yapmam gereken aynı ismi ve alan adresini kullanmak olacak. </p>
+
+<p>Ve sonuç olarak iki ayrı ip adresinden aynı adres bilgisini kullanarak e-posta içeriğine kolayca ulaşabiliyorum. İşte bu yüzden biz e-posta gönderirken ya da bir yere bu e-posta adresi ile kayıt olurken mutlaka buradaki şifreli adresi kullanmamız gerekiyor. Aksi halde geçici de olsa bizim mail adresimize şifresiz şekilde kolaylıkla herkes ulaşabilir.</p>
+
+<p>Esasen oluşturduğumuz mail adresi sadece 1 saat için geçerli oluyor ve servis, 24 saatin sonunda tüm günlüklerin silindiğini iddia ediyor. Yine de çalışma yapısı gereği bu tür servislerin kesinlikle gizlilik ve güvenlik sunmadığı kesin. Sizlere önerim bu tür hizmetleri anti-spam ve tek seferlik kullanım için tercih etmenizdir. </p>
+
+<p>Şimdi de bu servis üzerinden gönderdiğimiz e-postaların ip adresimizi açık edip etmediğini teyit edelim. E-posta göndermek üzere "<strong>Compose</strong>" kısmına tıklayıp deneme mesajımızı başka bir e-posta hesabına gönderelim. Ben denemek için gmail üzerinde yer alan bir e-posta adresine mesaj gönderiyorum. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-30-08-ea51f988ec7952985c3c9693e490d5ce.png" class="responsive"></figure>
+
+<p>Mesaj adrese ulaştığında, mesajın orijinal içeriği görüntülendiğinde ip adresimizin de yer aldığını görebiliyoruz. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-30-18-e50f6dfb08c3efc8e216a1b0fb1b798d.png" class="responsive"></figure>
+
+<p>Böylelikle servisin de nasıl çalıştığı ve hangi amaçlar için kullanılabileceğinden genel olarak bahsetmiş olduk. Daha önce de söylediğim gibi ele aldığımız "guerrilla mail" servisi dışında pek çok alternatif servis bulunuyor. Hangisini kullanacağınız size kalmış.</p>
+
+<h4 id="3">Gizlilik ve Güvenlik Odaklı Servisler</h4>
+
+<p>Özel olarak gizlilik ve güvenlik odaklı çalışan birden fazla servis olsa da içlerinde en sık tercih edilen ve şu an için kullanışlı bulunan servis "ProtonMail" servisidir.</p>
+
+<h4 id="4">ProtonMail</h4>
+
+<p>İsviçre merkezli ve oldukça popüler bir e-mail servisidir.</p>
+
+<p><strong>Öne çıkan özellikler;</strong></p>
+
+<ul><li><p>Servis, işleyişi konusunda şeffaftır.</p></li><li><p>Açık kaynaklıdır.</p></li><li><p>Ücretsiz sürümü bulunur.</p></li><li><p>Uçtan uca şifreleme ile korunur.</p></li><li><p>İki aşamalı doğrulama koruması vardır.</p></li><li><p>İsviçre yasal gizlilik yasaları ile korunmaktadır.</p></li><li><p>Kendini imha eden mesaj özelliği vardır.</p></li><li><p>Anonim ödeme seçeneği mevcuttur.</p></li></ul>
+
+<p>ProtonMail servisini şu an için gizlilik adına kullanılabilir kılan özelliklerinden bahsedelim.</p>
+
+<p>Şirketi kimin işlettiği, nereden ve nasıl yürütüldüğü, sahip oldukları veriler, kolluk kuvvetleri ile nasıl etkileşimde bulundukları, finansal kaynakları ve şirketle ilgili çok daha fazla bilgiyi açık şekilde düzenli olarak kamuoyu ile paylaşıyorlar. Ayrıca blogları üzerinden ya da diğer iletişim kanalları üzerinden sorulan sorulara ve eleştirilere cevap veriyorlar.</p>
+
+<h4>Açık Kaynaklı</h4>
+
+<p>Uygulamaları açık kaynaklı yani içeriği herkes tarafından görülüp denetlenebilir şekilde yayınlanıyor. Ayrıca bağımsız kuruluşlara kendi uygulamalarını düzenli aralıklarla test ettirip, sonuçlarını kamuoyu ile paylaşıyorlar. Bu eğitimi hazırladığım sırada kapalı kaynaklı birkaç uygulaması bulunmasına karşın, bu uygulamaların da açık kaynaklı hale getirileceğini duyurmuşlardır.</p>
+
+<h4>İş Modeli</h4>
+
+<p>Şirket olarak gelirlerinin tamamına yakınını ücretli üyelik ve bağışçılardan elde ettikleri için kişiselleştirilmiş reklam uğruna kullanıcılardan kişisel veri toplamıyorlar.&nbsp; Kişisel verilere gösterdiği saygı sayesinde fon toplayarak hayatta kalan bir şirket olduğu için, herhangi bir kişisel veri ihlali durumunda asla fon toplamaya devam edemezler. Bu sebeple kişisel verilere ihanet etmeleri doğrudan şirket çıkarları ile çatışacağı için mümkün gözükmüyor. </p>
+
+<p>Ayrıca gizli ve güvenli iletişimin herkesin hakkı olduğunu düşündükleri için ücretsiz sürümü de kullanmak mümkündür. </p>
+
+<h4>Tercih</h4>
+
+<p>Bu servisi kullandığı açık şekilde bilinen pek çok aktivist ve muhalif gazetecinin güvenli iletişim kurmak için bu servisi kullanmaya devam etmeleri ve bu servis üzerinden şu ana kadar bilgi sızıntısı yaşamamış olmaları, karşımızda iyi bir örnek olarak duruyor. Mesaj içerikleri, uçtan uca şifreleme sayesinde ProtonMail servisi de dahil hiç kimse tarafından okunamıyor. Ayrıca hesap güvenliği de iki adımlı doğrulama ile korunabiliyor.</p>
+
+<h4>Yasal Garanti</h4>
+
+<p>ProtonMail yalnızca İsviçre hükümetinin bağlayıcı yasal bir emriyle kullanıcı verilerini paylaşabilir. Yine de platform çok az veri depoladığı için paylaşılan veriler de kısıtlı miktarda bilgi içeriyor. Ayrıca mesaj içerikleri kullanıcı hariç, ProtonMail de dahil hiç kimse tarafında çözülemeyecek şekilde tutulduğundan mesaj içerikleri ifşa olmuyor. Geçmişteki davalara bakıldığında karşılıklı iletişimin ProtonMail üzerinden sağlandığı hiç bir mesaj içeriğine ulaşılamadığı da görülmektedir. Yine de şirket, gerekirse yasa dışı faaliyet yürüten kişilerin hesaplarını mahkeme kararı doğrultusunda askıya alma ve ip adreslerini takip ederek kolluk kuvvetleri ile paylaşma hakkının olduğunu da açıkça beyan ediyor. Yine de mesaj içerikleri yedek sunucular da dahil, kullanıcı hariç hiç kimse tarafından çözülemeyecek şekilde tutuluyor. </p>
+
+<h4>Ödeme Yöntemi</h4>
+
+<p>Eğer ücretsiz üyelik yeterli gelmiyorsa, kripto paralar üzerinden gerçek kimliğinizi açık etmeden anonim şekilde paralı üyelik satın alabilirsiniz.</p>
+
+<h4>Olumsuz Yönleri</h4>
+
+<p>ProtonMail güvenlik için iyi çözümler sunan oldukça popüler bir servis olsa da tamamen kusursuz değil. Bu servisin de kendi içinde olumsuz yanları mevcut.</p>
+
+<p>Örneğin Tor ağı üzerinden kayıt oluşturmak istendiğinde captcha ile anonim kayıt oluşturmayı önlüyor.</p>
+
+<p>Gönderici, alıcı ve konu(başlık) bilgisi ProtonMail üzerinde şifrelenmiyor. Yani mesaj içeriği hariç anonimliğinizi tehlikeye atabilecek kısımlar okunabilir şekilde tutuluyor.</p>
+
+<p>Projenin çıkışında tamamen bağımsız destekçiler ile gerçek amacına hizmet edebileceği ifade edilmiş olmasına karşın, ilerleyen dönemde pek çok yatırımcıdan ve çeşitli devlet kurumlarından finansal yatırım almışlardır. Bu durum; şirketin potansiyel olarak kısıtlanan bağımsızlığı dolayısıyla, kullanıcıları tarafından veri güvenliğinin sorgulanmasına neden oluyor. Yine de bu duruma cevaben ProtonMail, mesaj içeriğinin kullanıcı hariç hiç kimsenin okuyamayacağı şekilde şifrelendiğini belirterek, kullanıcılarının gizliliğini koruduklarını ifade ediyor.</p>
+
+<p>Güven denilen kavram satın alınabilecek bir olgu olmadığı için sadece zaman içerisinde hatasız hizmet karşılığında kazanılabiliyor. ProtonMail servisi de şu ana kadar ki tutumları ile bu güveni kazanmış en iyi alternatif gibi gözüküyor. ProtonMail şirket olarak, servislerini kullanırken sizi güçlü düşmanlara karşı koruyamayacaklarını da açıkça belirttiği için dikkatli bir kullanıcı olduğunuz sürece güvenliğiniz riske girmeyecektir. Yani söz konusu sizin güvenliğiniz olduğunda ProtonMail servisinden çok daha büyük bir sorumluluk sizin üstünüze düşüyor.</p>
+
+<p>Bu noktada kullanılan servisin güvenlik önlemleri dışında sizin de ekstra güvenlik önlemleri alması ve bilinçli hareket etmesi gerekiyor.</p>
+
+<ul><li><p>Kayıt olurken kullandığınız bilgilere dikkat edin. Gerçek ya da sizinle ilişkilendirilebilecek bilgiler kullanmayın.</p></li><li><p>Servisi güvenilir bir VPN ya da Tor ağı üzerinden kullanın. Böylelikle ip adresinizi izlemek istediklerinde, gerçek ip adresinize ve konum bilginize ulaşamazlar.</p></li><li><p>Gönderici kimliği gizlenmediği için göndericinin kim olduğuna dikkat edin. Gönderici üzerinden, dolaylı olarak da olsa size ulaşılabileceğini unutmayın.</p></li><li><p>Gönderdiğiniz e-postanın "konu" yani "başlık" kısmının gizlenmediğini unutmayın. Gönderdiğiniz e-postanın başlığına yazdıklarınıza dikkat edin. Ya da elle yani manuel olarak şifreleyip gönderin.</p></li><li><p>Asla ProtonMail servisi de dahil olmak üzere hiç bir servise %100 güvenip dikkatsiz davranmayın ! Sorumluluğun büyük kısmının sizde olduğunu unutmadan hareket edin.</p></li></ul>
+
+<h4 id="5">Kullanımı</h4>
+
+<p>Hesap oluşturmak ve mail atmak şu ana kadar kullandığınız herhangi bir mail servisinden daha farklı değil. Ancak biz yine de kısaca hesap oluşturma ve mail atma kısımlarına değinmiş olalım.</p>
+
+<p>Öncelikle hesap oluşturmak için web sitesini ziyaret ederek "<strong>Kayıt Ol</strong>" butonuna basalım. Açılan sayfadan kullanmak istediğimiz hesap türünü seçmemiz gerekiyor. Eğer yeterli gelecekse ya da denemek için hesap oluşturuyorsak "<strong>Ücretsiz</strong>" sekmesinden devam edebiliriz. Nitekim temel kullanım için ücretsiz versiyon son derece yeterli oluyor. Yine de ihtiyaçlarınıza göre diğer planlara da göz atabilirsiniz. Biz şimdilik herkese hitap etmesi açısından sekmeye tıkladıktan sonra "<strong>Ücretsiz Planı Seçin</strong>" butonuna basalım. </p>
+
+<p>Açılan sayfada yer alan kullanıcı adı ve parola kısımlarını istenilen şekilde dolduralım. Ayrıca eğer istersek hesap kurtarma işlemi için kullanmakta olduğumuz başka bir e-posta adresimizi de belirtebiliriz. Kurtarma e-postası, ProtonMail hesabımıza erişme konusunda sorun yaşadığımızda kullanacağımız bir alternatif olacak. Yine de girdiğiniz e-posta bilgisinin, sizin gerçek kimliğiniz ile ilişkilendirilemeyeceğinden de emin olun lütfen. Dilerseniz bu kısımı boş da bırakabilirsiniz. Tüm işlem bittiğinde "<strong>Hesap Oluştur</strong>" diyerek devam edelim. Onaylama işlemi için seçeneklerden herhangi birini kullanabiliriz. Eğer Tor ağı üzerinden bağlanıyorsanız "captcha" seçeneği muhtemelen doğrulama konusunda sorun çıkaracaktır. Bunun yerine&nbsp;e-posta kısmını tercih edip daha önce de ele aldığımız geçici bir e-posta hizmetini kullanabiliriz. E-posta seçeneğini seçtikten sonra geçici hesabımıza gelen onay kodunu girelim.&nbsp;Ve en son açılan pencerede görünür hesap ismimizi belirleyip "<strong>Tamamla</strong>" diyerek hesap kurulumunu tamamlamış olalım. İşte tüm hesap oluşturma işlemi bu kadardı. </p>
+
+<p>Kullanım arayüzü son derece kolay ve alışıldık olan bu servisi kullanırken hiç bir zorluk yaşayacağınızı sanmıyorum. Yine de temel işlem olarak mesaj gönderip gelen mesajı kontrol etmeyi ele alalım.</p>
+
+<p>Mesaj göndermek için "<strong>Oluştur</strong>" butonuna basalım.</p>
+
+<figure><img src="../../img/8/2020-06-15_11-42-20-dc7000c1ac3b976d5470cdd3272ff294.png" class="responsive"> Açılan mesaj penceresinde göndermek istediğimiz adresi ve mesaj içeriğini girelim. Daha fazla özellik için yan tarafta bulunan çentik şeklinde gözüken "<strong>Daha Fazla</strong>" butonuna basalım. </figure>
+
+<figure><img src="../../img/8/2020-06-15_11-42-32-9dbc9a653a09ab9171d3ef3a63ba2425.png" class="responsive"></figure>
+
+<p>Buradan mesajın bizden geldiği anlaşılması için mesajı imzalayabilir, bize geri şifreli mesaj gönderilebilmesi için de karşı tarafa genel anahtarımızı paylaşabiliriz. Ayrıca eğer karşı taraf da ProtonMail servisini kullanıyorsa "<strong>Okundu bilgisi iste</strong>" özelliği ile mesajımızı okuyup okumadığının bilgisini talep edebiliriz. Bunlar dışında mesajımıza zaman sınırlaması ve parola da ekleyebiliyoruz. Parola eklemeyi özellikle de gönderdiğiniz kişi ProtonMail gibi güvenli bir servis kullanmıyorsa uygulamanızı şiddetle tavsiye ederim.Biz örnek olarak "<strong>Test Metni</strong>" ifadesini, imzamızı ve genel anahtarımızı ekleyip ayrıca 1 saat süre sınırlaması ile parola da ekleyerek gönderelim. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-43-14-58cbb643efcca405d2a399c9be08db73.png" class="responsive"></figure>
+
+<p> Mesajı gönderdikten kısa bir süre sonra gelen kutumuzda parola ipucu ve mesajın ne kadar süre sınırlı olduğu gibi bilgiler de yer alıyor. Mesaj şifreli olduğu için açmak üzere "<strong>Güvenli Mesajı Görüntüle</strong>" butonuna basalım. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-43-35-2ea9a029bce3d3ce851964b75d7da2d3.png" class="responsive"></figure>
+
+<p>Açılan sayfadaki alana parolayı girip "<strong>Şifreyi Çöz</strong>" diyelim. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-43-43-3977f1e33a9398120db3b954b0583847.png" class="responsive"></figure>
+
+<p>Eğer şifre doğruysa mesaj içeriğine ulaşmış oluyoruz. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-43-56-95f966e4f8a15845d95677b8f017ffb0.png" class="responsive"></figure>
+
+<p>Mesaj eki olarak gördüğünüz gibi hem imza hem de genel anahtar dosyası bulunuyor. Bu dosyaları kullanarak daha önce öğrendiğimiz şekilde mesajın kimden gelindiğini teyit edip, karşı tarafa şifreli mesaj da gönderebiliriz. Eğer biz güvenli bir e-posta hizmeti kullanmıyorsak "<strong>Güvenle Yanıtla</strong>" butonuna basarak şifreli bir biçimde yanıt yazabiliriz. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-44-15-2ccbcb97da6fac3317032dbae2b9d0f9.png" class="responsive"></figure>
+
+<figure><img src="../../img/8/2020-06-15_11-44-23-761a8c5fb04fc6a434a2d825aba949a8.png" class="responsive"></figure>
+
+<p>Bahsetmiş olduğum tüm bu özellikler zaman içerisinde gelişip değişiklik gösterebilir. Ayrıca zamanla çok daha farklı özellikler eklenip, var olan özellikler de kaldırılabilir. Benim bu kısımda bunları açıklama nedenim bu servisin kullanımının gerçekten kolay ve işlevsel olduğunu kanıtlamaktı. Yani artık servisin ne kadar kolay kullanılabildiğini gördüğünüze göre daha fazla özellik için biraz kurcalamanız yeterli. </p>
+
+<h4 id="6">Darknet Üzerindeki Servisler </h4>
+
+<p>Darknet üzerinde yer alan ve anonimliği ön planda tutan pek çok servis bulunuyor. Biz bu kısımda sadece birkaç temel servisten bahsediyor olacağız.</p>
+
+<p>Darknet üzerinde yer alan servisleri de kendi içinde üç türde ele alabiliriz;</p>
+
+<ul><li><p>Tamamen darknete özel olarak çalışan servisler. Bu tür servisler yalnızca darknet üzerinde yer alan servisler ile iletişime izin verirler.</p></li><li><p>Darknet üzerinde yer alan ancak hem darknet hem de clearnet üzerindeki servisler ile iletişim kurabilen servisler.</p></li><li><p>Hem darknet hem de clearnet üzerinden ulaşılabilen ve her iki alandaki e-posta hizmetleri ile de iletişim kurabilen servisler.</p></li></ul>
+
+<h4 id="7">Torbox</h4>
+
+<p>Bu servis tamamen darknete özel olarak çalışarak, yalnızca darknet üzerinde yer alan birkaç mail servisi ile iletişim kurmamıza izin verir. Yani eğer iletişim kuracağımız kişi Torbox'un desteklediği bir sağlayıcı kullanmıyorsa, kullandığı servis darknet üzerinde yer alıyor olsa dahi karşılıklı e-posta alışverişi olamıyor. Torbox'un desteklediği servisleri web sitesi üzerindeki "<strong>Relay</strong>" sekmesinden görebilirsiniz. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-50-48-695347a6c193bff41aab7e14349a348d.png" class="responsive"></figure>
+
+<figure><img src="../../img/8/2020-06-15_11-50-35-a1e514ead92084791dec37d4a92c3c12.png" class="responsive"></figure>
+
+<p>Torbox ücretsizdir ve bizlere 25 MB depolama alanı sunar. Daha fazla disk alanı için bağış yapmanız gerekir. Sunucularda depolanan tüm e-posta verilerinin ve sunucunun kendisinin, şifreli şekilde tutulduğu servis tarafından belirtiliyor. Adından da anlaşılacağı gibi Torbox, tüm ağ trafiğini Tor ağı üzerinden yönlendirerek anonim kalmanızı kolaylaştırıyor.</p>
+
+<p>Adres: <a href="http://torbox3uiot6wchz.onion" target="_blank" rel="noopener noreferrer">http://torbox3uiot6wchz.onion</a></p>
+
+<p>Kaydolmak için "<strong>Sign Up</strong>" sekmesine tıklayalım. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-51-13-08383b1c0aae701d4534aeb32a67ae4a.png" class="responsive"></figure>
+
+<p>Açılan sayfada gerekli alanları doldurup "<strong>Add Mailbox</strong>" butonuna basarak kaydımızı tamamlayalım. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-51-22-3fdb17b63838e817e90dd537cb5fb792.png" class="responsive"></figure>
+
+<p>Kayıt işlemi başarılı olursa karşımıza e-posta adresimizin yazılı olduğu, e-posta kaydının başarılı olduğunu bildiren uyarı mesajı gelecektir.</p>
+
+<figure><img src="../../img/8/2020-06-15_11-51-32-6663b01f902fa515ed8b3207913411ac.png" class="responsive"></figure>
+
+<p>Kayıt işleminin ardından giriş yapmak için "<strong>Webmail Login</strong>" sekmesine tıklayalım. Açılan sayfaya giriş bilgilerimizi doldurup giriş yapalım.</p>
+
+<figure><img src="../../img/8/2020-06-15_11-51-58-916cf806a3fcebdad0cfb26d621d8f01.png" class="responsive"></figure>
+
+<p> Gördüğünüz gibi oldukça sade bir arayüz bizi karşılamış oluyor. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-52-35-1065291d0726c38b84cc41e8fe4b10b5.png" class="responsive"></figure>
+
+<p>Sol tarafta yer alan kısımdan bize gelen e-postaları kontrol edebilir, "<strong>Compose</strong>" kısmından Torbox servisinin desteklediği mail servislerinden birine mail atabiliriz. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-52-45-29f6bd6c3c44ffa2c746db6ede2db64e.png" class="responsive"></figure>
+
+<p>Örnek olması için ben "<strong>Elude</strong>" servisine mail atıyorum. Elude servisinde yer alan gelen kutumu kontrol ettiğimde mesajın bana ulaşmış olduğunu görüyorum. Bir de gelen maile cevap yazarak mesajın karşı tarafa iletilip iletilmediğini test ediyorum. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-53-01-fd42f65518c63e2b2f578372593a9529.png" class="responsive"></figure>
+
+<p>Mesajım karşı tarafa da ulaştığına göre mail alışverişinin başarılı olduğunu teyit etmiş olduk.</p>
+
+<p>Şimdi de clearnet üzerinde yer alan "Gmail" servisine mail atarak "Torbox" servisinin yalnızca darknet üzerinde yer alan belirli servisler ile iletişim kurabildiğini kanıtlayalım. </p>
+
+<p>Gmail adresine mail atmak istediğimizde gördüğünüz gibi işlem hata veriyor. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-54-45-ba9caae5f39bcfe4f504cb77dccfee6f.png" class="responsive"></figure>
+
+<p>Aynı işlemi bu kez tersi şekilde yani Gmail adresinden Torbox adresine mesaj atarak test edelim. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-55-02-0a758852845ae854215e192dc10ac2d8.png" class="responsive"></figure>
+
+<p>Bu işlem de bizi şaşırtmayarak adresin bulunamadığı uyarısı ile başarısız oluyor. Böylelikle yalnızca darknet üzerinde yer alan servisler arasında Tor ağı üzerinden güvenli mail alışverişi yapabileceğimiz bir e-posta servisini tanımış olduk.</p>
+
+<h4 id="8">Elude</h4>
+
+<p>Elude, yalnızca Tor ağı üzerinden erişilebilen mail servisidir. Yani şu an için surface web üzerinden hizmet sunan bir web adresi yoktur. Surface web üzerindeki web adresi yalnızca onion adresine yönlendirme yapmaktadır yani surface web üzerinden email servisine erişemeyiz. Ancak Elude hem darknet hem de clearnet üzerinde yer alan servislerle e-posta alışverişinde bulunabiliyor. Yani darknet üzerinde yer almasına karşın, çift taraflı şekilde çalışabiliyor. Ücretsiz olması ve çalışmak için hiç bir yerde javascript kullanmaması da sıklıkla tercih edilmesini sağlayan başlıca etmenlerdir. Ayrıca hesabınızı istediğiniz zaman tamamen silebilme seçeneğiniz de mevcuttur. Verileri şifreli şekilde sunucularında sakladıklarını ve ve hesabı silme talebinizle kalıcı olarak verilerinizi sildiklerini iddia ediyorlar. Ücretsiz kayıt ile birlikte bizlere 50 MB depolama alanı veriyorlar. Daha fazla depolama alanı için bağış yapmamız gerekiyor.</p>
+
+<p>Adres: <a href="http://eludemaillhqfkh5.onion/" target="_blank" rel="noopener noreferrer">http://eludemaillhqfkh5.onion/</a></p>
+
+<p>Kaydolmak için "<strong>Sign up</strong>" sekmesine tıklayalım. Açılan sayfada yer alan bilgileri dolduralım ve "<strong>Register</strong>" butonuna basalım. Gördüğünüz gibi kaydımızın başarılı olduğunu bildiren bir uyarı açılmış oldu, "<strong>Ok</strong>" diyerek giriş yapmak üzere devam edelim. Giriş bilgilerimizi doldurup giriş yapmak için "<strong>Sign in</strong>" butonuna basalım. E-mail doğrulaması istiyor, bu kısımı "<strong>skip</strong>" diyerek geçelim. Ve nihayet giriş yapmış olduk. Ancak karşımıza doğrudan mail kutusu gelmedi. Mail kısmına geçiş yapmak için "<strong>E-Mail Login</strong>" sekmesine tıklayalım. Açılan sayfada e-mail servisini hangi modda kullanmak istiyorsak o kullanım modunu seçelim. Ben daha güvenli olduğu için javascript gerektirmeyen yalın modu tercih etmenizi öneriyorum. Seçimimizi yaptıktan sonra mail kutumuza yönlendirilmiş oluyoruz. Sol taraftan gelen kutumuza göz atabilir, "<strong>Compose</strong>" kısmından ise istediğimiz kişilere mail atabiliriz. Ben test etmek için hem clearnet hem de darknet üzerinde yer alan iki farklı mail adresine mail gönderiyorum. Kısa süre sonra mesajlar her iki servise de sorunsuzca ulaşıyor. Teste devam ederek her iki servisten de yanıt yazalım.</p>
+
+<p>Yine kısa bir süre bekledikten sonra Elude servisinin gelen kutusuna baktığımızda, her iki servisten yazılan cevapların da bize ulaşmış olduğunu görüyoruz. Böylelikle bu servisin çift taraflı yani hem darknet hem de clearnet üzerindeki servisler ile mail alışverişi yapabilmemize olanak tanıdığını da teyit etmiş olduk.</p>
+
+<h4 id="9">ProtonMail</h4>
+
+<p>ProtonMail servisinin bu bölümde de yer alması sizi şaşırtmış olabilir. Ancak bu bölüme de dahil etmiş olma nedenim, hem sağladığı çeşitli güvenlik önlemleri hem de darknet üzerinden de ulaşılabiliyor olmasıdır.</p>
+
+<p>Darknet üzerinde yer alan .onion uzantılı alan adını öğrenmek için ProtonMail websitesindeki Tor bölümüne bakmanız yeterlidir. </p>
+
+<figure><img src="../../img/8/2020-06-15_11-55-57-600b539a32bf0a0ba9f6c68fd545a14c.png" class="responsive"></figure>
+
+<figure><img src="../../img/8/2020-06-15_11-56-22-06ad0a3b0eb5cf69b92e225653dd5d0c.png" class="responsive"></figure>
+
+<p>Darknet üzerinde yer alması dışında surface web üzerinden sağladığı özellikler .onion uzantılı adresi için de geçerlidir.</p>
+
+<figure><img src="../../img/8/2020-06-15_11-56-45-723396f9a9fecf4c030dee59a5e765cd.png" class="responsive"></figure>
+
+<p>Tek dikkat etmeniz gereken şey, doğru adresi kullandığınızdan emin olmaktır. Sahte siteler kritik bilgilerinizin sızdırılmasına neden olabilir. ProtonMail biraz önce bahsettiğimiz, hem darknet hem de clearnet üzerinden ulaşılabilen ve her iki alandaki e-mail servisleri ile iletişim kurabilen servislerden biridir.</p>
+
+<p>Zaten daha önce hesap oluşturma ve mail atma kısmına değinmiştik. Clearnet üzerindeki kullanım ile darknet üzerinde yer alan hizmetin kullanımı bire bir aynıdır. Yani tek yapmanız gereken Tor ağı üzerinden .onion uzantılı adresini kullanarak giriş yapmaktır.</p>
+
+<p>Adres: <a href="https://protonirockerxow.onion" target="_blank" rel="noopener noreferrer">https://protonirockerxow.onion</a></p>
+
+<h4 id="10">Hangisini Seçmeliyim ? </h4>
+
+<p>Hangi servisi kullanmak istediğiniz ihtiyaçlarınıza göre değişiklik gösterebilir. İçinde bulunduğunuz durumu ve amacınızı göz önünde bulundurarak, şu ana kadar öğrendiğiniz servis seçeneklerinden birini tercih edebilirsiniz. </p>
+
+<p>Hangi servisi kullanırsanız kullanın söz konusu güvenlik ve gizlilik olduğunda, asıl sorumluluğun sizin üzerinizde olduğunun bilincinde olarak faaliyetlerinize dikkat edin lütfen.</p>
+
+<p>Temel olarak mail güvenliği için birkaç öneri sıralayacak olursak;</p>
+
+<ul><li><p>Aynı mail adresini uzun süre kullanmayın. Mail adresinizi sık sık değiştirin.</p></li><li><p>Kayıt olurken girdiğiniz hesap bilgilerine dikkat edin. Sizin gerçek kimliğiniz ile ilişkilendirilebilecek bilgiler girmeyin.</p></li><li><p>Farklı amaçlar için farklı mail adresleri kullanın. </p></li><li><p>Mail servisinin uçtan uca şifrelemesi dışında kritik öneme sahip mesajlarınızı elle şifreleyin. Uygulama ya da işletim sistemi bazındaki güvenlik ihlallerinde mesaj içerikleri açık şekilde gözükmeyeceği için çok daha güvenli yoldur.</p></li><li><p>Hiç bir mail servisine körü körüne güvenmeyin. Mesaj başlığı ve gönderici gibi ek kısımlarında yazdıklarınıza dikkat edin. </p></li></ul>
+
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

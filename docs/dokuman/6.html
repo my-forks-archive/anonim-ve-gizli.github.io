@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 6. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./5.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./7.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./5.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./7.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">Gizli Servisler</a>
+			<a href="#1" class="list-group-item list-group-item-action">Gezinti</a>
+			<a href="#2" class="list-group-item list-group-item-action">Darknet Arama Motoru</a>
+			<a href="#3" class="list-group-item list-group-item-action">Ahmia.fi</a>
+			<a href="#4" class="list-group-item list-group-item-action">Torch</a>
+			<a href="#5" class="list-group-item list-group-item-action">Not Evil</a>
+			<a href="#6" class="list-group-item list-group-item-action">Torgle</a>
+			<a href="#7" class="list-group-item list-group-item-action">Candle</a>
+			<a href="#8" class="list-group-item list-group-item-action">DuckDuckGo</a>
+			<a href="#9" class="list-group-item list-group-item-action">Standart Arama Motoru</a>
+			<a href="#10" class="list-group-item list-group-item-action">Adres Listeleri</a>
+			<a href="#11" class="list-group-item list-group-item-action">Hidden Wiki</a>
+			<a href="#12" class="list-group-item list-group-item-action">Dark Fail</a>
+			<a href="#13" class="list-group-item list-group-item-action">".onion" Hakkında</a>
+			<a href="#14" class="list-group-item list-group-item-action">Web Yayıncılığı</a>
+
+   			<hr>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">6.Doküman</strong>
+          <h3 class="mb-0">Tor Gizli Servisleri | Dark Web</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">dark web , onion , arama motorları , listeler , web yayıncılığı</p>
+        </div>
+        
+      </div>
+    </div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+	 
+	
+	 
+<!-- saved from url=(0034)file:///C:/Users/pc/Desktop/a.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+<h4 id="0">Tor Gizli Servisleri - Dark Web</h4>
+
+<p>Eğitimin başında, yalnızca Tor ağı üzerinden erişilebilen Tor gizli servisleri olduğundan ve bu servislerin bulunduğu web alanın geneline "<strong>Dark Web</strong>" denildiğinden bahsetmiştik hatırlarsanız.</p>
+
+<p>Bu bölümde de, dark web üzeride yer alan web sitelerine nasıl ulaşabileceğimizi ele alıyor olacağız.</p>
+
+<p>Eğer dark web isiminden dolayı bu alan hakkında ön yargılara sahipseniz, Tor gizli servislerinin çıkış nedenini irdelemek düşüncelerinizi değiştirebilir.</p>
+
+<p>Tor organizasyonun en başından beri temel amacı; özgürlüğü kısıtlayan her türlü baskıya ve sansüre karşı, insanların iletişim kurup bilgi alma hakkını kullanabilmelerini sağlamaktı. Bu nedenle yalnızca istemci yani kullanıcı tarafındaki güvenliği ve özgürlüğü sağlamanın yeterli olmayacağının farkında olar ak, yayıncılar için de güvenli paylaşım ortamı sağlamak adına Tor gizli servis hizmetleri başlatılmış oldu. Böylelikle baskı altındaki gazeteciler gibi özgürlüğü kısıtlanmış tüm yayıncılar için ücretsiz ve oldukça güvenli olan "<strong>.onion</strong>" uzantılı yayın platformu ortaya çıkmış oldu. </p>
+
+<p>Yayıncılar "<strong>Tor gizli servisi</strong>" yani diğer bir deyişle "<strong>onion servisi</strong>" üzerinden yayın yapmak istediklerinde, alan adı kaydı gibi işlemler için hiç bir şirkete bağımlı olmadan anonim şekilde istedikleri içeriğin yayınını yap alabiliyorlar. Normal şartlarda alan adı kaydı yaptırırken, kayıt için gereken kimlik bilgilerinin kayıt şirketi ile paylaşılması ve kayıt için ücret ödenmesi gerekiyor. Onion uzantılı alan adı almak için ise, kimlik bilgisi verilmesi ya da herhangi bir ücret ödenmesi gerekmiyor. Bu sayede herkes tarafından erişilebilir ücretsiz ve anonim yayıncılık imkanı sağlanmış oluyor.</p>
+
+<p>Web sitesi dosyalarının barındırılması için yani sitenin host edilmesi için ise kendi bilgisayarımızı dahi kullanabiliyoruz. Bu sayede hem alan adı hem de host hizmeti için hiç kimse ile bilgi paylaşmak zorunda olmadan özgür biçimde Tor ağı üzerinden yayıncılık yapabiliyoruz.</p>
+
+<p>Özgür yayıncılığa en açık örnek olarak, Wikileaks belgelerinin de "<strong>darknet</strong>" üzerinden taşınmış olmasını verebiliriz. Tor gizli servisi ile kurulan web siteleri, Tor ağı üzerinde yani "<strong>darknet</strong>" üzerinde yer aldığı için yayıncı olarak sizin gerçek ip adresiniz de gizlenmiş oluyor. Ayrıca kimlik bilgileriniz ile alan adı kaydı da yaptırmadığınız için, bilgi paylaşım faaliyetlerinizi engellemek isteyen hiç bir mekanizma size doğrudan müdahale edemiyor.</p>
+
+<p>Biraz önceki açıklamalara bakarak "<strong>Tor ağına</strong>", "<strong>darknet</strong>" de denilebildiğini fark etmiş olabilirsiniz. Bunun nedeni daha önce de bahsetmiş olduğumuz Tor projesinin sahip olduğu kötü imajdan kaynaklanıyor. Yani "<strong>Tor</strong>" ifadesi yerine "<strong>Dark</strong>" ifadesi kullanılarak, "<strong>Tor Ağı</strong>" yani "<strong>Tor Network</strong>" yerine "<strong>Dark Net</strong>" ifadesi de kullanılabiliyor. Benzer şekilde Tor ağına bağlanmadan, standart tarayıcılar ile ulaşabildiğimiz web alanının geneline de "<strong>Clear Net</strong>" yani "<strong>Açık-Temiz Ağ</strong>" denebiliyor. Bu tabir genel olarak halka açık olan kolay ulaşılabilir internet alanına atıfta bulunmak için kullanılıyor.</p>
+
+<p>Eğer bu noktada aklınıza, onion servisleri yani dark web siteleri üzerinde gezinti ve yayın yapmak yasal mı sorusu geldiyse, cevabım Tor ağını kullanmak ile aynı olacak. Yani kullanımın yasal yada yasa dışı olmasını tamamen kişilerin faaliyetleri belirliyor. Yasal olan içerik sorun teşkil etmezken, yasa dışı içeriklere erişim ve dağıtım suç kapsamında değerlendirilir. Her iki tarafın kimliğinin de anonim olması kişilere <strong>geçici olarak</strong> yasaları aşma imkanı verse de, bu güvenlik önlemlerinin %100 güvenlik sağlamadığı ve gereken kaynak ayrıldığında gerçek kimliğinizin ortaya çıkma ihtimalinin bulunduğunu da bir kez daha hatırlatmak istiyorum. Yine de Tor kullanarak yaptığınız faaliyetler kendi kişisel bilgi güvenliğinizi sağlamak amacıyla olduğu sürece hiç bir sorun yaşamazsınız. <strong>Özgürlük denilen kavramın diğer insanların özgürlüğünü kısıtlamadığı ve insan hayatlarını riske etmediği sürece sağlanabilecek bir kavram olduğunun farkında olarak her türlü art niyetli faaliyetten uzan durun. </strong>Aksi halde aldığınız tüm gizlilik önlemleri sizi sadece belirli bir süre gizli tutacaktır.</p>
+
+<p>Bu duruma en açık örnek olarak, dark web üzerinde uzun yıllar yayın yapan ve zamanının en büyük illegal ticaret sitesi olan Silkroad'ın kurucusunun da titiz çalışmalar sonucu <a href="https://www.forbes.com./sites/andygreenberg/2013/10/02/end-of-the-silk-road-fbi-busts-the-webs-biggest-anonymous-drug-black-market/#3adb1f8c7a9c" target="_blank" rel="noopener noreferrer">yakalanmasını </a>verebiliriz. Bu konuda yani Silkroad kurucusu hakkında daha fazla bilgi almak ve farkındalık kazanmak için <a href="https://www.imdb.com/title/tt3312868/" target="_blank" rel="noopener noreferrer">"Deep Web" isimli belgeseli</a> eğer daha önce izlemediyseniz mutlaka izlemenizi öneririm.&nbsp; </p>
+
+<h4 id="1">Onion Servislerinde Gezinti</h4>
+
+<p>Onion uzantılı web siteleri Tor ağı üzerinde yer aldığı için, bu türden web sitelerine yalnızca Tor ağına erişebilen "<strong>Tor Tarayıcısı(Tor Browser)</strong>" gibi araçlar üzerinden ulaşabiliyoruz. Yani Tor ağını kullanmayan sıradan tarayıcılar ile "Dark Web" olarak geçen web alanına erişmeniz mümkün değil. </p>
+
+<p>Tor ağına erişimimiz olduğundan emin olduktan sonra tek yapmamız gereken, gitmek istediğimiz web sitesinin adresini kullanmaktır. Fakat bu alandaki .onion uzantılı web sitelerinin alan adları genellikle anlamlı kelimeler içermediği için akılda tutması oldukça zordur. Durum böyle olunca genellikle gitmek istediğimiz web sitesinin adresini, darknet arama motorlarını ya da diğer kullanıcılar tarafından paylaşılan listeleri kullanarak öğrenmemiz gerekiyor. Şimdi sırasıyla hem darknet arama motorlarından hem de paylaşılmış olan listelerden söz edelim.</p>
+
+<h4 id="2">Darknet Arama Motoru Kullanımı</h4>
+
+<p>Darknet üzerinde yer alan web sitelerinin bağlantı adreslerine "Google", "Bing" ya da "Yandex" gibi surface web kapsamında çalışan arama motorları ile erişemeyiz. "Google", "Bing" ya da "Yandex" kadar verimli çalışmasa da darknet üzerinde arama yapıp bize tutarlı sonuçlar sunabilen, darknete özel olan arama motorları da bulunuyor. Ancak tekrar belirtmekte fayda var, bu araçlar alıştığınız arama motorları kadar etkili değiller. Yani beklentilerinizi yüksek tutmadan, darknet arama motorlarını yardım alabileceğiniz araçlar olarak görmeniz çok daha doğru olur. İlk aracımız ile anlatımlara başlayalım.</p>
+
+<h4 id="3">Ahmia.fi</h4>
+
+<p>Bu araç sayesinde clearnet üzerinden de, darknet üzerinde yer alan onion uzantılı web sitelerini araştırabiliyoruz. Bu arama motorunun en büyük avantajı, clearnet üzerinde de yayın yapmakta olan kolay hatırlanabilir alan adına sahip olmasıdır. Örneğin elinizde hiç bir sitenin adresi yokken kolay hatırlanabilir bu web adresi üzerinden darknet üzerinde yer alan pek çok sitenin adres bilgisine ulaşabilirsiniz. Hatta bu arama motorunun sonuçlarından o kadar memnun değilseniz bu aracı, kullanışlı bulduğunuz başka bir darknet arama motorunun adresini bulmak üzere de kullanabilirsiniz. Kısacası Ahmia.fi arama motorunu, darknet üzerinde gezinmeye başlamak için hatırlaması ve ulaşılması kolay bir giriş kapısı olarak kullanabilirsiniz. </p>
+
+<p>Hemen kullanımına örnek vermek adına, clearnet üzerindeki adresine gidelim. Clearnet üzerindeki adresine gidiyorum çünkü hatırlaması çok kolay. Tarayıcımın adres çubuğuna ahmia.fi yazıp onaylıyorum. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-06-57-2e0baae5a21fbc4598306782eb90c2e6.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi karşımıza oldukça basit bir web arayüzü gelmiş oldu. Arama çubuğuna bulmak istediğimiz dark web sitesine ait anahtar kelimeleri girip aratmamız yeterli. Ayrıca alt tarafta gördüğünüz gibi arama motorunun darknet üzerindeki onion servis adresi de yer alıyor, dilerseniz bu adres üzerinden de araştırma yapabilirsiniz. Daha önce de söylediğim gibi ben sadece hatırlaması kolay olduğu için ilk olarak clearnet üzerindeki adresini ziyaret ettim. Şimdi denemek için arama çubuğuna başka bir arama motoru olan "<strong>Torch</strong>" arama motorunun ismini "<strong>Torch Tor search engine</strong>" şeklinde yazarak aratalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-06-41-fb532ca3560a666e6293065ea3359024.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi arama işlemi için özellikle detay belirtiyorum ki, aradığım bağlantı adresini sonuçlar içerisinde görebileyim. Arama işlemimizin sonucunda pek çok aynı isimli fakat farklı adrese sahip bağlantılar listelenmiş oldu. Bunlardan hangisinin gerçek hangisinin sahte olduğunu bilmenin kesin bir yolu olmasa da genellikle çok daha eski tarihli olanlar daha güvenilir adresler oluyor. Ancak eski tarihli olması da adresin güvenli olduğuna dair kesin belirti sayılmaz. Yani eski tarihli olmasına karşın sahte site de olabilir. Eski adresin kısmen daha güvenli olma ihtimali, uzun süre listede kaldığına göre yüksek şikayet almamış olmasından geliyor. Her adresin yanında gördüğünüz gibi "<strong>Report Abuse</strong>"&nbsp; yani "<strong>Kötüye Kullanım Bildir</strong>" seçeneği yer alıyor. İşte tüm kullanıcılar bu özelliği kullanarak adresi art niyetli olarak bildirebiliyor. Eğer bildirim sayısı yüksek ise adres listeden çıkarılıyor. Yine de raporlama sistemi oldukça hantal çalıştığından bu özelliğe çok da güvenmemek lazım. Ben zaten adresi bildiğim için biraz aşağıya inerek aradığım adresi gördüğümde ilgili bağlantıya tıklıyorum. Sizler de zaman içinde sık kullandığınız adresleri hatırlayabilir ya da clearnet üzerinden teyit ederek doğru adrese ulaşabilirsiniz. Clearnet üzerinden nasıl teyit edebileceğimize anlatımın devamında ayrıca değiniyor olacağız. Neticede aradığım adrese bizlerin giriş kapısı olarak nitelendirdiği "Ahmia" arama motorunu kullanarak ulaşmış oldum. </p>
+
+<h4 id="4">Torch</h4>
+
+<p>Adres: <a href="http://xmh57jrzrnw6insl.onion/" target="_blank" rel="noopener noreferrer">http://xmh57jrzrnw6insl.onion</a></p>
+
+<p>Uzun süredir aktif olan ve içerisinde 1 milyondan fazla adresin bulunduğu tahmin edilen arama motorudur. Bu aracı da test etmek üzere bu kez de başka bir arama motoru olan "<strong>Not Evil</strong>" arama motorunu araştıralım.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-08-01-4db339c57718c96e90f7e6e3d0a7d743.png" class="responsive"> Arama sonucunda istediğim sonuca ulaşamadım. Ki bu beni hiç şaşırtmadı zira şahsi fikrime göre "<strong>Torch</strong>" elindeki adres sayısının fazlalılığını doğru şekilde kullanamıyor. Bunları tutarlı şekilde sıralama konusunda büyük sorun yaşıyor ve üstelik çok fazla reklam barındırıyor. Benim favorim olmamasına karşın sahip olduğu geniş adres potansiyeli pek çok kullanıcı tarafından tercih edilmesine neden oluyor. İnsanlar genelde "Torch" aram motorunu, popüler web sitelerinden ziyade yeni adresler keşfetmek için kullanıyor. Ben de sık kullanılan bir araç olduğundan haberdar olmanız için ele almak istedim sadece. Benim favori aracım olmasa da mutlaka sizler de biraz deneyimleyip kendi kararınızı verin. Kesinlikle hiç bir işe yaramaz demiyorum, sadece kişisel tecrübeme göre genelde benim için verimsiz sonuçlar verdiğini belirtmek istedim.</figure>
+
+<h4 id="5">Not Evil</h4>
+
+<p>Adres: <a href="http://hss3uro2hsxfogfq.onion/" target="_blank" rel="noopener noreferrer">http://hss3uro2hsxfogfq.onion</a></p>
+
+<p>Bu arama motoru da Google'ın eski sloganını isim olarak kullanan popüler bir araçtır. Genellikle popüler olan adresleri çok daha doğru sıralar ve kendi çapında doğrulanmış adresleri özellikle "doğrulanmış adres" olarak belirtir. Ancak bu özellik yani doğrulanmış adres özelliği oldukça kısıtlı olduğundan arama sonuçlarında doğrulanmış adreslerle çok sık karşılaşmayız. Örneğin ben "<strong>Torch</strong>" yazarsam karşıma gelen pek çok adresten yalnızca birinde gördüğünüz gibi "<strong>Official Web Adress</strong>" yani "<strong>Resmi Web Adresi</strong>" ifadesi yer alıyor. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-09-35-84d0f2c7a4e7f818f5bd3206f61d8d78.png" class="responsive"></figure>
+
+<p>Bu da bağlantının "<strong>Torch</strong>" arama motorunun gerçek bağlantı adresi olduğunu belirtiyor. Hazır tutarlı bir arama motorunu kullanıyorken bir sonraki ele alacağımız arama motoru olan "<strong>Torgle</strong>" arama motorunu da araştıralım.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-09-48-691af99844410059865588912960870c.png" class="responsive"> Arama sonucunda ilk karşıma çıkan adres benim aradığım "<strong>Torgle</strong>" arama motorunun gerçek adresi. Yine de gördüğünüz gibi "<strong>Official Web Adress</strong>" yani "<strong>Resmi Web Adresi</strong>" ifadesi yer almıyor. Bu durum biraz önce bahsetmiş olduğumuz, doğrulanmış adreslerin sayısının kısıtlı olduğunu da kanıtlamış oluyor. Yine de benim favori arama motorum, hem reklamsız olması hem de sonuçların kalitesi bakımından şu an için "<strong>not evil</strong>" aracıdır. Ancak bu söylediklerimden en iyi arama motoru budur anlamı çıkmasın. Zaman içinde bu aracın da tüm olumlu özellikleri değişebilir ve daha iyi alternatifleri aracımızın yerini alabilir. Biz şimdilik araştırmış olduğumuz diğer arama motorundan bahsederek anlatıma devam edelim.</figure>
+
+<h4 id="6">Torgle</h4>
+
+<p>Adres: <a href="http://torgle5fj664v7pf.onion/" target="_blank" rel="noopener noreferrer">http://torgle5fj664v7pf.onion</a></p>
+
+<p>Bu arama motoru diğerlerinden farklı olarak henüz listeleme aşamasında web sitelerinin sayfa içeriğini görüntülü olarak da gösteriyor. Bu sayede bir nebze de olsa istenmeyen web siteleri ziyaretinden kaçınabiliyoruz. Hemen denemek için bir sonraki ele alacağımız arama motoru olan "<strong>Candle</strong>" arama motorunu araştıralım.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-11-08-fc75a57b4a744082ad1402f354fbfd0d.png" class="responsive"></figure>
+
+<p>Sonuçlar web sitelerinin görselleri ile birlikte listelenmiş oldu. Bu listeden aradığım bağlantıya, ekran görüntüsünün de yardımı ile gidiyorum.</p>
+
+<p>Bu aracı, genellikle hiç emin olmadığınız bağlantı adresleri ve yeni keşifler için kullanabilirsiniz. Yine de çok fazla reklam bulundurması ve yüksek tutarlılıkla sonuç vermemesi nedeniyle benim de pek sık tercih ettiğim bir araç sayılmaz.</p>
+
+<h4 id="7">Candle</h4>
+
+<p>Adres: <a href="http://gjobqjj7wyczbqie.onion/" target="_blank" rel="noopener noreferrer">http://gjobqjj7wyczbqie.onion/</a></p>
+
+<p>Çok geniş kapsamlı bir adres kaydı bulundurmamasına karşın, popüler olan bağlantıları düzenli biçimde sunduğu için sık tercih edilen bir arama motorudur. Hobi projesidir ancak başlangıcından itibaren kat ettiği yol göz önüne alındığında şu an için oldukça iyi bir konumdadır. Benim de "<strong>not evil</strong>" aracından sonra en verimli bulduğum hatta bazen "<strong>not evil</strong>" aracından bile daha iyi sonuç verdiğini düşündüğüm bir araçtır. Zaten bu durumu kullandıkça kendiniz de gözlemliyor olacaksınız. </p>
+
+<p>Hemen deneme yapmak için "<strong>not evil</strong>" yazalım ve aratalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-12-25-ddf82325c0ecce883a87d4d3ceac2a9c.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi aradığım bağlantı adresi listenin ilk sırasında karşıma gelmiş oldu. Her zaman ilk sırada aradığımız bağlantı adresi yer almasa da, genellikle ilk sayfada sıralanan liste içerisinde aradığımız bağlantı adresi yer alabiliyor. Özellikle de aradığınız web sitesini nasıl arayacağınızı ve hangi kelimeleri kullanacağınızı bildikten sonra, doğru sonuçlara ulaşma oranınız da zamanla artacaktır.</p>
+
+<p>Böylelikle temel ve en sık kullanılan birkaç arama motorunu genel kullanımı ile ele almış olduk. Buradaki araçlar zamanla kapanabilir ya da yerlerine daha farklı arama motorları getirilebilir. Ancak endişelenmeyin, bu gibi durumlar bizler için sorun teşkil etmeyecek çünkü bu bölümde dark web üzerindeki adreslere arama motorları olmadan da nasıl ulaşabileceğinizi görmüş olacağız. Yani gerektiğinde, alternatifler üzerinden yeni arama motorlarının bilgisini de edinebiliyor olacaksınız. Ayrıca benim burada bahsettiklerim dışında pek çok hatta sayısı belirsiz darknet arama motoru bulunuyor. Yeni arama motorları keşfetmek için, mevcut arama motorlarına "<strong>search engine</strong>" yazabilir ya da keşfettiğiniz diğer bağlantı kaynaklarını da kullanabilirsiniz. Size önerim pek çok servisi deneyip, hangilerinin size hitap ettiğini yani size işlevsel geldiğini keşfetmenizdir. Benim ele aldığım arama motorları yalnızca size başlangıç noktası oluşturması için seçtiğim araçlardır. Her zaman daha fazlası için keşiflere açık olun ve sürekli araştırın lütfen.</p>
+
+<p>Ayrıca hazır arama motorlarından bahsetmişken darknet arama motorları dışında "<strong>DuckDuckGo</strong>" arama motorundan da kısaca bahsetmek istiyorum.</p>
+
+<h4 id="8">DuckDuckGo</h4>
+
+<p>Duckduckgo <strong>kullanıcı gizliliğine önem veren</strong> ve <strong>tutarlı sonuç sunabilen</strong> başarılı bir araç olduğundan, Tor tarayıcısının da surface web aramaları için varsayılan olarak kullandığı arama motorudur.&nbsp; Benim de sizlere önerim; Tor ağını kullanmadığınız zamanlarda da araştırmalarınızı bu arama motoru üzerinden yapmanızdır. Bu sayede "Google" ya da "Yandex" gibi arama motorları tarafından toplanan kişisel bilgilerinizi korumak adına iyi bir adım atmış olursunuz.</p>
+
+<p>Duckduckgo kişisel bilgilerinizi toplamaz ve ayrıca onion uzantılı alan adı üzerinden yani darknet üzerinden de erişilebilir durumdadır. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-13-23-c9d2a8ea064ae4e406a9e6ac0396eb79.png" class="responsive"></figure>
+
+<p>Adresi: <a href="http://3g2upl4pq6kufc4m.onion/" target="_blank" rel="noopener noreferrer">http://3g2upl4pq6kufc4m.onion/</a></p>
+
+<h4 id="9">Standart Arama Motoru Kullanımı</h4>
+
+<p>Darknet üzerinde yer alan servis adreslerini bulmak için çok etkili bir yöntem olmasa da "Google" ya da "DuckDuckGo" gibi surface web üzerinde çalışan arama motorlarını da kullanabiliyoruz. </p>
+
+<p>Öncelikle bu tür arama motorlarının özellikle dark web üzerinde araştırma yapmak için hizmet sunmadığını bilerek beklentilerimizi oldukça düşürmemiz önemli. Burada yapacağımız işlem sadece sık kullanılan bazı onion uzantılı sitelere yani dark web sitelerine proxy kanalları aracılığı ile ulaşmak olacak. </p>
+
+<p>Bunun ne anlama geldiğini örnek üzerinden açıklamak adına basit bir test gerçekleştirelim.</p>
+
+<p>Örnek olması açısında DuckDuckGo arama motoruna "<strong>Torgle onion</strong>" şeklinde yazalım.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-14-51-f8914c110fdff1ce88782289b36a43f4.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi surface web üzerinde yer alan normal web siteleri ile birlikte, aracımızın dark web üzerindeki bağlantı adresi de listelenmiş oldu. Bu bağlantıya tıkladığımda sonu "<strong>oninon.ws</strong>" ile biten bir siteye yönlendirilmiş oldum. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-15-09-1881cc833c043a713129e975b3656247.png" class="responsive"></figure>
+
+<p>Onion uzantısının sonunda yer alan "<strong>.ws</strong>" ifadesi, bu alan adının surface web üzerinden de ulaşılabilmesini sağlayan proxy uzantısıdır. Bu uzantı Tor ağına bağlı olmayan herhangi bir normal web tarayıcısı üzerinden de dark web sitesine ulaşabilmemizi sağlıyor. Ancak bizim burada proxy kullanıyor olmamızın asıl amacı web sitesini güvensiz tarayıcıda görüntüleyebilmek değil. Asıl amacımız web sitesinin dark web üzerindeki bağlantı adresini surface web üzerinden de kolayca bulabilmektir. Yani bu şekilde güvensiz tarayıcılar üzerinden onion servislerinin kullanımı kesinlikle önermiyorum. Sadece bağlantı adresini keşfetmek üzere kullanmanız, gizliliğiniz ve güvenliğiniz açısından oldukça önemlidir.</p>
+
+<p>Ayrıca bu "<strong>ws</strong>" uzantısı dışında, proxy görevi gören çeşitli uzantılar da bulunuyor. Örneğin ben "<strong>not evil</strong>" arama motorunun darknet üzerinde yer alan onion uzantılı adresinin sonuna "<strong>sh</strong>" ekleyerek de Tor ağına bağlı olmaya gerek kalmadan sayfayı herhangi bir tarayıcıda görüntüleyebilirim. </p>
+
+<p>Örnek Adres; <a href="https://hss3uro2hsxfogfq.onion.ws/" target="_blank" rel="noopener noreferrer">https://hss3uro2hsxfogfq.onion.ws</a></p>
+
+<p>Bu gibi pek çok proxy uzantısı yer almasına karşın, yine de en sık kullanılmakta olanları "<strong>ws</strong>" ve "<strong>sh</strong>" uzantılarıdır. Fakat her web sitesi için her proxy uzantısı da doğru şekilde çalışmayabiliyor. Çalışan uzantıyı deneyerek bulabilirsiniz.</p>
+
+<p>İşte bu şekilde dark web üzerinde yer alan sayfaları normal tarayıcı üzerinde açmak için sonuna proxy görevini gören uzantıyı eklememiz yeterli oluyor. Ancak son kez söylüyorum dark web üzerinde yer alan siteleri proxy üzerinden güvenli olmayan standart tarayıcılar üzerinden kullanmanızı kesinlikle önermiyorum.</p>
+
+<p>Konumuza dönecek olursak, Duckduckgo da aslında şu an için dark web içerisindeki bağlantıları arama işlevinde değil. Sadece örnek aramamızda olduğu gibi, sık kullanılan proxy uzantılı yani surface web alanına da yansımış olan dark web sitelerini listeleyebiliyor.Aynı aramayı Google üzerinden de yapabiliriz ancak genellikle Duckduckgo kadar iyi sonuç vermeyecektir.(Aradığınız adrese göre bu durum zaman zaman değişiklik gösterebilir. Google da kullanılabilir bir alternatiftir sayılabilir.)</p>
+
+<p>Öğrendiğimiz yöntemler içinde, dark web üzerinde yer alan siteleri araştırmak için en iyi yolun surface web arama motorlarını kullanmak olmadığı kesin. Hatta genel olarak dark web üzerinde yer alan hiç bir arama motoru da verimli sayılmaz. Yine de zaman içerisinde bu duruma alışacaksınız. Alıştıktan sonra neyi nerede ve ne şekilde aramanız gerektiğini zaten biliyor olacaksınız. </p>
+
+<p>Arama motorları dışında sıralanmış listelerden de bağlantı adres bilgilerine ulaşabileceğimizden söz etmiştik. Şimdi bu listelerin neler olduğuna göz atalım.</p>
+
+<h4 id="10">Dark Web Adresleri için Listeler</h4>
+
+<p>Bu kısımda kullanabileceğiniz başlıca birkaç liste kaynağından bahsediyor olacağız. Elbette buradaki kaynaklar dışında sizler de ilgi alanınıza göre çeşitli forum ve bloglar üzerinden yeni adresler edinebilirsiniz. Yani bu listeleri sadece başlangıç için referans kaynakları olarak görün lütfen.</p>
+
+<h4 id="11">Hidden Wiki</h4>
+
+<p>Kategorize şekilde sıralanmış olan başlıca bağlantı adresleri için "<strong>hidden wiki</strong>" kaynağını kullanabilirsiniz.</p>
+
+<p><strong>Bağlantı Adresi:</strong> zqktlwi4fecvo6ri.onion</p>
+
+<p>Bu listede yer alan web sitelerinin pek çoğu güncel bağlantı bilgilerine sahip olsa da kimi bağlantıların çeşitli sebeplerle çalışmadığı da olabiliyor. Yine de alternatifleri içinde en çok bilgi sunan kaynak diyebiliriz. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-17-43-0786be7f1ec9169ba2597d08d939680a.png" class="responsive"></figure>
+
+<p>Ayrıca buradaki servislerin güvenli ya da yasal olduğu için burada bulundukları yanılgısına düşmeyin lütfen. Sadece en sık kullanılanlar bu listede yer alıyor. Yani buradaki listeye körü körüne güvenmek de doğru sayılmaz. Ayrıca hidden wiki adresinin de art niyetli pek çok kopyası olduğundan, gerçek hidden wiki adresine bağlı olduğunuzdan emin olun. Kopyalarını kullanmak güvenliğinizi riske edebilir. </p>
+
+<h4 id="12">Dark Fail</h4>
+
+<p>Hidden wiki kaynağından sonra en sık tercih edilen liste bu listedir. Üstelik sık sık güncellendiği için hidden wiki kaynağına oranla çok daha güncel adres bilgisi sunar.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-19-46-6cb5b640afcc9e9349c97d83da89174e.png" class="responsive"></figure>
+
+<p><strong>Bağlantı Adresi;</strong> <a href="http://darkfailllnkf4vf.onion/" target="_blank" rel="noopener noreferrer">http://darkfailllnkf4vf.onion</a></p>
+
+<p>Bu adresler dışında Reddit gibi platformlardan da kişilerin paylaştığı listelere göz atıp, çalışan bağlantıları eğer sık kullanacağınız türden adresler ise not etmeniz gerekir.</p>
+
+<p>Reddit üzerinde onion servisleri hakkında pek çok bilgi paylaşım kanalı bulunuyor. Eğer daha önce Reddit kullanmadıysanız kısa bir göz atma ile kullanımının ne kadar kolay olduğunu görüp, faydalanacağınız bir kaynak olarak yararlanabilirsiniz. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-20-02-734127045fe880270de1433e344abc54.png" class="responsive"></figure>
+
+<p>Reddit platformu üzerindeki arama çubuğunu kullanarak ya da "<a href="https://www.reddit.com/r/deepweb/" target="_blank" rel="noopener noreferrer">Deep Web</a>", "<a href="https://www.reddit.com/r/darknet/" target="_blank" rel="noopener noreferrer">Darknet</a>" ve "<a href="https://www.reddit.com/r/onions/" target="_blank" rel="noopener noreferrer">Onions</a>" gibi topluluklara katılarak pek çok adres bilgisine ulaşabilirsiniz. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-20-11-7a6ced8fbb33b84ad5973823d745b22e.png" class="responsive"></figure>
+
+<figure><img src="./../../img/6/2020-06-14_17-20-11-4fc974fbf7273d1865205bc76bc4d37e.png" class="responsive"></figure>
+
+<figure><img src="./../../img/6/2020-06-14_17-20-11-e6219dc484792610881ffab5df4d30e9.png" class="responsive"></figure>
+
+<p>Ayrıca "Reddit" ve "Hidden Wiki" gibi platformlar dışında pek çok farklı şekilde yeni adresler de edinebilirsiniz. Ancak maalesef ki her şeyin tek bir alanda toplandığı bir kaynak bulmak mümkün değil. İlgi alanınıza göre zaman içinde kendi kendinize bu web adreslerini keşfedip bir yere not etmeniz gerekiyor. Bulduğunuz yeni adreslerde dikkat etmeniz gereken şey, mümkünse birden fazla kaynaktan bu adresin orijinal bağlantı adresi olup olmadığını teyit etmenizdir. Böylelikle zaman içinde sık kullandığınız adreslerin temiz bir listesi elinizde olacaktır. Yine de adreslerin değişmesi ve dark web üzerindeki çoğu yayıncının profesyonellikten uzak kesintili hizmetleri nedeniyle sık sık listenizi güncellemeniz gerekebilir. Bu da dark web üzerinde gezintinin meşakkatli olmasının başlıca nedenlerindendir.</p>
+
+<h4 id="13">Anlamlı ve Anlamsız ".onion" Uzantılı Adresler Hakkında</h4>
+
+<p>Tor gizli servisleri üzerinde gezinirken, istisnalar hariç pek çok onion servisinin anlamsız karakterler içeren alan adlarına sahip olduğuna şahit olduk. Peki ama bu durumun nedeni ne ? Yani hem anlamlı hem de anlamsız alan adlarının olması ve bunların sayısındaki dengesizliğin nedeni nedir ?</p>
+
+<p>Aslında normal şartlarda bu alan adları güvenlik gerekçelerine bağlı olarak Tor servisi tarafından belirlenmiş olan metot uygulanarak rastgele olacak şekilde üretiliyor.&nbsp; Yani hiç kimsenin alan adında seçim yapma imkanı bulunmuyor. Yine de anlamlı bir alan adı istersek tekrar tekrar deneyerek anlamlı bir sonucun çıktığı alan adına ulaşabiliriz. Ancak bu tekrar deneme sayısı gerçek manada çok yüksek işlem gücü gerektirdiğinden herkesin yapabileceği bir işlem değildir. Ne kadar işlem gücü gerektirebileceğini listeye bakarak görebilirsiniz.</p>
+
+<p>1.5 GHz işlemci kullanarak istenilen karakterlerin oluşturulmasının ne kadar süreceğine dair ortalama süre hesabı listedeki gibidir.</p>
+
+<figure><img src="./../../img/6/2020-06-14_17-27-12-258b0a17568451998fa02cf9646b33d2.png" class="responsive" width="427" height="870"></figure>
+
+<p>Üstelik yakın geçmişte proje geliştiricileri tarafından alınan karar ile alan adlarının 16 karakterden 56 karaktere çıkarılması bu işlemi de anlamsız bırakmıştır. Kısacası anlamlı gördüğünüz .onion uzantılı alan adlarının pek çoğu, zamanında çok fazla işlem gücü harcanarak elde edilmiş azınlığı temsil ediyor. </p>
+
+<p>16 karaktere sahip olan alan adları V2 olarak geçerken 56 karaktere sahip alan adları V3 olarak geçiyor. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-29-22-59276ab30eae6a5fbfbaae6a3e49e1fd.png" class="responsive"></figure>
+
+<p>V3 eskisine oranla harici güvenlik önlemi de sağladığı için Tor tarafından tavsiye edilse de eski adresleme sistemini yani V2 sistemini de kullanmak mümkün. Darknet üzerinde yer alan popüler pek çok servis de hala eski tür adresleme sistemini başlarına olumsuz bir şey gelene kadar kullanmak niyetinde. Neticede adres değiştirmek bulunabilirliği azaltacak ve pek çok yeni ayarlamanın da yapılması gerekecek. Bu sebeple uzun süre boyunca V2 ait olan 16 karakter uzunluğundaki alan adlarını görmeye devam edeceğimiz gibi duruyor.</p>
+
+<h4 id="14">Bonus : Kendi dark web sitenizi nasıl kurabilirsiniz?</h4>
+
+<p>Bu bölümde ekstra olarak merak edenler için kendi web sitelerini nasıl darknet üzerinde yayınlayabileceklerini göstermek istedim. Merak edenler için dedim ancak ileride bu kısımda anlatacaklarıma atıfta bulunacağım için buradaki anlatımı herkesin takip etmesini şiddetle tavsiye ediyorum.</p>
+
+<p>Ben bu bölümde yalnızca kendi bilgisayarımızı host olarak kullanmayı göstereceğim. Ancak host yani site dosyalarını barındırma işi bizim bilgisayarımızda olacağı için bilgisayarımız kapalı iken web sitemize de erişilemeyecek elbette. Eğer sürekli aktif bir websitesi kurmak isterseniz bir sunucu kiralayıp yayının 7/24 bu sunucu üzerinden yapılmasını da sağlayabilirsiniz. Ayrıca darknet üzerinden hizmet sunan hosting servislerinden de faydalanabilirsiniz. Kurulum işlemi her halükarda benzer olacağından ben herkesin test edebilmesi ve yapının nasıl çalıştığını görebilmesi adına, kendi bilgisayarımız üzerinden nasıl yayın yapabileceğimizi göstereceğim. Profesyonel web sitesi kurulumu ve detayları eğitim müfredatının dışında olacağı için herkese hitap etmesi açısından ben sadece basit bir web sayfası yayınlamayı ele alıyor olacağım. Yani kapsamlı hizmet sunan web sitesi kurulumu için bu konuda gereken alt yapınızın olması gerekiyor. Biz burada sistem nasıl çalıştığı hakkında fikir sahibi olabilmek adına temel kurulumu ele alıyor olacağız.</p>
+
+<p>Kurulum işlemi sırasında anlatımları daha yaygın kullanıma sahip olduğu için "Windows" üzerinden gerçekleştiriyor olacağım. Yine de anlatım sırasında kullanacağım araçlar, "Linux" ve "Mac" işletim sistemlerinde de ortak olarak kullanılabilen araçlardır. Yani kullanmakta olduğunuz işletim sistemi üzerinden de adımları rahatlıkla takip edebilirsiniz. Ben bu bölümde sadece merakınızı gidermek ve ileride ele alacağımız konuları daha net kavramanız adına basit bir anlatım gerçekleştirmek istedim. Lafı daha fazla uzatmadan anlatıma geçelim.</p>
+
+<p>Öncelikle kendi bilgisayarımızı sunucu olarak kullanmak için lokal web sunucusu oluşturmamıza yardım eden <strong>XAMPP</strong> aracını indirip kurmamız gerekiyor. </p>
+
+<p>Aracımızı indirmek üzere web sitesini ziyaret edelim. Açılan sayfadan sistemimize uygun olan kurulum dosyasını indirelim. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-32-05-27bd9c3bc0d543354391ec40d75c8167.png" class="responsive"></figure>
+
+<p>Dosyamız indikten sonra kurulum işlemi için dosyamızı çalıştıralım. Kurulum adımlarını tamamladıktan sonra uygulamayı çalıştırıp "<strong>Apache</strong>" hizmetini "<strong>Start</strong>" butonuna basarak başlatalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-32-22-04f9be394cfea483a3c89215cedaae7c.png" class="responsive"></figure>
+
+<p>Hizmet başlatıldıktan sonra web sitemizin dosyalarını, gerekli konuma eklemek üzere "<strong>Explorer</strong>" butonuna tıklayalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-32-33-130c558e09a11f8fbf9669696f787a55.png" class="responsive"></figure>
+
+<p> Açılan pencereden "<strong>htdocs</strong>" klasörünün içerisine girerek, burada yer alan dosyaları sildikten sonra kendi web sitemizin dosyalarını ekleyelim. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-32-42-adf04804d99fc30f2af7478d70c05dc5.png" class="responsive"></figure>
+
+<p>Ekleme işlemini test etmek için de tekrar uygulamaya gelerek "<strong>Admin</strong>" butonuna basalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-32-54-af3183a83b7f2a97203b789a4915e6e6.png" class="responsive"></figure>
+
+<p>Açılan sayfadan, web sitemizi lokal olarak yüklemeyi başarmış olduğumuzu görebiliyoruz. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-33-05-16fd0326f9496521489c9d2ba44e4d0a.png" class="responsive"></figure>
+
+<p>Şimdi lokal olarak yayınlamış olduğumuz bu sitemizi Tor ağı üzerinden yayına almak için birkaç ayarlama yapmamız gerekiyor.</p>
+
+<p>Öncelikle Tor tarayıcımızın kurulu olduğu konuma gerek sırasıyla Tor Browser &gt;&gt; Browser &gt;&gt; TorBrowser &gt;&gt; Data &gt;&gt; Tor klasörlerine geçiş yapalım.&nbsp; Açılan son dosya konumunda yer alan "<strong>torrc</strong>" isimli dosyaya sağ tıklayıp herhangi bir metin editörü ile açalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-33-22-f4e662b029803daecc7f4c2799b94499.png" class="responsive"></figure>
+
+<p>Linux ve Mac sistemlerinde de dosya konumu benzer şekildedir. Tor tarayıcısını kurduğunuz konuma giderek, rahatlıkla "<strong>torrc</strong>" dosyasına ulaşabilirsiniz.</p>
+
+<p>Açılan dosyanın en alt satırına gelerek web sitemizin gizli servis dizinini ve lokal sunucumuzun adresini belirtelim.</p>
+
+<pre class="prettyprint linenums">HiddenServiceDir C:\Users\Kullanıcı-Adı\Desktop\Tor Browser\hidden_service 
+
+HiddenServicePort 80 127.0.0.1:80</pre>
+
+<figure><img src="./../../img/6/2020-06-14_17-33-38-3c90f2720ce68391d87d5c78da1e3947.png" class="responsive"></figure>
+
+<p>Gereken bilgileri girdikten sonra dosyamızı kaydederek kapatalım. Şimdi tek yapmamız gereken alan adını üretmek üzere Tor tarayıcısını çalıştırmak. Biz tarayıcıyı çalıştırdığımız anda, otomatik olarak belirtmiş olduğumuz "<strong>hidden_service</strong>" klasörü oluşturulacak ve alan adının bilgisini içeren dosyamız üretilecek. Tor tarayıcısını çalıştırdıktan sonra alan adını öğrenmek üzere "<strong>hidden_service</strong>" dosya konumunu ziyaret edelim. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-34-10-dd15190b00c6a4fca5522305b9413507.png" class="responsive"></figure>
+
+<p>Dizin içerisinde yer alan "<strong>hostname</strong>" dosyasına sağ tıklayıp herhangi bir metin editörü yardımı ile açalım. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-34-19-33c3c7c0b3d83168faa971820f4feb0e.png" class="responsive"></figure>
+
+<p>İşte bizim için üretilmiş olan alan adı, bu dosya içerisindeki adrestir. Hemen denemek üzere bu adrese Tor tarayıcısı üzerinden erişmeyi deneyelim. Kısa bir süre sonra yüklemiş olduğumuz web sayfasının karşımıza geldiğini görüyoruz. </p>
+
+<figure><img src="./../../img/6/2020-06-14_17-34-35-81086734e3e2e8e7809a7bdc72ff8686.png" class="responsive"></figure>
+
+<p>Böylelikle web sitemimizi Tor üzerinden onion uzantılı olarak yayınlamayı başarmış olduk. Yani artık bizim de bir "Dark Web" sitemiz var. Ancak tekrar hatırlatayım, bu site bizim bilgisayarımız üzerinden yayınlandığı için yayınlarken kullandığımız araçlar ya da bilgisayarımız kapatıldığında web sitesi de ulaşılamaz olacak. Daha kapsamlı ve kesintisiz hizmet için daha önce de söylediğim gibi pek çok alternatif yöntem üzerinden yayın yapabilirsiniz. Alternatif yöntemler&nbsp; daha profesyonel yayıncılara özel olduğundan bizim için bu kadarlık bilgi yeterli. Biz bu bölümde sadece temel olarak nasıl yayın yapabileceğimizi görmüş olduk.</p>
+
+<p>Bir sonraki bölümde güvenliğin ve gizliliğin mihenk taşı olarak kabul edilen şifreleme konusunu ele alıyor olacağız.</p></body></html>
+
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

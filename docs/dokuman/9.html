@@ -1,0 +1,363 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 9. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" class="responsive" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./8.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./10.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./8.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./10.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">Anlık Mesajlaşma</a>
+			<a href="#1" class="list-group-item list-group-item-action">Güvenli İletişim</a>
+			<a href="#2" class="list-group-item list-group-item-action">Servis Seçimi</a>
+			<a href="#3" class="list-group-item list-group-item-action">Pidgin Oturumu</a>
+			<a href="#4" class="list-group-item list-group-item-action">Kişi Ekleme</a>
+			<a href="#5" class="list-group-item list-group-item-action">Güvenliği Sağlamak</a>
+			<a href="#6" class="list-group-item list-group-item-action">İletişimi Şifreleme</a>
+			<a href="#7" class="list-group-item list-group-item-action">Kişiyi Doğrulama</a>
+			
+   			<hr>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">9.Doküman</strong>
+          <h3 class="mb-0">Güvenli Anlık Mesajlaşma</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">xmpp , uçtan uca şifreleme , güvenli iletişim , pidgin </p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+	<h4 id="0">Güvenli Anlık Mesajlaşma</h4>
+
+<p>Anlık mesajlaşma denilince aklınıza hemen "Whatsapp", "Telegram" ya da benzeri popüler uygulamalar gelmiş olabilir. Ancak bunların hiçbirisi gerçek manada güvenli iletişim sağlamaz. Örneğin içlerinde en popüler olan ve son verilere göre yaklaşık <strong>2 Milyar</strong> kullanıcısı bulunan "Whatsapp" uygulamasını ele alacak olursak; 2 milyar insana reklamsız ve tamamen ücretiz hizmet sunma maksatları gerçekte nedir sizce ? Yani sizce bunca uğraşı hiç bir kârları olmadan neden sürdürüyorlar ? Yoksa bu şirket bir iyilik timsali falan mı ? </p>
+
+<figure><img src="../../img/9/2020-06-15_12-03-04-254bd9d9964d76a9269977eb20e68f2f.png" class="responsive"></figure>
+
+<p>Yüce amaçları olan ve canla başla insanlık adına çalışan koca yürekli bir şirket he ? Bu soruya pek çok ticari cevap verilebilir ancak özetle tek bilmemiz gereken, bir uygulamanın ücretsiz olması halinde bizim kişisel verilerimiz ile ödeme yapıyor olduğumuzdur. Whatsapp uçtan uca şifreleme sistemi ile iletişimimizi koruduğunu iddia ediyor ancak bu göz boyamadan ibaret. Öncelikle Whatsapp uygulamasının gerçek ve tam korumalı uçtan uca şifreleme çalışması yürütüp yürütmediği ve kasıtlı zafiyetler içermediğini açık kaynaklı olmadığı için asla bilemeyeceğiz. Kasıtlı zafiyetler durumuna örnek olarak; içerisinde Türkiye'nin de bulunduğu 120 den fazla ülkeye şifreleme sistemi satan İsviçreli "<strong>CRYPTO AG</strong>" şirketinin, aslında yaklaşık 50 yıldır Amerikanın istihbarat servisi CIA ve Alman istihbarat örgütü BND tarafından yönetiliyor olduğunun açığa çıkmasını verebiliriz. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-03-50-835bde53bc6cc77c56e4d476170f38f5.png" class="responsive"></figure>
+
+<p>Şirketin şifreleme sistemlerinde bilinçli şekilde zafiyet bırakarak şifreli mesajların okunmasını kolaylaştırdığı ve bu yolla pek çok kritik istihbarat operasyonun yürütülmesini sağladığı CIA ve BND imzalı 280 sayfalık belgelerle ile ortaya konuldu. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-04-04-398e442f4a306be2c57a4e61c5cd4819.png" class="responsive"></figure>
+
+<p>Ayrıca bu olayın dışında yakın geçmişte Philips’in, Türkiye’deki şifreli görüşmeleri dinleyebilmesi için ABD'ye yardım ettiği iddia edilmişti. Türkiye'nin kendi elçilikleri ile iletişim kurmak ve iç görüşmelerde kullanmak üzere satın almak istediği cihazın görünümü değiştirilerek, kırılması kolay olan şifreleme cihazlarının satıldığı şirketin eski çalışanı "Cees Jansen" tarafından ifade edilmişti. </p>
+
+<p>Kısacası Whatsapp gibi uygulamaların "biz uçtan uca kırılması imkanız şifreleme kullanıyoruz, biz çok güvenliyiz" demesi, kendini kanıtlayıp açık kaynaklı hale gelmediği sürece sadece hükümsüz sözlerden ibarettir. Yani şu ana kadar edindiğimiz tecrübelere göre en güvenli bilinen uygulamalar bile hem uygulama hem de işletim sistemleri bazındaki zafiyetler nedeniyle tamamen tekinsiz sayılabiliyor.</p>
+
+<p>Bu noktada güvenli bir işletim sistemi üzerinden güvenli bir kanal aracılığı ile iletişim sağlamak şarttır. </p>
+
+<h4 id="1">Güvenli İletişim Hakkında</h4>
+
+<p>Güvenli iletişim için XMPP yapısını kullanıyoruz. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-07-21-27c6014ab4c940209cce40a43a1207c1.png" class="responsive"></figure>
+
+<p>Bu yapıyı kullanma nedenimiz; hiç bir şirket ya da kuruluşun kontrolü altında olmadan yani tamamen özgür bir protokol olarak hizmet veriyor olmasıdır. Bu protokol tamamen ücretsiz ve açık kaynaklı olarak, iki bağlantı noktası arasında veri taşımayı sağlar. Açık kaynaklı olduğu için çalışma yapısı incelenebilir ve hiç bir şirkete ya da merkezi kuruluşa bağlı olmadığından hiç kimsenin çıkarı doğrultusunda değiştirilemez. Bu yapı sadece iletişim kurmamızı sağlayan, üçüncü tarafların kontrolünde olmayan bir iletişim protokolüdür. Hatta Whatsapp uygulaması da bu protokolün bir varyasyonunu kullanıyor. Yani güvenliği sağlayan olgu, XMPP yapısından ziyade bu protokolü hangi ortamda ne şekilde kullandığımızdır. Bizler de anlatım sırasında bu protokol üzerinden nasıl güvenli bir biçimde anlık mesajlaşma yapabileceğimizi ele alıyor olacağız.</p>
+
+<p>Güvenli iletişim için gereken temel çalışma yapısını kısaca ele alacak olursak; Öncelikle çalıştığımız ortamın güvenliğinden emin olmamız gerekir. Güvenli çalışma ortamı için; güvenli bir işletim sistemi ve mesajlaşma aracı kullanmamız gerekir. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-08-57-a39db45925266ada544abbe122afa0f8.png" class="responsive"></figure>
+
+<p>Güvenli ortamı sağladıktan sonra Tor ağı üzerinden hizmet sunan bir sunucuda hesap oluşturmamız gerekir. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-09-07-a6fe390398df1c65ab17c2371ff68540.png" class="responsive"></figure>
+
+<p>Bu sunucu yalnızca bizim iletişimimizi karşı tarafa aktarmakla görevlidir. Bu yapıda sunucuya güvenmemiz gerekmez. Sunucudan tek beklentimiz, iletişimin Tor ağı üzerinden yönlendirilmesini sağlamaktır. Biz zaten iletişim kurarken karşılıklı olarak aradaki iletişimi şifreleyeceğimiz için sunucu güvensiz de olsa aradaki iletişim verilerini asla açıkça okuyamayacaktır. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-09-19-1e36b7ef5c35c459728237c8e543010f.png" class="responsive"></figure>
+
+<p>Sunucunun Tor ağı üzerinden hizmet sunması, iletişim verilerinin Tor ağının dışına çıkmadan karşılıklı taraflar arası anonimliği sağlayarak çok daha güvenli şekilde taşınmasını sağlar. Güvenli iletişim için tüm şartların her iki taraf için de sağlanması beklenir. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-09-35-3f5b554a8602cdd6b1341facbf98f4c8.png" class="responsive"></figure>
+
+<p>Şartlar her iki taraf için de uygun olduğunda güvenli anlık mesajlaşma imkanı sağlanmış olur. </p>
+
+<p>Anlatımlara geçmeden önce yanlış anlaşılmaları önlemek adına kısaca açıklama yapmak istiyorum. </p>
+
+<p>Önceki bölümlerde güvenli ortam için gerekli olan işletim sistemlerinden bahsettik ve en güvenli sistemin de aslında "Qubes" olduğunu öğrenmiş olduk. Yine de bu bölümdeki anlatımları, herkesin kolayca takip edebilmesi için "Tail" sistemi üzerinden gerçekleştiriyor olacağız. Çünkü Qubes sisteminin mevcut gereksinimleri dolayısı ile herkes tarafından kullanılabilmesi maalesef ki mümkün değil. Eğer sizin sisteminiz "Qubes" için gereken şartları sağlıyorsa ve kullanmak istiyorsanız merak etmeyin. Qubes sistemini ele alırken temel kullanım için bilmemiz gerekenleri öğrenmiş olduğumuzdan, Tail üzerinden yapılan anlatımları çok rahat bir biçimde Qubes sistemi üzerinden de takip edebiliyor olacaksınız. Bu açıklamayı "madem en güvenli sistem Qubes, neden anlatımı bu sistem üzerinden yapmadınız ?" gibi soruları şimdiden açıklığa kavuşturmak için yapmak istedim. Özetle tek bilmeniz gereken, eğer eğitimi dikkatli bir biçimde takip ettiyseniz Qubes sistemini kullanabilmek için gereken tüm temel bilgiye sahip olduğunuzdur. Yani aslında gerektiğinde kurs içerisindeki tüm işlemleri Qubes sistemi içerisinde uygulayabilecek bilgiye sahipsiniz. Benim anlatımları Tail üzerinde gerçekleştiriyor olmama takılmayın lütfen. Ben sadece herkese rehber olması açısından Tail kullanıyorum. Sizler şu ana kadar kurs içerisinden edinmiş olduğunuz bilgiler ile istediğiniz sistemde bu işlemleri uygulayabilecek niteliğe sahipsiniz. Eğer bu durumu da netleştirebildiysek anlatıma servis seçimi ile devam edelim.</p>
+
+<h4 id="2">Servis Seçimi ve Kayıt Aşaması</h4>
+
+<p>Güvenli iletişimin ilk şartı olan güvenli işletim sistemine sahip olduğumuza göre, bu kısımda da iletişim verilerimizi taşıyacak olan sunucu seçimini ve kayıt aşamasını ele alalım.</p>
+
+<p>Öncelikle kendi hesabımızı oluşturmak üzere herkese açık ve Tor ağı üzerinden kullanabilen XMPP sunucularının listesine göz atalım. Aslında pek çok alternatif bulunuyor ancak biz daha derli toplu olan ve gönüllü şekilde aralıklarla güncellenen Github üzerindeki <a href="https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac" target="_blank" rel="noopener noreferrer">kaynaktan</a> yararlanabiliriz. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-16-30-1223fd081ba9df2759ff82a5a3118d04.png" class="responsive"></figure>
+
+<p>Bu listede yer alan sunuculardan birini seçerek kendi hesabımızı oluşturacağız. Daha sonra bu hesap üzerinden diğer insanlar ile iletişim sağlayabileceğiz. Buradaki sunucuları daha önce ele aldığımız e-posta hizmet sağlayıcıları gibi düşünebilirsiniz. Yani bu da demek oluyor ki hangi sunucuyu seçtiğinize bakılmaksızın bir diğer sunucu üzerindeki kullanıcı ile kolayca iletişim kurabileceksiniz. Bunu Gmail üzerinden gönderilen mesajın ProtonMail hesabından alınıp okunabilmesi ve cevap yazılabilmesi ile aynı şey olarak düşünün. Sunucular sadece karşılıklı iletişim sağlanmasında aktarıcı görevi görüyor. Bu sebeple hangi sunucuyu seçerseniz seçin diğerleri ile iletişim kurabiliyor olacaksınız. <a href="https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac" target="_blank" rel="noopener noreferrer">Burada</a> listelenmiş olan sunucular Tor ağı üzerinden çalışabilen ve tamamen herkese açık olan hizmetlerin kısa bir listesi sadece. Eğer bu listedeki sunucular sizin için yeterli gelmediyse, internet üzerinde "Public XMPP servers" araması yaparak pek çok kullanılabilir hizmetin listesine ulaşabilirsiniz. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-17-26-605e214a45aeda5d24f70df792c120cb.png" class="responsive"></figure>
+
+<p>Karşınıza çıkan listeler içerisinde yer alan herhangi bir sunucuyu kullanabilirsiniz. Tabii bu sunucuların hepsi Tor ağı üzerinden yönlendirme yapmadığından, Tor ağını kullanan bir sunucu bulmak için bu listelere biraz göz atmanız gerekir. Neticede gördüğünüz gibi herkese açık pek çok sunucu hizmeti bulunuyor. Bizler şimdilik Tor ağı üzerinden kullanılabilen servislerin listesinden, istediğimiz bir tanesini seçerek kaydolalım. Daha sonra zaten tüm sunucular üzerindeki kayıtlı kullanıcılar ile seçtiğimiz sunucu üzerinden iletişim kurabiliyor olacağız. Eğer kafanız karıştıysa sorun yok. Uygulama üzerinden ne demek istediğimi çok daha iyi anlamış olacaksınız. Şimdilik sadece beni takip edin. </p>
+
+<p>Öncelikle listede yer alan adreslerden bir tanesini seçiyorum ve kaydolmak üzere sunucu adresine gidiyorum. Açılan sayfada kaydol kısmına tıklayarak gereken bilgileri doldurup kayıt işlemimi tamamlıyorum. </p>
+
+<figure><img src="../../img/9/2020-06-15_12-18-18-b3e04c3d7f191f053b3040b6f880911c.png" class="responsive"></figure>
+
+<figure><img src="../../img/9/2020-06-15_12-18-48-0ddd51cf2f72df923503bcb8b16cc59c.png" class="responsive"></figure>
+
+<figure><img src="../../img/9/2020-06-15_12-19-10-22359afd40af94867efb22ab0a2a30fa.png" class="responsive"></figure>
+
+<p>Sizin seçmiş olduğunuz sunucunun kayıt olma sayfası benimkinden farklı gözüküyor olabilir. Bunun bir önemi yok, sadece seçtiğiniz sunucu adresi üzerinde kayıt olmanız yeterli. </p>
+
+<h4 id="3">Pidgin Uygulaması Üzerinde Oturum Açmak</h4>
+
+<p>Sunucu üzerindeki kaydımızı da tamamladığımıza göre, güvenli iletişimin diğer bir şartı olan güvenli mesajlaşma aracını ele alalım. Açık kaynaklı olduğu için biz anlatım sırasında "Pidgin" isimli aracı kullanıyor olacağız. Zaten bu araç Tail sistemi üzerinde de güvenli bulunduğu için varsayılan olarak yüklü geliyor. Eğer siz Qubes işletim sistemi üzerinden anlatımı takip ediyorsanız, yeni araç kurulumunu nasıl yapabileceğinizi bildiğiniz için "Pidgin" aracını da kolayca kurabilirsiniz.</p>
+
+<p>Aracı açmak üzere Tail işletim sistemime geliyorum ve mesajlaşma yapacağım uygulama olan "<strong>Pidgin</strong>" uygulamasını açıyorum. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-50-00-28189a7a91fb2f6d89d096846999049c.png" class="responsive"></figure>
+
+<p>Uygulama açıldığında herhangi bir hesap tanımlı olmadığı için bizden ilk olarak bir hesap eklememizi talep ediyor. Eğer programı ilk açtığınızda karşınıza kişi ekleme penceresi gelmediyse "<strong>Hesaplar</strong>" sekmesinde yer alan "<strong>Hesapları Yönet</strong>" kısmına tıklayarak da aynı pencerenin açılmasını sağlayabilirsiniz. </p>
+
+<p>Yeni hesap eklemek için "<strong>Ekle</strong>" butonuna basalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-50-17-f2ce663bbb0d448bd4671d69c20bfdec.png" class="responsive"></figure>
+
+<p>Açılan pencerede "<strong>Protokol</strong>" kısmından "<strong>XMPP</strong>" seçeneğini seçelim. Kayıt olurken girdiğimiz kullanıcı adını ve şifresini belirtip, kayıt olduğumuz sunucu adresini de "<strong>Alan Adı</strong>" kısmına yazalım. Eğer şifremiz her program açılışında tekrar tekrar sorulsun istemezsek, hatırla kutucuğunu işaretledikten sonra "<strong>Ekle</strong>" diyerek işlemi tamamlayalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-50-28-344805aa052bf5bd97997000aa68e415.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi ekleme işleminin arından hesabım otomatik olarak aktifleştirilerek "<strong>Çevrimiçi</strong>" konumuna geçmiş oldu. Buradaki çevrimiçi ifadesi benim sunucu üzerinde oturum açmış olduğumu belirtiyor. Ayrıca ihtiyacıma göre buradan diğer anlık durumları seçerek, insanların benimle iletişim kurmak istediklerinde bu durum bilgimi görebilmelerini sağlayabilirim.</p>
+
+<figure><img src="../../img/9/2020-06-15_16-50-50-138959ddef67444ce64da23430529e8a.png" class="responsive"></figure>
+
+<h4 id="4">Kişi-Arkadaş Ekleme</h4>
+
+<p>Hesabımızda başarılı bir biçimde oturum açabildiğimize göre şimdi de başka birini arkadaş olarak ekleyip o kişi ile nasıl iletişim kurabileceğimizi görelim.</p>
+
+<p>Yeni bir arkadaş eklemek için "<strong>Kişiler</strong>" sekmesine gelerek"<strong>Kişi Ekle..</strong>" butonuna basalım. Açılan pencereye eklemek istediğimiz arkadaşın kullanıcı adı ile birlikte kullandığı sunucu adresini <strong>kullanıcı-adı@sunucu-adresi</strong> şeklinde girelim ve "<strong>Ekle</strong>" diyerek işlemi tamamlayalım.</p>
+
+<figure><img src="../../img/9/2020-06-15_16-51-17-ed6f0519384843983de5553bc56e7698.png" class="responsive"></figure>
+
+<p>Ekleme işleminin ardından karşı tarafa bizim bağlantı isteğimiz iletilmiş olacak. Eğer karşı taraf istediği onaylarsa arkadaş olup konuşma imkanı bulabileceğiz. Bu durumu test etmek için istek gönderdiğimiz kullanıcı hesabına geçiş yapalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-51-31-f94a98a49e6d42c7f4b847157d6593f2.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi arkadaşlık isteği hemen giriş panelinde gözüküyor. İsteği onaylamamız halinde, kullandığımız sunucuların farklı olmasına bakılmaksızın karşılıklı olarak iletişim kurabiliyor olacağız. Ayrıca size istek gönderen kişiyi ekleyip eklememe konusunda tereddüt yaşarsanız "<strong>Anlık İleti Gönder</strong>" seçeneği ile arkadaşlık isteğini henüz onaylamadan, karşı taraf ile iletişim kurup kim olduğunu öğrenme fırsatınız da bulunuyor. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-51-52-47f8f154cf68a2ba56258f54c481b26c.png" class="responsive"></figure>
+
+<figure><img src="../../img/9/2020-06-15_16-52-18-0c49fc11d81242a2438be89129d52a60.png" class="responsive"></figure>
+
+<p>Biz isteği "<strong>İzin Ver</strong>" diyerek onaylayalım.</p>
+
+<p>İsteği onayladıktan kısa bir süre sonra gördüğünüz gibi istek attığımız kullanıcının aktif olduğu bilgisi gelmiş oldu. Buradan basit bir mesaj atarak iletişimimizi test edelim. Denemek için "<strong>Selamlar</strong>" ifadesini yazıp yolluyorum. </p>
+
+<p>Gördüğünüz gibi yazılan ifade sorunsuzca karşı tarafa ulaşıyor. Testin devamı için cevaben "<strong>Selam</strong>" yazarak yanıt veriyorum. Ve bu mesajımız da gördüğünüz gibi sorunsuzca iletilmiş oldu. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-53-08-c24333bf843e47f1d21ed621f3dfc2a9.png" class="responsive"></figure>
+
+<p>İletişim kurmayı başlardık, peki ama bu iletişim güvenli mi ?</p>
+
+<p>Aslında şu an için bu iletişim kesinlikle güvenli sayılamaz. Hatta buradaki uyarıdan da bunu kolaylıkla anlayabiliyoruz. İletişimin karşılıklı olarak güvenli bir biçimde yapılabilmesi için öncelikle sunucu çıkışlarının Tor ağı üzerinde yapılmasını sağlamamız gerekiyor. </p>
+
+<h4 id="5">İletişim Güvenliğinin Sağlanması</h4>
+
+<p>Biz Tail işletim sistemini kullanırken tüm ağ trafiği Tor üzerinden yönlendirildiği için aslında mesajımızın çıkış noktası da Tor ağı üzerinden oluyor. Hatta eğer siz anlatımları Qubes sistemi üzerinden takip ediyorsanız; ağ için whonix servisini kullanarak Tail sistemine benzer şekilde mesajın çıkış noktasının da Tor ağı üzerinden yapılmasını sağlayabilirsiniz. Kullanmakta olduğumuz işletim sistemi ağ bağlantısını Tor ağı üzerinden yapıyor olsa da şu an özellikle belirtmediğimiz için mesajımız Tor ağından çıkarak clearnet üzerindeki sunucu üzerinden aktarılmış oluyor. Mesajımız Tor ağının dışında taşınırken anonimliğimizin de ihlal edilebilmesi ihtimali ortaya çıkıyor. Bu duruma çözüm olarak; anlatımın başında da söylediğim gibi XMPP protokolünü onion uzantısı ile darknet üzerinden de sunmakta olan hizmetlerden birini tercih etmemiz gerekiyor. Biz zaten bu duruma dikkat ederek Tor üzerinden hizmet sunan bir sunucu seçmiştik. Şimdi tek yapmamız gereken sunucunun onion uzantılı adresini de ayrıca belirtmek olacak. Bunun için "<strong>Hesaplar</strong>" sekmesine gelerek "<strong>Hesapları Yönet</strong>" kısmına tıklayalım. Açılan pencerede hesabımızı seçerek "<strong>Değiştir</strong>" butonuna basalım. Daha sonra "<strong>Gelişmiş</strong>" sekmesine gelerek "<strong>Bağlantı sunucusu</strong>" kısmına, listeden ya da web arayüzü üzerinden öğrendiğimiz onion servis adını girelim. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-59-27-6a08f88a9d54b8a5a8a9ef6d53f00fc7.png" class="responsive"></figure>
+
+<p>Oturumu kapatıp tekrar açtığımızda yaptığımız değişiklik geçerli olmuş oluyor. Bize sertifika ve parola doğrulaması soruyor. Onayı verip parolayı yazdıktan sonra yaptığımız ayar değişikliği geçerli olmuş oluyor.</p>
+
+<p>Onion adresini özellikle belirtmiş olmamız sayesinde, iletişimin vardığı nokta Tor ağı üzerinde yer alan güvenli bir sunucu olacağı için gizliliğimiz ve anonimliğimiz güvence altına alınmış oluyor. Ancak bu işlem de yeterli değil. Güvenli iletişimi garanti altına almak adına elbette karşı tarafın gerçek kimliğini de doğrulamamız gerekiyor. Kimlik doğrulamanın yanında, karşı taraf ile aramızdaki iletişimi de şifreleyerek sunucu da dahil olmak üzere taşınmakta olan iletişim verilerini herkesten korumamız gerekiyor. Kimliği doğrulamadan önce kimlik doğrulama aşamasındaki bilgi güvenliğini de sağlamak adına, öncelikle aradaki iletişimin uçtan uca şifrelenmesini sağlayalım.</p>
+
+<h4 id="6">Aradaki İletişimin Uçtan Uca Şifrelenmesi</h4>
+
+<p>İletişimin korunmasına adına bizlere harika koruma sunan uçtan uca şifreleme sisteminden daha önce de bahsetmiş hatırlarsanız. Bu sistemin ancak çalışılan ortam güvenli olduğunda ve şifrelemenin doğru şekilde uygulandığında güvenlik sağladığını da biliyoruz. Çalıştığımız ortam güvenli bir işletim sistemi ve kullandığımız "Pidgin" aracı da uçtan uca şifrelemeyi doğru şekilde uyguluyor. Doğru şekilde uyguladığını biliyoruz çünkü aracımız açık kaynak kodlu.</p>
+
+<p>Uçtan uca şifreleme işlemi için "<strong>Not private</strong>" yazan butona ya da üst çubuktan "<strong>OTR</strong>" sekmesine gelerek&nbsp; "<strong>Start private conversation</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_16-59-56-34a5da24f11432fbcb634af22ee9bb34.png" class="responsive"></figure>
+
+<p>Böylelikle her iki taraf için de uçtan uca şifrelenmiş mesajlaşma özelliği aktif edilmiş oluyor. Artık iki kişi arasında mesaj içeriği şifrelenerek, yalnızca karşılıklı tarafların okuyabileceği şekilde tüm mesaj içerikleri korunuyor olacak. Böylelikle mesaj içeriğini sunucu da dahil olmak üzere hiç kimse tarafından okunamayacak. Eğer buradaki "<strong>OTR</strong>" ifadesinin anlamını merak ediyorsanız; açılımı "<strong>O</strong>ff-<strong>t</strong>he-<strong>R</strong>ecord" yani "<strong>Kayıt Dışı</strong>" anlamına geliyor. Biz bu kısımdan, güvenli iletişim için gereken şifreleme ve kimlik doğrulama gibi işlemleri yönetebiliyoruz.</p>
+
+<p>Ayrıca her seferinde şifreleme özelliğini elle aktifleştirmek yerine, otomatik olarak her konuşmanın uçtan uca şifreleme ile korunmasını da sağlayabiliriz. Böylece dalgınlıkla karşılıklı iletişimi şifrelemeyi elle seçmediğimiz durumların da önüne geçmiş oluruz. </p>
+
+<p>Her konuşma için otomatik olarak uçtan uca şifrelemeyi aktifleştirmek üzere öncelikle "<strong>Araçlar</strong>" sekmesine gelerek "<strong>Eklentiler</strong>" kısmına tıklayalım.</p>
+
+<figure><img src="../../img/9/2020-06-15_17-00-12-6b5873e81167c027686df4f39879e12f.png" class="responsive"></figure>
+
+<p>Açılan pencerede "<strong>Off-the-Record Messaging</strong>" eklentisini seçerek "<strong>Eklentiyi Yapılandır</strong>" butonuna basalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-00-30-fab38a009290dd91312307961d02bd41.png" class="responsive"></figure>
+
+<p>Seçenekler arasından "<strong>automatically initiate private messaging</strong>/<strong>otomatik olarak mesaj şifrelemeyi başlat</strong>" özelliğini seçelim. Ardından açılan diğer bir özellik olan "<strong>require private messaging</strong>/<strong>gizli mesajlaşmayı gerekli kıl</strong>" özelliğini de seçelim. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-00-52-7a907ba922b9509fecd7800ca0fe4a85.png" class="responsive"></figure>
+
+<p>Tüm değişikliği yaptıktan sonra ayarın geçerli olması için uygulamayı kapatıp tekrar açalım. Yeni bir konuşma başlatmak üzere "<strong>Deneme</strong>" ifadesini yazıp yollayalım. Mesajı gönderdikten hemen sonra otomatik olarak şifrelendiğini uyarılara bakarak anlayabiliyoruz. Daha önce mesajlarımız şifrelenmediğinde "Not private" uyarısı bulunuyorken şimdi ise yalnızca "Unverified" yani kimliğin doğrulanmadığı uyarısı bulunuyor. Neticede bizde bu uyarıdan mesajların karşılıklı olarak şifrelenmekte olduğunu teyit edebiliyoruz. Biz bu özelliği tekrar kapatana kadar kiminle iletişim kurarsak kuralım, uçtan uca şifreleme otomatik olarak her konuşmamızda kendiliğinden aktif olacaktır.</p>
+
+<p>Ayrıca bu özelliğin dışında eğer konuşma içeriklerini kaydetmek istersek "<strong>Seçenekler</strong>" sekmesinden "<strong>Kayıt Tutmayı Etkinleştir</strong>" seçeneğini aktifleştirmemiz yeterli. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-02-12-9c13d2dcd1b59a1de07cd48fe82b1b9c.png" class="responsive"></figure>
+
+<p>Eğer kalıcılık modunu ayarlarken "<strong>Pidgin</strong>" aracını da kayıt tutulacaklar arasında seçtiyseniz konuşma kayıtlarına kalıcılık modu üzerinden ulaşabiliyor olacaksınız. Şimdi denemek için kısa bir konuşma gerçekleştirip içeriğin kayıt olup olmadığını teyit edelim. </p>
+
+<p>Konuşmanın ardından sistemi kapatıp tekrar kalıcılık modunda başlatalım. Sistem kalıcılık modunda başlatıldığında konuşma kayıtlarına göz atmak için "<strong>Pidgin</strong>" uygulamasını açıp "<strong>Yazışma</strong>" sekmesine gelelim. Açılan seçenekler içerisinden "<strong>Kayıtları Göster</strong>" kısmına tıklayıp kayıtlara göz atalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-01-31-1bebf3e4785f4822c2116ba7edc4214c.png" class="responsive"></figure>
+
+<p>Ve sonuç olarak yazışmalarımızın kaydının tutularak burada yer aldığını teyit edebiliyoruz.</p>
+
+<figure><img src="../../img/9/2020-06-15_17-01-46-002ee5fe5ba1231bd9c32260d916ed89.png" class="responsive"></figure>
+
+<p>Sizler de bu şekilde tüm konuşmalarınızı, daha sonra ulaşabilmek üzere kayıt altında tutabilirsiniz. Kayıtlı tutmak istediğiniz ve istemediğiniz konuşmalara göre bu özelliği açıp kapatmanız mümkündür. Aynı zamanda karşı tarafın da konuşmaları kayıt altına alabileceğini lütfen unutmayın. </p>
+
+<p>Mesajlarımızı aktarım sırasında şifreleyerek korumuş olsa da, bu kaydedilmiş olan mesaj içeriklerinin ele geçirilmesi halinde açık metin içerikleri okunabilir olacak. Bu noktada konuşmanın kritikliğine bağlı olarak tüm mesajlaşmayı karşılıklı olarak manuel şekilde şifreleyerek gerçekleştirmeniz de mümkündür. Bu yöntem sayesinde hiç bir mesajın içeriği açık metin şeklinde barındırılmayacağı için gizli anahtarlara sahip olmayan hiç kimse içeriğe erişemeyecektir. Örneğin Whatsap uygulamasının güvenli bir uygulama olmadığından bahsettik ancak Whatsapp uygulamasını da bu şekilde elle şifreleyerek kullanmanız halinde güvenli kılabilirsiniz. Örnek senaryo üzerinde iletişim kurduğunuz kişiler ile karşılıklı olarak Whatsapp uygulamasının web arayüzünü güvenli işletim sisteminiz üzerinde açarak&nbsp; tüm mesajlarınızı güvenli işletim sistemi üzerinde şifreleyip Whatsapp'ın uygulamasına yapıştırabiliriz. Böylelikle Whatsapp güvenli olmasa dahi siz güvenli şekilde iletişim kurabilmiş olursunuz. Aynı metodu dilediğiniz bir uygulama üzerinden de gerçekleştirebiliriz. Ancak yine de en güvenli yolun ele aldığımız şekilde tor ağı üzerinden hizmet sunan XMPP sunucularını kullanmak olduğunu lütfen unutmayın. Whatsapp örneğinde belirtmiş olduğum metodu zorunlu olduğunuz durumlarda kullanabilmeniz için belirttim. Ancak tekrar söylüyorum en güvenli yol Tor üzerinden hizmet sunan XMPP sunucularını kullanmaktır. Yani zorunlu olmadığınız durumlarda, kişisel verilerinizin güvenliğinin sağlanabilmesi için yaygın kullanıma sahip&nbsp; Whatsapp gibi uygulamaları kullanmanızı kesinlikle önermiyorum. Nedenini de anlatım sırasında pek çok kez ifade etmiş olduk.</p>
+
+<h4 id="7">İletişim Kurulan Kişinin Doğrulanması</h4>
+
+<p>Eğer iletişim kurduğumuz kişinin kimliğini doğrulamak istersek; "<strong>OTR</strong>" sekmesinden ya da "<strong>Unverified</strong>" butonuna basarak açılan seçenekler içerisinden "<strong>Authenticate buddy</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-05-00-44cfd3aa983a2fb1f78d0fac677657de.png" class="responsive"></figure>
+
+<p>Doğrulama işlemi için bize birden fazla yöntem sunuyor. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-05-08-d04280bd671a6f4d8e66cf31476b31bd.png" class="responsive"></figure>
+
+<ul><li><p>Soru ve cevap seçeneği, bizim oluşturduğumuz soruya, karşı tarafın tam olarak bizim belirtmiş olduğumuz cevabı girmesi ile doğrulamayı sağlıyor. Aynı şekilde karşı taraf da bizim kimliğimizi doğrulamak için bize soru sorabiliyor.</p></li><li><p>Ortak sır seçeneği, karşılıklı olarak aynı ifadeyi girmemiz ile doğrulamayı sağlıyor. Bir önceki yöntemden farklı olarak, soru sormadan tek seferde her iki taraftan da doğrudan tek cevap istenir.</p></li><li><p>Manuel parmak izi doğrulaması, karşılıklı olarak sahip olduğumuz imzaları harici bir güvenli kaynak üzerinden teyit etmemiz ile doğrulama işlemini yapıyor. Örneğin iletişim kurduğunuz kişiye ait olduğuna emin olduğunuz telefona SMS atarak karşılıklı olarak parmak izlerini teyit edebilirsiniz.</p></li></ul>
+
+<p>Ben örnek olarak "ortak sır" seçeneğini seçip "<strong>deneme testi</strong>" ifadesini ortak sır olarak belirterek "<strong>Authenticate</strong>"&nbsp; yani "<strong>Kimliği Doğrula</strong>" butonuna basıyorum. Böylelikle karşı tarafta pencere açılarak ortak sırrı girmesi isteniyor. Eğer karşı taraf doğru ifadeyi ortak sır olarak girerse karşılıklı olarak kimliklerimiz tek seferde doğrulanmış oluyor. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-05-41-da8f1066bc634ece54c4c707d8a32208.png" class="responsive"></figure>
+
+<p>Bu sayede gördüğünüz gibi iletişim kurduğunuz birinin hesabı ele geçirilmiş olsa dahi, bu doğrulama seçeneklerinden birini kullanarak hesabı kullanan kişinin gerçek kimliğini teyit edebilirsiniz.</p>
+
+<p>Ayrıca bu servis üzerinden mesaj dışında dosya da gönderebiliriz ancak <strong>Dosya aktarımları OTR tarafından şifrelenmez.</strong> OTR yalnızca konuşmaları şifreler. Yani bu servis üzerinden dosya göndermek güvenli sayılmaz. Dosya içeriklerini bizim manuel olarak şifreleyip karşı tarafa göndermemiz gerekir. Manuel şifreleme dışında güvenli bir biçimde nasıl dosya gönderebileceğimizi bir sonraki kısımda ayrıca ele alıyor olacağız. Yine de gizliliğinden endişe etmediğiniz dosyaları buradan mesajlaştığınız kişiye gönderebilirsiniz. Yine de bu özelliği zorunlu olmadıkça kullanmanızı önermiyorum.</p>
+
+<p>Eğer kullanacaksanız üst çubukta yer alan "<strong>Yazışma</strong>" sekmesinde yer alan "<strong>Kişiye dosya gönder</strong>" seçeneğini seçin. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-06-05-464fa5aa168be2b01e224c595fece059.png" class="responsive"></figure>
+
+<p>Açılan pencereden göndermek istediğiniz dosyayı seçip "<strong>Aç</strong>" diyerek devam edin. Bu işlemin ardından karşı tarafta, dosya alıp almak istemediğine dair soru penceresi açılmış oluyor. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-06-15-bd755dc73b81b7d762955d8be1cbb3bb.png" class="responsive"></figure>
+
+<p>Eğer karşı taraf kabul ederse dosya indirilmiş olacak. </p>
+
+<figure><img src="../../img/9/2020-06-15_17-06-34-ce073ba3872bedd0daa900820b940f6c.png" class="responsive"></figure>
+
+<p>Ayrıca bu süreçte dosyayı gönderen olarak dosyanın indirilme durumunu izleyebiliyor hatta dosya göndermekten vazgeçersek indirmeyi "<strong>Durdur</strong>" butonuna basarak durdurabiliyoruz. Yine de güvenlik açısından bu servis ile dosya göndermenin mantıklı bir yol olmadığını tekrar belirtmek istiyorum. Eğer güvenli şekilde dosya göndermek istiyorsanız bir sonraki bölümde bu konuyu ayrıca ele alıyor olacağız. Öğrenmek için lütfen okumaya devam edin.</p>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

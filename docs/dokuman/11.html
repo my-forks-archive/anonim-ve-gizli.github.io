@@ -1,0 +1,581 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 11. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" class="responsive" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./10.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./10.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+			<a href="#0" class="list-group-item list-group-item-action">Kripto Paralar</a>
+			<a href="#1" class="list-group-item list-group-item-action">Btc Cüzdanı Edinmek</a>
+			<a href="#2" class="list-group-item list-group-item-action">Bitcoin Edinmek</a>
+			<a href="#3" class="list-group-item list-group-item-action">Minning</a>
+			<a href="#4" class="list-group-item list-group-item-action">Takas </a>
+			<a href="#5" class="list-group-item list-group-item-action">ATM</a>
+			<a href="#6" class="list-group-item list-group-item-action">Borsa</a>
+			<a href="#7" class="list-group-item list-group-item-action">Önemli Açıklama</a>
+			<a href="#8" class="list-group-item list-group-item-action">ATM İşlemleri</a>
+			<a href="#9" class="list-group-item list-group-item-action">Kişiler Arası Takas</a>
+			<a href="#10" class="list-group-item list-group-item-action">BTC Gönderimi & Alımı</a>
+			<a href="#11" class="list-group-item list-group-item-action">Karıştırıcı Kullanımı</a>
+			<a href="#12" class="list-group-item list-group-item-action">Monero Nedir</a>
+			<a href="#13" class="list-group-item list-group-item-action">Monero Cüzdanı</a>
+			<a href="#14" class="list-group-item list-group-item-action">Hesaba Erişmek</a>
+			<a href="#15" class="list-group-item list-group-item-action">Hesabı Geri Yüklemek</a>
+			<a href="#16" class="list-group-item list-group-item-action">Monero Alımı</a>
+			<a href="#17" class="list-group-item list-group-item-action">Kişiler Arası Takas</a>
+			<a href="#18" class="list-group-item list-group-item-action">Kript Para Takası</a>
+			<a href="#19" class="list-group-item list-group-item-action">Bölüm Sonu Özeti</a>
+
+			<hr>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">11.Doküman</strong>
+          <h3 class="mb-0">Kripto Paralar</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">monero , bitcoin , mixers , tumbler , atm , takas , kripto </p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+	<h4 id="0">Kripto Paralar</h4>
+
+<p>Muhtemelen daha önce hiç kullanma gereksinimi duymamış olsanız dahi kripto paraları duymuşsunuzdur. Özellikle de Bitcoin'in yükselişte olduğu dönem, pek çok kişi kripto paralardan haberdar olmuştu. Bizler bu bölümde kripto paraların yatırım yönü ile değil, bize sağladığı özgürlükten diğer bir deyişle finansal anonimlikten bahsediyor olacağız.</p>
+
+<p>Kripto paralar merkeziyetçi olmayan, anonim para transferinde kullanılan para birimlerine verilen genel isimdir. Merkeziyetçi olmaması demek; banka ya da devletler gibi hiç bir merkezi otoriteye bağlı olmamasıdır. Kripto paralar aslında en basit tabiri ile dijital takas birimleridir. Üstelik tek bir kripto para çeşidi de yoktur. Tıpkı farkı ülkelerin farklı para birimleri olması gibi binlerce farklı kripto para çeşidi vardır. Yani kripto para denilince aklınıza sadece "Bitcoin" gelmesin. Bitcoin yalnızca ilk çıkmış olan ve en çok bilinen kripto paradır. Dileyen herkes kendi kripto parasını da oluşturabilir. Bu sebeple kripto para denilen takas birimi hiç bir otoritenin kontrolü altında değildir. Örneğin bireysel olarak siz tüm dünyada geçerli olacak kendi para biriminizi üretebilir misiniz ? Bildiğimiz fiziksel para birimleri için böyle bir işlemin mümkün olmadığı açık. Ancak kripto para dünyasında kendi kripto paramızı üretmemiz mümkündür. Kripto paraları kullanmaya başlamak için sistemin teknik çalışma yapısına hakim olmanız gerekmez. Ancak biz yine de nasıl bir sisteme güveneceğimizi, sistemin temel çalışma yapısını ele alarak basit bir anlatım ile görelim istiyorum. </p>
+
+<p>Açıklamaya Bitcoin'in temel çalışma yapısından bahsederek başlayalım. </p>
+
+<p>Örneğin ben Ahmet'e 5 Bitcoin göndermek istiyorum diyelim; Öncelikle doğru kişiye gönderebilmek için Ahmet'in hesap adresini bilmem gerekiyor. Eğer bilmiyorsam güvenli iletişim kanalları ile Ahmet'ten isteyebilirim. Ahmet'in hesap adresini öğrendikten sonra 5 Bitcoin Ahmet'in hesabına gönderirim. Gönderim yaparken, paranın benden geldiğinin teyit edilebilmesi için kendi hesabıma ait olan gizli anahtar ile işlemi imzalayarak transfer verisinin içerisine de açık anahtarımı koyarım. Bu sayede bu transferin benim tarafımdan yapılmış olduğu teyit edilebilir. Ayrıca transferi Ahmet'in açık anahtarı ile de şifrelerim böylelikle parayı yalnızca gizli anahtara sahip olan Ahmet kullanabilir.&nbsp; (Elbette bahsi geçen bu şifreleme ve imzalama işlemleri otomatik olarak gerçekleşir yani bizlerin bizzat şifreleme sistemi ile haşır neşir olmamız gerekmez. Ben sadece sistemin arkaplanda gerçekleştirdiği temel işlemi açıklamak için anlatımı bu şekilde gerçekleştiriyorum. Bizim yerimize sistem bu işlemleri otomatize şekilde gerçekleştiriyor.) Benim yapmış olduğum transfer bilgileri dolaşım ağına gönderilir. Bu sırada pek çok transfer bilgisi de ağa katılır. Ağ üzerinde dolaşımda olan bu transferler, eğer bir sahtekarlık girişimi yoksa madenci olarak adlandırılan kişilerce alınıp onaylanarak bir bloğun üzerine yazılır. Bu blok ağ üzerindeki diğer tüm katılımcılar ile paylaşılır. Blok içerisine kayıt olabilecek veriler sınıra ulaştığında mevcut blok önceki bloklara bağlanarak yeni bir blok oluşturulur.&nbsp; Bu sayede yapılan transfer, geri alınamaz ve değiştirilemez şekilde karşı tarafa ulaştırılmış olur. </p>
+
+<p>Anlatımı mümkün oldukça yalın şekilde gerçekleştirmeye çabaladım. Zira daha önce de söylediğim gibi çalışma yapısının teknik detayları, kripto paraları güvenli şekilde kullanım için şart değil. Bizler sadece güvendiğimiz sistemin çalışama yapısı hakkında genel fikir sahibi olmak adına buradaki açıklamayı yapmış olduk. Anlatımlara öncelikle "Bitcoin" daha sonra "Monero" ile devam ediyor olacağız.</p>
+
+<h4 id="1">Bitcoin Cüzdanı Edinmek</h4>
+
+<p>Bitcoin kullanabilmemiz için elbette kendimize ait bir Bitcoin hesabımızın olması gerekiyor. Hesap oluşturmak ve oluşturduğumuz hesabı yönetebilmek için öncelikle Bitcoin cüzdan uygulamasını edinmemiz gerekiyor. Farklı platformlardan kullanabileceğimiz pek çok farklı cüzdan uygulaması bulunuyor. Bu uygulamaları görmek üzere bitcoin.org üzerinden cüzdan seçim sayfasını ziyaret edebiliriz. Açılan sayfadan hangi platform üzerinden kullanacağımızı seçerek, karşımıza gelen listeden herhangi bir uygulamayı tercih edebiliriz. Ben anlatımı Tail üzerinden ele alacağım için, Linux sistemlerinde kullanılabilen herhangi bir aracı seçip kullanabilirim. Ancak, zaten Tail üzerinde&nbsp; "Electrum" cüzdan uygulaması varsayılan olarak yüklü geliyor. Yani Tail sisteminde, harici bir cüzdan uygulaması kurmak zorunda değilim. Eğer siz Tail harici bir sistem üzerinden rehberi takip ediyorsanız, buradan kullandığınız sisteme özel olan dilediğiniz bir cüzdan uygulamasını edinebilirsiniz. Zaten burada yer alan uygulamaların kullanımları, hemen hemen çok benzer olduğundan kullanım noktasında pek bir sorun yaşamazsınız. Yine de size önerim masaüstü ortamında, alternatiflerine oranla daha güvenli olarak kabul edilen "Electrum" aracını tercih etmenizdir. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-54-37-6370e03eaf57e1a313063576cb6d4818.png" class="responsive"></figure>
+
+<p>Aracımız, Tail üzerinde varsayılan olarak kurulu geliyor ve herhangi bir alternatif işletim sistemine kurulum işlemi de son derece kolay. Sadece kullanmakta olduğunuz işletim sistemine özel olan kurulum dosyasını edinip kurmanız yeterli. Biz Tail sistemi üzerinden anlatımlarımıza devam edelim.</p>
+
+<p>Hesabımızı oluşturmak üzere cüzdan uygulamasını açalım.</p>
+
+<figure><img src="../../img/11/2020-06-15_19-54-50-2db1fd90643993e6d8e55025f99361f2.png" class="responsive"> Uygulamayı ilk defa çalıştırdığımız için uygulama bizden yeni bir cüzdan oluşturmamızı istiyor. Cüzdan adımızı belirtip devam edelim. </figure>
+
+<figure><img src="../../img/11/2020-06-15_19-55-16-fec3458440e42fe7af9f557413872e49.png" class="responsive"></figure>
+
+<p>Karşımıza dört farklı seçenek çıkmış oluyor. Seçenekler arasında yer alan "<strong>standart</strong>" yöntem dışındaki diğer yöntemlerin ne anlama geldiğini açıklamamız gerekirse;</p>
+
+<p><strong>İki aşamalı doğrulama</strong> seçeneği, cüzdana erişmek için harici olarak "Google Authenticator" uygulaması üzerinden doğrulama gerçekleştirmemizi de gerekli kılan seçenektir. Bu seçenek cüzdan güvenliği için iyi olsa da Google servisine güvenmediğiniz sürece anonimlik için iyi bir seçenek olmayacaktır.</p>
+
+<p><strong>Birden fazla imzalı cüzdan</strong> seçeneği ise birden fazla cihaz kullanarak çoklu imzalar ile cüzdanı güvene alma işlemidir. Bu seçenek iyi bir güvenlik önlemi sağlasa da, giriş için birden fazla cihaza ihtiyaç duymak her zaman için kullanışlı olamayabilir.</p>
+
+<p><strong>Bitcoin adreslerini ya da özel anahtarları içe aktar</strong> seçeneği de gayet açık biçimde cüzdan için gerekli olan adres ya da özel anahtarların içeri aktarılması sırasında kullanılabilir. </p>
+
+<p>Bizler yeni bir cüzdan oluşturacağımız için <strong>standart cüzdan</strong> seçeneği ile devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-55-38-126aba400604a775ddc61c6aab550208.png" class="responsive"></figure>
+
+<p>Standart seçeneği ile devam ettikten sonra, karşımıza gelmiş olan seçenekleri de kısaca açıklayacak olursak;</p>
+
+<p><strong>Yeni tohum oluştur</strong> seçeneği içerisinde geçen "tohum" ifadesi, bir cüzdanı geri yüklemek için kullanılabilecek bir metin dizesidir. Yani eğer cüzdanımızı kurtarmamız gerekirse buradaki "tohum" ifadelerini kullanıyor olacağız.</p>
+
+<p><strong>Tohuma sahibim</strong> seçeneği ise, daha önce edinmiş olduğumuz tohum üzerinden hesabımızı kurtarmamızı sağlayan seçenektir. Yani buradaki seçenek ile&nbsp; gerektiğinde, cüzdanımızı tohum bilgimiz üzerinden kurtarabiliriz.</p>
+
+<p><strong>Ana anahtarı kullan</strong> seçeneği, daha önce oluşturmuş olduğumuz cüzdanımıza ait olan açık ya da gizli anahtar üzerinden cüzdanın geri yüklenmesini sağlar. Anahtar alanına açık anahtar girilirse, cüzdan yalnızca izleme modunda açılır herhangi bir parasal işlem yapılamaz. Eğer anahtar alanına cüzdana ait olan gizli anahtar girilirse cüzdan üzerinden parasal işlemler yürütülebilir.</p>
+
+<p><strong>Bir donanım cihazı kullan</strong> seçeneği ise, cüzdanımızın bilgisini barındıran bu iş için özel olarak geliştirilmiş elektronik cüzdan aracı üzerinden cüzdana erişmemizi sağlar.</p>
+
+<p>Biz yeni bir hesap oluşturduğumuz için herhangi bir geri yükleme yapmayacağımızdan "<strong>yeni tohum oluştur</strong>" seçeneği ile devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-56-05-95fa098c6c36905f8bd699907fa6275a.png" class="responsive"></figure>
+
+<p>Ancak ihtiyaç duyduğunuzda buradan öğrendiğiniz şekilde cüzdanınızı nasıl geri yükleyebileceğinizi de artık biliyorsunuz. Yani gerektiğinde buradaki seçeneklerden birini kullanarak, herhangi bir cihaz üzerinden cüzdanınıza ulaşabilirsiniz. "<strong>Yeni tohum oluştur</strong>" seçeneği ile devam ettiğimizde, tohum türünü seçmemizi isteyen sayfa bizleri karşılamış oluyor. Buradan, daha güvenli ve düşük işlem ücreti sağlayan "<strong>Segwit</strong>" seçeneğini seçebiliriz ancak bu seçenek uyarıda da belirtildiği gibi her websitesinin ya da cüzdan uygulamasının henüz desteklemediği bir seçenektir. Bu seçeneği seçerseniz kimi durumlarda yani desteklenmediği durumlarda para transferleriniz başarısız olabilir. Bu sebeple ben şimdilik "<strong>Legacy</strong>" seçeneği ile devam ediyorum. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-56-24-1bf527b6bd99117cc19d982500581f8f.png" class="responsive"></figure>
+
+<p>Ancak dilerseniz siz "<strong>Segwit</strong>" seçeneğini de kullanabilirsiniz. Eğer merak ediyorsanız bu iki seçenek arasında farkları daha iyi anlamak adına kısa bir internet araştırması yapabilirsiniz. Neticede, gerekli olan seçimi yaptıktan sonra tohum ifadeleri sıralı şekilde karşımıza gelmiş oluyor. Uyarıda da yer aldığı şekilde bu ifadeleri kimse ile paylaşmayacak, internet ortamında barındırmayacak ve mümkünse elektronik ortamdan uzak tutacağız. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-56-45-ae3d1332e7340e9b3379020120b21397.png" class="responsive"></figure>
+
+<p>Yani buradaki açıklamayla cüzdanımız, bu adresleri lokal olarak bir kağıdın üzerine yazıp saklamamızı öneriyor. Bu tohum ifadelerinin sırası da oldukça önemli, bu sebeple sırasına uygun şekilde tüm ifadeleri not aldığınızdan emin olun. Bu aşamayı kesinlikle çok dikkate almanız gerekiyor, eğer bu tohum bilgisini kaybederseniz cüzdanınızı gereken durumlarda kurtaramazsınız.&nbsp; Not alma işleminin ardından "<strong>Sonraki</strong>" diyerek devam edelim. Devam ettikten sonra cüzdan uygulamamız, tohumları not edip etmediğimizi test etmek için bizden bu tohum ifadelerini sırasına uygun şekilde belirtmemizi istiyor. Tohum bilgisini doğru şekilde girdiğimizde, cüzdan anahtarlarını koruyacak olan parola oluşturmamızı isteyen sayfa karşımıza geliyor. Buradan şifre oluşturmadan da devam edebilirsiniz ancak anahtar bilgilerinizin güvenliği için güçlü bir parola koruması eklemenizi şiddetle tavsiye ederim. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-57-05-3bf6012a17043c0eceaa0c12d1ff5eee.png" class="responsive"></figure>
+
+<p>Parolamızı da ekleyip devam ettiğimizde, nihayet kendimize ait cüzdanımız oluşturulup karşımıza gelmiş oluyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-57-29-fd2ae5e959764ce5a9cc442e74bf6e16.png" class="responsive"></figure>
+
+<p>Cüzdan arayüzü sizlerin de görebildiği gibi son derece basit. Buradan tüm işlem kayıtlarına göz atabiliyor, ayrıca gönderim yapıp, gönderim talebinde de bulunabiliyoruz. Cüzdan kullanımından anlatım sırasında zaten bahsediyor olacağız. Ancak öncelikle nasıl Bitcoin edinebileceğimizi öğrenelim istiyorum. </p>
+
+<h4 id="2">Bitcoin Edinmek</h4>
+
+<p>Yeni bir cüzdan hesabını nasıl oluşturabileceğimizi öğrendiğimize göre, şimdi de mevcut hesabımıza anonim şekilde nasıl Bitcoin yükleyebileceğimizi ele alalım. Esasen Bitcoin edinmek için pek çok farklı yöntem bulunuyor. Ancak maalesef ki bu yöntemlerin hepsi bize doğrudan anonimlik sağlamıyor. Örneğin en kolay yöntem olan borsa üzerinden Bitcoin almak istediğimizde, gerçek kimlik bilgilerimiz ile alışveriş yapmamız gerekiyor. Hal böyle olunca cüzdan adresimiz ile kimliğimizin bilgisi borsa tarafından biliniyor olacağından, kripto paraların sağlamış olduğu anonimlik özelliği ortadan kalkıyor. Bitcoin sisteminin yapısı gereği geçmişten günümüze gerçekleştirilmiş tüm işlemler ortak şekilde herkes tarafından ulaşılabilir olduğundan, cüzdan adresimiz üzerinden gerçekleştirmiş olduğumuz tüm transfer bilgileri de takip edilebilir oluyor. Kimlik bilgimiz ile ilişkilendirilen bir Bitcoin adresine sahip olursak, elbette pek çok otorite tarafından kolaylıkla tüm işlem geçmişimiz izlenebilir olacaktır. Bu durumu önlemek için alım işlemini anonim şekilde yapmalı ya da aldığımız Bitcoin'i anonimleştirmeliyiz. Anlatımlara Bitcoin alabileceğimiz ve anonimleştirebileceğimiz başlıca yöntemleri açıklayarak devam edecek olursak;</p>
+
+<ul><li><p>Kendiniz kazabilirsiniz. Yani "mining" ile üretebilirsiniz.</p></li><li><p>Takas yaparak elde edebilirsiniz.</p><ul><li><p>Standart paralar ile takas edebilirsiniz.</p></li><li><p>Alternatif kripto paralar ile takas edebilirsiniz.</p></li></ul></li><li><p>ATM üzerinden yükleme yapabilirsiniz.</p></li></ul>
+
+<p>Şimdi sırasıyla bahsi geçen bu yöntemleri tek tek ele alacak olursak;</p>
+
+<h4 id="3">Kendi Paranızı Kazmak - Minning</h4>
+
+<p>Bilgisayarımızın işlem gücünü kullanarak sistemin çalışmasına katkı sunma karşılığından sistemden ödül olarak kripto para kazanabiliriz. Fakat bu işlem için gerçek manada yüksek işlem gücü gerekeceğinden, pratikte uygulaması söylemesi kadar kolay değildir. Yani aslında bu yöntem kripto para kazanmanın en anonim yolu olsa da pek çoğumuz için uzak bir seçenek. Çünkü bu seçenek gerçek manada yüksek işlem gücüne sahip olan cihazlara, yüksek miktarda yatırım yapmamızı gerektiriyor. Eğer bu seçenek sizin için uygunsa, internet üzerinden kısa bir araştırma yaparak madenciliğe nasıl başlayabileceğinize dair yerli ve yabancı pek çok rehber bulabilirsiniz. Genel olarak pek çoğumuzun ulaşamayacağı alternatif olduğu için bu konuyu eğitim içerisinde ele almıyorum. </p>
+
+<h4 id="4">Kripto Takas Sistemi</h4>
+
+<p>Başka para birimleri ile takas yaparak kripto para almamız da mümkündür. Bu yöntem sayesinde, doğrudan borsa üzerinden kimliğimiz ile alım yapmadığımız için yine kimliğimizi gizleme olanağımız bulunur. Takasın da kendi içinde farklı türleri var.&nbsp; Ancak yöntemler içerisinden şu an için yalnızca "Kişisel Arası" olarak tabir edilen "Peer-to-Peer(P2P)" sistemler anonimliğimizi sağlıyor. Kişiler arası takas hariç diğer takas yöntemlerinde de çoğunlukla kimlik bilgisi sizlerden talep edilecektir. Kişiler arası olarak geçen takas sisteminde ise aracısız şekilde nakit para karşılığı Bitcoin satın alabiliyorsunuz. Ayrıca, eğer mevcutsa elimizde yer alan alternatif kripto paralar ile takas yaparak da Bitcoin elde edebiliriz. </p>
+
+<h4 id="5">ATM Üzerinden</h4>
+
+<p>ATM üzerinden hesabımıza anonim şekilde yükleme yapmamız mümkündür. Ancak dünyada en yoğun kullanıma sahip ülkelerden biri olmamıza karşın bahsi geçen bu ATM'ler yalnızca İstanbul'da oldukça sınırlı sayıda bulunuyor maalesef. Belki sizin eğitimi takip ettiğiniz dönemde bu durum değişmiş olabilir ancak şu an için ATM üzerinden yükleme işlemi için maalesef İstanbul tek seçenek. Üstelik bu bahsi geçen ATM'ler, işlemler sırasında telefon doğrulaması gerektirdiğinden çok da anonim bir yöntem sayılmazlar.</p>
+
+<p>Alternatifleri kısaca ele aldığımıza göre şimdi uygulama üzerinden Bitcoin alabileceğimiz yöntemlerden bahsedelim. Ayrıca lütfen herhangi bir alım gerçekleştirmeden önce bu bölümde yer alan tüm anlatımları sırasıyla baştan sonra takip edip, hangi seçeneği neden ve nasıl kullandığımızı iyi bir biçimde öğrenin. Çünkü mining dışındaki tüm alımlarda, anonimleştirme işlemi için harici bir uygulamalara ihtiyaç duyuyoruz. Hangi yöntemin sizin için uygun olduğuna doğru şekilde karar verebilmek adına, bu bölümü baştan sonra izlemeden alım yapmayın lütfen.</p>
+
+<h4 id="6">Borsa Üzerinden Bitcoin Almak</h4>
+
+<p>Borsa üzerinden satın almak anonimlik açısından önerilmiyor olsa da, anlatımın devamında elimizdeki Bitcoin'leri nasıl anonimleştirebileceğimizi ele alacağımızdan borsa üzerinden de Bitcoin alımı yapabiliriz. Borsa üzerinden Bitcoin alımı için tek yapmanız gereken, sizden talep edilen kimlik bilgileri ile borsa üzerinde kayıt oluşturmaktır. Borsa üzerinde hesap oluştururken girilen her bilginin eksiksiz ve size ait doğru bilgiler olduğuna dikkat etmeniz gerekiyor. Aksi halde kayıt olabilseniz dahi Bitcoin alımını yapamazsınız, çünkü Bitcoin alımı için kullanacağınız banka hesabınız sizin kimlik bilgileriniz ile eşleşmez. Borsa üzerinde hesap oluşturduktan sonra, kullandığınız borsanın desteklediği ödeme yöntemleri ile dilediğiniz miktarda Bitcoin alımı yapabilirsiniz. Hiç bir borsa anonim para yatırma imkanı tanımadığı için ben borsa üzerinden Bitcoin alımını bu eğitimde ele almıyorum. Yine de borsa üzerinde kayıt oluşturup kimliğiniz ile Bitcoin alımı yapmayı tercih edebilirsiniz. Alım işlemi zaten son derece kolay. Kimlik bilgileriniz ile kayıt oluşturduktan sonra size ait olan banka hesabından borsaya havale yaparak, hesabınıza Bitcoin alımı gerçekleştirebiliyorsunuz. Bu yöntemde hem kimlik bilgileriniz hem de size ait banka bilgileri borsanın kayıtlarında tutulacağı için anonimlik açısından en kötü tercih olarak kabul edilebilir. Yine de kimliğiniz ile aldığınız Bitcoin'i ileride ele alacağımız anonimleştirme yöntemleri ile anonim hale de getirebilirsiniz. Ancak herhangi bir alım gerçekleştirmeden önce bu bölümü baştan sona izleyerek sizin için hangi yöntemin daha doğru bir tercih olacağına karar verin. Yani alım işlemi için lütfen acele etmeyin, öncelikle yöntemleri tanıyın lütfen.</p>
+
+<h4 id="7">Önemli Ek Açıklama !</h4>
+
+<p>Lütfen buradaki açıklamayı sonuna kadar okumadan eğitime devam etmeyin. Eğer okumadan devam ederseniz, okuduğunuz varsayıyor olacağımı da peşinen belirtiyorum.</p>
+
+<p>Buradaki anlatımların anonimlik açısından ele alındığını ve hiç bir yatırım yönü olmadığını tekrar hatırlatmak istiyorum. Bu sebeple yatırdığınız paraların değer kaybetmesi ya da yükselmesi kesinlikle bu kursun kapsamında değildir. Biz sadece kripto paralar üzerinden hizmet sunan servislere anonim şekilde ödeme yapabilmek adına temel anlatımları gerçekleştiriyor olacağız. Bu sebeple eğer yatırım yönüne hakim değilseniz yüksek miktarda para yatırmayın kesinlikle. Örneğin Protonmail servisi için ödeme yapacaksanız sadece servisin talep ettiği kadarlık para yatırıp hizmeti satın alın. Yüklü miktardaki işlemleri acemiler için kesinlikle tavsiye etmemekle birlikte, yaşayacağınız para kayıplarının sorumluluğunu da almadığımı belirtmek istiyorum. Unutmayın biz bu kursta yalnızca kripto paraların anonimlik yönüne odaklanıyor olacağız. Paraların mevcut değeri, kazancı ve kaybı tamamen sizlerin sorumluluğu altındadır. Bu açıklamamı dikkate alarak anlatımlara devam edebiliriz.</p>
+
+<h4 id="8">ATM Üzerinden Bitcoin İşlemleri</h4>
+
+<p>Anlatım sırasında bu ATM'lerin yalnızca İstanbul'da olduğundan bahsetmiştik. Benim eğitimi hazırladığım sırada tüm dünyanın malumu Covid-19 virüsü sebebiyle İstanbul dışında ikamet ettiğim için ATM kullanımı bizzat ben ele alamadım. Ancak kullanımını oldukça net biçimde açıklayan Atamert Bey, eğitim içerisinde ATM kullanımına dair rehber videosunu kullanmama izin verdi. Buradan desteği için Atamert Bey'e de ayrıca teşekkür ediyorum. Youtube üzerinde yer alan kanalını <a href="https://www.youtube.com/channel/UC2nKq8vwg9K1Bj8roHhebaQ" target="_blank" rel="noopener noreferrer">buradaki</a> bağlantıdan ziyaret edebilirsiniz. Rehber videoyu izleyerek Bitcoin alımı yapabilirsiniz. Rehber video takip ederken sizlerin de görebileceği gibi işlemler için telefon numaranızı girmek zorunda olmanız, anonimliğimize engel oluşturan bir durum. Yani ATM üzerinden yükleme yapmak kısmen anonim sayılabilecek bir yöntemdir. Yine de ileride, elimizdeki Bitcoin'i nasıl anonim hale getirebileceğimizden de ayrıca bahsediyor olacağız. Şimdi rehber video ile ATM üzerinden Bitcoin hesabımıza nasıl para yatırabileceğimizi öğrenelim. <strong>Rehber video;</strong> <a href="https://www.youtube.com/watch?v=4U5FsTaHFcE" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=4U5FsTaHFcE</a></p>
+
+<h4 id="9">Kişiler Arası Takas Kullanımı</h4>
+
+<p>Kişiler arası takas için pek çok farklı platform bulunsa da kimlik bilgisi gerekmeden nakit para ile Bitcoin edinebileceğimiz şu an için bir tek paxful.com servisi bulunuyor. Bu yöntemi kullanmak üzere web sitesini ziyaret edelim. Sayfa açıldığında Bitcoin alabilmemiz için birden fazla ödeme yöntemi sunan alan karşımıza gelmiş oluyor. Buradan "Tümünü göster" diyerek Türkiye için kullanılması mümkün olan ödeme yöntemlerinin tümüne gözatabiliriz. Hiç bir kimlik bilgimizin gerekli olmadığı ve doğrudan bizimle ilişkilendirilemeyecek tek yöntem nakit para ile satın almaktır. Nakit ödeme yöntemini arattığımızda yine birden fazla ödeme yöntemi gelmiş oluyor. Bu yöntemler içerisinden uygun olanı seçip mevcut teklifleri listelemek üzere "<strong>Teklif Arayın</strong>" butonuna basalım. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-58-18-1a7ae7e660da37d3a7c2d28e89497b18.png" class="responsive"></figure>
+
+<p>Ayrıca buradan hangi para birimi ile ödeme yapmak istediğinizi de seçebilirsiniz ancak bu seçenek arama kriterini iyice daraltacağı için teklif bulmada sorun oluşturabilir. Türkiye'de güvenilir şekilde bu işi yapanların sayısı zaten oldukça az olduğundan size önerim buradan yalnızca ödeme türü olarak nakit seçeneğini seçerek para birimini kısıtlamadan arama yapmanızdır. Yüz yüze nakit ya da kartsız nakit seçenekleri anonimlik açısından kullanılabilir olan iki seçenektir. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-58-40-b0c83ccf43f810f579bf3636626e37ed.png" class="responsive"></figure>
+
+<p>Ancak eğitimi hazırladığım dönemde virüs önlemleri dolayısı ile yüz yüze nakit seçeneğinin ülkemizde mümkün olacağını pek sanmıyorum.(Virüs öncesinde de yüz yüze nakit seçeneği çok nadir olarak görülüyordu zaten.) Nitekim bu kriter ile arama yaptığımızda da hiç bir teklifle karşılamıyoruz. Bunun yerine kartsız nakit seçeneği ile teklif araması yapalım. Bu aramanın sonucunda gördüğünüz gibi birkaç tane uygun kriterli teklif karşıma gelmiş oldu. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-58-57-64a04ac7ae4aa293dce589e33464797e.png" class="responsive"></figure>
+
+<p>Teklifler arasından bize uygun olanı seçerken dikkat etmemiz gereken detaylar; güvenilirlik düzeyleri ve açıklama kısmında yazan "makbuz gerekliliği" "doğrulama" ve "üçüncü taraf" gibi kriterlerin anonimliğimize uygun olmasıdır. Ayrıca elbette satın alma limiti ve satıcının güvenilirlik düzeyi de işlemi gerçekleştirmeye uygun olup olmadığı konusunda bize fikir verecektir. Zaten çok fazla seçenek de sıralanmadığı için bu seçenekler arasından en ideal olan satıcı ile "Satın Al" diyerek iletişime geçebiliriz. Açılan sayfaya ödeme miktarını girip karşılığında ne kadarlık Bitcoin alacağımızı öğrenebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-59-29-f9fe67d71824210314e490a47b552de9.png" class="responsive"></figure>
+
+<p>Elbette burada güvenlik ve gizlilik için satıcı, istediği komisyon ücretini belirleyip kestiğinden dolayı verdiğimiz paranın hatırı sayılır bir kısmı da komisyon ücreti olarak gidecektir. Eğer teklif sizin için uygunsa işleme devam edip hesap oluşturarak satıcı ile iletişime geçerek satın alma işlemini gerçekleştirebilirsiniz. Satın almadan önce satıcının profiline giderek satıcı hakkında daha fazla bilgi edinebilirsiniz. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-59-38-c94c97943c889729368a49c7ebaefb16.png" class="responsive"></figure>
+
+<p>Ayrıca satıcının da sizden hesabınızın doğrulanmış olması ya da daha önce alışveriş yapmış olmanız gibi talepleri olabilir. Tüm bu bilgileri satıcı ile iletişime geçerek öğrenebilirsiniz. Mevcut tekliflerin hiç birisi bana uymadığı için ben şu an için takas yapmayacağım. Ancak sizin için uygunsa elbette bu yöntem ile anonim şekilde Bitcoin satın alabilirsiniz. Ayrıca nakit seçeneği dışında diğer alternatiflere de göz atarak Bitcoin alımı gerçekleştirebilirsiniz. Netflix hediye kartı karşılığı Bitcoin alabileceğiniz alternatifler dahi var. Sadece size uygun olabilecek takas yöntemlerine göz atın lütfen. Nakit dışındaki yöntemler, borsa üzerinden almaya benzer şekilde anonim olmadan Bitcoin alımı yapmamızı sağlar. Aldığınız Bitcoin anonim olmasa da ileride mevcut Bitcoin'leri nasıl anonimleştirebileceğimizi ele alıyor olacağız. </p>
+
+<h4 id="10">Hesaplar Arası Bitcoin Gönderimi Ve Alımı</h4>
+
+<p>İstediğimiz bir cüzdan adresine istediğimiz miktardaki transferi nasıl gerçekleştirebileceğimizi temel olarak bu kısımda ele alıyor olacağız. Aslında bu işlem son derece kolay. Tek yapmamız gereken transferi göndermek istediğimiz kişinin cüzdan adresini bilmek. </p>
+
+<figure><img src="../../img/11/2020-06-15_19-59-55-bc72ecc7a890d332cd6760f83f33cb75.png" class="responsive"></figure>
+
+<p>Cüzdan adresini bildiğimiz kişiye gönderim yapmak üzere cüzdan uygulamamızdan "Gönder" kısmına gelelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-00-18-c6c0455f5798e42228238cd96aba58ce.png" class="responsive"></figure>
+
+<p>Buradan gönderimi yapacağımız kişinin adresini yazıp, dilersek açıklama kısmına da istediğimiz bir ifade ekleyebiliriz. Eğer yazılı şekilde adresi belirtmek istemezsek karşı taraftan adresini karekod şeklinde göndermesini talep edebiliriz. Bu işlem için karşı taraf, "Ödeme istekleri" kısmında yer alan karekodu bizle kolayca paylaşabilir. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-00-30-9f6d822680194bda92aa708e936e7e10.png" class="responsive"></figure>
+
+<p>Ayrıca buradan, bizden almak istediği miktarı belirtirse karekod, alınacak miktarı belirtecek şekilde değişmiş oluyor. Biz bu karekodu okuttuğumuzda otomatik olarak karşı tarafın talep ettiği miktar, adresiyle birlikte elimize geçmiş oluyor. Yine de bunun yerine elbette "Gönder" kısmından kendimiz de istediğimiz miktarı özellikle belirtebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-00-50-9499764fa8a17b43710360165d368859.png" class="responsive"></figure>
+
+<p>Gönderim sırasında önemli olan başka bir detay ise "işlem ücreti" bahsidir. Eğer işlem ücretini düşük tutarsak transferimiz, madenciler tarafından öncelikli tercih sırasında olmayacaktır. İşlem ücretini ne kadar yüksek tutarsanız transferin gerçekleşme hızı da doğru orantılı olarak artacaktır. Ayrıca işlem ücretini çok daha spesifik şekilde belirtmek isterseniz ayarlar penceresini açarak, buradan "Komisyonu elle düzenle" seçeneğini aktifleştirebilirsiniz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-01-07-771deda040a703324b51d6c4adcf388b.png" class="responsive"></figure>
+
+<p>Bu işlemin hemen ardından görebileceğiniz gibi işlem ücretini çok daha özel biçimde belirtebileceğimiz kutucuk açılmış oluyor. Buradan istediğiniz işlem ücreti miktarını, transferin önemine bağlı olarak değiştirebilirsiniz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-01-31-d4881e7cf59543bc7b301120081ae832.png" class="responsive"></figure>
+
+<p>Elbette transfer yapıldıktan hemen sonra doğrudan karşı hesaba geçmiyor.&nbsp;Sadece onaylanma sürecine olduğunun bilgisi karşı tarafa iletiliyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-01-45-b8b0a2650a724e10f77d0a89ceea5cb2.png" class="responsive"></figure>
+
+<p>Eğer transferde herhangi bir aksaklık ya da hile durumu yoksa ilgili miktar kısa bir süre sonra onaylanarak karşı tarafa geçmiş olacak.</p>
+
+<p>Yaptığınız tüm işlemeler "Geçmiş" sekmesinden takip edilebilir şekilde kayıt altında tutuluyor. Buradan tüm transfer kayıtlarının detaylarına gözatabilirsiniz.</p>
+
+<h4 id="11">Karıştırıcı Kullanımı</h4>
+
+<p>Daha önce bahsetmiş olduğumuz ve sizlerin de bildiği üzere Bitcoin üzerinden gerçekleştirilen tüm transferlerin kayıtlarına herkes ulaşabiliyor. Eğer cüzdan adresinize sizinle ilişkilendirilebilecek bir kimlik bağlantısı yapmadıysanız, normal şartlarda o adresin size ait olduğunun bilinmesi mümkün değildir. Yine de ele aldığımız önceki anonim yöntemlerden birini kullanamadınız ve borsa üzerinden kimliğiniz ile Bitcoin almak zorunda kaldınız diyelim. Bu durumda sizin gerçek kimliğiniz, cüzdan hesabınız ile ilişkilendirilerek tüm transfer hareketleriniz kimliğiniz ile ilişkili şekilde pek çok otorite tarafından kolayca izlenebiliyor olacak. Haliyle de kripto paraların sağladığı anonimlik özelliği elbette sizin için yok olacaktır.&nbsp; Yine de belirtmemde fayda var; normal şartlarda borsa ve eğer işbirliği yapıyorlarsa devlet dışındaki hiç kimse sizin Bitcoin hesabınıza bağlı olan gerçek kimliğinizi bilemez. Yani sıradan biri sizin Bitcoin hesabınız üzerinden elbette doğrudan gerçek kimlik bilgilerinize erişemez. Örneğin Protonmail servisi için Bitcoin üzerinden ödeme yaptığınızda aslında Protonmail servisi, sizin Bitcoin hesabınıza bağlı olan kimlik bilgilerinizi göremez. Yine de borsanın biliyor olması ve haberimiz olmadan üçüncü taraflar ile paylaşabilme ihtimali, kişisel anonimliğimiz açısından oldukça rahatsız edici bir durumdur.</p>
+
+<p>Transferlerin takip edilmesini zorlaştırmak adına, transferleri karıştıran hizmetleri kullanarak anonimlik elde edebiliriz. Bu hizmeti sunan servisler genel olarak "mixers" ya da "tumblers" olarak ifade ediliyorlar. İnternet üzerinde kısa bir arama yaptığınızda bu hizmeti sunan pek çok servis olduğunu görebilirsiniz. Hangi servisi kullanmanız gerektiğine karar vermek için ayrıca açıklamalı şekilde sıralamaların yapıldığı listelere ya da reddit gibi platformlarda yer alan önerilere de göz atabilirsiniz.&nbsp; Pek çok servis farklı şekillerde hizmet sunuyor olsa da temelde bu tür servislerin yaptığı işlem; bizim bir cüzdanımızdan aldıkları parayı diğer cüzdan adresimize takip edilmesi zor şekilde karıştırarak göndermektir. Bu işlemi farklı şekillerde yapan pek çok servis var. </p>
+
+<p>Servis seçimi konusunda temel olarak dikkat etmeniz gerekenler; servisin sahte olmaması,&nbsp; log(kayıt) tutmuyor olması, onion uzantısı üzerinden de hizmet vermesi, ayrıca karıştırma işlemini gerçekten mantıklı ve takip edilmesi zor yoldan yapıyor olmasıdır. Bu maddeler içerisinden elbette ilk dikkat etmeniz gereken madde, seçmiş olduğunuz servisin sahte olmamasıdır. Zira internet üzerinde karşımıza çıkan her servis kesinlikle dürüst değil. Özellikle de karıştırma hizmetleri konusunda sahtekarlık yapan pek çok servis bulunuyor. Bu sebeple servisleri kullanmadan önce mutlaka internet üzerinde bu servis hakkında insanların geri bildirimlerini kontrol edin. Emin olmadığınız durumlarda reddit ve özellikle bitcointalk.org gibi platformlardan, insanlara servisin güvenilir olup olmadığını sorun. Bitcointalk özellikle Bitcoin için bu gibi durumlarda danışabileceğiniz bir forum platformudur. Mutlaka araştırma yaparken bu forumdan da yararlanın. Kısacası ilgili servisi kullanmadan önce güvenilirliğinden kesinlikle emin olun lütfen. </p>
+
+<p>Ben sizlere örnek olması açısından daha önce kullanmış olduğum bir servis üzerinden rehber anlatımı gerçekleştiriyor olacağım. Ancak sizler alternatif servisler için elbette kendiniz de araştırma yapabilirsiniz. Ayrıca yeri gelmişken belirtmeliyim; lütfen benim önerdiğim servis dışındaki servisler için güvenilir mi diye bana danışmayın. Zira benim de tüm karıştırma servislerini deneyimleyip kesin bir karara varmam mümkün değil elbette. Benim önerdiğim dışında bir servis kullanacaksınız araştırmasını yani güvenlik teyidini lütfen kendiniz gerçekleştirin. Çünkü pek çok servis özellikle de yüklü transferler konusunda güvenilmezdir. Bu konuda sorumluluğu benim üzerime almadığımı da belirtmek istiyorum. Hatta benim önerdiğim servisi de kullanmadan önce internet üzerinden son durumu hakkında bilgi alın mutlaka. Çünkü zaman içinde dolandırıcı olmayan servisler de niyet değiştirip sahtekarlıkta bulunabiliyorlar. Son kez uyarmak için belirtmek durumundayım; önermiş olduğum servis benim anlattığım dönemde herhangi bir dolandırıcılık faaliyetinde bulunmadığı için seçildi. Ancak bu servisin kurucusu ya da yöneticisi ben değilim ve ne zaman ne şekilde davranacağını kimse de kestiremez. Bu sebeple kullanmadan önce mutlaka siz de son durumu hakkında bilgi alın ve kesinlikle sahte alan adı olup olmadığına dikkat edin. Hatta sahtekarlık durumu varsa beni de bu konuda ivedilikle haberdar edin ki, eğitim içerisinden bu servisi en kısa sürede kaldırabileyim. Ek olarak yüklü miktardaki transferleri tek seferde yaparak riske girmenizi de hiç bir servis için asla önermiyorum. Uyarımızı da yaptıktan sonra şimdi anlatımlara devam edebiliriz.</p>
+
+<p>Kimi servisler karıştırma işlemi için transfer ücreti hariç komisyon talep etmezken, kimileri transfer ücretine ek olarak komisyon da talep eder. Komisyon talep eden servisler genelde ekstra güvenlik hizmeti sundukları için bu komisyonu talep ederler. Neticede her bir servisin kullanımı birbirine benzer şekilde olduğundan ben tek bir servis üzerinden anlatımları ele alıyor olacağım. Zaten buradaki anlatımı takip ederek sizler dilediğiniz herhangi bir servisi de rahatlıkla kullanabilirsiniz. </p>
+
+<p>Ben rehber olması açısından <a href="https://mixtum.io/" target="_blank" rel="noopener noreferrer">https://mixtum.io/</a> servisini ele alarak anlatımı gerçekleştireceğim. Elbette sizler dilediğiniz bir karıştırıcı servisi kullanabilirsiniz. Web sayfasını ziyaret edip, sayfanın en altına gelerek servisin onion uzantısı üzerinden yayın yapan adresine de ulaşabiliyoruz. İşlemleri surface web kapsamı dışında yürütmemiz, anonimlik açısından önemli bir detaydır. Bu sebeple hizmetin onion uzantılı adresine geçiş yapalım. Onion web sayfası karşımıza geldikten sonra karıştırma işlemini gerçekleştirmek üzere "<strong>Mix My Coins</strong>" butonuna tıklayalım. Açılan sayfada yer alan ilk kutucuğa, anonim transferi hangi hesaba gerçekleştirmek istiyorsak o hesap adresini belirtmemiz gerekiyor. Yani buraya gireceğimiz adres, transferin yapılacağı anonim hesap adresi olmalıdır. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-02-14-54d60548ce7038816aaf0dd08be6cd8b.png" class="responsive"></figure>
+
+<p>Eğer ikincil bir hesabınız yoksa, zaten yeni bir cüzdan hesabını nasıl oluşturabileceğinizi biliyorsunuz. Kendiniz için ikincil bir cüzdan hesabı oluşturarak bu hesabı anonim transferler için kullanabilirsiniz.</p>
+
+<p>Ayrıca gördüğünüz gibi bu servis üzerinde tek bir hesap yerine iki ayrı hesaba da gönderim yaptırabilme imkanımız bulunuyor. Eğer dilerseniz ikinci kutucuğa başka bir hesap adresinizi de girerek gönderim bu iki hesaba yapılmasını sağlayabilirsiniz. Ben paranın bölünmesini istemediğim için tek bir hesap adresi belirterek "<strong>Send</strong>" butonuna basıyorum. Böylelikle anonimleştirmek istediğimiz parayı göndermemiz gereken hesap adresi karşımıza gelmiş oluyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-02-42-6d8dbbdf92e6060a7ec2eb2dc82d21fe.png" class="responsive"></figure>
+
+<p>Biz burada belirtilen adrese anonimleştirmek istediğimiz miktarda Bitcoin gönderimi yapacağız. Gönderimin ardından belirli bir süre sonra belirtmiş olduğumuz anonim hesabımıza, iki farklı kaynaktan anonim para transferi gerçekleştirilmiş olacak. </p>
+
+<p>Sayfanın biraz altına indiğimizde, göndereceğimiz Bitcoin'lerin bizim anonim hesabımıza kaç Bitcoin olarak geçeceğini de hesap aracı yardımıyla öğrenebiliyoruz. Gördüğünüz gibi transfer için ne kadar komisyon alındığı burada açıkça belirtiliyor. Bu komisyon oranları elbette kullandığınız servise göre değişiklik gösterse de ortak olarak karıştırıcı kullanmanın yani anonim Bitcoin elde etmenin kaçınılmaz bir bedelidir. Ayrıca burada belirtilen minimum tutarın altındaki transferler hesabınıza geçmeden bağış olarak kabul ediliyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-03-02-9344b8d174cb43b96f2ccfae76150bf2.png" class="responsive"></figure>
+
+<p>Bu sebeple kullandığınız serviste belirtilen minimum tutarın altında transfer gerçekleştirmemeye özen gösterin. Aksi halde gönderdiğiniz Bitcoin'ler geri döndürülemez şekilde bağış olarak gitmiş olacaktır. Hemen denemek için burada belirtilen adrese Bitcoin cüzdanımız üzerinden istediğimiz tutarı belirterek gönderim yapalım. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-03-21-d73d7f0c73ac5ab8b112f54fe94f202d.png" class="responsive"></figure>
+
+<p>Gönderimi yaptıktan sonra web sayfası üzerinden de paranın karıştırma hizmetine aktarıldığının bilgisini alabiliyoruz. Bu noktada gönderimini yaptığınız tutarın hesabınıza aktarımı konusunda sorun yaşarsanız, destek alırken kullanabilmek adına teminat mektubunu da mutlaka indirin ve saklayın.&nbsp;</p>
+
+<figure><img src="../../img/11/2020-06-15_20-03-34-33e9968c0f021e3975327ab69324c037.png" class="responsive"></figure>
+
+<p>Bu sayede gerçekleştirdiğiniz işlemi destek ile paylaşarak transferin size ait olduğunu kanıtlayabilirsiniz. Bu önemli detayı da lütfen unutmayın. Özellikle Tail işletim sistemi üzerinden çalışıyorken bu dosyayı kaybolmayacak bir konumda barındırdığınızdan emin olun lütfen. Aksi halde&nbsp; gerektiğinde işlem kaydına ulaşma ve işlemi kanıtlama noktasında sorun yaşayabilirsiniz.</p>
+
+<p>Elbette gönderim işlemenin onaylanması ve hizmetin bize anonim şekilde gönderilmesi biraz zaman alacak.&nbsp; Belirli bir süre sonra anonim hesabımızı kontrol ettiğimizde, anonim hesabımıza parça parça anonim Bitcoin'lerin ulaşmış olduğunu teyit edebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-03-49-92b4d59f80ab954d57c81717b37e6118.png" class="responsive"></figure>
+
+<p>Bekleme süresi kullandığınız servise göre değişiklik gösterebilir. Bu süreyi kullandığınız servisin açıklamalarından öğrenebilirsiniz. Sonuç olarak anonim olmayan sıradan bir hesabımızdan, anonim olan hesaba "anonim" şekilde Bitcoin aktarması yapmayı başarmış olduk. </p>
+
+<p>Böylelikle finansal anonimliğimizi sağlayacak olan kripto paralardan biri olan Bitcoin'i nasıl kullanabileceğimizi temel anlamda öğrenmiş olduk. Bir sonraki bölümde anlatımlara, pek çok kripto para çeşidi içerisinden bize mümkün olan en ideal şekilde "<strong>anonimlik</strong>" ve "<strong>gizlilik</strong>" sağladığı için Monero'dan bahsederek devam ediyor olacağız. Ayrıca "madem Monero "anonimlik" ve "gizlilik" için en ideal servis, neden sadece Monero servisini ele almadık ?" diye merak etmiş olabilirsiniz. Bu durumun nedeni Bitcoin'in Monero'ya oranla daha yaygın kullanıma sahip olmasıdır. Bitcoin alımı ve ticareti çok daha kolay olduğundan, doğrudan Monero edinemediğiniz durumlarda kullanabileceğini bir alternatif olması açısından ele almış olduk. Takas sistemleri ile Monero edinmek için ya da yalnızca Bitcoin ile ödeme kabul eden hizmetlere erişim noktasında Bitcoin kullanmanız gerekebilir.&nbsp; Anlatımlara Monero ile devam edelim.</p>
+
+<h4 id="12">Monero Nedir ?</h4>
+
+<p>Monero da aslında tıpkı Bitcoin gibi bir kripto para çeşididir. Ancak Monero, Bitcoin'den farklı olarak hesap hareketlerini gizleyerek kişilerin finansal mahremiyetini korumasına yardımcı olur. Yani özetle Monero gizlilik odaklı bir kripto paradır. </p>
+
+<p>Bitcoin'i ele alacak olursak; sizler de biliyorsunuz ki Bitcoin adresleri üzerinden, kişilerin tüm transfer hareketleri dileyen herkes tarafından kolaylıkla izlenebiliyor. Çünkü Bitcoin'in gayesi de tamamen şeffaf olmak üzerinedir. Yani zaten Bitcoin'in temel çalışma yapısının bir parçası bu, Bitcoin hareketleri bilinçli olarak gizlemek istemiyor. Bu sebeple Bitcoin adresinin sahibi, gerçek kimliğini gizlemiş olsa dahi hesap hareketleri herkes tarafından her daim izlenebiliyor. Bu durum da, kişilerin takip edilerek gereken şartlar sağlandığında kimlikleri ile eşleştirme yapılması sonucu finansal mahremiyetlerini ele vermelerine sebep olabiliyor. Hatta sırf bu iş için yani Bitcoin kullanıcılarının hesapları ile kimliklerini eşleştirmek için çeşitli istihbarat örgütlerince kurulan özel araştırma ekipleri olduğu doğrultusunda pek çok doküman, şimdiye kadar birden fazla kez gündeme geldi. Özetle Bitcoin'i anonim şekilde satın almış olsanız bile hesap hareketleriniz izlenebildiği için gizlilik sağlayamazsınız. Eğitimin başında anonimlik ve gizlilik kavramlarını açıkladığımız için hangisinin ne anlama geldiğini zaten biliyorsunuz. Bitcoin'in dolaylı yollardan anonim eldesi de hesap hareketleri izlenebildiği için kişilere gizlilik sağlamıyor maalesef. Hal böyle olunca anonim Bitcoin hesabı üzerinden kişilerin gerçekleştirmiş olduğu transferler analiz edilerek, kişinin gerçek kimliğine ulaşılma ihtimali her zaman için mevcut bulunuyor. Zaten bu konuda görev yapan araştırma ekipleri olduğundan da biraz önce bahsettik. Özetle, gizlilik olmayınca anonimlik de bir noktadan sonra yeterince kaynak harcandığında ihlal edilebiliyor. Bu sebeple Bitcoin yaygın kullanıma sahip olsa da anonimlik ve gizlilik açısından en iyi kripto para tercihimiz olmayacaktır.</p>
+
+<p>Bu durumun aksine Monero tüm transfer hareketlerini gizleyerek sizlere finansal mahremiyet sağlama konusunda yardımcı olur. Bu da hiç kimsenin sizin Monero hesabınız üzerinden gerçekleştirmiş olduğunuz transferleri takip edemeyeceği anlamına gelir. Transfer hareketleriniz takip edilemeyeceği için de Monero hesabınıza borsa üzerinden kimliğiniz ile alım yapmış olsanız dahi finansal mahremiyetini korunuyor olur. Çünkü tüm transferler yalnızca aktarım yapılan taraflar arasında biliniyor olduğundan, dışarıdan yapılan analizler ile kişilerin transfer hareketlerinin izlenmesi mümkün değildir. Hiç kimse sizin nereye ne kadar ödeme yaptığınızı, hesap bakiyenizi ve bunun gibi kritik bilgilere asla dışarıdan erişemez. Şu ana kadar bahsetmiş olduklarımızdan da anlaşılabildiği üzere, Monero'nun getirmiş olduğu gizlilik unsurları aynı zamanda anonimlik için de harika bir fırsat sunuyor. </p>
+
+<p>Anlatımlar sırasında Monero'nun sağladığı imkanları, etik ya da politik açıdan ele almayacağımı ve daha önce Bitcoin'i ele alırken olduğu gibi finansal değerinden de bahsetmeyeceğimi şimdiden belirtiyorum. Anlatım sırasında odaklandığımız tek unsur, bu takas aracının nasıl kullanılacağıdır. Lütfen bu durumun farkında olarak eğitime devam edin. Açıklamalar yeterli geldiyse şimdi yeni bir cüzdan hesabına nasıl sahip olabileceğimizi ele alarak eğitimimize devam edelim.</p>
+
+<h4 id="13">Monero Cüzdanı Oluşturmak</h4>
+
+<p>Cüzdan oluşturmak için öncelikle cüzdan uygulamasını edinmemiz gerekiyor. Biz yine güvenli bulduğumuz ve herkesin kullanabileceği sistem olan Tail üzerinden kurulum işlemini ele alıyor olacağız. Ancak gerektiğinde alternatif sistemler için de burada anlatılanları takip ederek rahatlıkla kurulumu gerçekleştirebilirsiniz. </p>
+
+<p>Monero cüzdanının grafiksel arayüze sahip uygulamasını indirmek üzere öncelikle web sitesini ziyaret edelim.</p>
+
+<p>Web sitesi açıldığında cüzdanı edinmek üzere indirme sekmesine tıklayalım. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-04-06-b3e8bfbedab8eb5fc42fb86e12ad1b31.png" class="responsive"></figure>
+
+<p>Böylelikle farklı platformlar için indirme alternatifleri karşımıza gelmiş oluyor. Bizler Tail sistemine kurulum yapacağımız için "Linux 64-bit" olarak geçen dosyayı indirelim. Sizler anlatımı farklı bir sistem üzerinden takip ediyorsanız, elbette buradan sisteminize uygun olan dosyayı seçerek indirebilirsiniz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-04-19-b68301a95033bc0b0f9b32967783ed38.png" class="responsive"></figure>
+
+<p>Tamamlanmış olan indirme işlemimizin ardından, dosya içeriğinin değiştirilip değiştirilmediğini doğrulamak için hash doğrulamasını gerçekleştirmemiz gerekiyor. Eğer dosya içeriğinde en ufak bir değişiklik dahi olmuş olursa, geliştiricilerin yayınladığı hash değeri ile indirilen dosyanın değeri eşleşmeyecektir. Bu sayede yani hash değerini kontrol ederek dosyamızın güvenilirliğini teyit etmiş olacağız.</p>
+
+<p>Hemen dosyayı doğrulamak üzere Tail üzerinde yüklü bulunan "<strong>GTKHash</strong>" aracını çalıştıralım. Aracımız açıldıktan sonra indirmiş olduğumu dosyayı, indirdiğimiz konumda bularak seçelim. Daha sonra indirme sayfasında yer alan doğrulama kısmındaki "doğrulama işlemi için hash değerlerini göster" kısmına tıklayalım. Burada gördüğünüz gibi farklı platform dosyaları için farklı hash değerleri yer alıyor. Biz indirdiğimiz sürüme özel olan hash adresini kopyalayıp, aracımızdaki "<strong>Check</strong>" kısmına girelim. Son olarak "<strong>Hash</strong>" butonuna basarak dosyanın hash değerinin kontrol edilmesini sağlayalım. Sonuç olarak değerler aynı ise yeşil bir ibare belirerek, dosyanın değiştirilmemiş olduğunu teyit etmiş oluyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-04-32-5105c6eded846b193661a9a872d57c52.png" class="responsive"></figure>
+
+<p>Dosyamız değiştirilmiş dosya olsaydı teyit işlemi başarısız olacaktı elbette. </p>
+
+<p>Eğer dosyamızın değişikliğe uğramadığını teyit edebildiysek arşiv dosyası içeriğini dışarı çıkarabiliriz. Dosya içeriğini dışarı çıkarmak üzere dosyamıza sağ tıklayarak "<strong>Buraya çıkar</strong>" seçeneğine tıklayalım. Bu işlemin ardından kısa bir süre sonra arşiv dosyasının içeriği, bulunduğumuz konuma çıkarılmış oluyor. Çıkarılan dosyalara ulaşmak üzere klasör içerisine girelim.</p>
+
+<p>Cüzdan uygulamamızı çalıştırmak üzere son bir ayar daha yapmamız gerekiyor. Bu ayar da uygulamaya çalıştırma yetkisi vermek. Bu işlem için"<strong>AppImage</strong>" olarak geçen dosyaya sağ tıklayıp özelliklerini açalım. Açılan pencereden "<strong>Permissions/Yetkiler</strong>" sekmesine gelerek eğer yoksa, çalıştırabilirlik yetkisini verelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-04-45-2020ff97fb50bcdba24b2f9a6e31c9a9.png" class="responsive"></figure>
+
+<p>Eğer sizde varsayılan olarak bu yetki aktifse sorun yok. Ben aktif olmaması ihtimaline karşı yetkilendirmeyi de göstermek istedim. Zira kullandığınız sistem yine Linux olabilir ancak kullandığınız dağıtım Tail olmayabilir. Haliyle farklı dağıtımlar için farklı güvenlik ayarları geçerli olabilir. Bu sebeple özellikle bu detayı da belirtmek isterim. Uygulamamızın çalıştırılma yetkisi olduğundan emin olduktan sonra uygulamaya çift tıklayarak çalıştıralım. </p>
+
+<p>Uygulama ilk açıldığında karşımıza dil tercihi yapmamızı sağlayan seçim ekranı gelmiş oluyor. Buradan dil butona basıp istediğimiz dil tercihimizi yaparak "<strong>Devam et</strong>" butonuna tıklayalım. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-04-56-b2d7b378cdee8ba9aa0f374954ccb8ce.png" class="responsive"></figure>
+
+<p>Böylelikle cüzdanı kullanmak istediğimiz modu seçmemiz gereken pencere açılmış oluyor. Buradan "Gelişmiş mod" seçeneği ile devam edelim.</p>
+
+<figure><img src="../../img/11/2020-06-15_20-05-08-ffdcec0de831a24b3ae562c3c7d864c7.png" class="responsive"></figure>
+
+<p> Açılan menüden herhangi bir cüzdana sahip olmadığımız için "<strong>Yeni bir cüzdan oluştur</strong>" seçeneği ile devam etmemiz gerekiyor.&nbsp; </p>
+
+<figure><img src="../../img/11/2020-06-15_20-05-35-771b250b521406fb0070837d77b5bd52.png" class="responsive"></figure>
+
+<p>Diğer seçeneklerden de kısaca bahsetmemiz gerekirse;</p>
+
+<p><strong>Donanımdan yeni bir cüzdan oluşturun</strong>; seçeneğini kullanarak eğer elimizde varsa sırf bu iş için özel olarak kullanılan cüzdan cihazımızı kullanabiliriz. </p>
+
+<p><strong>Dosyadan bir cüzdan aç</strong>; seçeneği ile daha önce oluşturmuş olduğumuz bir cüzdan hesabının "<strong>.keys</strong>" dosyasını kullanarak, hesabın mevcut sistem üzerinde açılmasını sağlayabiliriz.</p>
+
+<p><strong>Geri yükleme</strong>; seçeneğini ile eğer hesabımızı doğrudan açabileceğimiz bir "<strong>.keys</strong>" dosyamız bulunmuyorsa, hesabı oluştururken bize verilen kurtarma bilgileri ile hesabımızı geri yükleyebiliriz. </p>
+
+<p>Biz henüz bir cüzdan hesabına sahip olmadığımız için hesabımızı oluşturmak üzere "<strong>Yeni bir cüzdan oluştur</strong>" seçeneği ile devam edelim.</p>
+
+<p>Açılan pencereden, cüzdanımızın sahip olacağı ismi ve cüzdan bilgisinin tutulacağı konumu belirtmemiz gerekiyor. Tail sisteminde çalışırken kalıcı birim haricindeki tüm veriler silindiği için, hedef konum olarak kalıcı alanı belirtmemiz son derece önemlidir. Daha sonra, eğer yedeğini de almadıysanız silinen hesap bilgilerinizi bulmanız mümkün olmayacaktır. Hesabımızı başka bir sistemde açmak istediğimizde kullanabileceğimiz "<strong>keys</strong>" dosyası bu alana kayıt olacak. Bu sebepte seçtiğiniz alana çok dikkat edin. Adımızı ve bilgilerin kalıcı olarak depolanabileceği alanı belirledikten sonra "Anımsatıcı tohum" olarak geçen anahtar kelimeleri ayrı bir yere not etmemiz gerekiyor. Buradaki anahtar kelimeleri kullanarak gerektiğinde hesabı yedekleyip, yedekten geri yükleme işlemi yapabiliyor olacağız. Aynı şekilde <strong>geri yükleme yüksekliğini</strong> de güvenli bir alana not etmeniz gerekiyor. Bu yükseklik numarası da hesabı geri yükleme işlemlerinde "anımsatıcı tohumlar" kadar önemli. Hatta ekstra olarak cüzdanı oluşturduğunuz tam tarihi de kenara not etmenizi öneririm. Hesap kurtarma sırasında cüzdan oluşturulma tarihi de kurtarmaya yardımcı olan bir bilgidir. Hesabınıza ait olan tüm yedekleme verilerini mümkünse güvenli bulduğunuz lokal bir alanda yani kağıt ya da internetten izole şifreli bir alanda tutmanız önerilir. Tüm ayarlardan eminsek ve gerekli bilgileri ehemmiyetli bir yere yedeklediysek, şifre oluşturmak üzere devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-06-03-a49c262e3f16eb0068fb96ba382c2323.png" class="responsive"></figure>
+
+<p>Güçlü bir şifre belirledikten sonra "<strong>İleri</strong>" diyerek devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-06-11-27a1ace1c8404df4d078155e91be01ed.png" class="responsive"></figure>
+
+<p>Açılan pencerede Monero ağı ile kuracağımız iletişim türünü seçmemiz gerek. Buradaki seçenekler transfer kayıtlarını içeren verilerin ne şekilde tutulacağı ile ilgilidir. Hatırlarsanız kripto paraların dağıtık yapısı gereği bu verilerin güvenlik için dağıtılarak ağ üzerindeki herkeste tutulabileceğinden bahsetmiştik. İşte burada yapacağımız seçim de bu kayıtların kendi bilgisayarımızda tutulup tutulmaması gerektiğine karar vermek olacak. </p>
+
+<p>Eğer bir düğümü arka planda otomatik olarak başlat seçeneğini seçerseniz tüm Monero blok zinciri bilgisayarınıza indirilecektir. Monero'yu kullanırken gizliliğimizi en iyi şekilde sağlayan yöntem budur. Çünkü bu yöntemle, kayıtların birer kopyasını bizzat kendimiz tutuyor oluruz. Yani kayıtları tutan başka insanlara güvenmemiz gerekmez. Ancak bu seçeneği seçerken, blok zincir boyutunun 60 GB fazla olduğunu, ayrıca zaman içinde sürekli artış göstereceğini lütfen unutmayın. Yeterince depolama alanımız olsa bile bu seçeneği seçersek bu büyüklükte verinin Tail kullandığımız için Tor ağı üzerinden yavaşça indirilmesi gerekecektir. Tahmin edebileceğiniz gibi bu indirme işlemi için epey uzun süre beklemeniz gerekecektir. </p>
+
+<p>Bunun yerine uzak zinciri kullanma seçeneğini seçerek, anlık olarak uzaktaki bir bilgisayarda tutulan zincir bilgisine ulaşabiliriz. Bu sayede gönderim ve alım işlemlerinde tüm zincirin kendi bilgisayarımıza indirilmiş olması gerekmeyecek. Genellikle eğer kendi bilgisayarımızda depolama yapamayacaksak, kendimize özel bir sunucu kiralayıp bu sunucu üzerinden kayıtlara ulaşmamız tavsiye edilir. Yine de eğer her ay uzaktaki sunucuya kira ödemek istemiyorsanız, güvenilir ve herkesin erişimine açık olan ortak bir uzak sunucuya da bağlanabilirsiniz. Bizler bu yöntemi kullanmak üzere, uzak bir düğüme bağlanma seçeneğini seçelim. Şimdi güvenli bir sunucu adresine ihtiyacımız var. Adres bilgisini almak üzere <a href="https://moneroworld.com/" target="_blank" rel="noopener noreferrer">moneroworld.com</a> web sitesini ziyaret ederek, "Nodes" sekmesine tıklayalım. Açılmış olan sayfayı aşağı doğru kaydırarak pek çok bağlantı adresi sağlandığını görebiliyorsunuz. Biz buradaki kaynaktan Tor için geçerli olan onion gizli servisi üzerinden hizmet sunan bağlantıyı ve port numarasını kopyalayalım. Bu adres üzerinden güvenli olan uzak bilgisayardaki kayıtlara, kayıtların tümünü indirmemize gerek kalmadan ulaşabiliyor olacağız. Kopyaladığımız adresi ve port numarasını girerek devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-06-25-f20e0bb819b2134cb482e6070b56bf6e.png" class="responsive"></figure>
+
+<p>Son olarak, cüzdan detaylarını içeren ekran karşımıza gelmiş oluyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-06-44-b1fd0370fb43828e187a046a8bb8bcac.png" class="responsive"></figure>
+
+<p>Eğer tüm detaylar olması gerektiği gibiyse "<strong>Create wallet</strong>" butonuna basarak cüzdanımızın oluşturulmasını sağlayabiliriz. Cüzdanımız oluşturulduktan sonra cüzdanı açmak üzere belirlediğimiz parolayı girelim. Ve işte tüm işlem bu kadardı. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-07-15-cb242dd2b5a9c40b5a7fcff9be8d983b.png" class="responsive"></figure>
+
+<p>Artık böylelikle, bizimde kendimize ait bir Monero cüzdanımız oluşturulmuş oldu. İlerleyen kısımlarda cüzdan kullanımına değiniyor olacağız. Yine de hazır açıkken sol alt tarafta yer alan bilgilendirme bölümünün, ağ bağlantı durumumuzu ifade ettiğini belirtmekte fayda var. Cüzdan oluşturma esnasında belirtmiş olduğumuz güvenli uzak sunucuya bağlantı durumumuzu ve sekronizasyon bilgimizi buradan takip edebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-07-23-c26d0fed2c4be00a19097600f63d7c16.png" class="responsive"></figure>
+
+<p>Elbette sizlerin de tahmin edebileceği gibi her türlü transfer işlemi için ağ bağlantımızın sunucu üzerinden senkronize olması gerekiyor. Zaten cüzdanımızı her açtığımızda ağ bağlantısı, verdiğimiz adrese göre kısa sürede otomatik olarak senkronize olacaktır.</p>
+
+<h4 id="14">Dosyadan Cüzdan Hesabına Erişmek</h4>
+
+<p>Bir önceki kısımda kendimize yeni bir cüzdan hesabı nasıl oluşturabileceğimizi öğrendik. Şimdi ise hesabımızın oluşturulduğu sırada üretilmiş olan "<strong>keys</strong>" dosyasını kullanarak, herhangi bir yerden cüzdan hesabımıza nasıl erişebileceğimizi görelim. </p>
+
+<p>Hesabımıza ulaşmak üzere cüzdan uygulamasını başlatalım. Dil tercihimizi gerçekleştirip, gelişmiş modu seçerek devam edelim. Açılan menüden "<strong>Dosyadan bir cüzdan aç</strong>" seçeneğine tıklayalım. <strong>Dosya sistemine göz at</strong> butonuna tıklayarak açmak istediğimiz hesabımıza ait olan <strong>keys</strong> dosyasını seçelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-07-40-525426134f8eabcce0f4109126f76d96.png" class="responsive"></figure>
+
+<p>Dosyayı seçtikten sonra karşımıza gelen kutucuğa hesabımızın parolasını girelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-07-53-782989300433e285ded4d32075351804.png" class="responsive"></figure>
+
+<p>Böylelikle sizlerin de şahit olduğu gibi, cüzdanımıza keys dosyası üzerinden kolaylıkla ulaşabilmiş olduk. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-08-00-eb6f0334262d2dabf353483a6fd94c9d.png" class="responsive"></figure>
+
+<p>Sizler de gerektiğinde hesabınıza ait olan dosya üzerinden, dilediğiniz bir bilgisayardan cüzdanınıza erişebilirsiniz. Hesabınıza ait olan keys dosyasını iyi bir biçimde sağladığınızdan emin olun lütfen. Ayrıca bu dosyayı doğrudan hiç kimse ile de paylaşmayın. Dosya içeriği yani hesabınız parola ile korunuyor da olsa, dosyanın istenmeyen kişilerin eline geçmesi güvenlik açısından istenmeyen sonuçlar doğurabilir. Bu dosyayı daha sonra ulaşabileceğiniz güvenli bir alanda barındırdığınızdan emin olmanız yeterlidir.</p>
+
+<h4 id="15">Hesabı Geri Yüklemek</h4>
+
+<p>Eğer hesabımızın bilgilerini içeren keys dosyasını kaybettiysek hesabı kurtarmak üzere, hesabı oluşturma esnasında bize verilen "<strong>anımsatıcı tohum</strong>" ve "<strong>geri yükleme yüksekliği</strong>" bilgilerini kullanabiliriz. </p>
+
+<p>Hesabımızı kurtarmak adına cüzdan uygulaması üzerinde yer alan menüden "<strong>geri yükleme</strong>" seçeneğini seçip devam edelim.</p>
+
+<figure><img src="../../img/11/2020-06-15_20-08-22-7280e09709b2de44ac9cfb5bb936a51d.png" class="responsive"></figure>
+
+<p>Açılan sayfada hesabımızı kurtardıktan sonra oluşturulacak olan keys dosyasının nereye kaydolması gerektiğini seçmemiz gerekiyor. Bu dosyanın önemli olduğunu ve Tail sisteminde çalışırken kaybolmayacak bir konuma kaydetmeniz gerektiğini daha önce de belirtmiştik. Zaten kurtarma işlemini de keys dosyasını kaybettiğimiz için gerçekleştirdiğimizden, hesabımızı kurtardıktan sonra oluşturulacak olan dosyayı doğru şekilde saklamaya özen gösterelim lütfen. Yani dosyanın kaydolacağı konumu dikkatli bir biçimde seçin lütfen.&nbsp; Cüzdan bilgimizin kaydolacağı konumunu belirledikten sonra, yedeklemiş olduğumuz anahtar kelimelerden oluşan "<strong>tohum</strong>" bilgisini sırasına uygun şekilde girelim. Tohum bilgisinin ardından, geri yükleme yüksekliği ya da cüzdanı oluşturduğumuz tarihi de istenildiği şekilde girip "<strong>Sonraki</strong>" diyerek devam edelim. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-08-43-8cac893d9b0eef94b453bf516bea4196.png" class="responsive"></figure>
+
+<p>Tıpkı yeni bir cüzdan adresi oluşturur gibi parolamızı ve uzak düğüm bağlantısı ayarımızı belirtip "<strong>Sonraki</strong>" diyerek devam edelim. Cüzdan bilgileri olması gerektiği gibiyse "<strong>Open wallet</strong>" butonuna basarak cüzdanımızın açılması sağlayalım. Eğer kurtarma için girmiş olduğumuz bilgiler doğruysa, cüzdan hesabımıza tekrar erişmiş oluyoruz.</p>
+
+<figure><img src="../../img/11/2020-06-15_20-09-10-cdda4be477c3dbd8799cfd38bb0502d3.png" class="responsive"></figure>
+
+<p>Eğer cüzdanınıza erişemediyseniz muhtemelen sizden istenen kurtarma bilgilerini yanlış girmiş olabilirsiniz. Bu durumda doğru bilgiler ile kurtarma işlemeni tekrar gerçekleştirmeniz gerekir.</p>
+
+<p>Neticede, elimizdeki hesap bilgilerini kullanarak hesabımızı nasıl geri yükleyebileceğimizi de öğrenmiş olduk. Sizler de ihtiyaç duyduğunuzda, herhangi bir cihaz üzerinden hesabınıza ait olan bilgileri kullanarak cüzdanınıza ulaşabilirsiniz.</p>
+
+<h4 id="16">Anonim Şekilde Monero Alımı</h4>
+
+<p>Bitcoin üzerinden ele almış olduğumuz yöntemler, benzer şekilde Monero için de geçerli. Yani dilersek kendi paramızı kazabilir, borsadan alabilir ya da takas yaparak Monero elde edebiliriz. Monero alımı için tek yapmanız gereken, Monero için hizmet sunan servisleri tercih etmenizdir. Ancak yine de her borsa Monero alım satımı yapmayabiliyor ve ayrıca henüz Türkiye'de Monero için işlem yapabileceğiniz bir ATM de bulunmuyor. </p>
+
+<p>Monero'nun her yerde alımı ve satımı olmadığından bahsettik. Bu sebeple Monero alım satımı yapılabilen satıcıları görmek üzere web sitesi üzerinde yer alan <a href="https://web.getmonero.org/tr/community/merchants/#exchanges" target="_blank" rel="noopener noreferrer">listeye</a> göz atalım. Bu listede yer alan hizmetlerden herhangi birini kullanarak Monero alımı gerçekleştirebiliriz. Örneğin şu an için doğrudan Türk Lirası ile alım yapabileceğimiz bir borsa da mevcut. Bu borsa üzerinde kimlik bilgilerimiz ile kayıt oluşturup Monero alımı gerçekleştirebiliriz. Yeri gelmişken belirtmeliyim, listede yer alan satıcılar elbette sizlerin eğitimi takip ettiğiniz dönemde değişikliğe uğramış olabilir. Yani mevcut satıcılar artık satış yapmıyor ya da pek çok yeni satıcı satışa başlamış olabilir. Bu sebeple gerçekleştirmek istediğiniz alım türüne göre eğitimi takip ettiğiniz dönemde mevcut listeyi kendiniz gözden geçirin ve size uygun olanı seçin.</p>
+
+<p>Pek çoğumuz için, borsa üzerinden Türk Lirası ile Monero alımı en kolay yöntem diyebiliriz. Üstelik Monero'nun sağladığı gizlilik sayesinde her ne kadar kimlik bilgilerimizi vermiş olsak da transfer hareketlerimizi gizleyerek anonimliğimizi korumaya devam edebiliyoruz. Ancak ben yine de herhangi bir borsaya kimlik bilgimi vermeyi şu an için tercih etmiyorum. Bunun yerine kişiler arası, nakit ya da kartla alım yapabileceğimiz veya takas sistemleri ile edinebileceğimiz yöntemleri değerlendirelim. Elbette sizler eğitimi takip ettiğiniz dönemde listede yer alan borsa hizmetlerini de tercih edebilirsiniz. Borsa üzerinden alım işlemi için borsanın sizden talep ettiği kaydı oluşturup, uygun ödeme yöntemi ile Monero alımı yapabilirsiniz. Zaten kullandığınız borsa da sizi alım konusunda yönlendirecektir. Biz anlatım sırasında kişiler arası ve alternatif kripto paralar ile takas yöntemlerini ele alalım.</p>
+
+<p>Ayrıca biraz önceki açıklamada, Türkiye'de henüz Monero için ATM bulunmadığından da bahsettik. Bu durumun, eğitimi takip ettiğiniz dönemde değişip değişmediğini teyit etmek için mutlaka <a href="https://coinatmradar.com/" target="_blank" rel="noopener noreferrer">ATM haritasını</a>&nbsp; gözden geçirin derim. Bu sayede doğrudan ATM ile alım gibi ek bir alternatife daha sahip olursunuz.</p>
+
+<h4 id="17">Kişiler Arası Takas Yöntemi</h4>
+
+<p>Bitcoin'i ele alırken bahsetmiş olduğumuz kişiler arası takas hizmetini Monero için sunan sınırlı sayıda servis bulunuyor. Hatta Monero'nun web sitesindeki satıcılar kategorisine baktığımızda şu an için kişiler arası takas için sadece 2 adet servisin hizmet sunmakta olduğun görebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-10-04-d82a6728ebe1d95833dd7ed23002c075.png" class="responsive"></figure>
+
+<p>Biz örnek anlatımı gerçekleştirmek üzere "<a href="https://localmonero.co" target="_blank" rel="noopener noreferrer">https://localmonero.co</a>" servisini ele alalım. Servisin web sayfasını ziyaret ettiğimizde, istediğimiz kategorilere göre satıcıları filtreleyebiliyoruz. Ancak maalesef ki dünya çapında ve özellikle de ülkemizde kişiler arası Monero takası yapan insan sayısı oldukça az. Özellikle Türkiye'de nakit üzerinden Monero takası yapan satıcılara rastlamak çok zor. Bu durumu gözlemlemek için ödeme yöntemini sınırlamadan Türk Lirası seçeneği ile teklifleri listelemeyi deneyelim. Karşımıza gelen sonuç, Monero için Türk Lirası ile alım işleminin pek yaygın olmadığını oldukça açık biçimde kanıtlıyor. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-10-20-0739ded2ec290d3a5c4c9eff0124bb51.png" class="responsive"></figure>
+
+<p>Sizin eğitimi takip ettiğiniz dönemde seçeneklerin çoğalmış olması mümkün elbette. Şu an için gördüğünüz gibi nakit seçeneği yerine yalnızca banka transferi sunan seçenek bulunuyor.&nbsp; Yine de bu servis üzerinden satıcıya güveniyorsanız nakit dışı da olsa elbette Monero alımı yapabilirsiniz. Satın alma işlemi için teklifin üzerine tıklayıp, açılan sayfada satıcının belirtmiş olduğu koşullara ve satın alım yönteminin detaylarına göz atabilirsiniz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-10-32-340932cb1d311c5d8dbd7e1e357ba16c.png" class="responsive"></figure>
+
+<p>Eğer mevcut koşullar sizin için de uygunsa hesap oluşturup satıcı ile iletişime geçebilirsiniz. Hemen test etmek için bir hesap oluşturalım. Hesabımızı oluşturduktan sonra satın almak istediğimiz tutarı belirterek "<strong>takas isteği gönder</strong>" butonuna basalım. Karşımıza takas koşullarını içeren liste gelmiş oluyor. Eğer buradaki koşulları onaylıyorsak, alt tarafta yer alan&nbsp; "<strong>koşulları kabul et ve takası başlat</strong>" butonuna tıklayalım. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-10-44-282a4b13300b0c218d82746283ceba2d.png" class="responsive"></figure>
+
+<p>Ödemeyi ilgili hesaba gerektiği şekilde gerçekleştirdikten sonra "ödemeyi yaptım" butonuna basarak satıcının takası onaylamasını bekleyin ve tüm işlem bu kadar. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-11-23-40d6ed12796c7e1f1a7a45bdbf1383c3.png" class="responsive"></figure>
+
+<p>Bu şekilde sizler de takas yöntemi ile banka hesabınız üzerinden alım gerçekleştirmiş olursunuz. Satıcının talep ettiği minimum tutar ve karşılığında sunduğu miktar bana uymadığı için ben takası burada sonlandırıyorum.</p>
+
+<h4 id="18">Kripto Paralar ile Takas</h4>
+
+<p>Eğer kişiler arası nakit yöntemi ile Monero almak istemezseniz ve elinizde alternatif kripto paralar varsa takas yöntemini de tercih edebilirsiniz. Örneğin Bitcoin yaygın kullanıma sahip olduğu için satın alınması çok kolay olduğundan iyi bir tercih olabilir. Daha önce öğrenmiş olduğumuz herhangi bir yöntemle Bitcoin edindikten sonra, elimizdeki Bitcoin'i Monero'ya dönüştürebiliriz.</p>
+
+<p>Takas işlemini kullanma nedenimiz, genellikle Monero alımı için borsaların ve yaygın kullanıma sahip alternatif hizmet sağlayıcıların destek vermiyor olmasıdır. Takas sayesinde istediğimiz bir borsa üzerinden Bitcoin alımı yaparak, elimizdeki Bitcoin'i sorunsuzca Monero'ya dönüştürebiliriz. </p>
+
+<p>Şimdi, elimizdeki Bitcoin'i nasıl Monero'ya dönüştürebileceğimizi ele alalım. Elbette Monero'nun kendi web sitesi üzerinde yer alan satıcı listesi üzerindeki herhangi bir takas servisini kullanabiliriz. Ancak ben örnek olması açısından "changenow.io" servisini kullanarak takas işlemini ele alıyor olacağım. Yine de sizler Monero desteği sunan dilediğiniz bir takas hizmetini kullanabilirsiniz elbette. Zaten hemen hemen tüm takas hizmetlerinin kullanımı benzer şekildedir. Web sayfasını açtığımızda hangi kripto paradan hangisine takas gerçekleştirmek istediğimizi belirtebileceğimiz takas aracı bizi karşılıyor. Ben Bitcoin'i Monero'ya dönüştürmek istediğim için gerekli seçimi yaparak dönüştürmek istediğim tutarı da belirterek "<strong>Exchange</strong>" butonuna basıyorum. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-11-46-2d46f373779d1ff7d08fd60b7c5d3b0b.png" class="responsive"></figure>
+
+<p>Böylelikle takas detaylarını belirtmem gereken sayfaya yönlendirilmiş oluyorum. Açılan sayfada, transferin yapılmasını istediğim Monero hesabını belirtmem gerekiyor. Hemen adres belirtmek üzere Monero cüzdanımızı açalım. </p>
+
+<p>Cüzdanımıza eriştikten sonra "Al" kısmından kendimize yeni bir hesap adresi oluşturalım. Yeni bir hesap adresi oluşturma nedenimiz mevcut Monero hesabının gerçek kimliğini gizlemektir. Buradan "Yeni adres oluştur" seçeneğine tıklayarak istediğimiz kadar alt adres üretebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-12-00-ee3adbf558b49b2cb602c9a1fcd0d012.png" class="responsive"></figure>
+
+<p>Hesabımıza ait sınırsız alt adres olması demek, gerçekleştirdiğimiz transferlerin birbirleri ile ilişkilendirilememesi demektir. Bu sebeple size önerim her transfer işlemi için ayrı bir alt adres üretmenizdir. Ayrıca Monero'nun sağladığı ek bir avantaj ise aynı cüzdan hesabı üzerinde birden fazla hesaba sahip olabilmektir. Hesap sekmesine geldiğimizde, burada varsayılan olarak oluşturulmuş olan "Primary account" hesabının yer aldığını görebiliyoruz. Eğer gerekirse ek olarak "Yeni hesap oluştur" kısmına tıklayarak aynı cüzdan üzerinden birden fazla hesaba da sahip olabiliriz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-12-09-baf083ba3c1fc804098231f24c25a92a.png" class="responsive"></figure>
+
+<p>Her hesabın bakiyesi ayrı olacağından farklı işleriniz için farklı hesaplar oluşturmak isteyebilirsiniz. Örneğin kişisel harcamalarınız için ayrı, işiniz gereği sahip olduğunu hesabınız ayrı olabilir. Hesabı yönetmek için tek yapmanız gereken, ilgili hesabı üzerine tıklayarak seçmektir. </p>
+
+<p>Ben takasa özel olarak oluşturmuş olduğum alma adresini, takas sistemine girip "<strong>Next</strong>" diyerek devam ediyorum. Karşımıza gelmiş olan hesap adresi ve transferin tahmini ne kadar zamanda gerçekleşebileceği gibi detaylardan eminsek "<strong>Confirm</strong>" diyerek işlemi onaylayabiliriz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-12-21-293f34b761105d23c44e426ec1860204.png" class="responsive"></figure>
+
+<p>Şimdi yapmamız gereken işlem, karşımıza çıkmış olan Bitcoin adresine ilgili tutarı göndermektir. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-12-30-5f8d91db2a10f2880ab96f7b176aa898.png" class="responsive"></figure>
+
+<p>Gönderim işleminin ardından transfer onaylanarak ilgili tutar Monero hesabımıza gönderilmiş olacak. Elbette transferin onaylanması ve takas edilerek bizim Monero cüzdanımıza gönderilmesi biraz vakit alacaktır. Bu gecikme süresi, kullanılan servise göre değişiklik gösterebilir. Eğer transferin gerçekleşmesini beklemeyecekseniz, web adresinin bağlantı adresini kopyalayıp bir kenara not edin. Bu sayede ilgili transfer bilgisine tekrar ulaşabilirsiniz. Ya da sayfanın biraz altında belirtilen kutucuğa e-posta adresinizi girerek, transfer gerçekleştiğine haberdar edilmeyi talep edin.</p>
+
+<p>Biraz zaman geçtikten sonra Monero hesabımızı kontrol ettiğimizde, takas işlemimizin başarılı bir biçimde gerçekleşmiş olduğunu teyit edebiliyoruz. </p>
+
+<figure><img src="../../img/11/2020-06-15_20-12-43-bb4ea33f9860f5679fe799b49469b8b4.png" class="responsive"></figure>
+
+<p>İşte sizler de bu rehberde olduğu gibi, dilediğiniz bir kripto para ile takas ederek Monero edinebilirsiniz. </p>
+
+<p>Zaten Monero tüm transfer hareketlerini takip edilemez şekilde gizlediğinden ve her transfer için ayrı bir hesap adresi belirtebileceğimizden dolayı, gizliliğimiz ve anonimliğimiz her daim korunuyor olacak. Yani Monero'yu ne şekilde elde ettiğiniz aslında çok da bir önemi yok. Monero'yu doğru şekilde kullandığınızda, çalışma yapısı gereği sizin bütüncül anonimliğinizi ve gizliliğinizi sağlıyor olacaktır.</p>
+
+<h4 id="19">Bölüm Sonu Özeti</h4>
+
+<p>Kripto paraları tam olarak hangi amaçla kullanmanız gerektiğini eğitim içerisinde pek çok kez doğrudan ya da dolaylı olarak dile getirmiş olduk. Kripto paralar; kimliğinizin bilinmesini istemediğiniz durumlarda, satın aldığınız hizmetlerdeki bütüncül anonimliğinizi sağlamak adına kullanabileceğiniz yegane ödeme sistemleridir. Hemen, aktif olarak kullanmak niyetinde değilseniz bile artık kripto paraların bizlere sağladığı avantajlardan ve genel kullanım yapısından haberdarsınız. Yani ihtiyaç duyduğunuzda ne yapmanız gerektiğini biliyorsunuz. Kripto paraları da ele aldığımıza göre artık eğitimimizin sonuna gelmiş bulunuyoruz. Eğitime dahil olduğunuz ve buralara kadar sabırla takip ettiğiniz için her birinize içten bir teşekkürü borç bilirim. Eğitim bitti dedim ancak öğrenme süreciniz burada sonlanmıyor. Sizler de biliyorsunuz ki gelişen teknolojiye ayak uydurmak için bizlerin de durmaksızın kendimizi geliştirmeye ihtiyacımız var. Gelişim için her daim araştırmaya ve öğrenmeye açık olmanız yeterli.</p>
+
+<p>Başka bir sefere görüşmek üzere, sağlıcakla kalın..</p>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

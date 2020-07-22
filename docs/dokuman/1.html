@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 1. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="../../index.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./2.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="../../index.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./2.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action" >Giriş</a>
+          	<a href="#1" class="list-group-item list-group-item-action" >Dokümantasyon Hakkında</a>
+			<a href="#2" class="list-group-item list-group-item-action" >Girizgah</a>
+			
+			<hr>
+			<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">1.Doküman</strong>
+          <h3 class="mb-0">Girizgah </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">gizlilik , anonimlik , mahremiyet , kvkk, gdpr , dokümantasyon hakkında , girizgah</p>
+        </div>
+        
+      </div>
+    </div>
+	          <article id="makale" class="markdown-body entry-content" itemprop="text">
+			  
+<h1 id="1">Dokümantasyon Hakkında</h1>
+<p>Bu dokümantasyon "<a href="https://www.udemy.com/course/temel-anonimlik-ve-gizlilik-kursu/?referralCode=3517B5FB2FC3671A540A" rel="nofollow">Temel Anonimlik ve Gizlilik Eğitimi</a>" adlı video eğitimin bir parçasıdır. Anlatımları daha detaylı bir biçimde takip edebilmek ve eğitimin gelişimini desteklemek adına video eğitime <a href="https://www.udemy.com/course/temel-anonimlik-ve-gizlilik-kursu/?referralCode=3517B5FB2FC3671A540A" rel="nofollow">buradan</a> katılabilirsiniz. Dokümantasyonu kaynak göstererek dilediğiniz kişiler ile paylaşmakta özgürsünüz.</p>
+<p><strong>Bu doküman sadece eğitim amaçlı oluşturulmuştur.</strong></p>
+<p><strong>Bu eğitim içerisinde yer alan tüm bilgiler; eğitimi alan kişilere, internet üzerinde yer alan kişisel verilerinin güvenliğini nasıl sağlayabileceklerini açıklamak üzerine  "gizlilik" ve "anonimlik" konuları kapsamında ele alınmıştır.</strong></p>
+<p><strong>Eğitimi alan ve eğitime devam eden tüm öğrenciler, eğitim içerisinde öğrendiği bilgileri yasal çerçeve içerisinde kalarak kullanacaklarını taahhüt ederler. Tekrar belirtiyorum eğitimi alarak ve eğitime devam ederek, burada yer alan bilgileri yasal çerçeve içerisinde kullanacağınızı kabul etmiş sayılıyorsunuz.</strong></p>
+<h1 id="2">Girizgah</h1>
+<p>Anlatımlara başlamadan önce nasıl bir durum ile karşı karşıya olduğumuzu daha net anlayabilmemiz için eğitim içerisinde ele alacağımız ana konulardan kısaca bahsedelim istiyorum. Eğitim müfredatı, bütüncül olması açısından "<strong>Gizlilik</strong>" ve "<strong>Anonimlik</strong>" kazanmamızı sağlayacak birbiri ile yakından ilişkili pek çok konunun bağlantılı şekilde anlatımı ile oluşturuldu. Eğitim içerisinde yer alan konuların seçilmiş olmasının nedeni, her birinin birbiri ile yakından ilgili olmasıdır. Yani kimi durumda biri olmadan bir diğer konunun bir önemi kalmıyor olacak. Bu sebeple eğitim müfredatının sırasına uyarak eğitime devam etmeniz oldukça önemlidir. Bu durumu eğitim içerisinde çok daha net görmüş olacaksınız zaten. Anlatıma eğitimin temel kavramlarını açıklayacak başlayacak olursak;</p>
+<p>"<strong>Gizlilik</strong>" dediğimiz kavram, kimliğimizin belli olduğu ancak aktivitelerimizin izlenemediği durumları tasvir eder.</p>
+<p>"<strong>Anonimlik</strong>" dediğimiz kavram ise yapılan aktivitelerin belli olduğu ancak yapan kişinin kimliğinin bilinmediği durumları tasvir eder.</p>
+<p>Günlük hayattan basit bir örnek ile aralarındaki farkı açıklayacak olursak;</p>
+<p>Örneğin herhangi bir bir otele gittiğinizde kayıt yaptırırken kimlik bilgilerinizi otele verirsiniz ancak otel odasındaki aktiviteleriniz örneğin saat kaçta uyuduğunuz otel tarafından bilinemez. Bu duruma "<strong>gizlilik</strong>" denir.</p>
+<p>Eğer otel odanızdan kıyafetlerinizi değiştirip maske takarak lobiye giderseniz, bu defa yapmakta olduğunuz aktiviteleriniz otel tarafından bilinip sizin kimliğiniz bilinemeyecektir. Bu duruma da "<strong>anonimlik</strong>" deniyor.</p>
+<p>Genellikle insanların internet üzerindeki tercihi anonim olmaktan ziyade, gizlilik sağlamak üzerine oluyor. Ancak maalesef ki ücretsiz olarak sunulan pek çok servis aslında bizlerin gizliliğini çok açık bir biçimde ihlal ediyor.</p>
+<p>" <em><strong>Eğer bir ürüne ücret ödemiyorsanız, muhtemelen ürün sizsinizdir.</strong></em> " sözünü mutlaka duymuşsunuzdur. Aslında bu söz, günümüz ücretsiz internet hizmetlerinin para kazanma yapısını bizlere oldukça net bir biçimde ifade ediyor. Günümüz internet dünyasında, ücretsiz sunulan her türlü kaliteli hizmetin karşılığında <strong>mahremiyetimiz</strong> ve <strong>dikkatimiz</strong> ile ödeme yapıyoruz. Genellikle hizmet sağlayıcıları, bizden edindikleri bilgileri yalnızca bizlere daha iyi hizmet sunmak için kullandıklarını iddia ediyor. Fakat bizlerden toplanan bilgilerin kullanıldığı alanlar, hizmet kalitesini arttırmak gibi masumane niyetlerden daha çok, art niyet barındırıyor.</p>
+<p>Örneğin kullanıcı davranışları yeterince iyi analiz edildiğinde, kişilerin düşüncelerine ve kararlarına etki edebilecek yönlendirmeler sağlanabileceği yakın dönemde gündeme gelmişti. Bunu duymuş olmaktan sıkılmış olabilirsiniz ancak en net kanıt olduğu için söylemek durumundayım, "<strong>Cambridge Analytica</strong>" şirketi seçim sonuçlarını bu yolla etkilemeyi başardı. Üstelik bu ilk kez de olmuyor ve ayrıca manipülasyon işini yapan tek şirket "<strong>Cambridge Analytica</strong>" şirketi de değil. Bu sebeple söz konusu bizim kişisel verilerimiz olduğunda "Aman benim bilgilerimi ne yapacaklar ?" diye düşünmek, aslında bir nevi kendi kişiliğimizin zaafları da dahil olmak üzere bizim hakkımızdaki her türden bilgiyi niyeti belirsiz yabancılara emanet etmek demek oluyor. Bu veriler anlamlı şekilde bir araya getirildiğinde, sizin düşünce yapınızı ve dolayısı ile nasıl etki altına alınabileceğinizi de açık şekilde ortaya koyabiliyor. Bu <strong>çok güçlü bir silah</strong> ve bizler kişisel verilerimizi önemsemeyerek bu silahı niyeti belirsiz kişilere emanet ediyoruz.  Konu hakkında daha geniş bir bakış açısı kazanmak adına eğer daha önce izlemediyseniz "<a href="https://www.netflix.com/tr/title/80117542" rel="nofollow">The Great Hack</a>" isimli belgeseli ve Glenn Greenwald'ın yapmış olduğu "<a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters/transcript?language=tr" rel="nofollow">Gizlilik neden önemlidir?</a>" isimli sunumu baştan sonra izlemenizi şiddetle tavsiye ederim.</p>
+<p>Kısacası, gerçek hayatta olduğu gibi sanal dünyada da her türlü kişisel verimizi korumak zorundayız. Neticede gerçek hayatta camlarımızda perdeler, evimizin girişlerinde kilitli kapılar bulunuyor. Eğer evinizde benzer gizlilik unsurları yoksa sanal dünyadaki gizliliğinizden de endişe etmemeniz normal karşılanabilir. Fakat evinizde gizliliğinizi korumaya çalışıp, sanal dünyada da umursamıyorsanız bu çelişkili bir durumdur. Bu durumun üzerine sizi düşünmeye davet ediyorum.</p>
+<p>Esasen son dönemde Türkiye'de "<a href="https://kvkk.gov.tr/" rel="nofollow">KVKK</a>", Avrupa birliğinde ise "<a href="https://gdpr.eu/" rel="nofollow">GDPR</a>" adı altında kişisel verilerin koruması adına yasal düzenlemeler ve çeşitli ataklar yapılıyor olsa da asıl görev bizzat bize düşüyor. Bizler de üzerimize düşen sorumluğu yerine getirmek adına bu eğitim içerisinde her türlü izlenmeye yönelik kendi mahremiyetimizi nasıl koruma altına alabileceğimizin genel bir portresini çizeceğiz. Konunun tek bir yönü olmadığını daha önce de söyledim şimdi tekrar söylüyorum; söz konusu mahremiyet olduğunda kapsayıcı bir anlayış ile ilerlemedikten sonra gerçek mahremiyetten söz edemeyiz. Yani eğitim içerisinde anlatılan her türlü bilginin anlatılmış olma nedeni var ve hiç bir bilgi gereksiz değil.</p>
+<p>"Yani aman be kardeşim ne anlatıyorsun, daha eğitimin başında neden bu kadar uzatıyorsun?" diyecek olursanız; dile getirdiklerimin hepsi eğitimi katılan herkesin aynı bilince sahip olduğundan emin olmak istediğim için burada yer alıyor. Eğer yeterince ahkam kesebildiysem, sıkı durun anlatımlara başlıyoruz..</p>
+</article>
+	<h1></h1>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>

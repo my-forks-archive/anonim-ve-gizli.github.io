@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 2. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./1.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./3.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./1.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./3.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action" >Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action" >Tor Nedir</a>
+          	<a href="#1" class="list-group-item list-group-item-action" >Nasıl Çalışır</a>
+			<a href="#2" class="list-group-item list-group-item-action" >Güvenli Midir</a>
+          	<a href="#3" class="list-group-item list-group-item-action" >Zaaf - 1</a>
+			<a href="#4" class="list-group-item list-group-item-action" >Zaaf - 2</a>
+          	<a href="#5" class="list-group-item list-group-item-action" >Zaaf - 3</a>
+          	<a href="#6" class="list-group-item list-group-item-action" >Art Niyetli Düğümler</a>
+			<a href="#7" class="list-group-item list-group-item-action" >Art Niyet Etkisi</a>
+          	<a href="#8" class="list-group-item list-group-item-action" >Art Niyetten Korunmak </a>
+			<a href="#9" class="list-group-item list-group-item-action" >Zamanlama Saldırıları</a>
+          	<a href="#10" class="list-group-item list-group-item-action" >Nasıl Korunabiliriz</a>
+          	<a href="#11" class="list-group-item list-group-item-action" >Tor Gizli Servisleri</a>
+			<a href="#12" class="list-group-item list-group-item-action" >Surface Web </a>
+			<a href="#13" class="list-group-item list-group-item-action" >Deep Web</a>
+			<a href="#14" class="list-group-item list-group-item-action" >Dark Web</a>
+			<a href="#15" class="list-group-item list-group-item-action" >Tor'a Erişmek</a>
+			<a href="#16" class="list-group-item list-group-item-action" >Yasal Mıdır</a>
+			<hr>
+			<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">2.Doküman</strong>
+          <h3 class="mb-0">Tor Nedir ve Nasıl Çalışır </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">tor , düğüm , tor ağının zaafları , gizli servisler , surface web , deep web , dark web,</p>
+        </div>
+        
+      </div>
+    </div>
+	          <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+			  <h1 id="0">Tor Nedir ?</h1>
+			 
+			  
+<p>Tor projesi, ABD&#39;nin Deniz Kuvvetleri tarafından, ABD hükümetinin haberleşmesini korumak amacıyla geliştirilmiş olan bir istihbarat çözümüdür. Ancak şimdilerde çevrimiçi gizliliği teşvik eden ve kar amacı gütmeyen açık kaynaklı bir organizasyon halini alarak, geniş kitlelerin kullanımına açık şekilde hizmet sunmaya devam etmektedir. Buradaki açık kaynak ifadesinin ne anlama geldiğini bilmiyorsanız; projenin açık kaynaklı olması demek, projeyi oluşturan tüm kaynak kodlarının herkese açık şekilde paylaşılıyor olması demektir. Projenin tüm kaynak kodları açık şekilde <a href="https://github.com/TheTorProject">paylaşıldığından</a> proje pek çok gönüllü tarafından çok daha hızlı bir biçimde, içerisinde zararlı kodların bulunmaması garanti edilerek geliştirilebiliyor. Genel olarak projenin açık kaynaklı olması, güvenilirliğinin ve gelişiminin herkese açık olduğunun belirtisidir. Özetle; herhangi bir proje açık kaynaklı ise o proje herkesin denetimi altındadır.</p>
+<img align="left" src="../../img/2/0-min.png" width="289" height="175"><p>Tor projesinin ana fon kaynağı, gönüllülerden toplanan bağışlar ile birlikte, içerisinde Amerikan hükümetinin de bulunduğu pek çok <a href="https://www.torproject.org/about/sponsors/">sponsordan</a> alınan yüklü miktardaki desteklerden gelmektedir. İşin ilginç tarafı ABD hükümetinin kimi teşkilatları bir taraftan projenin gelişimi için yüklü miktarda destek sağlarken, kimi teşkilatları ise Tor ağının güvenliğini delmek için rutin olarak çok fazla kaynak harcıyor. Yani hem güvenliğin geliştirilmesi hem de sömürülmesi için ABD tarafından aynı anda Tor projesine oldukça fazla fon sağlanıyor. Bu durum ilginç çünkü Tor sadece ABD hükümetinin kullanıma açık değil, tüm dünyadaki insanlar için ücretsiz ve kolay ulaşılabilir. Hükumet desteğinin farklı siyasi ve stratejik nedenleri olabileceği düşünülüyor ve Tor bağımsız kuruluşu da bu eleştirileri dikkate alarak fon tabanını geliştirmeye yönelik çalışmalar yürütüyor. Yine de destekleyen ana kurumun &quot;ABD Dışişleri Bakanlığı Demokrasi, İnsan Hakları ve Çalışma Bürosu&quot; olduğu düşünüldüğünde yapılan yardımın art niyetli olmadığı, insan haklarına yönelik olduğu da iddia ediliyor. Eğer merak ediyorsanız daha fazla sponsorluk bilgisi için Tor projesinin <a href="https://www.torproject.org/about/sponsors/">web sitesine</a> göz atabilirsiniz.</p>
+<p>Tor ismi, gizliliği sağlamak için yapılan çok katmanlı şifreleme ve yönlendirmeleri İngilizce olarak tarif eden “<strong>T</strong>he <strong>O</strong>nion <strong>R</strong>outer” ifadesinden geliyor. Yönlendirmeler çok katmanlı olduğu için bu yapı <strong>soğana</strong> benzetilerek soğanın İngilizce karşılığı olan &quot;<strong>onion</strong>&quot; olarak isimlendirilmiş. </p>
+
+<p>Tor&#39;un temel amacı bizim internet üzerindeki ayak izlerimizi çarpıtarak anonim olarak sansürsüzce internete erişmemize olanak sağlamaktır. </p>
+<h1 id="1">Tor Nasıl Çalışır ?</h1>
+<p>Tor temel olarak hedef şaşırtma ilkesine dayanıyor. Çalışma yapısını daha iyi anlamak ve aslında nasıl bir sisteme bel bağladığımızı görmek adına, anlatımlara öncelikle genel çalışma yapısından bahsederek başlayalım. </p>
+<p>Kullanıcıyı anonimleştirme işlemi için yaklaşık <a href="https://metrics.torproject.org/bubbles.html">7000 gönüllü</a>(Zamanla bu sayı değişiklik gösterebilir.) sunucudan rastgele 3 tanesi seçilerek kullanılır. 
+<img src="../../img/2/1-min.png" class="responsive">
+Bu seçilmiş olan sunuculara düğüm denir ve paketler şifrelenip bu 3 düğüm üzerinden geçerek hedefe ulaşır. Hedef sunucuya ulaşan paketlerin cevabı da aynı şekilde şifrelenerek bu 3 düğüm üzerinden geri döner. 
+<img src="../../img/2/2-min.png" class="responsive">
+Böylelikle istemci olarak bizim talep ettiklerimiz, hedef sunucu üzerinden güvenli şekilde aktarılmış olur. Oldukça genel tanımla Tor ağının çalışma şekli budur. Ancak gizliliğimizin nasıl bir sistem üzerinden sağlandığını biraz daha ayrıntılı bilmek bizi daha güvenli kılacağı için açıklamaya devam edelim.</p>
+<p>Örnek senaryomuzda Tor üzerinden wikipedia.org adresine gitmek isteyelim ve bu isteğimizin geçirdiği süreçleri tek tek ele alarak açıklayalım.</p>
+<ul>
+<li><p>Tor kullanımı için Tor Browser yani Tor uyumlu tarayıcımızı açtık ve gitmek istediğimiz adresi yazdık.</p><img src="../../img/2/3-min.png" class="responsive"></li>
+
+<li><p>Tor öncelikle kendi bünyesinde bulunan 7000 civarı aktif sunucu, diğer bir deyişle düğüm noktasından rastgele 3 düğüm noktası belirler. Tor sunucuları gönüllülük esası ile çalışır ve gönüllü sunucu seçiminde bir takım seçim kıstaslarının dışında yüksek bant genişliği sağlayabilecek ve uzun süre açık kalabilecek nitelikte sunucular tercih edilir. Yani şu an için 7000 civarı olan bu sunucuların sayısı zamanla değişiklik gösterebilir. Ve tüm sunucuların listesi herkese açık şekilde yayınlanır. Zaten Tor da, rastgele seçimi açıklanmış olan bu sunucu listesi üzerinden yapar.</p><img src="../../img/2/4-min.png" class="responsive">
+</li>
+<li><p>Düğüm noktaları rastgele olarak belirlendikten sonra bizim istek paketimiz <strong>3 katmanlı olarak</strong> şifrelenir. Buradaki istek paketi bizim &quot;wikipedia.org&quot; adresine gitmek istediğimizi belirten pakettir.</p><img src="../../img/2/5-min.png" class="responsive">
+</li>
+<li><p>Şifreli katmanlardan ilki başlangıç düğümünde bulunan anahtar sayesinde çözülür ve çözülen şifre <strong>yalnızca bir sonraki düğüm noktasının bilgisini</strong> verir. Böylelikle başlangıç düğümü elindeki istek paketini hangi düğüme yönlendireceğini bilir.</p><img src="../../img/2/6-min.png" class="responsive">
+</li>
+<li><p>Aynı şekilde ortanca düğüm noktası da 2. katmanda yer alan şifreyi kendi anahtarı ile çözerek, paketi iletmesi gereken bir sonraki düğüm noktasının hangisi olduğunu öğrenir. </p>
+</li>
+<li><p>Böylelikle çıkış düğümüne ulaşan paketteki son şifre katmanı da  çözülerek, bu paketin hangi sunucuya iletilmesi gerektiğinin bilgisi son düğüm noktası tarafından öğrenilip paket ilgili sunucuya iletilir.</p><img src="../../img/2/7-min.png" class="responsive">
+</li>
+<li><p>Sunucuya ulaşan pakete cevap olarak, sunucunun yanıt paketi ise yine aynı yolu izleyerek 3 aşamalı şifrelerin çözülmesi ile kullanıcıya yani istemciye ulaşır.</p><img src="../../img/2/8-min.png" class="responsive">
+</li>
+<li><p>Ayrıca uzun süreli kullanımda kullanıcıların anonimliğini sağlamak adına seçilmiş olan düğümler de her 10 dakikada bir varsayılan olarak yeniden rastgele şekilde değiştirilir. Bunun yanında kullanıcıların da istediği zaman manuel olarak düğüm noktalarını rastgele olacak şekilde değiştirme imkanı vardır.</p>
+<img src="../../img/2/9-min.png" class="responsive">
+</li>
+</ul>
+<p>Çok daha derin ve teknik konulara girmek bizi Tor ağında daha güvenli kılmayacağı için bu kadarlık bilgi şimdilik yeterli. Tor ağı genel olarak bu şekilde çalışıyor. İlerleyen kısımlarda bu çalışma yapısından yeri geldikçe daha detaylıca bahsediyor olacağız. Eğer Tor ağının ardındaki teknik ve bilimsel konuları merak ediyorsanız bu konuda pek çok makale mevcut, Tor projesinin web sitesinden ya da kısa bir internet araştırması yapmanız halinde bu detaylı bilgilere rahatlıkla ulaşabilirsiniz. Ancak güvenlik konusunda bizim üstümüze düşen ne varsa bu eğitimde bahsediyor olacağımdan emin olabilirsiniz. Geri kalan kısım işin daha çok teknik ya da bilimsel tarafı olarak tasvir edilebilir.</p>
+<h1 id="2">Tor ağını güvenli kılan nedir ?</h1>
+<p>Bu sistemde kullanıcının gerçek kimliğini yalnızca ilk düğüm noktası bilir. Çıkış düğümü ise sadece elindeki paketi hangi sunucuya iletmesi gerektiğini bilir. Böylelikle ilk sunucu elindeki paketin hangi sunucuya gittiğini bilmezken, son düğüm noktası ise elindeki paketin kimden geldiğini bilemez. Arada kalan orta düğüm noktasının görevi ise sadece ilk düğüm noktası ile son düğüm noktası arasında aktarma olduğu için paketi gönderini ve paketin hangi sunucuya ulaşacağını yani hedefini bilemez. Bu sayede anonim şekilde istemci ile sunucu arasında iletişim sağlanır. </p>
+<p>Aşağıdaki tabloya bakarak durumu daha net görebilirsiniz.</p>
+<table>
+<thead>
+<tr>
+<th>Düğüm Noktası</th>
+<th>Biliyor</th>
+<th>Bilmiyor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a style="color:#00FF00";>Giriş Düğümü</a></td>
+<td>Kullanıcının gerçek ip adresini</td>
+<td>Paketin hangi sunucuya iletileceğini</td>
+</tr>
+<tr>
+<td><a style="color:#8A2BE2";>Orta Düğüm</a></td>
+<td>Kendinden önceki ve sonraki düğümün adresini</td>
+<td>Paketin kimden geldiğini(kullanıcının gerçek ip adresini) ve hangi sunucuya gittiğini</td>
+</tr>
+<tr>
+<td><a style="color:#FF0000";>Çıkış Düğümü</a></td>
+<td>Paketin hangi sunucuya iletileceğini</td>
+<td>Paketin kimden geldiğini(kullanıcının gerçek ip adresini)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../img/2/10-min.png" class="responsive"></p>
+<p>Ancak gerçek dünyada her şey bu kadar güllük gülistanlık değil elbette. Şimdi Tor ağının zaaflarından ve bu zaaflara getirilebilecek çözümlerden bahsedelim. </p>
+<h1 id="3">Temel Zaaf - 1</h1>
+<p>Öncelikle Tor üzerinden bağlanabileceğimiz sunucuların listesi herkese açık olarak yayınlandığı için herhangi bir otorite(devlet, internet servis sağlayıcınız, ağ yöneticiniz vs..) istediği zaman bu sunucuların her birini engelleyerek Tor ağına erişiminizi kolaylıkla kısıtlayabilir. </p>
+<p>Bu duruma çözüm olarak Tor, köprü bağlantıları sağlar. Tor ağına erişmeden önce size sağlanan köprü bağlantısı ile, mevcut bulunan engelleri aşarak Tor ağına sınırsız erişim sağlayabilirsiniz. Üstelik tüm bu köprü adresleri gizli tutulduğu için olası durumlarda hepsinin birden engellenmesinin de önüne geçilmiş olur.</p>
+<p>Bu noktada aklınıza; &quot;<em>madem köprü bağlantılarını gizli tutabilecek yapısı var neden sunucuların listesini de gizli tutmuyor ?</em>&quot; gibi bir soru gelmiş olabilir. Esasen sunucu bilgilerini gizli tutmaya çalışmanın bir anlamı yoktur. Çünkü gönüllü sunuculardan birine sahip olan herkes listeyi bir istemci çalıştırarak alıp yayınlayabilir. Tüm sunucular, ortak Tor devresi üzerinde yer aldığı için herhangi bir sunucunun diğer sunucuların listesine ulaşması hiç de zor değildir. Yani Tor ağının çalışma yapısı gereği ağ üzerindeki hangi sunucuların aktif hangi sunucuların aktif olmadığının bilgisini almak çok kolaydır. Bu yüzden sunucu listesini gizli tutmak anlamsızdır.</p>
+<h1 id="4">Temel Zaaf - 2</h1>
+<p>Paketimizi ilk düğüm noktasına ulaştırırken ve paketimizin son düğüm noktasından hedef sunucuya ulaşması sırasında gizliliğimiz, giriş ve çıkış düğümlerini dinleyenler veya kontrol edenler tarafından ihlal edilebilir. </p>
+<p>Eğer gözlemciler sadece sizinle ilk düğüm noktası arasında gözlem yapıyorlarsa yani ağı dinliyorlarsa yalnızca Tor ağına bağlandığınızı görebilirler. Kimi durumlarda bu bile sizin şüpheli konumuna düşerek daha derin takip altına alınmanıza neden olabilir.</p>
+<img src="../../img/2/11-min.png" class="responsive">
+<p>Öte yandan daha büyük bir zahmet ile hem sizin ilk düğüm ile bağlantınızı hem de son düğüm ile sunucu arasındaki bağlantıyı dinliyorlarsa, sizin paketi gönderim zamanınız ve sunucuya ulaşan paketin zamanı arasındaki korelasyona bakarak, sizin bu sunucu ile etkileşime geçtiğiniz kanısına varıp takibi derinleştirebilirler.</p>
+<img src="../../img/2/12-min.png" class="responsive">
+<img src="../../img/2/13-min.png" class="responsive">
+<p>Bunlar her ne kadar ikinci dereceden kanıtlar gibi dursa da gerektiğinde sizi şüpheli konumuna düşürebilecek durumlardır. Ve gerçek bir gizlilikten söz ettiğimizde bu açıklık kabul edilemez bir zaaftır.</p>
+<p>Bu noktada Tor&#39;a ek olarak &quot;VPN&quot; kullanımı ve &quot;SSL&quot; sertifikası bulunan &quot;HTTPS&quot; adreslerini tercih etmek bir zorunluluktur. Bu konuları eğitim içerisinde tek tek ele alacağız ancak şimdilik kısaca bilgi sahibi olmak adına açıklamaya çalışalım.</p>
+<p>Eğer Tor ağına erişmeden önce VPN kullanırsak gözlemciler sadece VPN bağlantımızı görüp Tor ağına eriştiğimizi göremezler. Bu kullanıma VPN üzerinden Tor bağlantısı deniyor.</p>
+<img src="../../img/2/14-min.png" class="responsive">
+<p>Ayrıca yalnızca SSL sertifikası bulunan sunucular ile iletişim kurmak, sunucu ile bizim aramızdaki iletişimi şifreleyeceği için hassas bilgileri gözlemcilerden uzak tutar.</p>
+<h1 id="5">Temel Zaaf - 3</h1>
+<p>Diğer bir kuşku oluşturacak nokta, düğüm olarak kullanılan ve paketlerimizi taşıyan sunucuların dünyanın her yerindeki gönüllüler tarafından sağlanıyor olmasıdır. Bu gönüllüler arasında çeşitli istihbarat kurumları ve Tor üzerinde izleme yapma niyetinde olan kişi veya çeşitli kurumların olması hiç de şaşırtıcı değil. Özellikle de tercih edilen sunucuların yüksek bant genişliğine sahip olması ve aktif çalışma süresinin uzun olması gerekliliği, herhangi bir gönüllünün karşılıksız olarak sağlamasının kolay olmadığı şartlardır. Üstelik kendi sunucuları üzerinden oluşan trafik dolayısı ile telif hakları ve çeşitli davalar ile ilgilenme ihtimali de böylesi bir zahmete katlanan insanların çıkarlarını pek çok kez sorgulatıyor.</p>
+<p>Durum böyle olunca işiniz şansa kalıyor ve hangi düğüm noktasına güveneceğinizi bilemiyorsunuz. Ancak topluluk tarafından bu güvensizlik olasılığı oldukça düşük olarak kabul ediliyor. Tor ağı üzerinde 7000 kadar düğüm noktasının olduğu ve sunucu seçiminin rastgelelik üzerine yapıldığı üstelik aynı anda birçok kullanıcıya hizmet verdiği düşünüldüğünde, trafik analizinin nokta atışı olacak şekilde yapılması olasılıksal olarak düşük hatta imkansız olarak kabul ediliyor. Ancak bu oldukça masumane bir tavır. Zira bir istihbarat teşkilatı ya da sizi takip etme motivasyonu yüksek olan herhangi bir oluşumun elindeki kaynağın da sınırını ve potansiyelini bilmediğimiz için her zaman için bu tehlike mevcut görünüyor. Hatta bununla ilgili bizzat Tor ağı üzerinde yapılmış ve kısmi başarıya ulaşmış saldırı çalışmaları da bulunuyor. Bu yüzden Tor topluluğu daha fazla gönüllü ile sunucu sayısını arttırarak art niyetli gözlemcilerin sayısını olasılıksal olarak düşürmek gayretinde. </p>
+<img src="../../img/2/15-min.png" class="responsive"><p>Yine de; herhangi bir gözlemcinin elle tutulur bir kanıt için hem giriş hem de çıkış düğümlerini kontrol edebiliyor olması beklendiği için rastgele seçilen üç sunucudan ilk ve son düğüm noktasının aynı gözlemciye ait olma olasılığı oldukça düşüktür.</p><p> Üstelik Tor, ilk düğüm noktasını sabit tutarak 10 dakikada bir ortanca ve çıkış düğümlerini değiştirdiği için hem giriş hem de çıkış düğümünün aynı gözlemci tarafından yönetiliyor olma olasılığını istatistiksel olarak oldukça düşürmektedir.</p><img src="../../img/2/16-min.png" class="responsive">
+<p>Ayrıca Tor ağına yapılan saldırılar sonucu ortaya çıkan tabloda, Tor ağının kusurlu yapısına odaklanmaktan ziyade hedefteki kişilerin kendi gizliliklerini ele verecek dikkat hataları yapmalarını beklemenin daha kesin sonuç verdiği ortak uzman görüşüdür.</p>
+<p>Kısacası anonimlik elde etmek hiç de kolay değil. Tor da hiç bir zaman %100 anonimliği garanti etmiyor. Ancak geçmişten günümüze baktığımızda, Tor üzerine yapılmış olan oldukça iyi finanse edilmiş sofistike saldırılar bile işe yarar kesin sonuçlar vermemiştir.</p>
+<p>Hatta Edward Snowden&#39;ın yayınladığı belgelerde &quot;NSA&quot; yani &quot;Amerikan Ulusal Güvenlik Ajansı&quot;&#39;nın Tor ağını izleme konusunda &quot;büyük&quot; sorunlar yaşandığı da rapor edilmiştir.
+Yine de günümüz teşkilatlarının elindeki potansiyel kaynağı ve yeni geliştirilmiş olması muhtemel saldırı tekniklerini bilemeyeceğimiz için Tor hiç bir zaman %100 anonimliği garanti edemez. Bunun kanıtı olarak da yakın geçmişte Tor üzerinde bulunan 0day zafiyetleri gösterilebilir. Yayınlanmış ve kapatılmış pek çok zafiyet bulunsa da henüz kapatılmayan ve istihbarat servisleri gibi kuruluşların aktif olarak kullandığı tahmin edilen pek çok zaafiyet olduğu düşünülmektedir. Bu zaafiyetler genellikle gerçek ip adresinizin açığa çıkmasına neden olacak türden kritik açıklardır. </p>
+<p>Yine de şu an için bildiğimiz kadarıyla teknik saldırılardan ziyade Tor ağının gizliliğini ele veren en yaygın 2 tür metot bulunuyor.</p>
+<ul>
+<li>Art niyetli çıkış düğümleri</li>
+<li>Zamanlama analizi</li>
+</ul>
+<h2 id="6">Art Niyetli Çıkış Düğümleri</h2>
+<p>Daha önce de bahsettiğimiz şekilde Tor ağının sunucuları gönüllülük üzerine kuruludur ve bu gönüllülerin gerçekte kimler olduğu ve hangi amaçla bu sunucu kaynağını sağladığını asla bilemiyoruz. Yapılan çeşitli araştırmalar neticesinde Tor ağının çıkış düğümlerinin yaklaşık %2.5&#39;inin kötü niyetli kişiler tarafından sağlandığı tahmin ediliyor. Ancak yine de art niyetli sunucuların tespiti için düzenli aralıklarla testler yapılıp, zararlı olduğu tespit edilen sunucular Tor ağından çıkarılıyor olsa da bu yöntemin kesin bir çözüm sağlamadığı da bir gerçek. </p>
+<h3 id="7">Art niyetli çıkış düğümleri ne yapabilir ?</h3>
+<ul>
+<li>Son düğüm olduğu için kim olduğunuzu doğrudan bilmiyor olsa da hangi sunucuya ulaşmak istediğinizi biliyor. Bununla birlikte, gerçek kimliğinizi doğrudan veya dolaylı olarak iletişiminiz veya internet davranışınız aracılığıyla açık etme riskiniz bulunuyor.</li>
+<li>Verilerinizi gözetlemenin yanı sıra, kötü amaçlı Tor çıkış düğümleri, genellikle sayfa isteğinizi sahte bir web sitesine yönlendiren <strong>ortadaki adam (MitM)</strong> saldırısı gerçekleştirebiliyor.</li>
+<img src="../../img/2/17-min.png" class="responsive">
+</ul>
+<h3 id="8">Nasıl korunabiliriz ?</h3>
+<ul>
+<li>Güvenli SSL şifreli <a style="color:#008000";>(https://)</a> web sitelerine bağlandığınız sürece, verileriniz güvende kalır ve sahte bir çıkış düğümü tarafından riske edilemez.</li>
+<li>Ortadaki adam saldırılarının bilincinde olarak gitmek istediğiniz adresi kontrol etmek ve girdiğiniz bilgilerin hassasiyetinin farkında olmak güvenliğiniz için önemlidir. Yani Tor ağını kullandığınız için güvendeyim rehavetine kapılmadan, sürekli tüm adımlarınızı da kontrol altında tutmalısınız.</li>
+</ul>
+<h2 id="9">Zamanlama Saldırıları</h2>
+<p>Esasen zamanlama saldırıları çok çeşitli senaryolar ile oluşturulabilecek , güvenliği en fazla riske eden saldırılardır. Zamanlama saldırılarında temel amaç; gerçekleştirilen faaliyet ile kişinin Tor ağına eriştiği zaman arasındaki korelasyonu belirlemektir.</p>
+<p>Örneğin 2013 yılında Harvard üniversitesinde sınavı ertelemek için bir bomba ihbarı yapılmıştı. Bu ihbar Tor ağı üzerinden belirli bir süre sonra kendi kendini imha eden bir e-posta hizmeti kullanılarak gerçekleştirilmişti. Ancak tüm bu güvenlik önlemlerine rağmen ihbarı yapan kişi yakalandı. Yakalanmasının temel nedeni gönderiyi kampüsün wifi ağı üzerinden gerçekleştirmesiydi. Araştırma ekibi mesajın gönderildiği zaman aralığındaki internet trafiğini analiz ederek Tor ağının kullanıldığı süreçteki internet kullanım kayıtlarına baktı. Neticede Tor ağını kampüs içerisinde kullanan tek bir kişi vardı ve bu şekilde mesajı gönderenin de o kişi olduğu ortaya çıktı. Bu oldukça basit bir dikkatsizlik hatası ancak temelde bu gibi zaman eşleştirmeleri sayesinde kişilerin gerçek kimlikleri ortaya çıkabiliyor. </p>
+<p>Bunun haricinde eğer gözlemcinin elinde Tor ağı üzerinde yer alan yüksek sayıda sunucu varsa gelen ve giden verilerin analizini yaparak da bu duruma benzer şekilde kişilerin kimliğini tespit edebilir. Buna rağmen, herhangi bir anda çevrimiçi olan çok sayıda Tor kullanıcısı olacağı için, böyle bir korelasyon kapsamlı ve uzun süreli istatistiksel analiz gerektireceğinden kesin sonuç alınması neredeyse imkansız olarak görülüyor. Bununla birlikte, NSA, Mossad ve hatta neredeyse sınırsız güce ve gerçekten küresel bir erişime sahip olan çeşitli organizasyonların ellerinde olan potansiyel kaynağı bilmemize olanak yok elbette. Yani teoride, gözlemcinin hedef için yeterince kaynak ayırması durumunda hedefin gizliliğini ihlal edebilme ihtimali her zaman için bulunuyor.</p>
+<p>Ayrıca bu iki saldırı dışında  kişinin yapabileceği pek çok dikkat hatası da kişinin kimliğini doğrudan ele verebilir. Yine de dikkat hatası dışındaki teknik saldırılar ilginizi çekiyorsa aşağıdaki listeden Tor ağına yapıldığı bilinen saldırılara da göz atabilirsiniz. </p>
+<p>Geçmişten günümüze saldırı türleri.</p>
+<img src="../../img/2/18-min.png" class="responsive">
+<p><strong>Kaynak: <a href="https://github.com/Attacks-on-Tor/Attacks-on-Tor" target="_blank">Attacks on Tor</a></strong></p>
+<p>Eğer Tor projesine aktif katkı sağlamak için geliştirici olarak katılmayacaksanız, teknik saldırıların detayları normal bir kullanıcı için gereksizdir. Neticede teknik saldırıların çözümü Tor geliştiricilerinin sorumluluğundadır. Yine de genel bilgi sahibi olmak adına listede yer alan saldırıları araştırmanız size hiç bir şey kaybettirmez.</p>
+<h3 id="10">Nasıl korunabiliriz ?</h3>
+<p>Zamanlama saldırılarından korunmanın doğrudan bir yolu olmasa da, kişisel aktivitelerinizi kontrol altında tutarak hareket etmeniz güvenlik sağlayabilir. Bağlı bulunduğunuz internet, bulunduğunuz konum, kullandığınız bilgisayar ve gerçek hayatta sizinle ilişkilendirilebilecek ne varsa tüm bu parametreleri dikkate alarak hareket etmeniz gerekir. Kısacası &quot;OPSEC&quot; denilen operasyon güvenliği için gereken tüm faktörleri her daim kontrolünüz altında tutabilmeniz gerekir.</p>
+<h1 id="11">Tor Gizli Servisleri</h1>
+<p>Tor gizli servislerini açıklamaya, birkaç kavramı ele alarak başlayalım. Bu kavramlar daha önce de sıklıkla duymuş olmanızın muhtemel olduğu; &quot;<strong>Deep Web</strong>&quot; &quot;<strong>Dark Web</strong>&quot; ve &quot;<strong>Surface Web</strong>&quot; kavramlarıdır.
+Buz dağı örneği, kavramları iyi bir biçimde temsil ettiği için sıklıkla kullanılır.
+</p>
+<img src="../../img/2/19-min.png" class="responsive">
+<h2 id="12">Surface Web</h2>
+<p>Buz dağı benzetmesinde yer aldığı şekilde, web ağının yüzeyini yani arama motorları tarafından indexlenen genel web ağının çok küçük bir kısmını temsil eder. Örneğin Google gibi bir arama motorunu kullanarak arama yaptığınızda karşınıza çıkan tüm web içerikleri yalnızca surface web alanındakileri temsil ediyor. Bu web alanındaki siteler arama motorları tarafından indexlenmeyi kabul eden sitelerdir. Ve tüm web ağı düşünüldüğünde ağın çok küçük bir kısmını temsil ederler.</p>
+<h2 id="13">Deep Web</h2>
+<p>Surface web den farklı olarak, arama motorlarının indexlemediği her türlü web içeriğini temsil eder. Genellikle arama motorlarının indexlemeye değer bulmadığı ya da doğrudan web sitelerinin arama motorlarından kaçmak için indexlenmeyi engellediği web alanının genelini temsil eder. Bu alandaki web sitelerine erişmek için doğrudan web adresinin girilmesi gerekir. Ve bağlantı için gereken şartların sağlanması gerekir.</p>
+<p>Örneğin sitelerin admin panelleri güvenlik nedeniyle genellikle arama motorlarının indexlemesi dışında tutulurlar. Böylelikle sitenin admin panelini arama motoru üzerinden bulunamazken, eğer tam adresini biliyorsak bu admin paneline erişebiliriz. İşte bu ve bunun gibi pek çok nedenle arama motorlarının kapsamı dışında tutulan yani diğer bir deyişle, derinde kalan web alanına &quot;<strong>derin web</strong>&quot; ifadesinin İngilizce karşılığı olan &quot;<strong>deep web</strong>&quot; deniyor.</p>
+<h2 id="14">Dark Web</h2>
+<p>Dark web ise yine deep webe benzer şekilde surface webteki arama motorlarının kapsamı dışındadır ve Tor ağı üzerinde yer aldığı için yalnızca Tor üzerinden erişilebilir durumdadır.</p>
+<p>Dark web Tor ağı üzerinde tutulan, gizliliğin ön planda olduğu <strong>.onion</strong> uzantılı web adreslerinin genel adıdır. Bu .onion uzantılı adresler herkes tarafından ücretsiz şekilde oluşturulabilir ve anonim şekilde yayınlanabilir. Anonim ve ücretsiz olarak oluşturulabiliyor olması bu web ağının suistimale daha açık olup, daha çok karanlık işler için kullanılmasının önünü açmıştır. Bu web ağı yüksek oranda art niyetli amaçlar uğruna kullanıldığından &quot;<strong>Dark Web</strong>&quot; yani &quot;<strong>Karanlık Web</strong>&quot; olarak isimlendirilmiştir. Tor ağı üzerinden erişilebildiği için bu tür web sitelerine &quot;<strong>Tor gizli servisleri</strong>&quot;  ya da daha modern adıyla &quot;<strong>onion servisleri</strong>&quot; de denmektedir.</p>
+<p>Kısaca onion servislerinden bahsetmemiz gerekirse;</p>
+<p>Onion servisi üzerinden yayın yapmak için herhangi bir üçüncü taraf hizmet sağlayıcıya &quot;alan adı&quot; ya da &quot;dosyalarının barındırılması&quot; için ihtiyaç duymadan, kendi web sitemizi Tor ağı üzerinden yayınlayabiliyoruz. Üstelik tüm bağlantı Tor ağı üzerinden yönlendirildiği ve şifrelendiği için .onion uzantısı üzerinden yayın yaparken anonim kalabiliyoruz. Kısaca onion servislerinin çalışma yapısı bu şekilde. Bu servislerden eğitim devamında ayrıca bir bölümde tekrar bahsediyor olacağız. </p>
+<p>Şu ana kadar yapmış olduğumuz açıklamalar ile genel olarak bilmemiz gereken pek çok kavramdan kısaca söz etmiş olduk. Ayrıca yeri geldikçe tekrar bu konulardan daha detaylıca eğitim içerisinde bahsediyor olacağız.</p>
+<p>Şimdi Tor ağına erişebileceğimiz çeşitli araç ve yöntemleri ele alarak anlatımlara devam edelim.</p>
+<h2 id="15">Tor Ağına Erişmek</h2>
+<p>
+Tor ağını kullanmak için birden fazla yöntem bulunmakla birlikte biz bu kurs içerisinde en güvenli olarak kabul edilen birkaç yöntemi ele alarak anlatımları bu yöntemler üzerinden gerçekleştireceğiz.</p>
+<p>Tor ağına güvenli şekilde erişmek için 3 farklı yolu ele alacağız, bunlar;</p>
+<table>
+<thead>
+<tr>
+<th>Yöntemler</th>
+<th>Güvenlik Derecesi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tor Browser</td>
+<td>Basit ancak pek güvenli bir yöntem sayılmaz.</td>
+</tr>
+<tr>
+<td>Tail OS</td>
+<td>Pek çok durumda iyi bir yöntemdir.</td>
+</tr>
+<tr>
+<td>Qubes OS üzerinden Whonix </td>
+<td>En güvenli olarak kabul edilen yöntemdir.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Yöntemleri açıklarken yeri geldikçe yöntemlerin avantajlarından ve dezavantajlarından da ayrıca bahsediyor olacağız. Böylelikle ihtiyacınız olduğunda hangi yöntemin sizin ihtiyacınızı daha doğru şekilde karşılayacağını da biliyor olacaksınız. </p>
+<h2 id="16">Tor Ağını Kullanmak Yasal Mıdır ?</h2>
+<p>
+Ayrıca son olarak Tor ağını kullanmanın yasal olup olmadığı konusuna da açıklık getirelim.</p>
+<p>Aslında yasal olup olmaması tamamen Tor ağını hangi amaç için kullandığınıza göre değişiklik gösterir. Yani yalnızca Tor ağına bağlandığınız için pek çok durumda suçlanmazsınız. Yalnızca Tor ağına bağlanmış olmak doğrudan suç teşkil etmez. Fakat ağ üzerinde yaptığınız tüm faaliyetlerin sorumluluğu size aittir. Suç teşkil eden faaliyetleriniz varsa ve yakalanırsanız suçlanmanız gayet doğaldır. Özetle suç unsuru bulunmayan hiç bir faaliyet Tor ağı üzerinden gerçekleştirildiği için yasal anlamda sorun teşkil etmeyecektir.</p>
+<p>Bir sonraki kısımda ilk kullanım yöntemimiz olan Tor Browser aracını ele alarak anlatımlara devam ediyor olacağız.</p>
+
+</article>
+
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

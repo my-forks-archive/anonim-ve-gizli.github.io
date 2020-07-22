@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 10. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" class="responsive" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./9.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./11.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./9.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./11.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+			<a href="#0" class="list-group-item list-group-item-action">Dosya Paylaşımı</a>
+			<a href="#1" class="list-group-item list-group-item-action">Firefox Send</a>
+			<a href="#2" class="list-group-item list-group-item-action">OnionShare</a>
+			<a href="#3" class="list-group-item list-group-item-action">OnionShare-Alternatif</a>
+			<a href="#4" class="list-group-item list-group-item-action">Paylaşılan Dosyalar</a>
+			<a href="#5" class="list-group-item list-group-item-action">Alınan Dosyalar</a>
+			<a href="#6" class="list-group-item list-group-item-action">Web Sitesi Yayınla</a>
+			<a href="#7" class="list-group-item list-group-item-action">Ayarlar</a>
+			<a href="#8" class="list-group-item list-group-item-action">Herkese Açık Kip</a>
+			<a href="#9" class="list-group-item list-group-item-action">Başlatma Sayacı</a>
+			<a href="#10" class="list-group-item list-group-item-action">Durdurma Sayacı</a>
+			<a href="#11" class="list-group-item list-group-item-action">Kalıcı Adres</a>
+			<a href="#12" class="list-group-item list-group-item-action">Eski Adres</a>
+			<a href="#13" class="list-group-item list-group-item-action">Paylaşım Ayarları</a>
+			<a href="#14" class="list-group-item list-group-item-action">Alma Ayarı</a>
+			<a href="#15" class="list-group-item list-group-item-action">İçerik Güvenliği Pol.</a>
+			<a href="#16" class="list-group-item list-group-item-action">Meta Veri Silmek</a>
+			<a href="#17" class="list-group-item list-group-item-action">Kalıcı Dosya Silimi</a>
+			<a href="#18" class="list-group-item list-group-item-action">Kalıcı Disk Silimi</a>
+			<a href="#19" class="list-group-item list-group-item-action">Disk Silme & Şifreleme</a>
+			<a href="#20" class="list-group-item list-group-item-action">Disk Alanı Şifreleme</a>
+			<a href="#21" class="list-group-item list-group-item-action">Disk Parolası Değişimi</a>
+
+   			<hr>
+<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">10.Doküman</strong>
+          <h3 class="mb-0">Güvenli Dosya Paylaşımı</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">kalıcı silme , meta veri , onionshare , firefoxsend , diski şifrelemek</p>
+        </div>
+        
+      </div>
+    </div>
+ <article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+	<h4 id="0">Güvenli Dosya Paylaşımı</h4>
+
+<p>Günlük kullanımda dosya paylaşmak için "Google Drive" "Mega" "Dropbox" ve benzeri bulut tabanlı pek çok servisi sıklıkla kullanıyoruz. Bu tür servisler önemsiz dosyaları paylaşmak için pratik çözüm sunuyor olsa da, söz konusu güvenlik olduğunda güvenilecek servisler değillerdir.</p>
+
+<p>Bu tür servisler eğer dosya şifreli değilse, dosya içeriğini rahatlıkla okuyabilir. Dosya içeriği ve dosyaya erişim sağlayan herkes hakkında kayıt tutup bu bilgileri üçüncü taraflar ile haberimiz olmadan paylaşabilir. Yani bu tür servisler üzerinden gerçekleştirilen transferlerde, gizliliğimiz kolayca ihlal edilebilir.</p>
+
+<p>Bu duruma alternatif olarak; transferi gerçekleştiren sunucunun dahi içeriği okumasını engellemek için dosyaları henüz sunucuya göndermeden şifreleyerek, uçtan uça şifreleme ile aktarımı yapan servisler de vardır. Ancak bu servisler de şirket yapısı üzerinden yürütüldüğü için hizmette meydana gelebilecek güvenlik sorunları ile ya da haberimiz olmadan yürütülen art niyetli çalışmalar ile güvenliğimiz riske edilebilir. Yani özetle bu tür hizmetleri sunan servislere de sonsuz bir güven duymamız gerekir. Ancak bu güveni sağlayacak bir garanti yoktur. </p>
+
+<p>Bunun yerine Tail işletim sistemi içerisinde de varsayılan olarak bulunan, çok daha iyi anonimlik ve gizlilik sağlayabilen "<strong>OnionShare</strong>" servisini kullanabiliriz.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-23-47-306d442a9eb5f04811f26ff162c99180.png" class="responsive"></figure>
+
+<p>Şu an için gizlilik ve anonimlik konusunda en ideal servisin "<strong>OnionShare</strong>" olduğundan bahsettik ancak ben yine de pratik ve kısmen güvenli olan ilk paylaşım yönteminden de bahsetmek istiyorum. </p>
+
+<p>Dosyaların henüz sunucuya yüklenmeden şifrelenmesini sağlayarak uçtan uca şifreleme koruması sunan pek çok servis var. Ben sadece "<strong>OnionShare</strong>" servisini kullanma imkanınız olmadığında ya da gizliliğin çok da önemli olmadığı durumlarda herhangi bir servisi kullanmaktan ziyade bir nebze daha güvenli olan bu tür servisleri kullanmanızı tavsiye ederim. Bu kısımda bu tür servisler içerisinde en kullanışlı ve güvenilir bulduğum "<strong>Firefox Send</strong>" hizmetini ele alarak anlatımı gerçekleştireceğim. Sizler uçtan uca şifreleme sunan diğer alternatif hizmetleri de tercih edebilirsiniz.</p>
+
+<h4 id="1">Firefox Send Kullanımı</h4>
+
+<p>Servisi test etmek için küçük boyutlu bir resim dosyasını yüklüyorum. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-24-15-c7d6d61b5f369d16ddc5e48588ed7522.png" class="responsive"></figure>
+
+<p>Yükleme işleminin ardından dosyanın ne kadar süreyle kaç kez indirilebilir olacağı ve parola içerip içermemesi gerektiğini soran seçenekler karşımıza geliyor. Buradan dilediğiniz şekilde ayarlama yapıp dosyanın indirilme koşullarını değiştirebilirsiniz. Burada belirleyeceğimiz parola dosyayı indirmek isteyenlere sorulacak olan paroladır. Yani dosya bu parolayı koysanız da koymasanız da içeriği aktarma esansında şifrelenmiş şekilde sunucu üzerinden taşınıyor olacak. Uçtan uca şifreleme dosyanın sunucu üzerinden güvenli transferi için kullanıyorken, belirleyeceğimiz parola dosyayı indirebilecek kişileri parola ile sınırlamak için var. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-24-51-6c060ca38ecdaa9e8c323aa68fbe54fd.png" class="responsive"></figure>
+
+<p>Ben denemek için parola koruması ekliyorum.</p>
+
+<p>Ayarlamamızı istediğimiz şekilde yaptıktan sonra dosyamızı "<strong>Yükle</strong>" butonuna tıklayarak yükleyelim. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-25-22-5255340058238d9d426e19d20ce5dcd8.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi yükleme işleminin ardından güvenli indirme bağlantısı kaşımıza gelmiş oldu. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-25-48-4716f57c21a7e3aec2b5adc053756397.png" class="responsive"></figure>
+
+<p>Bu bağlantı aynı zamanda dosya içeriğinin şifresinin çözülmesini de sağladığı için yalnızca bu bağlantı üzerinden dosyamız indirilebilir. Bağlantıyı test etmek için kopyalayıp yeni sekmeye yapıştıralım. Açılan sayfada belirlediğimiz parolayı girdikten sonra "<strong>kilidi aç</strong>" diyerek devam edelim ve "<strong>indir</strong>" diyerek indirme işleminin başlatılmasını sağlayalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-26-00-a98423a9a7e8e3a457e2c658521e19a3.png" class="responsive"></figure>
+
+<p>Böylelikle dosyamızı kısmen güvenli olarak sayılabilecek bu yol üzerinden paylaşmayı başardık. Bu servis dosya paylaşımı için pratik çözüm sunuyor olsa da tam olarak güvenli olmamasının pek çok nedeni var. </p>
+
+<p>Her ne kadar dosya içeriği şifreleniyor olsa da, şifreyi çözebilen bağlantı adresinin bilgisi sunucu tarafından görülebilir. Yani eğer şirket gerçekten dosya içeriğini görmek isterse dosyayı kendisi de bu bağlantı üzerinden edinebilir. </p>
+
+<p>Ayrıca dosyayı şifreleme ve çözme mekanizmalarında yer alabilecek ya da kasıtlı olarak bırakılmış zafiyetler dosya güvenliğini riske edebilir. Yani bu mekanizmaların güvenli şekilde çalıştığından nasıl emin olabiliriz ? Daha önce şifreleme bölümünde, güvenli iletişim için kullanılan şifreleme sistemlerinde bilinçli güvenlik zafiyetleri bırakılarak iletişimin takip edilebilmesinin sağlandığı durumlardan bahsetmiştik hatırlarsanız. Neticede bu hizmeti sunan organizasyon bir şirket ve bu şirketin bulunduğu ülkenin yasalarına ve ticari çıkarlarına dikkat ederek hareket etmesi gerekir. Bu sebepten pek çok açıdan bağımlı olan bir hizmet sağlayıcıya güvenmek için bir nedenimiz yok. Bunun yerine gizliliği ön planda tutan ve açık kaynaklı şekilde bağımsız hizmet sunan "<strong>OnionShare</strong>" üzerinden dosyamızı gönderebiliriz. Hemen bu işlemi nasıl yapabileceğimizi görelim. </p>
+
+<h4 id="2">OnionShare Kullanımı</h4>
+
+<p>Bu kısımda daha önce de bahsetmiş olduğumuz güvenli ortamda çalışma ilkesine dayanak, anlatımı ilk olarak Tail işletim sistemi üzerinden ele alıyor olacağız. Ancak bölümün sonunda ele alacağımız gibi Tail dışında Windows Mac ya da diğer Linux dağıtımlarından da "<strong>OnionShare</strong>" dosya paylaşım servisini kullanmak mümkün. Şimdilik en ideal yol olduğu için anlatımı Tail üzerinden ele alalım. Ancak unutmayın kurs içerisinde anlatımı yapılan her türlü bilgiyi, eğer Qubes sistem rehberini iyi bir biçimde takip ettiyseniz Qubes sisteminde de rahatlıkla uygulayabilirsiniz. Qubes sistemi üzerinde nasıl program kurulumu yapabileceğinizi zaten biliyorsunuz. Onionshare aracı da diğer program kurulumlarından farksızdır. Ayrıca bölümün sonunda ihtiyacınız olduğunda kullanabilmeniz için alternatif sistemler için de kurulum ve kullanım hakkında bilgi ediniyor olacağız.</p>
+
+<p>OnionShare servisinin, alternatiflerine oranla neden çok daha iyi gizlilik ve güvenlik sunduğunu anlamak için kısaca çalışma yapısından da bahsedelim istiyorum.</p>
+
+<p>Daha önce darknet üzerinde kendi onion uzantılı web sitemizi nasıl yayınlayabileceğimize değinmiştik. Hatta hatırlarsanız sitemizin dosyalarını kendi bilgisayarımızda barındırarak sitemizi yayınlamıştık. Yani hosting hizmeti için herhangi bir üçüncü taraf şirkete ihtiyaç duymadan kendi bilgisayarımızı sunucu olarak kullanmıştık.</p>
+
+<p>İşte "<strong>OnionShare</strong>" dosya paylaşım hizmeti de aynı şekilde kendi bilgisayarımızı dosyaların barındırıldığı sunucu olarak kullanıp, rastgele oluşturulan bir onion adresi üzerinden dosyaları harici bir sunucuya ihtiyaç duymadan paylaşabilmemizi sağlıyor. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-36-15-aa67afd92c0f250a9e3fbdca00d991ea.png" class="responsive"></figure>
+
+<p>Bu sayede dosyamız güvenliğinden şüphe duyabileceğimiz hiç bir sunucuya uğramıyor. Yani dosyanın indirilme durumunu takip edip gerektiğinde tamamen silebilme imkanına sahip oluyoruz. Ayrıca dosya için oluşturulan adres darknet üzerinde yer aldığı için anonimliğimiz de Tor ağı güvencesi altında oluyor. Kısacası hem anonimlik hem de gizlilik kapsamında tüm kontrolün bizde olduğu, istediğimiz zaman yok edebileceğimiz oldukça mantıklı bir dosya paylaşım sistemidir. Üstelik hizmetin açık kaynaklı olması, hiç kimsenin çıkarları doğrultusunda hizmete zararlı kod veya arka kapı ekleyemeyeceği anlamına geliyor. Bu servis hiç bir devlet ya da şirket ile bağlı değil, bu servis hepimizin denetimi ve sahipliği altında hizmet sunuyor. Hemen basit bir dosya gönderimi denemesi ile servisin nasıl çalıştığını daha net görmüş olalım.</p>
+
+<p>Paylaşmak istediğimiz dosyaya sağ tıklayarak "<strong>Share via OnionShare</strong>/<strong>OnionShare üzerinden paylaş</strong>" seçeneğini seçebilir ya da doğrudan "<strong>OnionShare</strong>" uygulamasını açarak dosyamızı uygulama üzerinden bulup seçebiliriz. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-37-01-f806ce7d98d1d71c7b98ddd3ea970217.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-37-01-d3e9f027ab3e56c5fc71f1029ebc19c7.png" class="responsive"></figure>
+
+<p>İlk seçenek daha pratik olduğu için sıklıkla tercih ediliyor ancak dosyayı ne şekilde seçtiğinizin bir önemi yok. Ben örnek olması açısından yalnızca tek bir dosyayı paylaşmayı ele alacağım ancak ihtiyacınız olursa "<strong>Ekle</strong>" butonuna basıp dosyaları seçerek aynı anda çoklu dosya paylaşımında da bulunabilirsiniz. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-37-21-70dc856c3207bfefdd03591a5349e15d.png" class="responsive"></figure>
+
+<p>Dosya paylaşımındaki sunucu biz olduğumuz için paylaştığımız dosyanın boyutu ve adet sayısında bir sınır bulunmuyor. Yani bilgisayarımızın depolama alanı kadar potansiyel paylaşım imkanımız var. Ancak aktarımın Tor ağı üzerinden yapılacağının farkında olarak hem dosya yükleme hem de yüklü dosyayı indirmedeki hız problemini göz ardı etmemenizde fayda var. Yani çok büyük boyuta sahip ve gizliliği çok önemli olmayan dosyaları paylaşmak için "<strong>OnionShare</strong>" servisi hız açısından çok mantıklı bir alternatif sayılmaz. Bunun yerine ilk ele aldığımız "<strong>Firefox Send</strong>" gibi clearnet üzerinde şifreli aktarım yapan kısmen güvenli sayılabilecek hizmetlerden yararlanabilirsiniz. Yüklemek istediğimiz dosyayı seçtikten sonra "<strong>Paylaşımı Başlat</strong>" diyerek paylaşmaya başlayabiliriz.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-37-35-0e4c61bfc6522a44c3b605e18bf053b3.png" class="responsive"></figure>
+
+<p>Dosyamı yükledikten kısa bir süre sonra Tor üzerinde yer alan bir bağlantı adresi oluşturulmuş oldu. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-37-50-a466eb9f72a0843ba7d7a4fc7b262643.png" class="responsive"></figure>
+
+<p>Bu bağlantı adresini karşı tarafa güvenli bir iletişim kanalı aracılığı ile ulaştırıyorum. Bu iletişim kanalı daha önce öğrendiğimiz şekilde e-posta ya da güvenli anlık mesajlaşma servislerinden biri olabilir.</p>
+
+<p>Karşı taraf bu bağlantı adresini açtığında ve dosyayı indirmeye başlandığında benim indirme durumundan haberim oluyor. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-38-04-18456c9f6fd8c265e5e82203e9015d9f.png" class="responsive"></figure>
+
+<p>Eğer istersem bu aşamada indirme işlemini iptal edebilirim. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-38-40-18cf1a41430c50bb8e6807a07fea2f1c.png" class="responsive"></figure>
+
+<p>Ayrıca ben iptal etmesem de karşı taraf dosyayı indirir indirmez, indirme bağlantısı kendiliğinden geçersiz kalıyor. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-38-52-747125e07dfaeaacaa936b803282db20.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-39-16-a9ba6000b93be3ed237c220f36a8fc57.png" class="responsive"></figure>
+
+<p>İlk indirmenin ardından indirme bağlantısının geçersiz kalması varsayılan olarak kullanılan bir özellik. Eğer bu özelliği kapatmak ve diğer ayarlarda değişiklik yapmak istersek ayarlar simgesine tıklayalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-39-32-37ff4d04f28ef23259c8e56716ae77d0.png" class="responsive"></figure>
+
+<p>Burada gördüğünüz gibi ilk indirmenin ardından bağlantının geçersiz kalma özelliği işaretli bulunuyor. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-39-43-dad155b232c7d32e16aa1eb595fc47ac.png" class="responsive"></figure>
+
+<p>Eğer dosyayı birden fazla kişi ile paylaşmak ya da birden fazla kez indirilebilir kılmak istiyorsak bu işareti kaldırdığımızda bir kez olan indirme sınırı kalkmış olacak. Ek olarak indirme bağlantısının belirli bir süre için geçerli olmasını istersek zaman sınırlaması özelliğini de aktifleştirebiliriz. Ayrıca paylaşım ile ilgili bilgileri masaüstü bildirimi olarak almak istemiyorsak buradaki bildirim ayarını kaldırabiliriz. Ayarlarda yapmış olduğumuz değişikliklerin geçerli olabilmesi için "<strong>Save</strong>" diyerek kaydedelim. Gördüğünüz gibi zamanlama özelliğini aktifleştirdiğim için burada zaman sınırı belirleyebileceğim parametre alanı aktif olmuş oldu. Buradan zaman sınırlaması belirleyip dosyamızı tekrar paylaşalım.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-40-05-639b18a22119ba7e4f37567038a381f9.png" class="responsive"></figure>
+
+<p>Böylelikle belirlediğimiz sürenin sonunda artık indirme bağlantısı geçersiz olacak.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-40-29-966a61794377334c80b6b1675cca5630.png" class="responsive"></figure>
+
+<p>Ayrıca belirlediğimiz zaman dolmadan da buradan dilediğimiz zaman indirme bağlantısını geçersiz kılabiliriz. Bahsettiğim kullanım özellikleri şu an benim kullanmakta olduğum sürümde bulunan özelliklerdir. Yani bu özellikler zamanla gelişip değişiklik gösterebilir. Yine de "<strong>OnionShare</strong>" servisinin güvenli dosya paylaşmak için oldukça iyi bir alternatif olduğunu öğrenmiş oldunuz. Sizin kullanmakta olduğunu sürümde bu özellikler farklı ise biraz kurcalama ile yeni ve değişmiş özelliklerin kullanımlarını kolaylıkla kavrayabilirsiniz. </p>
+
+<h4 id="3">Alternatif Sistemler İçin OnionShare | Windows - Mac - Linux</h4>
+
+<p>İndirme ve kurulum işlemleri tüm sistemlerde benzer şekilde olduğundan ben bu kez anlatımı Mac sistemi üzerinden gösteriyor olacağım. Ancak sizler hangi işletim sistemine kurmak istiyorsanız, zorlanmadan bu rehberi takip ederek kurulum işlemini gerçekleştirebilirsiniz.</p>
+
+<p>Öncelikle kurulum dosyasını indirmek üzere "OnionShare" servisinin web adresini ziyaret edelim. Açılan sayfada gördüğünüz gibi pek çok alternatif sistem için indirme bağlantıları bulunuyor. Biz buradan, kullandığımız sisteme uygun olan bağlantıya tıklayalım. Ben Mac üzerinden anlatımı gösterdiğim için ben MacOS bağlantısına tıklıyorum.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-40-48-00f773c143381bb0274553bb62cace01.png" class="responsive"></figure>
+
+<p>İndirme işlemi tamamlandıktan sonra indirilen kurulum dosyasının güvenliğini teyit etmek üzere imza dosyasını da indirelim. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-40-56-491ebf18c66d03d137c16363aa57cc53.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-41-13-fa5054fe68343ee9dbffc05ee29c0b4e.png" class="responsive"></figure>
+
+<p>Doğrulama işlemi için doğrulama rehberinde de belirtildiği ve daha önce de uyguladığımız şekilde gereken komutları terminal açarak girelim.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-41-21-ab8b7743619e586287ed408a6399afd5.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-41-32-29940849e93424ab619a8d988f23ceb9.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-41-41-129b4a6da53e871f44f1790ebdf095ef.png" class="responsive"></figure>
+
+<p>Doğrulama işlemimiz başarılı ise kurulum için dosyamızı çift tıklayarak açalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-41-53-2ee71345a8fe0beddf4f24eca7189248.png" class="responsive"></figure>
+
+<p>Sırasıyla karşımıza gelen onayları verip kurulumu tamamlayalım. Böylelikle aracımız kurulmuş oldu. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-42-08-61f08c4f82bb899b16dd599f8d840a74.png" class="responsive"></figure>
+
+<p>Test etmek üzere uygulamamızı çalıştıralım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-42-29-66502f2b32638db154da9da62899ea98.png" class="responsive"></figure>
+
+<p>Aracımızın kullanımı zaten her platform için aynı. Tail sisteminde daha güvenli olması açısında daha yalın halde geliyor sadece. Öncelikle kullanımı daha rahat olması açısından ayarları açıp dili "Türkçe" olarak değiştirebilirsiniz. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-43-04-5a959d0b9333c198d128710036f6f4ba.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-42-40-73ed7c3aa503b388b2275c13fe4a41aa.png" class="responsive"></figure>
+
+<p>Ayarın geçerli olması için uygulamayı kapatıp tekrar açalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-43-34-c09b8505decbea9f08951a18b4e06d6e.png" class="responsive"></figure>
+
+<p>Uygulamamız açıldıktan sonra sırasıyla kullanım detaylarından bahsetmeye başlayalım.</p>
+
+<h4 id="4">Paylaşılan Dosyalar</h4>
+
+<p>Bu kısımdan tıpkı daha önce de yaptığımız şekilde güvenli dosya paylaşımında bulunabiliyoruz. </p>
+
+<h4 id="5">Alınan Dosyalar</h4>
+
+<p>Daha önce Tail üzerinde görmediğimiz bu özellik ise diğer insanların bize güvenli şekilde&nbsp; dosya gönderebilmesini sağlıyor. Örneğin bize dosya göndermek isteyen karşı tarafın "OnionShare" uygulaması yoksa, bizim paylaştığımız onion bağlantısını kullanarak Tor tarayıcısı üzerinden bize dosya gönderebiliyor.&nbsp; Hemen özelliğimizi test etmek üzere "<strong>Alma Kipini</strong>" etkinleştirelim. Alma kipi etkinleştirildiğinde bize bir bağlantı adresi veriyor. Bu bağlantı adresini bize güvenli şekilde dosya göndermek isteyen kişiler ile paylaşabiliriz. Bağlantı adresi gördüğünüz gibi onion servisi olduğu için yalnızca Tor ağı üzerinden ulaşılabilir. Bağlantıyı test etmek üzere Tor tarayıcımızı açarak yapıştıralım. Biz bağlantıyı yapıştırır yapıştırmaz bağlantının açıldığını "OnionShare" uygulaması, dosyaları alacak kişiye hemen bildiriyor. Açılan sayfaya, karşı tarafa göndermek istediğimiz dosyaları yükleyip "<strong>Send Files</strong>" butonuna basmamız yeterli. Ben denemek için birkaç metin belgesi yüklüyorum. Dosyalar yüklendikten sonra karşı taraf, dosya yüklendiğine dair haberdar ediliyor. Uygulama üzerinden gönderilmiş olan dosyalara ulaşmak için alınanlar simgesine tıklamamız yeterli oluyor. Açılan kısımdan bize gönderilmiş olan dosyalara göz atıp, dosya konumlarına gidebiliyoruz. Ayrıca eğer istersek alınacak olan dosyaların kaydolacağı konumunu ayarlardan istediğimiz şekilde değiştirebiliyoruz. Değiştirme işlemini ayarları açıklarken tekrar ele alıyor olacağız.&nbsp; Şimdilik, bize güvenli yoldan dosya göndermek isteyenler için ne yapmamız gerektiğini öğrenmiş olduk.</p>
+
+<h4 id="6">Web Sitesini Yayınla</h4>
+
+<p>Bu kısım ise kendi web sitemizi kolayca onion uzantısı ile yayınlayabilmemizi sağlıyor. Bu alana web sitemizin dosyalarını yükleyip "<strong>Paylaşımı başlat</strong>" diyerek pratik şekilde yayınlayabiliriz. Özelliği test etmek için basit bir index sayfasını yükleyerek yayınlamayı deneyelim. </p>
+
+<p>Yayınlama işleminin ardından web sitesi için bağlantı adresi üretilmiş oldu. Bu adresi Tor tarayıcısı üzerinden ziyaret ederek web sitemizin yayınlanıp yayınlanmadığını da test edelim.</p>
+
+<p>Ziyaretimiz sonucunda web sitemizin onion adresi üzerinden sorunsuzca yayın yapmakta olduğunu teyit etmiş olduk. Biz paylaşımı durdurana kadar da web sitemiz yayın yapmaya devam edecek. </p>
+
+<h4 id="7">Ayarlar</h4>
+
+<p>Çeşitli kullanım özelliklerinden bahsetmiş olduk. Şimdi de bu özelliklerin ayarlarından bahsetmek üzere dişli simgesine tıklayarak ayarlarımızı açalım.</p>
+
+<h4 id="8">Herkese açık kip</h4>
+
+<p>Bu ayar; dosyanın başına, dosya yolunu saldırganların tahmin etmesini engellemek için kullanılan rastgele kelimeler ekleme özelliğini kaldırır. Normalde dosya adresini otomatik taramalardan korumak için adresin başına rastgele olacak şekilde ifadeler getirilir. Eğer saldırganlar alan adının başındaki bu rastgele ifadeleri tahmin etmek için birden fazla deneme yaparsa, dosya paylaşımı güvenlik nedeniyle otomatik olarak kapatılır. Fakat bizim amacımız dosyanın bağlantı adresine sahip olan herkes tarafından ulaşılabilir olması ise bu özelliği aktif ederek rastgele ifade korumasını kaldırabiliriz.</p>
+
+<p>Denemek için hem bu özellik açıkken hem de açık değilken dosya paylaşıp bağlantı adresleri arasındaki farkı görelim. Bu özellik aynı zamanda bizim dosya alırken ya da websitemizi yayınlarken de geçerli oluyor. Yani dosya göndermek isteyenlerin ya da web sitemizi ziyaret etmek isteyenlerin bu takma adları da bilmesini istersek bu özellik kapalı kalmalı. Şayet herkese açık olsun istersek de "<strong>Herkese açık kip</strong>" özelliği aktif olmalı.</p>
+
+<h4 id="9">Otomatik başlatma sayacı</h4>
+
+<p>Bu özellik ise paylaşımı ileri tarihli olarak planlayıp zamanı geldiğinde otomatik olarak paylaşılması anlamına geliyor.</p>
+
+<p>Hemen özelliğimizi aktif edip test edelim.&nbsp; Gördüğünüz gibi özelliği aktifleştirdiğimizde ileri tarihli planlama yapabileceğimiz zaman parametresi de açılmış oldu. Buradan bir zaman ayarladığımızda paylaşım zamanı geri sayım şeklinde gözüküyor. Eğer biz iptal etmezsek ya da program kapanmazsa bu dosya vakti geldiğinde otomatik olarak paylaşılmış olacak. Aynı özellik bizimle paylaşılacak dosyalar ve yayınlayacağımız web sitesi için de geçerli.</p>
+
+<p>Bu özellik genellikle filmlerde sık rastlayabileceğiniz&nbsp; "benim başıma bir şey gelirse şu şu dosyalar otomatik olarak paylaşılacak, paylaşılmayı ancak ben durdurabilirim" gibi senaryolara hizmet ediyor.</p>
+
+<h4 id="10">Otomatik durdurma sayacı</h4>
+
+<p>Bu özellik daha önce de ele aldığımız şekilde paylaşım için zaman sınırlaması getirmemizi sağlıyor. Artık tek tek söylememe gerek yok, buradaki tüm ayarlar web sitesi yayınlamak dosya gönderip almak gibi işlemler için ortak. Yani bu ayarı aktifleştirirsem tüm işlemler için zaman sınırlaması tanımlayabiliyor olacağım. </p>
+
+<h4 id="11">Kalıcı adres kullanılsın</h4>
+
+<p>Bu özellik ise her defasında otomatik olarak oluşturulan rastgele onion adreslerinin sabitlenmesini yani tek bir adres üzerinden yayın yapılmasını sağlıyor. Bu özellik seçildiğinde dosya paylaşımı, alımı ve web sitesi yayını her zaman aynı alan adı üzerinden sağlanıyor olacak. Üstelik programı kapatıp açsanız da aynı alan adı geçerli olacak. Bu özellik sürekli yayın yapmak amacıyla kullanılsa da gizlilik açısından pek önerilmiyor.</p>
+
+<h4 id="12">Eski adresler kullanılsın</h4>
+
+<p>Bu özellik eğitim içerisinde Tor gizli servislerinden bahsederken de değindiğimiz 16 karakterli alan adlarının 56 karaktere çıkarılarak daha güvenli hale getirilmesi ile ilgilidir. OnionShare varsayılan olarak güvenli kabul edildiği için 56 karakterlik V3 adresleri üretir. Yine de eski alan adı üretmek isterseniz bu özelliği aktifleştirerek daha kısa adresler elde edebilirsiniz. Bu özellik açıkken ve kapalıyken paylaşım yaparak aradaki farkı teyit edelim. Özellik açık ve kapalı durumdayken üretilen adresler kıyaslandığında aradaki uzunluk farkını rahatlıkla teyit edebiliyoruz.</p>
+
+<p>Ayrıca tekrar ayarlara dönüp baktığımızda eski adres özelliğini aktif ettiğimizde "<strong>İstemci kimlik doğrulaması kullansın</strong>" özelliği de ek olarak seçilebilir oluyor. Bu kimlik doğrulaması özelliği şu an için yalnızca eski tür adreslerde mümkün, ileride yeni versiyona adaptasyonu da sağlanabilir. Ne işe yaradığına gelecek olursak; paylaşım yapmakta olduğumuz alan adımızı bir şekilde elde eden saldırganların, bizde bulunan gizli doğrulama anahtarına sahip olmadan bağlantıyı kuramayacakları anlamına gelir. Bu durumu test etmek için her iki özelliği de aktifleştirelim. Bağlantı adresimiz biraz zaman geçtikten sonra doğrulama anahtarı ile birlikte oluşturulmuş oldu. Hem bağlantı hem de doğrulama anahtarını karşı tarafa güvenli bir iletişim aracı ile ulaştırmamız gerekiyor. Alan adına ve doğrulama anahtarına sahip olan kişi Tor tarayıcısının dosyasına gelerek "<strong>torcc</strong>" dosyasının sonuna bu anahtarı eklemesi gerekiyor. Karşı taraf bu anahtarı eklemezse alan adını biliyor olsa dahi bağlantıyı sağlayamaz. "<strong>torcc</strong>" dosyasını daha önce web sitesi yayınlama aşamasında da düzenlemiştik hatırlarsanız. Dosyayı düzenlemek için tek yapmanız gereken, Tor tarayıcısını kurmuş olduğunuz konuma giderek Tor Browser &gt;&gt; Browser &gt;&gt; TorBrowser &gt;&gt; Data &gt;&gt; Tor dizini içerisindeki dosyaya sağ tıklayarak metin editörü ile açmanızdır.</p>
+
+<p>Bu anahtarı eklemiş olan ve alan adını bilen herkes, güvenli şekilde paylaşım yapılmış sunucu ile iletişim kurabiliyor olacak. Ben yine de bu yöntemi çok kullanışlı bulmuyorum. Bunun yerine çok daha güvenli koruma sağlayacak yeni nesil alan adlarını ve herkese açık paylaşımı kapatarak kullanmak çok daha makul bir çözüm. Yine de bu özelliğin de ne işe yaradığını öğrenmiş oldunuz.</p>
+
+<h4 id="13">Paylaşım ayarları</h4>
+
+<p>Dosyalar gönderildikten sonra paylaşım durdurulsun seçeneğini daha önce de ele almıştık. Bu özelliği kapattığınızda dosyalar birden fazla kez indirilebilir oluyor. Eğer sadece bir kez indirme imkanları olsun isterseniz bu ayarı aktifleştirebilirsiniz.</p>
+
+<h4 id="14">Alma ayarları</h4>
+
+<p>Bu kısımdan dosya almayı açtığımızda gelen dosyaların nereye kaydolması gerektiğini seçebiliyoruz.</p>
+
+<h4 id="15">İçerik Güvenliği Politikası Üstbilgisi Kaldır</h4>
+
+<p>Bu seçenek kötü amaçlı kod yürütmesini engelleyecek olan güvenlik standartının devre dışı bırakılması demek oluyor. Bu güvenlik standardı kimi zaman yayınladığımız web sitesinin doğru şekilde çalışmasını engellese de, web sitesini kullanacak olan ziyaretçilerin güvenliği için bulunması gereken bir özelliktir. Yani bu güvenliği kaldırmanızı da önermem.</p>
+
+<p>Tüm bu ayarlar dışında daha önce Tor tarayıcısı üzerinden de ele aldığımız şekilde ihtiyacımız olduğunda köprü adreslerini OnionShare aracı için tanımlayabiliyoruz. Ayrıca bağlantımızı test etmek üzere "<strong>Tor Bağlantısını Sına</strong>" butonuna basmamız da yeterli. Bu sayede hizmet durumu hakkında kısa sürede bilgi sahibi olabiliyoruz.</p>
+
+<p>Şu ana kadar MacOS üzerinden göstermiş olduğumu tüm işlemeler diğer sistemler için de aynı şekilde uygulanabilir durumdadır. Yani anlatımların Mac üzerinden olmasının bir önemi yok, sadece kullandığınız işletim sistemine göre hareket etmeniz yeterli. Ayrıca her zaman için söylediğim gibi bu özellikler zaman içerisinde gelişip değişiklik gösterebilir. Mühim olan sizin konunun temeline hakim olup gelişmelere adaptasyon sağlayabilmenizdir.&nbsp; Üstelik Türkçe dil desteği de olduğundan, yeniliklere adapte olmamız bu araç için çok kolay olacaktır.</p>
+
+<p>Şimdiye kadar güvenli dosya paylaşımı için servis kullanımını detaylıca ele aldık. Şimdi de en az servis kadar mühim olan diğer bütüncül güvenlik konularından bahsedelim istiyorum. Anlatımlara meta verilerden bahsederek devam edelim.</p>
+
+<h4 id="16">Meta Verileri Silmek</h4>
+
+<p>Dosya paylaşmadan önce, dosya içerisinde kayıtlı bulunan meta verileri gizliliğimiz için silmemiz gerekiyor. Meta veri dediğimiz bilgiler; dosyanın ne zaman, ne şekilde ve nerede oluşturulduğu gibi kritik bilgileri içeren bir nevi dosyanın kimliğini temsil eden bilgilerdir. Örneğin anlatım sırasında benim göndermiş olduğum resim dosyasında bu meta veriler yer alıyordu. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-57-05-0e60a743bc3bbf629bb786511e7a5925.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_17-57-17-0ba36a38447adbcd5f520495f23a7afb.png" class="responsive"></figure>
+
+<p>Ben bu verileri silmediğim için dosyayı alan kişiler, bu veriler üzerinden gerçek kimliğim hakkında bilgi edinebilir. Bu durumu teyit etmek için dosyamızın özelliklerine bakalım. Gördüğünüz gibi pek çok kritik bilgi yer alıyor yani dosya içerisindeki meta verileri silmeden paylaşmak açıkça bir güvenlik ihlalidir. Hatta 2012 yılında uzun süre polislerin kişisel bilgilerini yayınlamaktan aranan w0rmer isimli bir hacker, paylaştığı bir fotoğrafta yer alan meta veriyi silmeyi unuttuğu için gerçek konum bilgisini ele vererek <a href="https://www.esecurityplanet.com/hackers/fbi-used-metadata-to-catch-cabincr3w-hacker.html" target="_blank" rel="noopener noreferrer">yakalanmıştı</a>. </p>
+
+<p>Yani anlayacağınız dosya içerisinde yer alan meta verileri silmek anonimlik için son derece önemli bir unsur. Üstelik bu işlemi gerçekleştirmek de son derece kolay. Meta veriyi silmek için dosyamıza sağ tıklayarak&nbsp; "<strong>meta verileri sil</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-57-42-99239dc92dace08b9b4ade123b17b80f.png" class="responsive"></figure>
+
+<p>Böylelikle dosyanın benzersiz olmasını sağlayan tüm kritik bilgiler silinmiş oluyor. Dosya özelliklerine açıp baktığımızda da bu durumu teyit edebiliyoruz. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-58-32-9ccfefcb16df16a05e6f085a4d3cdfa9.png" class="responsive"></figure>
+
+<p>Sizler de herhangi bir dosya paylaşırken <strong>hangi dosya türü olursa olsun</strong> mutlaka bu dosyaların meta verilerini silip paylaşın. Aksi takdirde önemsiz gibi görülen ve unutulmaya çok yatkın olan bu detay tüm anonimlik uğraşlarınızı boşa çıkarabilir. </p>
+
+<h4 id="17">Dosyaları Geri Döndürülemez Şekilde Silmek</h4>
+
+<p>Eğer herhangi bir dosyayı sildiğinizde o dosyanın tamamen yok olduğunu düşünüyorsanız kesinlikle yanılıyorsunuz. İşletim sistemleri dosya silme emri aldığında o dosyayı gerçekten silmek yerine, dosyaya ulaşmanızı sağlayan yolun bilgisini silerler. Yani aslında dosya bulunduğu konumda duruyor olmasına rağmen, sadece dosyaya giden bağlantı siliniyor. Bu yöntemin kullanılma nedeni dosyayı gerçekten silmeye oranla çok daha hızlı sonuç vermesidir. Peki ama gerçek silme işleminden kasıt nedir?</p>
+
+<p>Gerçek silme işlemi dediğimiz kavram; disk üzerinde yer kaplayan her türlü verinin ancak üzerine yeni veriler yazılması ile ortandan kaldırılabilecek olmasıdır. Üstüne yeni veri yazılarak tahrip edilmeyen her türlü verinin tekrar kurtarılma ihtimali vardır. Adli bilişim alanında bu iş için kullanılan pek çok yazılımsal ve harici olarak fiziksel kurtarma yöntemi vardır. </p>
+
+<p>İşin özü eğer bir dosyadan geri döndürülemez şekilde kurtulmak istiyorsak o dosyayı silerken üzerine birden fazla kez rastgele veri yazılmasını sağlamamız gerekiyor. Pek çok işletim sisteminde bu üzerine yazma işlemi için harici yazılımlar kullanmak gerekir ancak, bu işlemi Tail sistemi üzerinde harici bir yazılım kullanmadan kolaylıkla yapabiliyoruz. Kalıcı olarak silmek istediğimiz dosyamıza sağ tıklayarak "<strong>wipe</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-58-46-146e415d7ae8bc60e9ee5ef5519e6198.png" class="responsive"></figure>
+
+<p>Açılan pencereden ek ayaları görmek için "<strong>Options</strong>" kısmına tıklayalım.&nbsp; </p>
+
+<figure><img src="../../img/10/2020-06-15_17-58-55-1c7b50bca6e0c9fe693d834c9e53ae93.png" class="responsive"></figure>
+
+<p>Bu kısımdan üzerinden kaç kez veri geçeceğini seçebiliriz. İdeal olan burada da belirtildiği şekilde 2 kezdir. Eğer aceleniz varsa, güvenli olmasa da hızlı modu seçebilirsiniz. Ayrıca son geçişin rastgele veriler yerine sıfırlar ile yapılmasını da sağlayabilirsiniz.&nbsp; Dosyanın üzerinden kaç kez ne şekilde veri geçirilmesini istiyorsak ona göre seçim yapıp "<strong>Wipe</strong>" diyerek işlemi başlatalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-59-07-bb9eef90b2b8350bcea574a63de8cd04.png" class="responsive"></figure>
+
+<p>Böylelikle dosyamız, üzerine rastgele veriler yazılarak geri döndürülemez biçimde silinmiş oluyor.</p>
+
+<figure><img src="../../img/10/2020-06-15_17-59-24-1146e95040be9e96e0bdb2db5c059cbe.png" class="responsive"></figure>
+
+<p>Yani dosyaya ulaşılsa bile dosya içeriği yalnızca rastgele veriler içeren işe yaramaz veri kümelerinden ibaret olacaktır. İşlemin tamamlandığını, açılan bildirim penceresi ile görebiliyoruz. </p>
+
+<h4 id="18">Disk Bölümünü Kalıcı Olarak Silmek</h4>
+
+<p>Eğer yalnızca bir dosyayı silmek yerine disk alanında yer alan her veriyi güvenli bir biçimde silmek istersek, silmek istediğimiz disk bölümündeyken sağ tıklayıp "<strong>Wipe available disk space</strong>" seçeneğine tıklayalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_17-59-36-ace2aa47e33b46f6237c4f76f8873496.png" class="responsive"></figure>
+
+<p>Açılan pencerede silinecek disk alanı belirtiliyor. Ayrıca daha önce yaptığımız şekilde üzerine yazma sayısını ve biçimini değiştirebiliyoruz. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-00-10-b504774bfc773861fcabd74ef3f221ba.png" class="responsive"></figure>
+
+<p>Ancak sildiğimiz alan sistemin bir parçası olduğundan kimi dosyaları kalıcı olarak silme işlemi için bizden yönetici izini isteyecektir.&nbsp; </p>
+
+<figure><img src="../../img/10/2020-06-15_18-00-18-6f6b5dbbdd7ffbc08bb2d019d578048e.png" class="responsive"></figure>
+
+<p>Eğer yönetici hesabı ile oturum açmadıysanız sistemi tekrar yönetici hesabı ile açıp silme işlemini gerçekleştirebilirsiniz. Şayet yönetici izni olmadan devam ederseniz işlemin kısmen başarılı olduğunu bildiren uyarı penceresi açılacaktır. Kısmen başarılı denilmesine karşın aslında silme işlemi başarısız olmuştur. Yani disk bölümlerini silerken yönetici izninizin olması şarttır.</p>
+
+<h4 id="19">Diski Güvenli Biçimde Silmek Ve Şifrelemek</h4>
+
+<p>Şayet sadece bir dosyayı ya da bir bölümü silmek yerine diskin tamamını güvenli bir biçimde silmek istersek bu işlem de mümkündür.</p>
+
+<p>Diski silmek için öncelikle "<strong>Diskler</strong>" uygulamasını açalım. Açılan pencerenin sol tarafında sisteme takılı bulunan diskler yer alıyor. Buradan silmek istediğimiz diski seçtiğinizden marka ve boyut bilgisini kullanarak emin olalım. Daha sonra tüm disk alanını silmek üzere üç çizginin yer aldığı butona basarak "<strong>Diski Biçimlendir..</strong>" seçeneğine basalım. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-00-41-90edad74d57d5ecba413a13c592b0ace.png" class="responsive"></figure>
+
+<p>Açılan pencereden silme ve bölümlendirme biçimini seçelim. Aceleniz yoksa güvenli olması açısından "<strong>Var olan verileri sıfırlar ile değiştir</strong>" seçeneğini seçin. Ayarlar istediğimiz şekildeyse "<strong>Biçimlendir</strong>" butonuna basarak devam edelim.</p>
+
+<figure><img src="../../img/10/2020-06-15_18-00-56-63bdf60fd745fe2076b140a46def3955.png" class="responsive"></figure>
+
+<p>Sistem son kez emin olmamız için bizi uyarıyor. Eğer eminsek "<strong>Biçimlendir</strong>" butonuna basarak biçimlendirme işlemini başlatabiliriz.</p>
+
+<figure><img src="../../img/10/2020-06-15_18-01-04-4a8f21619a7d405f115bef98125daa93.png" class="responsive"></figure>
+
+<p><br></p>
+
+<p>Disk alanını biçimlendirmek dışında, diskimizi şifrelememiz de mümkündür. Hatta hatırlarsanız Tail işletim siteminde kalıcılık modunu ele alırken, şifreli bir kalıcılık bölümü oluşturup dosyalarımızı burada muhafaza etmiştik. Diski şifreleme durumu yalnızca kalıcılık modu için geçerli değil elbette. İhtiyacımız olduğunda tıpkı kalıcılık modunda olduğu gibi disk alanlarından birini şifreleyerek koruma altına da alabiliriz. </p>
+
+<h4 id="20">Disk Alanını Şifrelemek</h4>
+
+<p>Şifreli bir alan oluşturmak için boş bir disk alanını kullanıyoruz. Ben örnek olması açısından silmiş olduğum alanı seçip "<strong>artı</strong>" tuşuna basıyorum. Açılan pencerede, şifreli olarak oluşturmak istediğim disk alanını belirterek "<strong>Sonraki</strong>" butonuna basıp devam ediyorum. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-02-06-0d3a9451814f547fa2ba5d8dbaa6f2e1.png" class="responsive"></figure>
+
+<p>Bölüm adını giriyorum ve tür olarak Linux sistemini seçip, "<strong>Parola korumalı bölüm</strong>" kutucuğunu işaretliyorum. Eğer diski tekrar güvenli şekilde silmek istersem buradan "<strong>Sil</strong>" özelliğini de aktifleştirebilirim. Benim diskim daha önce güvenli şekilde silindiğinden ben bu özelliğe şu an için ihtiyaç duymuyorum. Gerekli ayarlamaları yaptıktan sonra "<strong>Sonraki</strong>" diyerek devam ediyorum. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-02-20-148a8fa10fcd13cd7b9b1a36dde8a499.png" class="responsive"></figure>
+
+<p>Karşıma diski koruyacak olan şifreyi belirlemem için panel açılıyor. Burada güçlü ancak unutmayacağım bir parola girişi yapıyorum ve "<strong>Oluştur</strong>" diyerek işlemin başlamasını sağlıyorum. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-02-30-18549e327987c69d809f9d86f694dcf3.png" class="responsive"></figure>
+
+<p>İşlemleri disk aracı üzerinden takip edebiliyoruz. Diskin boyutuna da bağlı olarak bu işlem biraz vakit alabiliyor. İşlem bittiğinde, daha sonra test aşamasında kullanmak üzere küçük bir dosyayı diskin içerisine atıyorum. Şimdi diskin bize şifre sorup sormayacağını test etmek için diski sistemden ayırıp tekrar bağlayalım. Diski sistemden ayırma nedenimiz parola sorma işleminin yalnızca yeni bağlanan diskler için geçerli olmasıdır. Yani bir diskin parola korumasını bir kez açtıktan sonra her defasında açmamız gerekmiyor.&nbsp; Diskimizi sisteme tekrar bağladıktan sonra, dosya yöneticisi yardımı ile diskimizi açmayı deneyelim. Diski açmak istediğimizde bize parola soruyor, eğer parolayı doğru yazarsak diskimiz erişime açılıyor. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-02-48-ce35a78a3f8cbcb3c724c36faaca90fa.png" class="responsive"></figure>
+
+<p>Parola harici diskin içeriğinin okunması mümkün değildir. Zaten bu durum bizim diski şifreleme amacımıza hizmet ediyor. Böylelikle şifreleme işleminin de sorunsuzca çalıştığını teyit etmiş olduk. Son olarak disklere koyduğunuz şifrelere çok dikkat etmeniz konusunda sizleri uyarmak istiyorum. <strong>Eğer diskin şifresini unutursanız verilerinizi kurtarmanız mümkün olmayacaktır !</strong> Pişmanlık yaşamamak için kullandığınız şifrelere dikkat edin.</p>
+
+<h4 id="21">Disk Parolasını Değiştirmek</h4>
+
+<p>Eğer disk şifresini biliyorsanız ve diskin şifresini değiştirmek istiyorsanız bu işlem de mümkündür. Şifreyi değiştirmek üzere diskinizi seçip dişli simgesine tıkladıktan sonra "<strong>Parola Değiştir</strong>" kısmına tıklayın. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-03-06-0bdae7640b94a73d9bec5c79962ac563.png" class="responsive"></figure>
+
+<figure><img src="../../img/10/2020-06-15_18-03-13-aa431e82ce7313ea393aee27fe84243a.png" class="responsive"></figure>
+
+<p>Açılan pencereye kullanmakta olduğunuz mevcut parolayı ve yeni atamak istediğiniz parolayı girip "<strong>Değiştir</strong>" butonuna basın. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-03-32-797f9bdd2aa96d5c5c5364cff9ef3d7c.png" class="responsive"></figure>
+
+<p>Kısa süre sonra diskimizin şifresi değiştirilmiş olacak. Teyit etmek üzere diskimizi tekrar çıkarıp bağlayalım ve disk içeriğini görüntülemeye çalışalım. Bize sorulan parola kısmına yeni atadığımız parolayı girerek parolamızın değişip değişmediğini teyit edelim. </p>
+
+<figure><img src="../../img/10/2020-06-15_18-03-44-254062b389a822dc42acb359a1ddbdfd.png" class="responsive"></figure>
+
+<p>Diski açabildiğimize göre parola değiştirme işlemimiz başarılı şekilde tamamlanmış oldu.</p>
+
+<p>Böylelikle dosyaların güvenli paylaşılmasından, güvenli depolanıp, güvenli şekilde silinmesine kadar ihtiyacımız olacak tüm konulara değinmiş olduk. Bir sonraki bölümde güvenli ödeme sistemlerinden yani kripto paralardan bahsediyor olacağız.</p>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

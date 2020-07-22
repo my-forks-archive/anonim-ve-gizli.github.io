@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 4. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./3.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./5.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./3.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./5.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">Tail OS</a>
+			<a href="#1" class="list-group-item list-group-item-action">Kıyaslama</a>
+			<a href="#2" class="list-group-item list-group-item-action">Kurulum Seçenekleri</a>
+			<a href="#3" class="list-group-item list-group-item-action">Sanal</a>
+			<a href="#4" class="list-group-item list-group-item-action">DVD</a>
+			<a href="#5" class="list-group-item list-group-item-action">USB Disk</a>
+			<a href="#6" class="list-group-item list-group-item-action">İndirmek & Kurmak</a>
+			<a href="#7" class="list-group-item list-group-item-action">Başlatmak</a>
+			<a href="#8" class="list-group-item list-group-item-action">Kullanım Rehberi</a>
+			<a href="#9" class="list-group-item list-group-item-action">Üst Çubuk</a>
+			<a href="#10" class="list-group-item list-group-item-action">Kalıcılık Modu</a>
+			<a href="#11" class="list-group-item list-group-item-action">Avantaj</a>
+			<a href="#12" class="list-group-item list-group-item-action">Dezavantaj</a>
+			<a href="#13" class="list-group-item list-group-item-action">Aktifleştirmek</a>
+			<a href="#14" class="list-group-item list-group-item-action">Kişisel Veri</a>
+			<a href="#15" class="list-group-item list-group-item-action">Yer İşaretleri</a>
+			<a href="#16" class="list-group-item list-group-item-action">Ağ Bağlantıları</a>
+			<a href="#17" class="list-group-item list-group-item-action">Ek Yazılım</a>
+			<a href="#18" class="list-group-item list-group-item-action">Yazıcılar</a>
+			<a href="#19" class="list-group-item list-group-item-action">Thunderbird</a>
+			<a href="#20" class="list-group-item list-group-item-action">GnuPG</a>
+			<a href="#21" class="list-group-item list-group-item-action">Bitcoin İstemcisi</a>
+			<a href="#22" class="list-group-item list-group-item-action">Pidgin</a>
+			<a href="#23" class="list-group-item list-group-item-action">SSH İstemcisi</a>
+			<a href="#24" class="list-group-item list-group-item-action">Dotfiles</a>
+			<a href="#25" class="list-group-item list-group-item-action">Uygulama Kurulumu</a>
+			<a href="#26" class="list-group-item list-group-item-action">Parola Değişimi</a>
+			<a href="#27" class="list-group-item list-group-item-action">Kalıcılık Modunu Silmek</a>
+			<a href="#29" class="list-group-item list-group-item-action">Köprü Bağlantısı</a>
+			<a href="#30" class="list-group-item list-group-item-action">Ortak Ağ</a>
+			<a href="#31" class="list-group-item list-group-item-action">Tail Üzerinden VPN</a>
+			<hr>
+			<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">4.Doküman</strong>
+          <h3 class="mb-0">Tail İşletim Sistemi </h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">tail os , live , kullanım rehberi , persistence kalıcılık modu , ortak ağ bağlantıları , tail üzerinden vpn</p>
+        </div>
+        
+      </div>
+    </div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	 
+	 <h1 id="0">Tail İşletim Sistemi</h1>
+<p>Tail, gizlilik odaklı olarak geliştirilmiş Linux tabanlı bir işletim sistemidir. Geliştirilmesine finansal olarak en çok katkıyı Tor projesi sağlamıştır. Bu işletim sisteminde tüm internet trafiği Tor ağı üzerinden yönlendirilir. Tail işletim sisteminin temel özelliklerini anlamak için isminin nereden geldiğine bakmamız yeterli.</p>
+<p>Hemen isim açılımını ele alarak özelliklere göz atalım.</p>
+<p><strong>Tail</strong> = <strong>t</strong>he <strong>a</strong>mnesic <strong>i</strong>ncognito <strong>l</strong>ive system
+<strong>The Amnesic;</strong> Bu ifade &quot;<strong>amnezi</strong>&quot; yani &quot;<strong>hafıza kaybını</strong>&quot; ifade ediyor. Tail işletim sistemi, çalıştırıldığı bilgisayar üzerinde hiç bir iz bırakmadığı için bu isimlendirme yapılmıştır. Tail, tüm işlemleri ram üzerinden yürüterek sistem kapandığında geriye hiç bir iz kalmamasını sağlar. Hatta ram üzerinden anlık kayıtların kurtarılmasını önlemek için ayrıca kapatma işlemi sırasında ram üzerine rastgele veriler yazarak, ram üzerinden yürütülen işlemlerin belirli bir süre ram üzerinde kalması ihtimalini bile önler. Yani &quot;<strong>amnezik</strong>&quot; bir sistemdir, geride kalıntı bırakmaz.</p>
+<p><strong>Incognito;</strong> Bu ifade ise &quot;<strong>kimliği gizlemek</strong>&quot; anlamına geliyor. Tail işletim sistemi, gizliliğimizi ve anonimliğimizi korumak adına tüm internet trafiğini Tor ağı üzerinden sağlar. Ayrıca içerisinde bulunan programların güvenlik açısından sıkı denetimini yapar. Dolayısı ile &quot;<strong>incognito</strong>&quot; kelimesi de sistemin gizlilik ve anonimlik özelliğini ifade ediyor.</p>
+<p><strong>Live;</strong> Bu kelime ise &quot;<strong>yaşayan</strong>-<strong>nakledilebilen</strong>&quot; anlamına geliyor. Tail işletim sistemi USB ya da DVD üzerine yazılarak herhangi bir bilgisayar üzerinden çalıştırılabildiği için bu şekilde isimlendirilmiştir. Yani Tail taşınabilir bir işletim sistemidir.</p>
+<p>Tail işletim sisteminin kendi isim açılımı ile de açıkça ifade ettiği başlıca özellikleri bu şekilde. Zaten eğitimin devamında bilmemiz gereken tüm özelliklerinin detaylarına da değinmiş olacağız. </p>
+<p>Şimdi yeri gelmişken neden sadece Tor Browser kullanmak yerine Tail işletim sistemini kullanmanın çok daha iyi güvenlik ve gizlilik sağladığını kıyaslama yaparak görelim.</p>
+<h2 id="1">Kıyaslama</h2>
+<table>
+<thead>
+<tr>
+<th>Tor Browser</th>
+<th>Tail İşletim Sistemi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><li>Sadece yüklü bulunduğu bilgisayar üzerinde çalıştırılabilir. Yani taşınabilir değildir.</li></td>
+<td><li>USB ya da DVD takılabilen her türlü bilgisayarda çalıştırılabilir. Yani taşınabilirdir, istenilen yerden çalıştırılabilir.</li></td>
+</tr>
+<tr>
+<td><li>Yalnızca tarayıcı üzerindeki internet trafiği Tor ağı üzerinden yönlendirilir.</li></td>
+<td><li>Tüm işletim sisteminin internet trafiği Tor ağı üzerinden yönlendirilir.</li></td>
+</tr>
+<tr>
+<td><li>Tarayıcının yüklü bulunduğu işletim sistemi içerisinde yer alan olan programların kötü niyetli olması ile gizlilik ve anonimlik ihlal olabilir.</li></td>
+<td><li>Varsayılan olarak yüklü gelen programlar güvenlik açısından test edilmiştir. Diğer sistemlerin aksine Tail varsayılan olarak seçtiği programlar üzerinde gizlilik ve güvenlik konusunda sıkı denetim uygular.</li></td>
+</tr>
+<tr>
+<td><li>Tarayıcıyı kullandığınıza dair izler bilgisayar üzerinde kalır.</li></td>
+<td><li>Bağlı bulunduğu bilgisayar üzerinde hiç bir veri yani hiç bir iz bırakmadan çalışır.</li></td>
+</tr>
+<tr>
+<td><li>Yalnızca internet üzerinde gezinme olanağınız vardır.</li></td>
+<td><li>İşletim sistemine dair her türlü işinizi güvenli bir alandan yürütebilme olanağınız vardır.</li></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Kıyaslamayı pek çok farklı madde ile uzun uzadıya devam ettirebiliriz. Ancak temelde bilmemiz gereken; Tail işletim sisteminin, herhangi bir sistem üzerinden Tor Browser kullanmaya oranla bizlere çok daha güvenli bir çalışma ortamı sağladığıdır. Tek başına herhangi bir işletim sisteminde Tor tarayıcısını kullanmak, gizliliğin ya da anonimliğin çok da önemli olmadığı durumlarda başvurulabilecek <strong>pratik bir çözümdür</strong>. Yani tek başına Tor tarayıcısını kullanmak tamamen kullanışsızdır demiyorum. Zaten Tail işletim sistemi içerisinde de Tor tarayıcısını kullanıyor olacağız. Tail işletim sisteminin özelliği bizlere çok daha izole ve güvenli bir ortam sunmasıdır. Sistemin kullanımını ele alırken, neden çok daha güvenli ve kullanışlı olduğunu zaten anlamış olacaksınız. </p>
+<p>Şimdilik anlatımlara Tail işletim sisteminin kurulum seçeneklerinden bahsederek devam edelim.</p>
+<h2 id="2">Tail OS Kurulum Seçenekleri</h2>
+<p>Tail işletim sistemini kullanabileceğimiz başlıca yöntemler aşağıdaki gibidir.</p>
+<ul>
+<li>Sanallaştırma yazılımları(Virtualbox, Vmware..) üzerinden sanal olarak kullanım.</li>
+<li>DVD üzerinden kullanım.</li>
+<li>USB disk üzerinden kullanım.</li>
+</ul>
+<p>Bu alternatifler içerisinden en kullanışlı olanı kesinlikle USB üzerinden kullanımdır. Nedenini yeri geldiğini anlamış olacaksınız. Şimdi tek tek kurulum metotlarından bahsedelim.</p>
+<h3 id="3">Sanal Olarak Kullanım</h3>
+<p>Sanallaştırma yazılımları herhangi bir işletim sistemini, mevcut işletim sistemimiz üzerinde sanal olarak çalıştırabilmemize olanak tanırlar. Örneğin Windows kurulu bir işletim sistemi içerisinde sanallaştırma yazılımı ile aynı anda Tail işletim sistemini de çalıştırabilirim. Standart sanallaştırma yazılımları pek çok farklı durumda harika bir çözüm olsa da önceliğimiz güvenlik olduğunda uzak durmamız gereken bir alternatiftir.</p>
+<p><strong>Dezavantajlarından bahsetmemiz gerekirse;</strong></p>
+<ul>
+<li>Ana makinede yani sanal olmayan işletim sisteminde meydana gelebilecek her türlü zaafiyet, sanal makineyi de etkileyeceği için Tail işletim sisteminin aldığı güvenlik önlemlerinin anlamı kalmayacaktır.</li>
+<li>Sanal kullanımda, mevcut işletim sistemi üzerinde kullanıma dair kalıntılar kalacağı için gizliliğimiz ihlal edilebilir.</li>
+<li>Çalışmakta olan bir işletim sistemi içerisinde başka bir işletim sistemi daha çalıştırdığımız için bilgisayarın ram, işlemci gibi kaynakları her iki sisteme de ayrılacağından performans sorunlarına neden olabilir.</li>
+</ul>
+<p><strong>Yani uzun lafın kısası;</strong> Eğer sanallaştırma yazılımları ile Tail işletim sistemini kullanırsanız, güvenli bir işletim sistemini güvensiz bir ortamda çalıştıracağınız için Tail işletim sisteminin tüm güvenlik önlemlerini anlamsız kılmış olursunuz. Bu kullanımı kesinlikle önermiyorum.</p>
+<h3 id="4">DVD Üzerinden Kullanım</h3>
+<p>DVD üzerinden kullanmak için öncelikle DVD üzerine Tail işletim sisteminin kurulumunu yapıyoruz. Böylelikle kurulumunu yaptığımız DVD ile, DVD okuyucusu bulunan herhangi bir bilgisayar üzerinden Tail işletim sistemini çalıştırabiliyoruz. DVD kurulumu ve kullanımı USB üzerinden kurulum ve kullanım ile aynıdır. Fakat dezavantaj olarak her bilgisayarda DVD okuyucusunun bulunmaması ve DVD diskinin zamanla yıpranıp bozulma ihtimalinin, USB diske oranla çok daha fazla olması var. Ayrıca DVD kullanımı, depolama alanı bakımından da tatmin edici bir tercih olmayacaktır.</p>
+<h3 id="5">USB Disk Üzerinden Kullanım</h3>
+<p>En makul kullanım yöntemi olan seçenek USB disk üzerinden kullanmaktır. Bir kez kurulduktan sonra istenilen bilgisayarda sorunsuzca çalıştırılabilir ve geride hiç bir iz bırakmaz. Ayrıca yeni sürümleri için yeniden kuruluma ihtiyaç duymadan sistemi USB diskimiz üzerinden sürekli güncelleyebilme imkanımız da vardır. Ek olarak kolay taşınabilir olduğu ve dosyaların bozulması, zarar görmesi DVD diske oranla daha düşük bir ihtimal olduğundan ideal tercihtir.</p>
+<p>Tüm artıları ve eksileri düşünüldüğünde kullanım yöntemleri içerisinde <strong>en güvenli ve en verimlisi USB disk</strong> üzerinden kullanımdır. Ben de bu eğitimde yalnızca USB disk üzerine kurulumu göstereceğim. Ancak sanal olarak kullanmak ya da DVD üzerinden çalıştırmak isteseniz de kısa bir internet araştırması ile kurulumları nasıl yapabileceğinizi bulabilirsiniz. Yine de tekrar bu yöntemlerin kullanışsız ve güvenliğinizi riske atabilecek yöntemler olduğunu da hatırlatarak uzak durmanızı tavsiye ediyorum.</p>
+<p>USB üzerinden kullanım için tek şart, USB diskinizin <strong>en az 8 GB</strong> depolama alanına sahip olmasıdır. </p>
+<p>USB diskimiz bu tek şartı da sağlıyorsa şimdi USB diskimize nasıl Tail işletim sistemini kurarız onu görelim.</p>
+<h2 id="6">Tail OS İndirmek Ve Kurmak</h2>
+<p>Ben bu bölümde anlatımları Windows üzerinden gerçekleştireceğim ancak anlatacağım her şey diğer işletim sistemlerinden de ortak şekilde takip edilebilir. Yani buradaki anlatımın Windows üzerinden olmasına takılmayın lütfen, sadece beni takip edip adımları kendi sisteminizde uygulamanız yeterli.</p>
+<p>Öncelikle Tail işletim sistemini edinmek üzere web sitesini ziyaret edelim. Açılan sayfadan &quot;<strong>install</strong>&quot; butonuna tıklayalım.
+Karşımıza gelen sayfanın alt tarafına gelerek kurmak istediğimiz metoda uygun olan kurulum imajını seçelim.  Ben USB üzerinden kurulumu ele alacağım için &quot;<strong>For USB Sticks</strong>&quot; bağlantısına tıklıyorum.  </p>
+<p>Gördüğünüz gibi USB kurulumu için indirme ve doğrulama sayfası karşımıza gelmiş oldu. </p>
+<p><img src="../../img/4/0-min.png" class="responsive"></p>
+<p>Buradan indirme butonuna basarak imaj dosyamızın indirilmesini başlatalım. 
+İmaj dosyamız indikten sonra, daha önce Tor tarayıcısında da yaptığımız şekilde dosyamızın değiştirilip değiştirilmediğini anlamak için doğrulama yapmamız gerekiyor. Doğrulama işlemi için doğrulama eklentisini indirip kuralım. Eklentiyi kurduktan sonra doğrulama butonuna basalım ve indirmiş olduğumuz imaj dosyasını seçelim.
+Bir müddet sonra gördüğünüz gibi dosyamız başarılı şekilde doğrulanmış oldu. Eğer sizde bu yazı çıkmıyorsa dosya içeriği değişikliğe uğramış olabilir. Bu durumda alternatif seçenek olan Torrent üzerinden indirme işlemini deneyebilirsiniz. Torrent indirmesi için buradaki butona basarak Torrent dosyasını indirin. Ve herhangi bir Torrent indirme aracını kullanarak işletim sistemi imajının indirilmesini sağlayın. Torrent üzerinden indirme işleminden sonra da aynı şekilde dosyanızı eklenti yardımı ile kontrol edin. Eğer indirme ve doğrulama aşamasında sorun yaşarsanız bana soru cevap kısmından yazabilirsiniz. </p>
+<p>Evet, böylelikle kurulum dosyamızı güvenli şekilde temin etmiş olduk. Şimdi sırada, USB diskimizin üzerine kurulumu yapmamızı sağlayacak olan aracı temin etmek var. Kurulum işleminde, açık kaynaklı olduğu ve Windows, MacOS, Linux platformlarda ortak şekilde çalışabildiği için &quot;<strong>belena etcher</strong>&quot; yazılımı kullanacağım. Yine de sizler kendi işletim sisteminize özel olan olan alternatif araçları da kullanabilirsiniz. Ben sadece çoklu platformları desteklemesi ve açık kaynaklı olması nedeniyle bu aracı seçtim.</p>
+<p>Şimdi kurulum aracımızı indirmek üzere web sitesini ziyaret edelim.</p>
+<p>Web sitesine eriştiğimizde gördüğünüz gibi çoklu platformlar için indirme bağlantıları bulunuyor. </p>
+<p><img src="../../img/4/1-min.png" class="responsive"></p>
+<p>Buradan kullanmakta olduğunuz sistem için uygun olan dosyayı seçip indirebilirsiniz. Ben anlatımı Windows üzerinden gerçekleştirdiğim için buradan Windows sürümünü seçeceğim. Ayrıca gördüğünüz gibi Windows için portable yani kurulum yapmadan kullanma imkanımız da var. Dilerseniz portatif sürümü seçerek kuruluma gerek kalmadan bu aracı kullanabilirsiniz. Ben şimdilik standart olan yöntemi tercih ederek dosyamı indiriyorum. İndirme işleminin ardından oldukça kolay olan kurulum işlemini de tamamlayıp programı açıyorum. 
+Artık hem Tail sistem kalıbımız hem de kurulum için gereken programımız hazır olduğuna göre, tek yapmamız gereken USB diskimizi sisteme takıp kurulum işlemini gerçekleştirmek. USB diskinizin 8 GB ya da daha büyük depolama alanına sahip olması yeterli. </p>
+<p>Kurulum için USB diskimizi ve kurulum imajımızı seçerek işlemi başlatıyoruz. </p>
+<p><img src="../../img/4/2-min.png" class="responsive"></p>
+<p>Bir süre sonra kurulum işlemi tamamlanıyor ve artık USB diskimiz üzerinden Tail işletim sistemini çalıştırmaya hazırız.</p>
+<p><img src="../../img/4/3-min.png" class="responsive"></p>
+<p>Bir sonraki kısımda kurulumunu tamamlamış olduğumuz Tail işletim sistemini nasıl USB üzerinden başlatacağımızı görmüş olacağız. Eğer indirme ve kurulum aşamasında sorun yaşarsanız bana soru cevap alanından yazmaktan çekinmeyin lütfen. Ayrıca benim eğitimi hazırladığım zaman ile sizin eğitimi takip ettiğiniz zaman aralığında web sitelerinde kısmi değişimler olmuş olabilir. Eğer böyle bir durum varsa, web sitesine kısa bir bakış attıktan sonra indirme bağlantılarına ya da dosya doğrulama mekanizmasına kendiniz de kolaylıkla ulaşabilirsiniz. Yine de sorun yaşarsanız elbette benimle de iletişime geçebilirsiniz. 
+Her şey tamamsa hadi Tail işletim sistemimizi USB üzerinden istediğimiz bir bilgisayarda nasıl kullanabileceğimizi öğrenelim.</p>
+<h2 id="7">Tail İşletim Sistemini USB Disk Üzerinden Başlatmak</h2>
+<p>İçerisinde Tail işletim sistemi yer alan USB diskimizi hangi bilgisayara takarsak, o bilgisayar üzerinde Tail işletim sistemini güvenli bir biçimde kullanabiliyor olacağız.
+Bu işlem için BIOS üzerinden ayarlama yaparak, bilgisayarın başlangıçta USB disk üzerinden çalışmasını sağlamamız yeterli.</p>
+<p>Ayarlamayı yapmak üzere öncelikle bilgisayarın bios menüsüne girmemiz gerekiyor. Bios menüsüne girmek için, bilgisayar başlangıcında bios açılımı için tanımlanmış olan tuşa basmamız gerekiyor. Bu tuş bilgisayardan bilgisayara değişiklik gösterse de genellikle <code>ESC F2 F10 F11 F12</code> tuşlarından biri oluyor. Zaten genellikle bilgisayar başlangıcında hangi tuşun bios menüsüne girdiğini de ekranın alt tarafta belirtiliyor. Yine de sizin bilgisayarınızda hangi tuşun bios menüsüne girdiğini bilmiyorsanız, marka model ismi ile kısa bir internet araştırması ya da tuşları deneme yanılma sonucunda öğrenebilirsiniz. </p>
+<p>Bios menüsüne ulaştığınızda gördüğünüz arayüz bende gördüğünüz bios menü arayüzünden farklı olabilir. Bu hiç önemli değil. Temelde yapmak istediğimiz şey, bilgisayarın USB disk üzerinden başlatılması için boot sırasında USB diski en üste getirmek. Bunun için USB diskimizin bilgisayara takılı oluğundan emin olarak, boot sekmesini buluyoruz ve USB diskimizi boot sıralamasında ilk sıraya getiriyoruz. Sıralamada USB diski nasıl yukarı taşıyabileceğinizi, bios menüsünde yer alan açıklamalar ile öğrenebilirsiniz. Kimi bios menüsünde <strong>artı</strong> ve <strong>eksi</strong> tuşları sıralama değiştirmede kullanılıyor olsa da kimilerinde <strong>F5</strong> ve <strong>F6</strong> tuşları sıralama değiştirme için kullanılabiliyor. Bunu kendi bios menünüzdeki açıklamalardan kolaylıkla öğrenebilirsiniz.</p>
+<p>USB diskimizi boot sıralamasında ilk sıraya aldığımızda, bilgisayarımız biz bu ayarı değiştirene ya da usb diskimizi çıkartana kadar USB diskimiz üzerinden başlatılıyor olacak. </p>
+<p><img src="../../img/4/4-min.png" class="responsive"></p>
+<p>Şimdi ayarları kaydedip bilgisayarın yeniden başlatılmasını sağlayalım.</p>
+<p><img src="../../img/4/5-min.png" class="responsive"></p>
+<p>Evet bilgisayarımız yeniden başlatıldı ve otomatik olarak USB diskimiz üzerinden Tail işletim sistemini çalıştırmış oldu. Sizler de bu şekilde hangi bilgisayarda olursa olsun Tail işletim sistemini USB diskiniz üzerinden çalıştırabilirsiniz.</p>
+<p>Sistemi USB üzerinden başlatmayı başardığımıza göre şimdi sisteme giriş yapıp, özelliklerinden bahsetmeye başlayalım.</p>
+<p>Gördüğünüz gibi sistem açılır açılmaz direk olarak karşımıza temel özellikleri ayarlayabileceğimiz bir pencere açılmış oldu. Bu ayar penceresi, sistemi her açtığımızda bizi karşılıyor olacak. Bunun nedeni daha önce de bahsetmiş olduğumuz sistemin &quot;unutkan&quot; yapısıdır. Burada yer alan ayarlardan da kısaca bahsederek, gerektiğinde hangi ayarları ne şekilde düzenlememiz gerektiğine değinelim.</p>
+<p>Sistemin dil ve klavye gibi bölgesel ayarlarını buradan düzenleyebiliyoruz. Benim önerim yalnızca klavye ayarınızı düzenlemeniz yönündedir. Yine de sisteme alışma aşamasında Türkçe dilini de tercih edebilirsiniz. Bu temel ayarların dışında diğer ayarları görmek için artı işaretine tıklayalım.</p>
+<p><img src="../../img/4/6-min.png" class="responsive"></p>
+<p><strong>Admin şifresinin kapalı olması;</strong></p>
+<p><img src="../../img/4/7-min.png" class="responsive"></p>
+<p>Sistemimizin ele geçirilmesi yani hacklenmesi durumunda saldırganların verebileceği zararları sınırlamak için varsayılan olarak kapalı şekilde ayarlanmıştır. Eğer amacınız güvenlikse Tail işletim sisteminde yönetici ayrıcalıkları ile sürekli işiniz olmayacaksa bu özelliğin kapalı olarak kalması sizin için en iyisi olacaktır. Yine de program yüklemek ve sistemle ilgili yönetici izinleri gerektiren diğer işlemleri yapmanız gerektiğinde bu özelliği aktifleştirebilirsiniz. Şimdilik bu özellik kapalı kalsın. Zaten gerektiğinde sistem sizden bu özelliği aktifleştirmenizi talep edecektir.</p>
+<p><strong>Mac adresi aldatmasının açık olması;</strong> </p>
+<p><img src="../../img/4/8-min.png" class="responsive"></p>
+<p>Kullandığımız cihazların kimliğini belirten, benzersiz MAC adresleri bulunur ve bu adresler kalıcıdır yani zamanla kendiliğinden değişmez. Benzersiz ve değişmeyen bu adres üzerinden de anonimliğimiz ihlal edilebilir. Kimliğimizi tamamen anonim kılmak için MAC adresinin sahtesi ile otomatik olarak değiştirildiği bu özelliğin her zaman açık olmasını şiddetle tavsiye ediyorum. Ancak bağlantı kurduğunuz ağ yalnızca belirli MAC adreslerine izin verecek şekilde çalışıyorsa, bu özelliğin açık olması ağa erişmenize engel olabilir. Yalnızca bu ve bunun gibi durumlarda bu özelliği kapatmanız mantıklı olacaktır. </p>
+<p><img src="../../img/4/9-min.png" class="responsive"></p>
+<p><strong>Ağ ayaları;</strong></p>
+<p><img src="../../img/4/10-min.png" class="responsive"></p>
+<p>Ağ ayarı varsayılan olarak tüm internet trafiğini Tor ağı üzerinden sağlayacak şekildedir. Yani sadece Tor tarayıcısının değil, Tail işletim sistemi içerisindeki tüm programların internet trafikleri de Tor ağı üzerinden yönlendirilir. Alternatif seçeneklerinde, tıpkı Tor tarayıcısı üzerinde ayarladığımız şekilde köprü bağlantısını yapılandırma imkanımız da bulunuyor. </p>
+<p><img src="../../img/4/11-min.png" class="responsive"></p>
+<p>Buradan köprü bağlantısını ayarladığımızda tüm sistemin Tor ağı üzerindeki trafiğinin köprü bağlantısını da ayarlamış oluyoruz. Diğer seçenek ise tüm internet trafiğini kapatmak. Eğer çevrimdışı şekilde çalışmak istiyorsanız bu seçenek ile internet bağlantısından izole bir ortamda faaliyetlerinizi yürütebilirsiniz.  Biz şimdilik bu ayarda da bir değişiklik yapmadan işimizi bitirip işletim sistemini başlatalım.</p>
+<p>Ve en nihayetinde karşımıza oldukça basit bir arayüzü olan Tail işletim sistemi gelmiş oldu. </p>
+<p><img src="../../img/4/12-min.png" class="responsive"></p>
+<p>Eğer daha önce hiç Linux kullanmadıysanız bu arayüz size biraz alışılmadık gelmiş olabilir. Ancak kesinlikle endişelenmeyin, kullanımı oldukça kolaydır. Zaten bir sonraki bölümde temel olarak ihtiyaç duyabileceğiniz kullanımından bahsediyor olacağız. </p>
+<h2 id="8">Tail OS Genel Kullanım Rehberi</h2>
+<p>Sistemi kullanmakla ilgili, eğer varsa ön yargılarınızdan kurtulun. Eğitime devam ettikçe Windows ya da MacOS gibi yaygın işletim sistemlerini kullanmak kadar kolay olduğunu bizzat deneyimlemiş olacaksınız.</p>
+<h3 id="9">Üst Çubuk(Görev Çubuğu)</h3>
+<p><img src="../../img/4/13-min.png" class="responsive"></p>
+<p>Üst çubukta(görev çubuğu) sistemle ilgili pek çok kısayol yer alıyor. Bu çubuk Windows üzerindeki görev çubuğu ile benzer işlevdedir.</p>
+<p>Uygulamalar kısmına tıklarsak; </p>
+<p><img src="../../img/4/14-min.png" class="responsive"></p>
+<p>Sistemde yüklü bulunan bütün uygulamaların kategorize şekilde sıralandığı bir liste karşımıza gelmiş oluyor. Bu panel Windows işletim sistemindeki başlat menüsüne benzer yapıdadır. Buradan dilediğimiz uygulamayı seçip başlatabiliriz. Ayrıca bu liste dışında, klavyemizde yer alan başlat tuşuna basarsak sistem üzerinde yüklü bulunan tüm uygulamalar içerisinde arama yapabileceğimiz bir paneli de açabiliriz. Buradan da istediğimiz uygulamaya kolaylıkla erişebiliyoruz. Hatta yan panelde yer alan uygulamalar simgesine tıklayarak sistemde yüklü bulunan tüm uygulamaları da liste halinde tek elden görüntüleyebiliriz. Gördüğünüz gibi temel olarak ihtiyaç duyabileceğimiz pek çok araç hatta ofis yazılımı sistem içerisinde yüklü geliyor. Üstelik tüm bu araçlar güvenliği test edilmiş, ücretsiz şekilde kullanıma açık olan araçlardır. Biraz kurcalama ile pek çok işinizi kolaylıkla Tail üzerinden de yürütebileceğinizi, sizler de kısa zamanda zaten deneyimlemiş olacaksınız.</p>
+<p>Yerler kısmına tıklarsak; </p>
+<p><img src="../../img/4/15-min.png" class="responsive"></p>
+<p>sistem üzerinde yer alan dosyalara kısayoldan erişebileceğimiz panel açılıyor. Örneğin &quot;<strong>Desktop</strong>&quot; dizinine tıklarsak, dosya yöneticisi doğrudan masaüstü konumunu açmış oluyor. Bu dosya yöneticisi üzerinden sistem üzerinde yer alan ve erişimimiz olan tüm dizinlerde gezinebiliyoruz. Ev dizini bizim &quot;Belgeler&quot;, &quot;Resimler&quot;, &quot;İndirilenler&quot; ve &quot;Müzikler&quot; gibi kullanıcı hesabımıza ait dosyaların bulunduğu ana konumu temsil ediyor. Bu konumdaki dosyalar biz bilgisayarı kapattığımızda sıfırlanmış olacak. Anlatımın başında Tail işletim sisteminin unutkan bir sistem olduğundan bahsetmiştik. Sistemin sahip olduğu unutma fonksiyonu nedeniyle özellikle belirtilmediği sürece tüm dosyalar sistem kapatılırken siliniyor. Yani örneğin ben herhangi bir dosya indirirsem, bu dosya sistemi kapatıp açtığımda indirilenler konumundan otomatik olarak silinmiş olacak. Ancak bu konuda endişelenmeyin ileride dosyalarımızı nasıl kayıtlı tutabileceğimizi öğrenmiş olacağız. Biz yine de hazır dosya yöneticisini açmışken denemek için yeni bir klasör de oluşturalım. Yeni bir klasör oluşturmak için bulunduğumuz konumda sağ tıklayarak &quot;<strong>Yeni Klasör</strong>&quot; seçeneğine tıklamamız yeterli. Ayrıca gizli dosyaları nasıl görünür kılabileceğimizi de hazır dosya yöneticisi açıkken görelim. Örneğin ben ana dizin olan ev dizinimde yer alan gizli dosyaları görüntülemek istersem arama butonunun yanında yer alan listeleme seçeneklerinden &quot;<strong>Gizli Dosyaları Göster</strong>&quot; seçeneğini aktif etmem yeterli. </p>
+<p><img src="../../img/4/16-min.png" class="responsive"></p>
+<p>Gizli dosyaları aktif ettikten sonra, ana dizinimizde aslında ne kadar çok gizli dosya bulunduğunu da görebiliyoruz. Fark ettiyseniz gizli dosyaların hepsinin başında nokta işareti yer alıyor. Bu bir tesadüf değil. Linux sistemlerinde isminin başında nokta bulunan her türlü dosya ya da klasör &quot;gizli&quot; olarak kabul ediliyor. Örneğin yeni oluşturmuş olduğumuz klasörün isminin başına da nokta koyduğumuzda klasörümüz gizli klasör formuna dönüşüyor. Test etmek için gizli dosyaları gösterme özelliğini kapatabiliriz.</p>
+<p>Ayrıca dosyalar uygulamasını açtığımız için görev çubuğunda açtığımız uygulama da gözüküyor. Buradan sağ tıklayarak uygulamayı kapatma gibi faaliyetler yürütebiliriz. </p>
+<p>Saat ve tarih kısmına tıklarsak; takvim ve sistem bildirimleri paneli açılıyor. Buradan bildirimleri takip edip, takvime göz atabiliriz.</p>
+<p><img src="../../img/4/17-min.png" class="responsive"></p>
+<p>Pano simgesine tıklarsak; ileride ele alacağımız şifreleme işlemlerinde kullanacağımız şifreleme aracının kısayoluna ulaşmış oluyoruz. Bu kısayolu şifreleme konusunu ele alırken sıklıkla kullanıyor olacağız. Şimdilik simgenin bu işlevde olduğunu bilmeniz yeterli.</p>
+<p><img src="../../img/4/18-min.png" class="responsive"></p>
+<p>Tor simgesine tıklarsak; açık onion devrelerine ulaşabilmemiz mümkün oluyor.  Açılan pencereden mevcut Tor devreleri ve bağlantı durumları hakkında bilgi edinebiliyoruz. Eğer bağlantıda sorun yaşıyorsanız buradaki simge sizde çarpı işaretli olarak gözüküyor olabilir. Çarpı işareti bağlantı sorunlarını temsil ediyor.</p>
+<p><img src="../../img/4/19-min.png" class="responsive"></p>
+<p>Erişilebilirlik simgesine tıklarsak; pek çok işletim sisteminden aşina olduğumuz &quot;<strong>büyük yazı</strong>&quot;, &quot;<strong>ekran klavyesi</strong>&quot; ve &quot;<strong>yakınlaştırma</strong>&quot; gibi yardımcı araçları aktifleştirebileceğimiz bir liste paneli açılıyor. Örnek olarak büyük yazıları aktifleştirip, yazıların büyüdüğünü teyit edebiliriz.</p>
+<p><img src="../../img/4/20-min.png" class="responsive"></p>
+<p>Klayve ayarımızı değiştirmek için mevcut klavyenin diline tıklayıp yenisi ile değişim yapabiliyoruz. Ayrıca mevcut klavye düzenini görmek için &quot;<strong>Klavye Düzenini Göster</strong>&quot; kısmına tıklayabiliriz.</p>
+<p>Yan yana yer alan internet bağlantısı, ses düzeyi ve güç simgelerinden birine tıklarsak; tüm bu özellikler hakkında bilgi alıp değiştirebileceğimiz panel açılıyor. </p>
+<p><img src="../../img/4/21-min.png" class="responsive"></p>
+<p>Eğer Tail sistemini dizüstü bilgisayarınızda kullanıyorsanız tüm bunlara ek olarak pilin ve ekran parlaklığının durumunu da gösteren simgeyi de görmeniz mümkündür.
+Açılan panelden ses düzeyini ve mevcutsa ekran parlaklığını değiştirebiliriz.
+Eğer Tail işletim sistemi wifi kartımızı destekliyorsa internet bağlantımızı wifi üzerinden sağlayabilir ya da kablolu bağlantıyı buradan kapatıp tekrar açabiliriz. Ayrıca panelde yer alan ayarlar simgesine tıklayarak sistem ayarlarının açılmasını sağlayabiliriz. Bu ayarlara biraz sonra değineceğiz. Şimdi paneldeki diğer simgelerden de bahsedelim.</p>
+<p>Panelde yer alan kilit simgesi oturumu kilitlememizi sağlıyor. Eğer yönetici ayrıcalıkları ile sistemi başlatmadıysak parola da belirlemediğimiz için bu simgeye tıkladığımızda oturumu kilitlemeden önce parola belirlememizi istiyor. Buradan parolamızı belirleyip &quot;<strong>Ekranı Kilitle</strong>&quot; diyerek oturumun kilitlenmesini sağlayalım. Tekrar oturum açmak için gördüğünüz gibi sistem bizden parola talep ediyor. Bu parola, sistemi tamamen kapatana kadar geçerli olacak olan oturumu korumak içindir. Yani sistemi kapattığımızda bu parola da silinmiş olacak. Parolamızı yazıp oturumumuzu tekrar açalım. </p>
+<p>Durdurma simgesi, sistemi uyku moduna almamızı sağlıyor. Ayrıca yan yana yer alan diğer butonlardan sistemi yeniden başlatabilir ya da tamamen kapatılmasını sağlayabiliriz.</p>
+<p>Ayarlardan bahsedeceğimizi söyledik ancak tüm ayarları tek tek ele almamız gerek yok. Çünkü ihtiyacınız olan ayarı buradaki kategorilere göz atarak istediğiniz zaman kolaylıkla bulabilirsiniz. Örneğin ekran çözünürlüğünü ayarlamak istersem &quot;<strong>Aygıtlar</strong>&quot; sekmesine tıklıyorum ve açılan sayfadan &quot;<strong>Ekranlar</strong>&quot; sekmesinde yer alan &quot;<strong>Çözünürlük</strong>&quot; ayarını istediğim şekilde düzenliyorum. Düzenlemenin ardından &quot;<strong>Uygula</strong>&quot; diyerek geçerli ayarın uygulanmasını sağlıyorum. </p>
+<p><img src="../../img/4/22-min.png" class="responsive"></p>
+<p>İşte tüm işlem bu kadar. Sizler de sistemle ilgili tüm ayarlamalarınızı buradan kolaylıkla yapabilirsiniz. Eğer aradığınız ayarı bulmada sorun yaşarsanız arama çubuğundan yardım alabilirsiniz. Örneğin ben arama çubuğuna &quot;<strong>klavye</strong>&quot; yazıyorum ve hemen ilgili ayarın kısayolu karşıma geliyor. Son olarak bu ayarların sistemi kapatıp tekrar açtığınızda yok olacağını da lütfen unutmayın.</p>
+<p>Ayarlar hakkında da bilgi edindikten sonra tekrar masaüstüne dönelim. Masaüstüne sağ tıkladığımızda listede yeni klasör oluşturmak dışında çeşitli işlemler için de kısayollar yer alıyor. Örneğin masaüstü arkaplanını değiştirmek istersek &quot;<strong>Arka planı değiştir</strong>&quot; kısmına tıklayabiliriz.</p>
+<p><img src="../../img/4/23-min.png" class="responsive"></p>
+<p>Açılan ayar sayfasından, masaüstü ya da kilit ekranı için kolaylıkla değişiklik yapabiliriz. Sistemde yüklü bulunan ya da bizlerin yükleyeceği resimleri de kullanmamız mümkün. Herhangi bir tanesini seçerek &quot;<strong>Seç</strong>&quot; butonuna basıp değişikliğin geçerli olmasını sağlayabiliyoruz.</p>
+<p>Ayrıca alt çubuğa da değinmek istiyorum. Herhangi bir uygulama başlatarak alt çubuk hakkında konuşalım. </p>
+<p><img src="../../img/4/24-min.png" class="responsive"></p>
+<p>Örneğin çöp kutusuna tıklarsak &quot;<strong>dosya yöneticisi</strong>&quot; uygulaması açılmış oluyor. Uygulamanın çalışma bilgisini ayrıca aşağıdaki alt çubuktan da takip edebiliyor hatta üzerine sağ tıklayarak, simge durumunu büyütüp küçültme ve ayrıca uygulamayı kapatma gibi işlevleri de yerine getirebileceğimizi görüyoruz. </p>
+<p><img src="../../img/4/25-min.png" class="responsive"></p>
+<p>Tüm bunların dışında sağ alt tarafta <strong>1/2</strong> yazan bir kısım ise bizim çalıştığımız masaüstü alanının hangisi olduğunu ve kaç tane masaüstü ortamının aktif olduğunu gösteriyor. Örneğin biz dosya yöneticisi uygulamasını &quot;<strong>Çalışma Alanı 1</strong>&quot; de açtık gördüğünüz gibi. Eğer &quot;<strong>Çalışma Alanı 2</strong>&quot; alanına geçersem yeni bir masaüstü ortamı beni karşılıyor. Burada da Tor tarayıcısını çalıştırmayı deneyelim. Tarayıcımızı çalıştırdığımızda, çalışma alanı da <strong>3</strong>&#39;e yükselmiş oldu gördüğünüz gibi.  Daha önce yaptığımız şekilde buradan da bir diğer çalışma ortamına geçiş sağlayabiliyoruz. </p>
+<p><img src="../../img/4/26-min.png" class="responsive"></p>
+<p>Bu şekilde tek bir masaüstü ortamında karmaşa yaşamdan çoklu alanlarda işlemlerimizi çok daha düzenli şekilde yürütebiliyoruz. Ayrıca ortamlar arası geçiş için ortam bilgisinin yer aldığı bu kutucuğun üzerine gelip fare tekerleğini kullanarak da hızlı geçişler sağlayabiliyoruz. Tüm bunlar dışında klavyemizden <code>başlat</code> tuşuna basarak sağ tarafta yer alan paneli de geçiş için kullanabiliyoruz. Üstelik buradan diğer masaüstü ortamlarında hangi araçların açık olduğunun ön izlemesini hatta kapatma işlemini dahi yapabiliyoruz.</p>
+<p><img src="../../img/4/27-min.png" class="responsive"></p>
+<p>Şu ana kadar genel olarak sistem ile ilgili bilmemiz gereken tüm temel kavramlardan bahsettik. Sizlerin de fark etmiş olduğu gibi Tail işletim sistemini kullanmak son derece kolay. İlerleyen zamanlarda zaten kullandıkça sisteme olan hakimiyetiniz de artmış olacak. Yine de burada öğrendiklerimiz sistemi kullanmaya başlamak için son derece yeterli.</p>
+<p>Sistem üzerindeki ayarları değiştirebileceğimizi öğrendik ancak Tail işletim sisteminin amnezik yani unutkan bir işletim sistemi olduğunu aklınızdan çıkarmayın lütfen. Yani burada yapmış olduğunuz tüm değişiklikler, siz bilgisayarı kapatıp tekrar açtığınızda yok olmuş olacak. Bu durumu konunun başında tüm verilerin ram üzerinde geçici olarak tutulduğundan bahsederken ele almıştık hatırlarsanız. Bu özellik her ne kadar güvenliğimizi sağlıyor olsa da, uzun vadeli kullanımda Tail işletim sisteminde kaydetmek isteyeceğimiz bir takım veriler de olabilir. Yani biz bu amnezi özelliğinden feragat ederek &quot;<strong>kalıcılık</strong>&quot; diğer bir deyişle &quot;<strong>persistence</strong>&quot; modunda da sistemi kullanmak isteyebiliriz. Bu kullanım ile kaybolmasını istemediğimiz dosyaları ve birtakım ayarları koruyabiliriz. Bir sonraki kısımda mevcut Tail sistemi üzerinde nasıl kalıcı mod ile çalışabileceğimizi ele alacağız.</p>
+<h2 id="10">Tail OS Persistence-Kalıcılık Modu</h2>
+<p>Kalıcılık modunu aktifleştirmeden önce bu modun avantajlarından ve dezavantajlarından kısaca bahsetmek istiyorum.</p>
+<h3 id="11">Avantaj</h3>
+<p>Avantaj olarak, kurulan programlar, birtakım ayarlar, dosyalar ve kaydetmeye değer olan verilerin şifreli bir biçimde kaydedilebiliyor olması var. Bu sayede belirli bir düzeni oturttuğunuz sistemi istediğiniz yere taşıyıp istediğiniz bir bilgisayardan kullanabiliyor olursunuz. Ayrıca dosyalar şifreli bir biçimde korunduğu için şifreyi bilmeyen hiç kimse bu kayıtlı dosyalara doğrudan ulaşamaz.</p>
+<h3 id="12">Dezavantaj</h3>
+<p>Dezavantaj olarak ise aynı şekilde dosyaların kaydedilmesinin oluşturabileceği güvenlik sorunları yer alıyor. Her ne kadar dosyalar şifreli biçimde korunuyor olsa da şifreniz farklı yollar ile ele geçirildiğinde sizin hakkınızda benzersiz bilgiler sunabilir. Yani kalıcılık modunu kullanarak bir nevi gizli ayak izleri bırakırsınız. Ayak izleriniz gizli de olsa açığa çıktığında kişisel verilerinizin gizliliğinin ihlal edilebilme potansiyeli olduğundan, hiç ayak izi bırakmamaya oranla daha az güvenli sayılır. </p>
+<p>Kullanıp kullanmamak sizin ihtiyaçlarına göre yani durumdan duruma değişiklik gösterebilir. Bu kısımda da hem nasıl aktifleştirebileceğimiz hem de aktif olan kalıcılık modunu nasıl kapatabileceğimizi ele alacağız. İşe ilk olarak nasıl aktifleştirebileceğimizi ele alarak başlayalım.</p>
+<h3 id="13">Kalıcılık Modunu Aktifleştirmek</h3>
+<p>Menüden &quot;<strong>Tails</strong>&quot; sekmesine gelerek buradan &quot;<strong>kalıcılık alanını yapılandır</strong>&quot; kısmına tıklayalım.</p>
+<p><img src="../../img/4/28-min.png" class="responsive"></p>
+<p>Açılan pencerede, kalıcılık modunda ki verileri koruyacak olan şifreyi ayarlamamız gerekiyor. Şifreyi unutmamız halinde bu dosyalara erişemeyeceğimizin farkında olarak, güçlü ama unutmayacağımız bir parola belirleyip devam edelim.</p>
+<p>Parola belirledikten sonra, kalıcılık modunda hangi verilerin tutulmasını istediğimizi listeden seçebiliyoruz. Burada yalnızca ihtiyacınız olan kısımları seçmeniz depolama alanı ve genel güvenliğiniz için oldukça önemli. Hangi seçenekleri seçmemiz gerektiğine karar verebilmek için listede yer alan seçenekleri kısaca açıklayalım.</p>
+<p><img src="../../img/4/ek1-min.png" alt=""></p>
+<h2 id="14">Kişisel veri</h2>
+<p>Bu özellik etkinleştirildiğinde, silinmesini istemediğimiz her türlü dosyamızı &quot;Persistence&quot; yani &quot;kalıcılık&quot; klasörüne kaydederek silinmeye karşı koruma imkanımız oluyor. Kalıcılık moduna kaydedilen dosyalara nasıl ulaşabileceğimizi yeri geldiğinde ayrıca ele alıyor olacağız. Şimdilik bu seçeneği de aktifleştirip devam edelim.</p>
+<p><img src="../../img/4/ek2-min.png" alt=""></p>
+<h2 id="15">Tarayıcı Yer İşaretleri</h2>
+<p>Bu özellik etkinleştirildiğinde, yalnızca Tor tarayıcısının sahip olduğu yer işaretlerinde yapılan değişiklikler kalıcı birime kaydedilerek silinmeye karşı korunmuş oluyor. Yer işaretinin ne olduğunu bilmiyorsanız; yer işareti web sitesinin adresini daha sonra ulaşabilmek üzere kaydetme özelliğine deniyor. </p>
+<p><img src="../../img/4/ek3-min.png" alt=""></p>
+<h2 id="16">Ağ bağlantıları</h2>
+<p>Bu özellik etkinleştirildiğinde, ağ cihazlarının ve bağlantılarının yapılandırması kalıcı birime kaydedilir. Yani kalıcılık modundayken her defasında aynı ağ bağlantısı için ek ayarlama yapmanıza gerek kalmaz. </p>
+<p><img src="../../img/4/ek4-min.png" alt=""></p>
+<h2 id="17">Ek Yazılım</h2>
+<p>Bu özellik etkinleştirildiğinde, Tails&#39;i her başlattığınızda seçtiğiniz &quot;ek yazılımların&quot; listesi otomatik olarak yüklenir.</p>
+<p>Burada geçen &quot;Ek Yazılımlar&quot;, sistemde yüklü bulunan programlar haricinde bizim yüklediğimiz programları temsil ediyor. Aslında bu yüklenecek yazılımların listesini tutan bir özellik. Eğer biz &quot;Ek Yazılımlar&quot; seçeneğini kalıcılık modu için aktifleştirirsek, kullanmak istediğimiz harici yazılımlar otomatik olarak her defasında bu liste üzerinden kuruluyor olacak. Sisteme harici bir programı nasıl kurabileceğimizi ele alırken bu konuya tekrar değiniyor olacağız. Şimdilik bu seçenek hakkında bilmeniz gereken tek şey, yüklediğimiz harici programların kalıcılık modundan da ulaşılabilir olmasını sağladığıdır. Ben ek yazılım kuracağım için bu seçeneği de aktifleştiriyorum.</p>
+<p><img src="../../img/4/ek5-min.png" alt=""></p>
+<h2 id="18">Yazıcılar</h2>
+<p>Bu özellik etkinleştirildiğinde, yazıcıların yapılandırması kalıcı birime kaydedilir. Kalıcılık modundayken sistem tekrar tekrar varsayılan yazıcı için ayar sormaz.</p>
+<p><img src="../../img/4/ek6-min.png" alt=""></p>
+<h2 id="19">Thunderbird</h2>
+<p>Bu özellik etkinleştirildiğinde, &quot;Thunderbird e-posta istemcisi&quot; tarafından saklanan yapılandırma ve e-postalar kalıcı birime kaydedilir. Bu araç bizim birden fazla e-mail adresini tek bir araç üzerinden yönetebilmemizi sağlayan işlevsel bir araçtır. Eğer bu aracı kullanarak e-postalarınızı yönetmek isterseniz, kalıcılık modundan da tüm bilgilerinize tekrar tekrar erişebilmek için bu özelliği de aktifleştirebilirsiniz.</p>
+<p><img src="../../img/4/ek7-min.png" alt=""></p>
+<h2 id="20">GnuPG</h2>
+<p>Bu özellik etkinleştirildiğinde, ileride ele alacağımız şifreleme işlemlerinde kullanacağımız anahtarların kaybolmaması sağlanır. Eğer şifreleme kullanacaksak bu özelliğin mutlaka her daim aktif olması gerekir. Şifreleme konusuna geldiğimizde bahsi geçen anahtarların saklanmasının neden önemli olduğunu zaten anlayacaksınız. Şimdilik bu ayarın mutlaka açık olması gerektiğini bilmeniz yeterli. </p>
+<p><img src="../../img/4/ek8-min.png" alt=""></p>
+<h2 id="21">Bitcoin İstemcisi</h2>
+<p>Bu özellik etkinleştirildiğinde, Bitcoin cüzdanı &quot;<strong>Electrum - bitcoin istemcisinin</strong>&quot;  tercihleri kalıcı birime kaydedilir. Kripto paralar konusunda da ayrıca anlatım yapıyor olacağız. Eğer kripto para kullanacaksak bu seçeneği de aktifleştirebiliriz.</p>
+<p><img src="../../img/4/ek9-min.png" alt=""></p>
+<h2 id="22">Pidgin</h2>
+<p>Bu özellik etkinleştirildiğinde, &quot;<strong>Pidgin Internet messenger</strong>&quot;&#39;ın tüm yapılandırma dosyaları kalıcı birime kaydedilir.  Pidgin isimli uygulama, ileride ele alacağımız &quot;Güvenli Anlık Mesajlaşma&quot; bölümünde güvenli anlık iletişim için kullanacağımız chat yazılımının adıdır. </p>
+<p>Bu seçeneği aktifleştirdiğimizde kaydedilen verileri genel olarak sıralayacak olursak;</p>
+<ul>
+<li>Hesaplarınızın, arkadaşlarınızın ve sohbetlerinizin yapılandırması.</li>
+<li>OTR şifreleme anahtarlarınız ve anahtarlığınız.</li>
+<li>Eğer özellikle ayarladıysak geçmiş konuşma içerikleri.</li>
+</ul>
+<p>Anlık güvenli mesajlaşma hizmetinden yararlanacaksak bu özelliğin de mutlaka açık olması gerekir. Her defasında ayarlama yapmak yerine kalıcı modda aynı ayarları kullanabilmek adına bu seçeneği de aktifleştirmemiz gerek. </p>
+<p><img src="../../img/4/ek10-min.png" alt=""></p>
+<h2 id="23">SSH İstemcisi</h2>
+<p>Bu özellik etkinleştirildiğinde, güvenli kabuk istemcisiyle ilgili tüm dosyalar kalıcı birime kaydedilir. Eğer Tail üzerinden ssh bağlantısı yapacaksanız yapılandırma ayarlarının kalıcılık modundan tekrar tekrar ulaşılabilir olması için bu seçeneği de aktifleştirebilirsiniz. Eğer ssh ile bir işiniz yoksa bu seçenek kapalı kalabilir.</p>
+<p><img src="../../img/4/ek11-min.png" alt=""></p>
+<h2 id="24">Dotfiles</h2>
+<p>Bu özellik etkinleştirildiğinde, <strong>/live/persistence/ TailsData_unlocked/dotfiles</strong> dizininde yer alan tüm dosyalar ana dizin olan ev dizinimize bağlanır. Bu özellik ileri seviye kullanıcılar için sisteme özel konfigürasyon ayarları yaparken kullanışlıdır. Ancak başlangıç aşaması için bize en başta yer alan seçenek ile dosyaların kaydolması yetecektir. </p>
+<p>Şimdilik gerekli olan temel birkaç veriyi seçiyorum ve &quot;<strong>kaydet</strong>&quot; diyerek devam ediyorum. Böylelikle seçtiğim veriler otomatik olarak kaydolup, seçmediğim her türlü veri sistemi kapattığım anda kalıcı olarak silinecektir. Yine de eğer ileride fikrinizi değiştirirseniz, tekrar bu listeden kalıcı moda dahil edilecek olan veri seçeneklerini düzenleyebilirsiniz. </p>
+<p>Yaptığımız değişiklikler sistem yeniden başlatıldıktan sonra geçerli olacağı için sistemimizi yeninden başlatalım.</p>
+<p>Sistem yeniden başlamış oldu. Karşımıza gelen pencereden eğer kalıcılık modunu kullanacaksak parolamızı girip kilidi açmamız gerekiyor. </p>
+<p><img src="../../img/4/29-min.png" class="responsive"></p>
+<p>Şayet kalıcılık modunu kullanmak istemezsek parola yazmadan sistemimizi başlatmamız yeterli. Yani aslında sistemi yalnızca kalıcı ya da yalnızca unutkan modda kullanmak zorunda değiliz. Hangi modu ne zaman kullanacağımıza başlangıç aşamasında kendimiz karar verebiliyoruz. </p>
+<p>Sistemimizi kalıcılık modunda açtığımıza göre şimdi de test etmek üzere birkaç deneme gerçekleştirelim.
+Öncelikle ağ ayarlarını hatırlamayı aktifleştirdiğim için wifi ağına bağlanıp şifremi giriyorum.
+Tor tarayıcısı için yer işaretlerini aktifleştirdiğim için Tor tarayıcısını açıp bir web sitesini ziyaret ediyorum. Ziyaret ettiğim web sitesini daha sonra ulaşabileceğim şekilde kaydetmek için &quot;<strong>Yıldız</strong>&quot; ikonuna tıklayıp web sitesini yer işaretlerime kaydediyorum. Bu noktada unutmamanız gereken detay; bizim <strong>yalnızca Tor tarayıcısı için</strong> yer işaretlerinin kaydolmasını sağlayacak olan özelliği aktifleştirmiş olamamızdır. Yani Tor tarayıcısı hariç hiç bir tarayıcının yer işaretleri ve ayrıca Tor tarayıcısının yapılandırmış olduğunuz ayarları da kaydolmayacaktır. Bu özellik sadece Tor tarayıcısının yer işaretleri kayıtlı tutmayı sağlar. Bu durumu da test etmek için Tor tarayıcısının ayarlarında değişiklik yapalım. Örneğin tarayıcının temasını karanlık tema ile değiştirelim. İşlemi tamamladıktan sonra tarayıcımızı kapatıp tekrar açalım. Gördüğünüz gibi tarayıcı şu an için karanlık temayı kullanmaya devam ediyor. Ancak sistemi yeninden başlattıktan sonra bu durumun devam edip etmeyeceğini hep birlikte görmüş olacağız.
+Kişisel verilerimin kaydolmasını da aktifleştirdiğim için, verilerin kaydolacağı konuma göz atmak ve yeni klasör oluşturup kalıcılığını test etmek istiyorum. Bu işlem için görev çubuğunda yer alan &quot;<strong>Yerler</strong>&quot; kısayoluna tıklıyorum. Açılan panelde kalıcılık moduyla birlikte gelmiş olan 2 yeni dizin kısayolu görüyoruz. Bunlar &quot;<strong>Persistent</strong>&quot; ve &quot;<strong>Tor Browser(persistent)</strong>&quot; dizinleridir. Bu dizinlerde, sistem kapanırken silinmesini istemediğimiz tüm verilerimizi barındırabiliyoruz. Peki ama neden sadece tek kalıcılık dizini bulunmuyor da hem Tor tarayıcısı için hem de standart kalıcılık için iki ayrı dizin bulunuyor ? </p>
+<p>Bu durumun nedeni, Tor tarayıcısının güvenlik gerekçesiyle normal şartlarda yalnızca &quot;<strong>Tor Browser</strong>&quot; dizinine erişebiliyor olmasıdır.  Örneğin biz Tor tarayıcısı üzerinden herhangi bir dosya indirmek istediğimizde &quot;<strong>Tor Browser</strong>&quot; konumu dışındaki herhangi bir konumu seçtiğimizde yetki hatası ile karşılaşırız. Tor tarayıcısının ucu internete açık olduğundan internet üzerinden gelebilecek zararları önlemek için Tail, Tor tarayıcısının sisteme veri kaydedebileceği konumu sistem dosyalarından izole şekilde yapılandırmıştır. Benzer şekilde yine sistemin güvenliğini kalıcı moddayken de tehlikeye sokmamak adına Tor tarayıcısı için ayrıca kalıcı dizin oluşturuluyor. Bu yüzden hem Tor tarayıcısı hem de tüm sistem geneli için iki adet kalıcılık dizini bulunuyor. Deneyecek olursak Tor tarayıcısı üzerinden hem &quot;<strong>Tor Browser</strong>&quot; hem de &quot;<strong>Tor Browser(persistent)</strong>&quot; dizinine dosya kaydederken erişim sorunu yaşamıyoruz. İki dizin arasındaki fark birinin geçici, diğerinin ise kalıcı olarak dosyaları tutuyor olmasıdır.
+İki adet kalıcılık dizinin bulunma nedenini öğrendiğimize göre şimdi de kalıcı ve kalıcı olmayan dizinlere klasörler oluşturup testimiz için hazırlığımızı bitirelim. Ben denemek için hem &quot;<strong>Persistent</strong>&quot; hem de &quot;<strong>Tor Browser(persistent)</strong>&quot; konumlarında birer yeni klasör oluşturuyorum. Ayrıca geçici konumlar olan masaüstüne ve ev dizinime de birer yeni klasör oluşturuyorum.</p>
+<p>Kalıcılık moduna dair genel testimizi sonuçlandırmak için sistemimizi yeninden başlatıp değişiklikleri kontrol etmemiz yeterli. Sistemimizi yeninden başlatalım ve sistemi kalıcılık modunda açmak için parolamızı girelim. </p>
+<p>Sistem açıldığında ilk etapta gözümüze çarpan masaüstü konumunda oluşturmuş olduğumuz klasörün silinmiş olduğu. Bu durum bizi şaşırtmadı çünkü kalıcılığı sağlayan &quot;<strong>Persistent</strong>&quot; ya da &quot;<strong>Tor Browser(persistent)</strong>&quot; dizinleri dışında kalan tüm dizinlerdeki dosyaların otomatik olarak silineceğini zaten biliyorduk. Ev dizinimizi de kontrol ettiğimizde aynı şekilde burada oluşturmuş olduğumuz klasörün de silinmiş olduğuna şahit oluyoruz. Şimdi hem &quot;<strong>Persistent</strong>&quot; hem de  &quot;<strong>Tor Browser(persistent)</strong>&quot; dizinlerini kontrol ederek klasörlerin silinip silinmediğine bakalım. Dizinlere ulaştığımızda her iki kalıcılık dizinindeki klasörlerin de silinmemiş olduğunu görebiliyoruz. Bu durumda dosyaların kalıcılığının nasıl sağlandığını da uygulayarak öğrenmiş olduk. Ayrıca sistemin wifi ağına da otomatik olarak şifre sormadan bağlandığını görüyoruz. Bu da demek oluyor ki ağ ile ilgili ayarlarımız da başarılı şekilde kayıt altında tutulup kullanılmış. Şimdi son testimiz için de Tor tarayıcımızı açalım. Tarayıcımız açıldığında daha önce karanlık temayı seçmiş olmamıza karşın, standart tema üzerinden açıldığını görüyoruz. Bu durum da, tarayıcı ayarlarındaki değişikliklerin kalıcı olmadığını kanıtlamış oluyor. Şimdi bir de yer işaretini kontrol edelim. Yer işareti ise kaydettiğimiz şekilde aynen duruyor. Böylelikle Tor tarayıcısının yalnızca yer işaretlerinin kayıt olarak tutulduğunu da teyit etmiş olduk.</p>
+<p>Ayrıca hazır kalıcılık modunu test etmişken birde Tail işletim sistemi içerisine nasıl yeni uygulamalar kurabileceğimizi ve bu uygulamaların kalıcılık durumlarını da irdeleyelim.</p>
+<h3 id="25">Tail Sistemine Yeni Uygulama Kurulumu</h3>
+<p>Tail işletim sistemine yeni bir uygulama kurmak için hem grafiksel hem de komut satırı arayüzü alternatiflerimiz yer alıyor. Biz bu bölümde herkesin daha kolay kurulum yapabilmesi adına, grafiksel arayüz üzerinden kurulum işlemlerini ele alıyor olacağız. Kurulum işlemi de güvenlik için farklı bir süreçte ilerlediği için kavram karmaşası yaşamamak adına adımları dikkatlice takip etmeniz gerekiyor. Ayrıca güvenlik ve gizlilikle ilgili bir eğitimde neden işletim sisteminin ayrıntılarına değindiğimi merak edenleriniz olabilir. Bunun nedeni sistemi uzun süre kullanacağınızı varsayarak, sistem içerisinde ihtiyacınız olan her türlü temel bilgiye sahip olmanızın faydalı olacağını düşünüyor olmamdır. Yani kimi zaman anlatımlar sıkıcı hatta sizin için gereksiz dahi gelse, buradaki tüm anlatımların tecrübe kapsamında size yararı olacağı için anlatıldığından kuşkunuz olmasın lütfen. </p>
+<p>Her şeyden önce paket kurulumu yaparken yönetici iznine ihtiyacımız olacağı için yönetici hesabını sistem başlangıcında mutlaka aktif etmemiz gerekiyor. Yönetici izni aktifken &quot;<strong>synaptic paket yöneticisi</strong>&quot; uygulamasını çalıştırıyoruz ve yönetici onayını veriyoruz. </p>
+<p><img src="../../img/4/30-min.png" class="responsive"></p>
+<p>Bu uygulama, isminden de anlaşılacağı gibi sistem üzerinde yer alan her türlü paketi yönetmek için kullanılan yardımcı bir araçtır. Bizler bu araç yardımı ile paketler yükleyip, mevcut paketleri güncelleyip silebiliyoruz.</p>
+<p>Uygulamayı ilk kez açtığımızda paketlerin bulunduğu sunucu adresi üzerinden paket bilgilerinin yenilenmesi gerekiyor. </p>
+<p><img src="../../img/4/31-min.png" class="responsive"></p>
+<p>Bu işlemin bitmesini bekliyoruz. İşlem bittikten sonra yüklemek istediğimiz uygulamayı arama kısmından sorguluyoruz. Ben küçük bir araç olduğu için örnek olarak &quot;<strong>figlet</strong>&quot; isimli bir aracı indiriyor olacağım. Araç bulunduktan sonra yanındaki kutucuğu işaretliyorum. Aracı işaretledikten sonra kurulum işlemi için &quot;<strong>Uygula</strong>&quot; butonuna basıyorum. </p>
+<p><img src="../../img/4/32-min.png" class="responsive"></p>
+<p>Karşıma kurulacak ve güncellenecek olan paketlerin bilgisi ile onay kutusu geliyor, onaylayıp devam ediyorum. Kurulum işlemi tamamlandığında bildirim olarak, kurulum işleminin tek sefer mi yoksa her sistem açılışında tekrarlayacak kurulum şekilde mi ayarlanması gerektiğini soran panel açılıyor. </p>
+<p><img src="../../img/4/33-min.png" class="responsive"></p>
+<p>Eğer buradan bir kez kurulsun seçeneğini seçersek, sistem kapatılıp açıldığında kalıcı modu kullanıyor dahi olsak bu araç biz tekrar elle kurana kadar kullanılamıyor olacak. Ama eğer her defasında kurulsun seçeneğini seçersek, aracın paketi &quot;<strong>Ek Uygulamalar</strong>&quot; listesine eklenerek sistem her kalıcı modda açıldığına otomatik olarak kendiliğinden kuruluyor olacak. Eğer tek sefer ihtiyacımız olan bir uygulama değilse her defasında otomatik kurulması işimizi oldukça kolaylaştıracaktır. Ben her defasında kurulsun seçeneğini seçerek işlemi tamamlıyorum. Durumu kontrol etmek için de &quot;<strong>Ek Uygulamalar</strong>&quot; aracını çalıştırıp paketin yer alıp almadığına bakıyorum. </p>
+<p><img src="../../img/4/34-min.png" class="responsive">
+<img src="../../img/4/35-min.png" class="responsive">
+Gördüğünüz gibi paketimiz bu liste içerisinde yer alıyor. Biz bu listeden çarpı işaretine basıp kaldırana kadar da sistem kalıcı modda başlatıldığında, aracımız otomatik olarak kuruluyor olacak. Hemen sistemimizi kalıcı modda yeninden başlatarak aracın otomatik olarak kurulup kurulmadığını test edelim.</p>
+<p>Sistemi kalıcı modda yeniden başlattık. </p>
+<p><img src="../../img/4/36-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi sistem otomatik olarak aracın kurulmakta olduğunu bize bildiriyor. Üstelik tekrar kurulum işlemi için internet bağlantısına da ihtiyacımız yok. Çünkü zaten kurulum paketi daha önce indirilip tekrar tekrar kurulmak üzere kalıcı depolama biriminde muhafaza edilmişti. Şayet yeni bir güncelleme gerekirse, sistem güncellemeyi internet bağlantısına sahipken otomatik olarak güvenlik amacıyla yapıyor olacak. Kurulum işlemi bittiğinde haberdar ediliyoruz.  Daha önce de kurduk ama hiç test etmedik, şimdi test etmek için iyi bir zaman. Aracımızın işlevi düz metinleri ASCII karakterlerine çevirerek ekrana bastırmaktır. Bu basit araç konsol üzerinden çalışıyor. Hemen test etmek için <code>figlet Merhabalar</code> komutunu konsola girelim. </p>
+<p><img src="../../img/4/37-min.png" class="responsive"></p>
+<p>Gördüğünüz gibi çıktı istediğimiz şekilde sonuçlanmış oldu. Burada kurduğum aracın bir önemi yok, yani aracın ne olduğuna takılmayın. Ben sadece basit bir örnek olması açısından bu aracı kurdum. Sizler ihtiyacınız olan herhangi bir aracı, depolarda yer alması yani sistemin desteklemesi durumunda buradan öğrendiğiniz şekilde kurabilirsiniz. Ayrıca bu noktada yeni kuracağınız paketlerin güvenlik açısından test edilmemiş olabileceğini de lütfen unutmayın. Tail işletim sistemi yalnızca kendi sistemi içerisinde varsayılan olarak yüklü gelen paketlerin güvenliğinden sorumludur. Yani harici araç kurulumları sisteminizin güvenliğini riske edebilir. Güvenmediğiniz ve ihtiyacınız olmayan hiç bir uygulamayı kurmanızı kesinlikle önermiyorum.</p>
+<p>En nihayetinde kalıcılık modunun sorunsuzca çalıştığına bizzat şahit olmuş olduk. Sizler de kalıcılık modunu kullanarak kaybetmek istemediğiniz her türlü veriyi güvenli şekilde işletim sisteminiz içerisinde barındırabilirsiniz.</p>
+<h3 id="26">Kalıcılık Modunun Parolasını Değiştirmek</h3>
+<p>Eğer kalıcılık modunun parolasını değiştirmek istersek, disk uygulaması üzerinden bu işlemi gerçekleştirebiliyoruz. Ancak bu işlem için yönetici iznine ihtiyacımız olacağından, sistem başlangıcında yönetici hesabını aktif etmemiz gerekiyor. </p>
+<p><img src="../../img/4/38-min.png" class="responsive"></p>
+<p>Yönetici hesabı aktif olarak sistemi başlattıktan sonra, uygulamalar kısmından &quot;<strong>Disk</strong>&quot; uygulamamızı açalım. Açılan pencereden &quot;<strong>TailsData</strong>&quot; etiketli ve üzerinde anahtar simgesi bulunan disk alanını seçip ayarlar simgesine tıklayalım. </p>
+<p><img src="../../img/4/39-min.png" class="responsive"></p>
+<p>Buradan &quot;<strong>Parolayı Değiştir</strong>&quot; seçeneğini seçip yeni parolamızı belirledikten sonra &quot;<strong>Değiştir</strong>&quot; butonuna basarak parolanın değiştirilmesini sağlayalım. </p>
+<p><img src="../../img/4/40-min.png" class="responsive"></p>
+<p>Karşımıza gelen yönetici izni için, yönetici parolasını girdikten sonra &quot;Doğrula&quot; diyerek onay verelim. Tüm işlem bu kadardı. Artık kalıcı disk alanımız, değiştirmiş olduğumuz yeni parolamız ile korunuyor.</p>
+<h3 id="27">Kalıcılık Modunu Silmek</h3>
+<p>Kalıcılık modunu kapatmak ve kalıcılık moduna dahil olan tüm verilerden kurtulmak istersek,  &quot;<strong>Tails</strong>&quot; menüsünde yer alan &quot;<strong>kalıcılık bölümünü sil</strong>&quot; seçeneğini kullanabiliriz. Ancak bu işlem için hem yönetici hesabımız aktif olmalı hem de sistemi geçici modda başlatmış olmamız gerekiyor. Eğer sistemi kalıcılık modunda başlatırsak, halihazırda sistem kalıcılık modunu kullanacağından silmesi mümkün olmayacaktır. Sistemi amnezik modda yönetici hesabı aktif şekilde başlattıktan sonra uygulama menüsünden &quot;<strong>Kalıcılık bölümünü sil</strong>&quot; kısmına tıklayalım.  </p>
+<p><img src="../../img/4/41-min.png" class="responsive"></p>
+<p>Bu seçeneği seçtikten sonra silinecek bölümün bilgisini içeren pencere açılıyor. Eğer tüm verileri silerek kalıcılık modunu kapatmak istersek &quot;Sil&quot; butonuna basarak devam ediyoruz. </p>
+<p><img src="../../img/4/42-min.png" class="responsive"></p>
+<p>Bu işlemin ardından tüm kayıtlı veriler ve verilerin kaydedilmesi özelliği ortadan kalkmış olacak. </p>
+<p><img src="../../img/4/43-min.png" class="responsive"></p>
+<p>Sizler de bu şekilde ihtiyaçlarınıza göre Tail işletim sistemini hem &quot;<strong>amnezik</strong>&quot; hem de &quot;<strong>kalıcılık</strong>&quot; modunda kullanabilirsiniz. </p>
+<h3 id="28">Köprü ve Ortak İnternet Bağlantıları Hakkında</h3>
+<h4 id="29">Köprü Bağlantısı</h4>
+<p>Konunun başında Tail işletim sistemi için köprü bağlantısı sağlayabileceğimizden bahsettik ancak nasıl yapacağımızı hiç ele almadık. Eğer köprü bağlantısına ihtiyaç duyuyorsak, bunu sistem başlangıcında açılan ek ayarlardan düzenleyebiliyoruz. Bunun için sistem başlangıcında bizi karşılayan pencereden artı tuşuna basıp ağ ayarlarından &quot;<strong>Bir Tor köprüsü ya da vekil sunucu yapılandır</strong>&quot; seçeneğini seçip &quot;<strong>Ekle</strong>&quot; diyelim.</p>
+<p><img src="../../img/4/44-min.png" class="responsive"></p>
+<p>Ekleme işleminin ardından gördüğünüz gibi, &quot;<strong><em>bir ağa bağlandıktan sonra Tor köprüsü ya da yerel vekil sunucusu yapılandırmasını yapacaksınız</em></strong>&quot; şeklinde mesaj alıyoruz. </p>
+<p><img src="../../img/4/45-min.png" class="responsive"></p>
+<p>Başlat diyerek sistemin düzenlediğimiz ayarlar doğrultusunda açılmasını sağlayalım.</p>
+<p>Sistem başladığında bir ağa bağlandıktan sonra karşımıza Tor ağını yapılandırmak yani köprü bağlantısını eklemek için bir pencere açılıyor. </p>
+<p><img src="../../img/4/46-min.png" class="responsive"></p>
+<p>Bu pencereyi Tor tarayıcısını ilk kez açtığımızda da görmüştük hatırlarsanız. Bu pencere Tor ağına yapacağımız bağlantıyı yapılandırmamızı sağlıyor. Açılan pencerede &quot;<strong>Yapılandır</strong>&quot; butonuna basalım ve &quot;<strong>Bulunduğum ülkede Tor ağı engelleniyor</strong>&quot; seçeneğini seçelim. </p>
+<p><img src="../../img/4/47-min.png" class="responsive"></p>
+<p>Seçimimizin ardından açılmış olan alana, bağlantı kurmak istediğimiz köprü adresini yazıp &quot;<strong>Bağlan</strong>&quot; diyerek Tor ağının köprü bağlantısı üzerinden çalışmasını sağlayalım. Köprü adreslerini bulmak için Tor ağına bağlı olmayan &quot;<strong>Güvenli Olmayan Tarayıcı</strong>&quot; aracını kullanabiliriz. Bu araç internet bağlantısını Tor ağı üzerinden sağlamadığı ve ek tarayıcı korumaları içermediği için &quot;güvensiz&quot; olarak tabir edilen ve zorunda kalmadıkça kullanılması önerilmeyen alternatif tarayıcıdır. Biz de köprü bağlantısını öğrenmek için bu noktada kullanmak durumundayız.</p>
+<p>Tarayıcımızı başlattığımızda sistem bizi, bu tarayıcının güvenli olmadığı konusunda uyarıyor. Biz tüm uyarıların farkında olduğumuzu bildirmek için &quot;<strong>Başlat</strong>&quot; butonuna basıyoruz.</p>
+<p><img src="../../img/4/48-min.png" class="responsive"></p>
+<p>Açılan tarayıcının adres çubuğuna bridges.torproject.org yazıp onaylayalım. Buradan &quot;<strong>Get bridges</strong>&quot; kısmına tıklayıp açılan sayfadan daha önce de yaptığımız şekilde köprü bağlantımızı edinelim.
+Aldığımız bağlantı adresini gerekli alana yazıp onaylayalım. </p>
+<p><img src="../../img/4/49-min.png" class="responsive"></p>
+<p>Böylelikle tüm sistemin kullandığı Tor ağının köprü bağlantısını gerçekleştirmiş olduk.</p>
+<p><img src="../../img/4/50-min.png" class="responsive"></p>
+<h4 id="30">Ortak Ağ Bağlantıları</h4>
+<p>Bağlı olduğumuz internet herkesin kullanabildiği toplu kullanıma açık hastane, okul, şirket, kafe gibi bir ortak internet bağlantısı ise genellikle öncelikle ağda oturum açmayı gerektireceğinden Tor ağı üzerinden bu interneti kullanamayız. Bu tür toplu kullanılan ağlarda denetimi sağlamak için ağ üzerinde istenilen bilgileri girip oturup açmadan internete erişmemizi engelleyecek doğrulama mekanizması bulunur. Hatırlarsanız Tor ağı da internet erişiminin ardından Tor ağına bağlanma imkanı sunduğu için bu engeli ancak güvenli olmayan standart bir tarayıcı üzerinden aşabiliriz.</p>
+<p>Ağı kullanabilmek için öncelikle bizden istenen oturumu, internet trafiğini Tor ağı üzerinden yönlendirmeyen güvensiz tarayıcı üzerinden açmamız gerekiyor. Bir kez oturum açtıktan sonra artık tüm trafiği Tor ağı üzerinden yönlendirip kullanabiliyor olacağız zaten. </p>
+<p>Bu işlem için internet sekmesinde yer alan &quot;Güvenli olmayan tarayıcıyı&quot; açmamız gerekiyor. Güvenli olmayan tarayıcı Tail işletim sistemi üzerindeki Tor ağı üzerinden kullanılmayan tek programdır. Sadece istisnai durumlarda kullanılmak üzere bulunur. Nitekim köprü bağlantısı almak ve toplu internet ağlarında oturum açmak gibi zorunlu işlemleri dışında bu tarayıcıyı asla kullanmayacağız. Bu tarayıcı üzerinden yaptığınız hiç bir işlem gizli ve anonim sayılmaz. Hatta gördüğünüz gibi tarayıcımızı çalıştırdığımızda bize bu uyarıyı vererek, sadece gerektiği durumlarda kullanmamız konusunda bizi uyarıyor. Bunu daha önce de ele aldık ancak önemli olduğu için tekrar açıklama gereği duydum.</p>
+<p>Güvenli olmayan tarayıcımızı başlattığımızda karşımıza tekrar bu tarayıcının güvenli olmadığı ve sadece oturum açma gibi zorunlu durumlarda bu tarayıcıyı kullanmamız gerektiğinden bahsediyor. Hatta renginin kırmızı olması ve logosunda ünlem işareti bulunmasının nedeni de dikkatsizlik ile bu tarayıcıyı kullanmamızı önlemektir. 
+Çevremde şu an için böyle bir oturum açmayı gerektiren toplu ağ olmadığından size doğrudan gösteremeyeceğim. Yine temsili olarak ele alacak olursak; hastane, havalimanı, okul, işyeri ve benzeri toplu internet erişimin olduğu yerlerde internet ağlarına bağlanmanız gerekirse mutlaka sizden birtakım bilgiler isteyerek, oturum açmanızı talep edecek bir kontrol mekanizması ile karşılaşacaksınız. Yani henüz Tor ağına bağlanmadan önce internet erişiminin önünde bu engel olacağı için Tor ağını kullanamazsınız. Bu durumda güvenli olmayan yani Tor ağı üzerinden yönlendirilmeyen tarayıcıyı açarak gerek oturumu açıp internet üzerindeki engeli kaldırmanız yeterli. İnternet engeli kalktığında zaten Tor ağına otomatik erişim sağlanacaktır. Böylelikle toplu internet ağlarından da Tor ağına erişmeniz mümkün olacaktır. Yine de oturum açarken girdiğiniz bilgiler sizin anonimliğinizi ihlal edebileceği için bu noktada girdiğiniz bilgilere çok dikkat etmenizde fayda var.</p>
+<h2 id="31">Tail Üzerinden VPN Kullanımı Hakkında</h2>
+<p>Tail işletim sistemi, henüz <a href="https://tails.boum.org/blueprint/vpn_support/">resmi olarak desteklemediği</a> için Tail üzerinden VPN kullanımını güvenli bulmuyor. Yani Tail geliştiricileri VPN kullanımını kesinlikle önermiyor. Yine de Tail işletim sistemi desteklemese de VPN kullanabileceğimiz yöntemler mevcut fakat bunlar açıkça güvenliğimizi riske ediyor. Güvenli olmadığı için ben de Tail üzerinden VPN kullanımını ele almayacağım. İnternet üzerinden bulacağınız yöntemleri de kullanmanızı kesinlikle önermem. Benim anlatmıyor olma nedenimin, yarardan çok zarar getirebilecek olmasıdır. VPN yerine köprü bağlantısı kullanabilirsiniz.</p>
+<p>Köprü bağlantısını kullanmak, internet servis sağlayıcınızın Tor kullandığınızı bilmesini zorlaştırır, ancak yine de imkansız değildir. Derin araştırma yapıldığında analiz sonucu Tor ağını kullandığınızın bilgisi ortaya çıkabilir. Yine de Tor köprülerinin her geçen gün trafiği gizlemek için daha iyi hizmet sunduğunu ele alarak, kısa süreli kullanımlarda Tor ağına bağlı olduğumuzun tespiti oldukça güç olacaktır. </p>
+<p>Peki ama hani VPN ekstra güvenlik sağlıyordu ve Tail sistemi de güvenliğe önem veriyordu ? O zaman neden Tail sistemi üzerinden VPN kullanımının kolay ve güvenli bir yolu yok ? Aslında VPN kullanımı, internetimizi derinlemesine analiz eden gözlemcilerden Tor ağına bağlı olduğumuzun bilgisini gizlemek ve art niyetli giriş düğümlerinin işini zorlaştırmak için var. Ama şart değil. Tail sistemini taşınabilir şekilde kullanabildiğiniz için gerçekten gizlilik gerektiren işlerimizi toplu ağlar üzerinden gerçekleştirebiliriz. Yani Tail üzerinden VPN kullanımına takılmanız anlamsızdır. Tail sisteminin çalışma yapısını ve amacını doğru şekilde anladıysanız gizliliğiniz riske girmeyecektir.</p>
+<p>VPN kullanımına da açıklık getirdiğimize göre, uzun soluklu bir bölümün daha sonuna gelmiş olduk. Bir sonraki bölümde güvenliğimizi çok daha ileri seviyeye taşıyabilecek &quot;Qubes&quot; işletim sisteminden bahsediyor olacağız.</p>
+
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+

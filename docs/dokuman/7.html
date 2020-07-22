@@ -1,0 +1,450 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Anonimlik ve Gizlilik Eğitimi | 7. Ders</title>
+	<link rel="icon" href="../../img/menu/icon.png" type="image/icon type">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body id="body" >	
+<div class="bs-canvas-overlay bs-canvas-anim bg-dark position-fixed w-100 h-100"></div>
+	
+<nav class="navbar y-navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></a>
+  <center >
+	<div>
+	<a href="./6.html" style="color: black" class="btn navbar-toggler " > <i class="fa fa-angle-double-left fa-lg"></i></a>
+	
+    <a href="../../index.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-book fa-lg"></i></a>
+	
+    <a href="./8.html" style="color: black" class="btn navbar-toggler " ><i class="fa fa-angle-double-right fa-lg"></i> </a>
+	</div>
+  </center>
+  <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		
+</nav>
+
+<nav class="navbar x-navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+	
+	<div class="container ">
+            <div align="left"><button class="btn"  data-toggle="canvas" data-target="#bs-canvas-left" aria-expanded="false" aria-controls="bs-canvas-left"><i class="fa fa-align-justify fa-lg"></i></button>
+		<a href="../../menu.html" class="btn"  ><i class="fa fa-home fa-lg"></i></a>     </div>
+	<center >
+		
+        <a href="./6.html" class="btn">Önceki <i class="fa fa-angle-double-left fa-lg"></i></a>
+		
+        <a href="../../index.html" class="btn" ><i class="fa fa-book fa-lg"></i></a>
+		
+        <a href="./8.html" class="btn" ><i class="fa fa-angle-double-right fa-lg"></i> Sonraki</a>
+		
+        
+    </center>
+			<div align="right">
+				<a href="../../bildirim.html" class="btn" ><i class="fa fa-paper-plane"></i></a>    
+             <a style="color: black" class="btn"  data-toggle="canvas" data-target="#bs-canvas-right" aria-expanded="false" aria-controls="bs-canvas-right" ><i class="fa fa-gear fa-lg"></i></a>  
+		</div>              
+	</div>
+     
+</nav>
+<div id="bs-canvas-right" class="bs-canvas bs-canvas-anim bs-canvas-right position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">Ayar Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+			<button class="btn">Yazı Boyutunu Seçip Kaydedin</button>
+  <!-- This is how they choose their font size -->
+  <select onchange="fontSize(this);">
+    
+	<option>18px</option>
+	<option>20px</option>
+	<option>22px</option>
+	<option>24px</option>
+	<option>26px</option>
+
+  </select>
+  <br>
+
+  <input type="button" id="save" value="Seçili Boyutu Kaydet">
+<button class="btn">Okuma Modunu Değiştirin</button>
+		<button class="btn btn-outline-dark" onclick="darkLight()" ><i class="fa fa-eye fa-lg"></i></button>
+		
+        </div>
+    </div>    
+</div>
+	
+<div id="bs-canvas-left" class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed bg-light h-100" >
+	<header class="bs-canvas-header p-3 bg-dark">
+		
+    	<h4 align="center" class="text-light">İçerik Menüsü<button type="button" class="bs-canvas-close close" aria-label="Close" aria-expanded="true"><span aria-hidden="true" class="text-light">×</span></button></h4>
+        
+    </header>
+    <div class="bs-canvas-content px-3">
+    	
+    	<div align="center" class="list-group my-2 ">
+
+			<a href="#" class="list-group-item list-group-item-action">Giriş</a>
+          	<a href="#0" class="list-group-item list-group-item-action">Şifreleme</a>
+			<a href="#1" class="list-group-item list-group-item-action">Uygulama Güvenliği</a>
+			<a href="#2" class="list-group-item list-group-item-action">Nasıl Çalışır</a>
+			<a href="#3" class="list-group-item list-group-item-action">Simetrik Şifreleme</a>
+			<a href="#4" class="list-group-item list-group-item-action">Asimetrik Şifreleme</a>
+			<a href="#5" class="list-group-item list-group-item-action">PGP Anahatı Oluşturmak</a>
+			<a href="#6" class="list-group-item list-group-item-action">Anahtar Aktarımı</a>
+			<a href="#7" class="list-group-item list-group-item-action">Dosya Dağıtmak</a>
+			<a href="#8" class="list-group-item list-group-item-action">Yazılı Dağıtmak</a>
+			<a href="#9" class="list-group-item list-group-item-action">Anahtar Sunucusu</a>
+			<a href="#10" class="list-group-item list-group-item-action">Metni Şifreleme</a>
+			<a href="#11" class="list-group-item list-group-item-action">Dosya Şifreleme</a>
+   			<hr>
+			<a href="#bildirim" class="list-group-item list-group-item-action">Geri Bildirim</a>
+			
+          	
+        </div>
+		
+		
+    </div>    
+</div>
+    
+  <div class="container">    
+        <p></p>
+	  <div align="center" class="col">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col d-flex flex-column position-static">
+          <strong class="d-inline-block text-primary">7.Doküman</strong>
+          <h3 class="mb-0">Şifreleme Üzerine: Uçtan Uca Şifeleme</h3>
+          <div class="mb-1 text-muted">Konu Etiketleri</div>
+          <p class="card-text mb-auto">pgp , simetrik ve asimetrik şifreleme , metin şifreleme , dosya şifreleme , anahtar dağıtımı</p>
+        </div>
+        
+      </div>
+    </div>
+<article id="makale" style="font-size:1em;" class="markdown-body entry-content" itemprop="text">
+	
+	 <h4 id="0">Uçtan Uca Şifreleme</h4>
+
+<p>İlerleyen bölümlerde adından sıkça söz edeceğimiz uçtan uca şifreleme mekanizmasından ve kullanımından bu bölümde bahsediyor olacağız. </p>
+
+<p>Uçtan uca şifreleme mekanizması; gönderici ile alıcı arasındaki iletişim verisinin henüz gönderilmeden, göndericideyken şifrelenip yalnızca alıcıya ulaştığında çözülebileceği şekilde çalışır. Yani iletişim verilerinin&nbsp; karşılıklı olarak güvenli şekilde aktarılmasını sağlar. Bu mekanizmada temel amaç; verinin aktarım yolu üzerindeki sunucu da dahil olmak üzere hiç kimse tarafından okunamamasını sağlamaktır. Genel tanımla uçtan uca şifreleme mekanizması bu şekilde çalışır.</p>
+
+<p>Kullanım ayrıntılarına geçmeden önce, uçtan uca şifreleme sisteminden ne beklememiz gerektiği konusuna değinmek istiyorum. Zira kimi zaman uçtan uca şifreleme yönteminin mucizevi bir biçimde tüm güvenlik sorunlarını çözdüğü ve müthiş bir gizlilik sağladığı gibi bir yanlış algı oluşabiliyor. Baştan söyleyelim doğru yerde doğru şekilde kullanıldığında harika bir çözümdür yine de her derde deva bir mucize değildir.</p>
+
+<p>Uçtan uca şifreleme doğru şekilde uygulandığında anahtara sahip olmayan hiç bir gözlemcinin şifreyi çözemeyeceği doğrudur. Hatta sırf bu yüzden amerikan istihbarat teşkilatının iPhone kullanan şüphelilerin verilerine erişimde zorluk yaşanacağını şirkete bildirmesiyle, Apple uçtan uca şifrelemeyi tüm iCloud verilerine uygulamaktan vazgeçti. Yani bu durum da gösteriyor ki, uçtan uca şifreleme gerçekten güçlü bir koruma sağlıyor. Ancak mesele sadece şifrelenmiş mesajları çözmek değil. Örneğin kullandığınız işletim sisteminde ya da uygulamada yer alan bir zafiyet, mesajın şifresi çözüldükten sonra açıkça okunabilen halini ele geçirebilir. Bu gibi durumlarda gözlemcilerin şifre çözme zahmetine girmesi gerekmez. Örneğin yakın dönemde ortaya çıkan korkunç bir durumu ele alırsak, Whatsapp'ın çok övündüğü uçtan uca şifreleme mekanizmasının bir önemi olmadığı ortaya çıktı. Saldırganların size Whatsapp üzerinden arama gerçekleştirerek zararlı yazılım bulaştırıp tüm mesaj içeriklerinize hatta telefonunuza sızabildikleri ortaya çıktı. Üstelik bu casus yazılımın İsrailli "<strong>NSO</strong>" siber güvenlik firması tarafından "<strong>Pegasus</strong>" adıyla istihbarat örgütlerine ve çeşitli oluşumlara sattığı biliniyor. Bu casus yazılımı kullanan kişiler zahmetsiz şekilde hedeflerindeki kişilerin telefonlarına Whatsapp gibi uygulamalar üzerinden rahatlıkla sızabiliyorlar. Üstelik zafiyetin hedefteki kişilerin hiç bir onay işlemine ihtiyaç duymadan gerçekleşmesi, durumun ne kadar tehlikeli olduğunu da ortaya koyuyor. Her ne kadar reddediyor olsalar da NSO şirketinin, Jeff Bezos ve Cemal Kaşıkçı'nın telefonlarına da bu yolla sızdıkları <a href="https://www.bbc.com/turkce/haberler-dunya-51222094" target="_blank" rel="noopener noreferrer">gündeme geldi</a> ve yapılan adli bilişim incelemeleri de bu bilgiyi doğrular nitelikte. Bu olaylara ek olarak ayrıca Facebook, Whatsapp uygulamasını bu şekilde hackleyip binlerce insanın konuşmalarına ve telefonlarına sızdığı iddiasıyla aynı şirketi dava etti. Burada dikkat etmemiz gereken şey NSO siber güvenlik şirketinin faaliyetleri değil. Bu iddialar doğru da olsa yanlış da olsa kesinlikle mümkünatı olan bir gerçekliği bize hatırlatıyor. Söz konusunu kişisel gizlilik olduğunda yaygın kullanıma sahip işletim sistemleri ve uygulamalar hiç bir zaman güvenli değil. Hedef olarak seçildiğinde herhangi bir işletim sistemi ya da uygulama üzerinde zaafiyet bulunabilir ve bunun neticesinde gizliliğimiz ihlal edilebilir. Bu örneğimizde NSO şirketinin "Pegasus" yazılımından bahsettik ancak bu sadece bir örnek. Bu şirket olmasa, başka bir şirket benzer faaliyetleri yürütmeye devam edecektir. Yani burada şirketin ya da casus yazılım adının bir önemi yok. Burada ki esas mesele birilerinin, istediği insanları izlemeye hakkının olduğunu düşünüp bunu şirketlerden talep ederek böyle bir ticari pazar oluşturması. Böyle bir talep olduğu sürece bu ticari pazara ürün sunacak pek çok şirket ve kişi olmaya devam edecek. Bu gibi yazılımlar sadece devletlere "terör faaliyetlerini engelleme" adı altında geliştirilip sunuluyor olsalar da baskıcı rejimlerde muhaliflerin ortadan kaldırılması, sivil toplum kuruluşlarının zayıflatılması ve yüksek rantlı işlerde rakiplerin takip edilebilmesi gibi art niyetli amaçlar için kullanıma da oldukça açıklar. Amerikanın terör bahanesi ile kendi vatandaşları da dahil tüm dünyayı takip ettiği belgelerle kanıtlanmıştı hatırlarsanız. İşte tüm bu casus yazılımların geliştirilmesinde ve pazarlanmasında aynı şekilde "terör eylemlerini durdurmaya yönelik hizmet" sundukları bahanesi yer alıyor. Ancak bu casus yazılımların gerçekte kimler üzerinde hangi amaçla kullanılacağının kesin bir sınırı bulunmuyor. Yani buradaki "biz terör karşıtlığı için kullanıyoruz" ifadesi oldukça masumane bir göz boyamadan ibaret. Bu sistem daha çok "parayı veren düdüğü çalar" şeklinde basit bir ticaret anlaşması üzerine kurulu. </p>
+
+<p>Açıklamayı biraz uzun tutmuş olabilirim ancak amacım güvenlik riskinin ne boyutta olduğunu biraz olsun hissedebilmeniz. Bu örnekteki Whatsapp uygulamasının, kullanan kişiler tarafından güvenli sanıldığı ve popüler kullanıma sahip olduğu için hedef seçildiği ortada. Ancak hedefteki kişiler daha farklı uygulamalar kullanıyorlarsa, bu uygulamalara özgü güvenlik ihlalleri de gereken kaynak ayrıldığında bulunup sömürülebilir. Örneğin Edward Snowden'ın da güvenli bulup tavsiye ettiği "Signal" isimli mesajlaşma uygulamasında da yakın tarihte kritik bir güvenlik zaafiyeti keşfedilmişti. Özetle çalıştığınız ortam güvenli değilse şifrelemenin de hiç bir önemi kalmıyor. Şifrelemenin ötesinde çalıştığınız ortamın güvenliğinden emin olmanız gerekiyor. Çalıştığınız ortamın güvenliğinden eminseniz şifreleme bu noktadan sonra önem kazanıyor. Güvenli olan; internet tarayıcısı, işletim sistemi gibi ortamlarından eğitim içerisinde bahsettik. Yine eğitimin devamında güvenliğimiz için gereken diğer konulardan da bahsetmeye devam edeceğiz. Ancak diğer konulara geçmeden önce, yaygın kullanıma sahip güvenli bilinen uygulamaların da temelde neden güvenli olmadığına kısaca değinmek istiyorum.</p>
+
+<h4 id="1">Uygulamaların Güvenliği Hakkında</h4>
+
+<p>Güvenli iletişim için uçtan uca şifreleme sunan uygulamalar, kullanıcı deneyimini olumsuz yönde etkilememesi için şifreleme ve şifre çözme işini genellikle arkaplanda gerçekleştirir. Örneğin siz Whatsapp gibi uçtan uca şifreleme kullanan herhangi bir uygulama üzerinden birine mesaj gönderdiğinizde; mesajınız arkaplanda şifrelenerek sunucuya aktarılır ve sunucu şifreli mesajınızı karşı tarafa ulaştırarak şifrenin karşı tarafta çözülmesini sağlar. Bu süreçte eğer şifreleme doğru şekilde yapılıyorsa mesajı aktarmayı yapan sunucu ya da aradaki bağlantıyı kontrol eden herhangi bir gözlemci mesaj içeriğini asla açık şekilde göremez. Çünkü mesaj göndericiden şifrelenerek çıkar ve ancak alıcıya ulaştığında çözülür. Böylelikle uçtan uca şifreleme kullanılarak mesajın yolda herhangi bir gözlemci tarafından okunmasının önüne geçilir. Bu güvenlik için kulağa harika geliyor olsa da biraz önce bahsetmiş olduğumuz, uygulama bazındaki zafiyetler söz konusu olduğunda şifreleme sadece göz boyamadan ibaret oluyor. Zira uygulama gerektiği şekilde hacklendiğinde, tıpkı mesajı gönderen ve mesajı alan kullanıcılar gibi gözlemcilerin de açık mesaj içeriklerini okuyabilmesi sağlanabiliyor. Peki bu durumda ne yapmamız gerekiyor ?</p>
+
+<p>Bu gibi durumların önüne geçmek yani mesaj içeriklerimizi meraklı gözlemcilerden uzak tutmak için uçtan uca şifrelemeyi bizim manuel olarak gerçekleştirmemiz gerekiyor. Uygulamalar kullanıcı deneyimini iyileştirmek için bu işi arkaplanda yürütüp bize açık metin sunduğu için bu açık metinler yalnızca karşılıklı aktarım yapılırken sunucu yolu üzerinde korunmuş oluyor. Cihazımıza ulaşan açık metinler, cihaz ya da uygulamanın hacklenmesi ile uygulama içerisinde şifresiz şekilde tutulduğu için rahatlıkla okunabiliyor. Eğer bizler hiç bir zaman açık metni doğrudan göremeyeceğimiz bir mesajlaşma yoluna gidersek, daha sonra bu mesajlar ele geçirilse dahi okunamazlar. Bu işlem için bizim mesajımızı göndermeden önce elle şifreleyip, karşı tarafa doğrudan şifrelenmiş olan mesajı göndermemiz gerekiyor. Bunun için öncelikle mesajımızı güvenli bir ortamda yazıp şifrelememiz, daha sonra şifreli mesajı kopyalayarak karşı tarafa aktarmamız gerekiyor. Mesajı alan karşı taraf ise ona ulaşan şifreli mesajı kopyalayıp yine güvenli bir ortamda şifresini çözerek okuması gerekiyor. Böylelikle mesajın okunabilir içeriği asla güvensiz ortamda barındırılmamış oluyor.</p>
+
+<p>Bu kısımda da manuel yani elle şifreleme işlemini nasıl yapabileceğimizi ve karşı tarafın bu şifreyi nasıl çözebileceğini göstererek gerçek güvenli iletişimin nasıl sağlanması gerektiğini öğreniyor olacağız. Bu yöntem biraz hantal gibi gözükse de güvenlik için şart olduğunu sizler de anlatım sırasında görmüş olacaksınız. Ayrıca uçtan uca şifreleme seçeneği sunmayan uygulamalarda da kendi şifrelememizi kendimiz manuel olarak yapabiliyor olacağız. Şifreleme ve şifre çözmeyi nasıl yapacağımıza geçmeden önce bu sistemin tam olarak nasıl çalıştığını anlamamız oldukça önemli. Çünkü sadece sistemin tam olarak nasıl çalıştığını bilirsek, sistemi hatasız şekilde kullanarak güvenliğimizi sağlayabiliriz.</p>
+
+<h4 id="2">Uçtan uca şifreleme nasıl çalışır ?</h4>
+
+<p>Uçtan uça şifrelemede, "<strong>PGP şifreleme protokolü</strong>" kullanılır. PGP protokolü, şu ana kadar gerçekleştirilen denemelerde henüz açık şekilde kırılamadığı için güvenlik alanında yaygın kullanıma sahiptir. Kısaltmanın açılışı "<strong>P</strong>retty <strong>G</strong>ood <strong>P</strong>rivacy" yani "Oldukça İyi Gizilik" anlamına geliyor. Ancak isminin alaycı bir ifade barındırdığını da belirtmek isterim. Bahsettiğim gibi bu şifreleme protokolü iyiden de öte neredeyse kırılması imkansız bir şifreleme sunuyor. Detaylarına bu kısımda değinmeyeceğim ancak ortaya çıkışı ve yaygınlaşması konusunu ayrıca araştırmanızı öneririm. </p>
+
+<p>PGP asimetrik şifreleme kullanan bir protokoldür. PGP protokolü asimetrik şifreleme kullanıyor olsa da simetrik ve asimetrik arasındaki farkın iyi anlaşılması adına öncelikle simetrik şifrelemeden bahsedelim istiyorum.</p>
+
+<h4 id="3">Simetrik Şifreleme</h4>
+
+<p>Simetrik şifrelemede tek bir anahtar vardır ve mesaj içeriği bu anahtar ile şifrelenip yine bu anahtar sayesinde çözülür. Örneğin ben <strong>X</strong> şifreleme anahtarı ile "<strong>merhaba</strong>" yazısını şifreleyip gönderdiğimde, şifreli mesajı alan kişide de eğer <strong>X</strong> anahtarı varsa benim şifreli mesajımı çözebiliyor. Elbette bu yöntemde <strong>X</strong> anahtarına sahip olan herkesin şifreyi çözebilecek olması, şifrelemenin güvenliğini tehlikeye atıyor. Burada anahtarı çok iyi korumak ve karşı tarafa aktarmak gerekiyor. Ancak biz mesajımızı bile aktarmak için şifrelemeye ihtiyaç duyduğumuzdan bu yöntem oldukça verimsiz. Güvenli iletişim kanalım olsa zaten anahtar aktarmak yerine doğrudan iletişim kurmayı tercih ederim elbette.</p>
+
+<h4 id="4">Asimetrik Şifreleme</h4>
+
+<p>Diğer bir metot olan asimetrik şifrelemede ise hem <strong>açık</strong>(<strong>public</strong>) hem de <strong>gizli</strong>(<strong>private</strong>) olan iki adet anahtar bulunur. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-51-51-f080b48e99970e1d68fecfe89299398e.png" class="responsive"></figure>
+
+<p>Örneğin ben <strong>X kişisine</strong> şifreli mesaj göndermek istersem, mesajımı <strong>X kişisinin açık anahtarı</strong> ile şifreleyerek karşı tarafa iletirim. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-52-01-992e4b9bec7100494b93fc6973dea23f.png" class="responsive"></figure>
+
+<p>Bu açık anahtar herkese açık olarak yayınlanan anahtardır.&nbsp; <strong>X kişisi kendi açık anahtarı ile</strong> şifrelenmiş olan mesajı yalnızca <strong>kendi gizli anahtarı ile</strong> çözebilir. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-52-16-3e5f13623e59b73c2801b52871c25f06.png" class="responsive"></figure>
+
+<p>Böylelikle isteyen herkes X kişisine gizli mesaj gönderebilir ancak mesajları yalnızca gizli anahtara sahip olan X kişisi okuyabilir. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-52-31-f4f54ce59d9aa6a90ea21b63ee9f6145.png" class="responsive"></figure>
+
+<p>Aynı şekilde X kişisi de başka birine şifreli mesaj göndermek istediğinde, o kişinin açık anahtarı ile mesajı şifreleyip gönderir. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-52-56-40ec465f665840ffa09b5e3a541635fb.png" class="responsive"></figure>
+
+<p>Mesajı alan kişi de kendi gizli anahtarı ile mesaj içeriğinin şifresini çözer. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-53-09-f1bd4ff0f149aa98881da6b46ea19d17.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_07-53-20-1998046074aa3cf8337127750301b395.png" class="responsive"></figure>
+
+<p>İşte bu yöntem asimetrik şifreleme olarak geçiyor. Bu yöntemde açık anahtar herkes ile paylaşılırken, gizli anahtar kişilerde gizli şekilde tutuluyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-53-34-62320d985557653307140e53a249e9b0.png" class="responsive"></figure>
+
+<p>Bu sayede şifreyi çözebilecek anahtar hiç taşınmadığı için simetrik şifrelemede olan zafiyetin önüne geçilmiş oluyor. </p>
+
+<p>Ayrıca bu yöntem mesajı gönderen kişilerin gerçek kimliklerini de doğrulama imkanı tanır. Kimlik doğrulama işlemi nasıl oluyor derseniz örnek üzerinden açıklayalım;</p>
+
+<p>Örneğin ben X kişisine <strong>hem şifreli hem de mesajın benden geldiğini kanıtlayan</strong> bir gizli mesaj göndermek istersem;</p>
+
+<ul><li><p>Öncelikle mesajı kendi gizli anahtarım ile imzalıyorum. Kendi gizli anahtarım yalnızca bende olduğundan bu mesajın kesin olarak benden geldiğini kanıtlayacak. </p><figure><img src="../../img/7/2020-06-15_07-53-55-e95dc672066be9d297a530f4a9f0067d.png" class="responsive"></figure></li><li><p>Kendi gizli anahtarım ile imzalanmış mesajı, bir de&nbsp; X kişisinin açık anahtarı ile şifreliyorum. Bu işlem mesaj içeriğinin X kişisi hariç hiç kimse tarafından okunamamasını sağlıyor.</p><p><img src="../../img/7/2020-06-15_07-54-18-e7437050c36ba0887dfd1f43484e4d0e.png" class="responsive"></p><p><br></p></li><li><p>Mesajı alan X kişisi, kendi gizli anahtarı ile mesaj içeriğini açıp okuyor. Mesaj X kişisinin açık anahtarı ile şifrelendiğinden yalnızca X kişisinin gizli anahtarı ile açıp okunabiliyor.</p><figure><img src="../../img/7/2020-06-15_07-54-59-03f659b81b7ef12ff93be3853e6816af.png" class="responsive"></figure><figure><img src="../../img/7/2020-06-15_07-55-10-1d3119e699454a4907bdf156a54a5668.png" class="responsive"></figure></li><li><p>Mesajı okuyan X kişisi mesajın benden geldiğini teyit etmek için gönderen kişinin yani benim açık anahtarım ile mesajdaki imzayı açıyor. </p><figure><img src="../../img/7/2020-06-15_07-55-31-a9a4640b521960b6ec8979f66fb9a805.png" class="responsive"></figure></li><li><p>İmza açıldığında gönderenin ben olduğum anlaşılıyor. İmzalamayı ben kendi gizli anahtarım ile yaptığım ve bu gizli anahtar yalnızca bende bulanabileceği için gönderen kişinin kesinlikle ben olduğum bu şekilde doğrulanabiliyor.</p><figure><img src="../../img/7/2020-06-15_07-55-43-f7431fee80bfbe242956830edd8f74c3.png" class="responsive"></figure></li></ul>
+
+<p>Bu örneğimizde de olduğu gibi asimetrik şifreleme kullanarak iki uç nokta arasında güvenli iletişim kurulabiliyor. İşte uçtan uca şifreleme denilen kavram da bu şekilde iki uç arasındaki güvenli iletişim sağlandığı duruma deniyor.</p>
+
+<p>Genel çalışma yapısından bahsettiğimize göre şimdi de kendi benzersiz anahtarlarımızı nasıl oluşturabileceğimize göz atalım. </p>
+
+<p>Anlatımlara geçmeden önce, anahtar oluşturma, anahtarı paylaşma, dosya şifreleme ve benzeri her türlü işlem için anlatımları güvenli olan Tail işletim sistemi üzerinden gösterdiğimi belirtmek istiyorum. Esasen PGP anahtarı oluşturmak ya da verileri şifreleyip, şifreli verileri çözmek için pek çok işletim sisteminde pek çok alternatif yazılım bulunuyor. Ancak daha önce de bahsetmiş olduğum güvenli ortamda çalışmanın önemi dolayısı ile bu kısımda Tail işletim sistemi içerisinde yüklü gelen bir aracı kullanıyor olacağız. Yani sizler gerektiğinde, güvenli bulduğunuz diğer işletim sistemleri üzerinde yer alan PGP araçlarını da kullanabilirsiniz. Biz anlatımı güvenli bulduğumuz Tail işletim sistemi üzerinden gerçekleştiriyor olacağız.</p>
+
+<h4 id="5">PGP Anahtarı Oluşturmak</h4>
+
+<p>Programı açmak için "<strong>Uygulamalar</strong>" kısmından "<strong>Araçlar</strong>" sekmesine gelerek "<strong>Parolalar ve Anahtarlar</strong>" isimli uygulamayı çalıştıralım.</p>
+
+<figure><img src="../../img/7/2020-06-15_07-59-08-ed9154654716e963b7c12d0591cf0f56.png" class="responsive"></figure>
+
+<p>Açılan program penceresinde "<strong>Dosya</strong>" sekmesinden "<strong>Yeni</strong>" kısmına tıklayarak "<strong>PGP Anahtarı</strong>" seçeneğini seçelim.</p>
+
+<figure><img src="../../img/7/2020-06-15_07-59-19-a2062be6e03f684c2a94dcb45a47b4be.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_07-59-27-775faa8ab54569af68917937e038d3c2.png" class="responsive"></figure>
+
+<p>Açılan pencereye, insanların bizi tanımasını sağlayacak ismimizi ve e-posta adresimizi girelim. Açıklama kısmına da anahtarın kullanım alanına dair açıklama metni girebiliriz. Bu noktada anahtarınız üzerinde yazan bilgilerin herkes tarafından okunabileceğinin farkında olarak yazdıklarınıza dikkat etmeniz çok önemli. Yazdığınız açıklama kısmı dahi herkes tarafından okunabilir olacak. Şifreleme türünü değiştirmeden anahtar uzunluğunu arttırmanızı öneririm. Anahtar uzunluğu 2048 yerine 4096 bit olursa çok daha güvenli olacaktır. Eğer oluşturulacak anahtarın belirli bir süre için geçerli olmasını istiyorsanız da "<strong>Kullanım süresi bitmez</strong>" işaretini kaldırıp süre sınırı belirleyebilirsiniz. Tüm ayarlamaları yaptıktan sonra oluştur diyerek devam edin. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-59-46-c49a8fd0b957693a77e8eb0619f8eac8.png" class="responsive"></figure>
+
+<p>Gizli anahtarı bilgisayarımız içerisinde korumak için açılan pencereye güçlü ama unutmayacağınız bir parola belirleyin.</p>
+
+<p>Parolayı da belirledikten kısa bir süre sonra size özel olan PGP anahtarı oluşturulmuş oluyor. Oluşturulan anahtarın özelliklerine bakmak ve düzenlemek için sağ tıklayıp "<strong>Özellikler</strong>" kısmına tıklayabilirsiniz. </p>
+
+<figure><img src="../../img/7/2020-06-15_07-59-58-abefe783358fa07bc08f32d57a2e88b1.png" class="responsive"></figure>
+
+<p>Açılan pencerede anahtarlar ilgili pek çok bilgi edinebilir ve aynı zamanda çeşitli ayarlamalar da yapabilirsiniz. Örneğin "<strong>Parola Metnini Değiştir</strong>" diyerek anahtarınızı koruyan parolayı değiştirebilirsiniz. Ya da ayrıntılar sekmesinden anahtarınızın geçerlilik tarihini de düzenleyebilirsiniz. Hatta gizli anahtarınızı başka bir bilgisayara aktarmak için dışarı da aktarabilirsiniz.</p>
+
+<p>En nihayetinde bize özel olan PGP anahtarımızı oluşturmuş olduk. Bir sonraki kısımda açık anahtarımızı nasıl diğer insanlara ulaştırabileceğimizi ele alıyor olacağız. Ayrıca burada varsayılan olarak bulunan anahtarların hiç birini silmemeniz gerekiyor.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-01-08-8d00472c010f4cdba1187893559599b4.png" class="responsive"></figure>
+
+<p>Buradaki anahtarlar sistemin ve çeşitli paketlerin güvenli şekilde güncellenip denetlenmesi için kullanılan temel anahtarlardır. Güvenliğiniz ve sistemin stabil çalışabilmesi için bu anahtarı hiç bir zaman silmeyin.</p>
+
+<h4 id="6">PGP Anahtarlarını İçeri ve Dışarı Aktarma</h4>
+
+<p>Güvenli iletişim kurmak istediğimiz kişilerin bize şifreli mesaj gönderebilmesi için öncelikle bizim açık anahtarımızı karşı tarafa ulaştırmamız gerekiyor. Açık anahtarı dağıtmak için pek çok yol bulunuyor olsa da temel olarak kabul edilen birkaç ana yol vardır.</p>
+
+<ul><li><p>Bunlardan en basiti, iletişim kuracağımız kişiyle, karşılıklı olarak açık anahtarlarımızı mail gibi bir iletişim yolu ile iletmektir. </p></li><li><p>Bu yöntem dışında anahtarları "<strong>.asc</strong>" formatında doğrudan dosya olarak da dağıtabiliyoruz.</p></li><li><p>Bir diğer yöntem ise açık anahtarımızı, herkesin ulaşabileceği genel anahtar sunucularına yüklemektir.</p></li></ul>
+
+<p>Şimdi sırasıyla tüm yöntemleri genel hatları ile tek tek ele alarak açıklayalım.</p>
+
+<h4 id="7">Dosya Olarak Dağıtmak</h4>
+
+<p>Bu işlem için açık anahtarını dışarı aktarmak istediğimiz kullanıcıyı seçip dosya sekmesine gelerek "<strong>Dışarı Aktar</strong>" kısmına tıklayalım. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-05-46-646bdac70de5e2185e6a02ec24ab61b4.png" class="responsive"></figure>
+
+<p>Açılan pencerede anahtarı kaydetmek istediğimiz konumu seçip dosya formatını "<strong>zırhlanmış PGP anahtarları</strong>" olarak seçelim. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-06-26-2b8c2a4a6216fb46860bb130f799ce39.png" class="responsive"></figure>
+
+<p>Bu dosya formatını seçme nedenimiz, kaydedeceğimiz anahtar dosya içeriğinin herhangi bir metin editörü ile de okunabilmesini sağlamaktır. Eğer bu dosya formatını seçmezseniz insanlar gerektiğinde dosyayı açıp içerisindeki anahtara bakamazlar. Hatta bu durumu teyit etmek için kaydettiğimiz dosyaya sağ tıklayarak herhangi bir metin editörü ile anahtar içeriğine bakabiliriz.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-06-38-e829077e99302a161e6ae02e8568c74a.png" class="responsive"></figure>
+
+<p>Kaydetmiş olduğumuz bu dosyayı, bize şifreli mesaj göndermesini istediğimiz insanlar ile herhangi bir yolla paylaşabiliriz. Bu dosya gizli bir içeriğe sahip olmadığından isterseniz e-posta eki olarak isterseniz de ayrıca bir dosya yükleme servisi üzerinden karşı tarafa ulaşmasını sağlayabilirsiniz. </p>
+
+<p>Herhangi birinin açık anahtarını içeri aktarmak istediğimizde ise programı açıp "<strong>Dosya</strong>" sekmesinden "<strong>İçeri Aktar</strong>" seçeneğine tıklamamız gerekiyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-06-51-971823ab5b86266e7beb394b1f83d28b.png" class="responsive"></figure>
+
+<p>Açılan pencereden içeri aktarmak istediğimiz açık anahtar dosyasını seçerek karşımıza gelen anahtar bilgileri doğru ise içe aktar diyerek anahtarın kaydedilmesini sağlayabiliyoruz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-07-09-7dad5fc6acf3e7acfc054e82fab3dcaa.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-07-09-98d2babf48029b89eff2c6bf6a021be8.png" class="responsive"></figure>
+
+<p>İşte bu şekilde açık anahtarlarınızı istediğiniz kişiler ile paylaşmak üzere dışarı aktarıp, aynı şekilde istediğiniz kişilerin açık anahtarlarını da içeri aktarabilirsiniz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-07-21-cfbf83bac179de769363523c56b5f987.png" class="responsive"></figure>
+
+<h4 id="8">Yazılı Olarak Dağıtmak</h4>
+
+<p>Bir önceki anlatımda anahtarımızı dışarı aktarırken özellikle "zırhlanmış PGP anahtarları" dosya formatını dosya içeriğimiz kolayca okunabilsin diye zaten seçmiştik. Dosyayı bu şekilde kaydettiğimiz için herhangi bir metin editörü ile açıp içerisindeki açık anahtarı kopyalayabiliyoruz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-10-23-9eae2fc4fe174e68ed573e67a35e5a31.png" class="responsive"></figure>
+
+<p>Bu kopyaladığımız açık anahtarı da e-posta ya da benzeri bir yazılı iletişim aracılığı ile karşı tarafa gönderebiliyoruz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-10-55-b50ac26954e385da5be18737211d36cd.png" class="responsive"></figure>
+
+<p>Karşı taraf yazılı olarak aldığı bu anahtarı herhangi bir metin editörüne yapıştırıp dosyayı <strong>.asc</strong> formatında kaydedip daha önce yaptığımız şekilde programın içerisine aktarabiliyor.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-11-06-08628faed80bde6934e74930778c6ec0.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-11-06-e04345c5df6107fd47c57ce16d242863.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-11-07-f44c402c403725af43f9a28ac1b45e6d.png" class="responsive"></figure>
+
+<h4 id="9">Anahtar Sunucu Kullanarak Dağıtmak</h4>
+
+<p>Açık anahtarımızı, herhangi bir anahtar sunucusuna yükleyerek çok daha geniş kitlelerin anahtarımıza ulaşabilmesini sağlayabiliriz.&nbsp; Üstelik kullanabileceğimiz pek çok alternatif anahtar sunucusu bulunuyor.</p>
+
+<p>Ne kadar çok alternatif olduğunu görmek adına herhangi bir arama motoruna "<strong>pgp keyserver</strong>" yazıp aratmanız yeterli. Biz örnek olarak "<a href="http://keyserver.pgp.com/" target="_blank" rel="noopener noreferrer">keyserver.pgp.com/</a>" üzerinden anlatımı gerçekleştirelim. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-15-04-48859fe6849f7932664994a41d88d8dc.png" class="responsive"></figure>
+
+<p>Ben bu adresi kullanımının kolay olması ve e-posta doğrulaması ile anahtarları kısmen daha tutarlı şekilde barındırıyor olmasından dolayı tercih ediyorum. Ancak hangi sunucuyu seçtiğinizin çok da bir önemi yok aslında. Çünkü neredeyse tüm sunucular birbirleri ile kendi bünyelerinde bulunan anahtarları paylaşarak global bir anahtarlık oluşturuyorlar. Yani biz X sunucusuna anahtarımızı yükledikten belirli bir süre sonra, pek çok sunucuda da anahtar bilgimiz yer alıyor olacak. </p>
+
+<p>Anahtarımızı doğrudan web arayüzü üzerinden paylaşıp var olan anahtarlar içerisinde sorgulama yapabiliriz. Anahtarımızı yüklemek üzere "<strong>Publish Key</strong>" butonuna basalım. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-20-40-adade8e887859189b13879f7e3cbb3c6.png" class="responsive"></figure>
+
+<p>Açılan sayfada eğer anahtarımızı dosya olarak yükleme yapacaksak "<strong>Dosya Seç</strong>" diyerek "Zırhlanmış PGP" yani <strong>.asc</strong> uzantılı açık anahtar dosyasını seçip yükleyebiliriz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-20-53-18f8aefe4b2035fed23538bff80d1ff6.png" class="responsive"></figure>
+
+<p>Ayrıca yazılı olarak paylaşmak istersek de "<strong>Key Block</strong>" butonuna tıklayarak yazılı şekilde de giriş yapabiliriz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-20-59-fd0a29a70d7c5cf32f4a55a448f9075a.png" class="responsive"></figure>
+
+<p>Yükleme işleminin ardından sunucu bizden e-posta doğrulaması isteyecek. E-posta doğrulması yaparak bu anahtarın geçersiz olmadığını kanıtlayarak, daha sonra gerektiğinde sunucu üzerindeki kaydını silmek için de bu e-posta adresini kullanıyor olacağız. E-posta adresimize gelen doğrulama işlemini tamamladıktan sonra artık anahtarımız sunucu üzerinden herkes tarafından bulunabilir oluyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-21-08-9fd71e81c6b0a95ab731c2f7f6200af2.png" class="responsive"></figure>
+
+<p>Ayrıca lütfen unutmayın bu sunucu geçersiz anahtarları elemek için 6 ayda bir yeniden e-posta doğrulaması isteyecektir. Eğer onaylamazsanız anahtarınız sunucu üzerindeki geçerliliğini yitirerek, diğer insanlar tarafından bulunabilir olmayacaktır. Bu detayı unutmadan sürekli kullandığınız ve ulaşabileceğiniz bir e-posta adresini anahtarınıza tanımladığınızdan emin olun lütfen.</p>
+
+<p>Yükleme işleminin ardından teyit etmek üzere e-posta adresini kullanarak arama yapalım. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-21-24-52baae6cfe79e6f6c8049bb3ddb3c034.png" class="responsive"></figure>
+
+<p>Arama sonucunda da görüldüğü üzere anahtarımız başarılı bir biçimde anahtar sunucusuna yüklenmiş bulunuyor. Artık bizim ismimizi ya da e-posta adresimizi kullanarak kim arama yaparsa açık anahtar bilgimize anahtar sunucusu üzerinden rahatlıkla ulaşabiliyor olacak. Size gizli mesaj göndermek isteyen kişilerin tek yapması gereken, buradan sizin açık anahtarınızı indirip daha önce de ele aldığımız şekilde içeri aktarmaktır. </p>
+
+<p>Böylelikle sunucu üzerine yüklediğimiz anahtar belli bir süre sonra elden ele ulaştırılarak pek çok sunucu üzerinden de bulunabilir olacak. Ancak bunun anında olmasını beklememek gerek çünkü dağıtımı için farklı koşullar geçerli olabilir. Siz anahtarınızı yükler yüklemez anlık olarak sunucu üzerinden, herhangi birine anahtar bilginizi paylaşmak isterseniz o kişiye kullandığınız anahtar sunucusunu da belirtmeniz gerekecektir.</p>
+
+<p>Eğer yüklediğiniz anahtarı herhangi bir sebeple sunucudan kaldırmak isterseniz; "<strong>Remove Your Key</strong>" butonuna tıklayıp anahtarınıza bağlı bulunan e-posta adresini belirterek anahtarı kaldırmak istediğinizi "<strong>Remove</strong>" butonuna basarak onaylayın. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-21-34-ecef8a2cfcd40a393c02d9b34e167f1f.png" class="responsive"></figure>
+
+<p>Bu işlemin ardından geçerli e-posta adresine silme işlemi için onay bildirimi gidecektir. Eğer e-posta üzerinden de onayı verirseniz açık anahtarınız keyserver.pgp.com sunucusundan kaldırılmış olacak. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-21-43-a2f494a1e2268824b1edc7543074ecd9.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-18-28-ff7abfc2edf98cbfcb39ec835ed9b9ca.png" class="responsive"></figure>
+
+<p>Anahtarın kaldırılıp kaldırılmadığını arama yaparak teyit edebiliriz.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-18-36-21879b1ab360e338c8bd2e30b847ea6a.png" class="responsive"></figure>
+
+<p>Eğer anahtarınız uzun süredir anahtar sunucusunda bulunuyorsa, muhtemelen pek çok alternatif anahtar sunucusuna da anahtarınız yayılmıştır. Silme işleminin ardından alternatif sunucular üzerinde yer alan anahtar bilginiz de kısa zaman içerisinde kendiliğinden silinecektir. Ancak yine de bir süre anahtarınızı alternatif sunucular üzerinde görmeye devam edebilirsiniz.</p>
+
+<p>Ben burada temel olarak kullanılabilecek yöntemlerden bahsettim ancak paylaşım için bunlar ile sınırlı değilsiniz. Örneğin her e-postanın sonuna otomatik olarak eklenmesini sağlarsanız ya da web siteniz varsa orada açıkça belirtseniz de insanlar size bu anahtar üzerinden şifreli mesajlar gönderebilir. Kısacası insanların görebileceği herhangi bir iletişim kanalı aracılığı ile açık anahtarınızı paylaşmanız mümkün.</p>
+
+<p>Açık anahtarımızı nasıl dağıtabileceğimizi ve ihtiyacımız olan anahtarları nasıl içeri aktarabileceğimizi öğrenmiş olduk. Bir sonraki bölümde de bu anahtarları kullanarak karşı tarafa nasıl şifreli içerik gönderebiliriz bunu ele alalım.</p>
+
+<h4 id="10">PGP Anahtarı İle Metni Şifrelemek</h4>
+
+<p>Bu işlem için herhangi bir metin editörüne şifrelemek istediğimiz metni yazıp, metnin tamamını seçiyoruz. Metnin tamamını seçtikten sonra üst çubukta yer alan pano simgesine tıklayıp "<strong>Panoyu Genel Anahtarlarla İmzala/Şifrele</strong>" seçeneğine tıklıyoruz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-25-05-6a87cf1eff65a341e81d66e07871588c.png" class="responsive"></figure>
+
+<p>Daha sonra mesajı kime şifreli şekilde göndermek istiyorsak o kişinin açık anahtarı ile mesajı şifreliyoruz. </p>
+
+<p>Ayrıca mesajın bizden geldiğini kanıtlamak için imzalamak istersek, alt taraftan kendi gizli anahtarımız ile mesajı imzalayabiliyoruz.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-25-16-e52b3f2a86104dfba140762c5e28862e.png" class="responsive"></figure>
+
+<p>Mesajımızı şifreleyip imzaladıktan sonra mesajın şifreli içeriği otomatik olarak kopyalanmış oluyor. Bu mesajı e-posta ya da benzeri bir iletişim kanalı ile karşı tarafa aktarabiliriz. Ben e-posta üzerinden mesajımı yapıştırıyorum.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-25-30-bbd13c475badc045151c520eae0db79e.png" class="responsive"></figure>
+
+<p>Mesajım karşı tarafa ulaştığında, mesajı alan kişi kendi gizli anahtarı ile mesaj içeriğini okuyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-25-39-3a40fb8bf66cd4efbb794d44cc26188b.png" class="responsive"></figure>
+
+<p>Aynı zamanda göndericinin yani benim açık anahtarıma da sahip olduğu için mesajın benden geldiğini imza kısmına bakarak doğrulayabiliyor.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-26-00-da49eb79a953c2545df5674d3146e325.png" class="responsive"></figure>
+
+<p>Eğer karşı tarafta benim açık anahtarım olmasaydı imzamı da kontrol edemeyecekti. Kontrol sisteminin nasıl işlediğini açıklamıştık. Eğer biri ile ilk defa iletişim kuruyorsak ve karşı tarafta bizim açık anahtarımız yoksa mesaj içeriğimizle birlikte mutlaka açık anahtarımızı da yollamayı unutmayalım. Böylelikle hem bizim imzamızı kontrol edebilir hem de gerektiğinde bize yanıt olarak gizli mesaj da gönderebilir.</p>
+
+<p>Ayrıca metin içeriğini şifrelemeden, yalnızca metnin bizden geldiğini kanıtlamak istersek açık metne imzamızı eklememiz yeterli oluyor. Metni imzalamak için de aynı şekilde metni seçerek açılan pencereden yalnızca imzalama işlemini yapmamız yeterli. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-26-19-5417b69a3675eeba59751b6571ac2543.png" class="responsive"></figure>
+
+<p>Mesajı alan karşı taraf da mesajı okuduktan sonra mesajın kimden geldiğini teyit etmek isterse imzamızı bizim açık anahtarımız ile kontrol edebilir.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-26-28-d2d23ac4e1aad81df943e12507e2eef2.png" class="responsive"></figure>
+
+<p>İşte metin içeriklerini bu şekilde şifreleyip imzalayarak karşı tarafa ulaştırabiliyoruz.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-26-38-6a503f82a9dcba46d37a9290106edf24.png" class="responsive"></figure>
+
+<h4 id="11">PGP Anahtarı İle Dosyaları Şifrelemek</h4>
+
+<p>Metin içerikleri dışındaki herhangi bir dosyayı şifreleyip imzalamak için de PGP anahtarımızı kullanabiliyoruz. Dosyayı şifrelemek için dosyaya sağ tıklayıp şifrele seçeneğine tıklayın. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-31-07-7c4fce41e99b5ed261103b58a7817dca.png" class="responsive"></figure>
+
+<p>Açılan pencereden kime göndermek istiyorsanız o kişinin açık anahtarını seçerek içeriği şifreleyin. Ve eğer imzalamak istiyorsanız kendi gizli anahtarınız ile imzalayın. Bu şekilde gördüğünüz gibi dosyamızın şifrelenmiş hali oluşturulmuş oldu. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-31-16-3b257dedc24e631db1240e189a8bc17b.png" class="responsive"></figure>
+
+<p>Şimdi tek yapmamız gereken bu dosyayı karşı tarafa aktarmak. Aktarmak için dosya yükleme ya da herhangi bir iletişim kanalını kullanabilirsiniz.&nbsp; Dosyayı alan taraf dosyayı açmak için sağ tıklayıp "<strong>şifre çözücü ile dosyayı aç</strong>" seçeneğine tıklıyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-31-27-3b33b6329471b836b07d2f1886cc195e.png" class="responsive"></figure>
+
+<p>Eğer gerekli anahtar onda varsa yani gizli anahtara sahipse dosyayı sorunsuzca açabiliyor. Ve göndericinin kimliğini de imzasını açık anahtar ile kontrol ederek doğrulayabiliyor. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-31-37-f9e26090427fc75292799eefa461e8a8.png" class="responsive"></figure>
+
+<p>Ayrıca sadece dosyanın bizden gönderildiğini kanıtlamak istediğimiz durumlarda, dosyayı şifrelemeden yalnızca imzalama imkanımız da bulunuyor. İmzalamak istediğimiz dosyaya sağ tıklayıp imzala seçeneğini seçip dosyamızı imzalıyoruz. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-31-48-c0f6906ee67a93c5bf4d7b08dc53e09b.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-32-00-38ec5c75f1a5ab76df10bd42d47cf61d.png" class="responsive"></figure>
+
+<p>Daha sonra hem dosyayı hemde imza doğrulama dosyasını karşı tarafa gönderiyoruz. Karşı taraf dosyayı açmadan önce dosyanın kimden geldiğini teyit etmek için imza dosyasına sağ tıklayıp "<strong>imzayı kontrol et</strong> " seçeneğini seçip dosyayı kimin gönderdiğinden emin olabiliyor.</p>
+
+<figure><img src="../../img/7/2020-06-15_08-32-15-a83d54b724c00ad8cd5a63dba5ba74f6.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-32-23-5080129e5f2ba567321a4d5bca41b662.png" class="responsive"></figure>
+
+<p>Ayrıca aklınızda şüphe kalmaması için, imzalama işlemenin her defasında bize ait olan benzersiz farklı imzalar üretilerek yapıldığını da belirtmek istiyorum. Bu durumu teyit etmek için "merhaba" ifadesini iki kez imzalayıp her iki imzayı da karşılaştırarak denememizi gerçekleştirelim. </p>
+
+<figure><img src="../../img/7/2020-06-15_08-32-40-f1ea43126ea449a729c6e66a5c597634.png" class="responsive"></figure>
+
+<figure><img src="../../img/7/2020-06-15_08-32-40-209fb85d0d13b33358f892fa5d1b0b01.png" class="responsive"></figure>
+
+<p>Gördüğünüz gibi aynı ifadeyi kendi anahtarımız imzalamış olmamıza karşın, üretilmiş olan imzalar kesinlikle aynı değil. Hemen testimizi devam ettirmek üzere benzersiz olan her iki imzayı da kontrol ederek, imzanın kime ait olduğunu teyit edelim. İmzaları kontrol ettiğimizde her iki imzanın da aynı kişi tarafından atılmış olduğunu teyit edebiliyoruz. Kısacası bu yapı sayesinde gerçek hayatta olduğu gibi tek bir imzamız bulunmaz. Tek bir imza bulunmadığı için de kimse kimsenin imzasını kopyalayarak kimlik sahteciliği yapamaz. Her iletişim için yalnızca bizim kendi anahtarımız üretebileceğimiz benzersiz imzalar bulunur. </p>
+
+<p>Böylelikle iki uç nokta arasında nasıl güvenli iletişim kurup veri aktarabileceğimizi de öğrenmiş olduk. Şifrelemeyi bildikten sonra istediğiniz servis üzerinden istediğiniz kişiler ile güvenle görüşebilirsiniz. </p>
+
+<p>Ayrıca son olarak, anlatımın başından beri değindiğimiz konuların geneli hakkında çok daha geniş bir bakış açısı kazanmak adına "Şifrepunk" isimli kitabı da mutlaka okumanızı tavsiye ederim.</p>
+	
+<center>
+	<h1 id="bildirim">Geri Bildirimde Bulunun</h1>
+<p>Sizlere daha verimli bir kaynak sunabilmemiz için, uygulamada veya dokümantasyonlarda yer alan tüm hata ve eksiklerimizi bize bildirebilirsiniz.	</p>
+	<div class="checkbox mb-3">                         
+			<a href="../../bildirim.html" class="btn btn-danger">Geri Bildirimde Bulunun</a>
+      </div>
+	  </center>	
+</article>       
+    </div>
+
+    
+<script src="../../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../../js/script.js"></script>		
+ 
+
+
+</body>
+</html>
+
