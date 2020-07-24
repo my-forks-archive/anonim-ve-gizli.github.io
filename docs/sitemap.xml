@@ -1,88 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
   <loc>https://anonim-ve-gizli.github.io/</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/menu.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/bildirim.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/1.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/2.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/3.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/4.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/5.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/6.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/7.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/8.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/9.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/10.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/docs/dokuman/11.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/index.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/egitim.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://anonim-ve-gizli.github.io/hakkinda.html</loc>
-  <lastmod>2019-10-31T08:40:18+00:00</lastmod>
+  <lastmod>2020-07-23T05:37:51+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
